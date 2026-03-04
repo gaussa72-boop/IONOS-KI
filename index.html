@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IONOS-7 | KOSMISCHE INTELLIGENZ</title>
+    <style>
+        :root {
+            --glow: #b3941d;
+            --bg: #050505;
+            --accent: #f39c12;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            color: white;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+        }
+
+        /* Hintergrund-Canvas für die Lebensblume */
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Container für die kreisenden Bilder */
+        .orbit-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+        }
+
+        .ai-node {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--glow);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 20px var(--glow);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            z-index: 5;
+        }
+
+        .ai-node:hover {
+            transform: scale(1.3);
+            box-shadow: 0 0 40px var(--accent);
+            z-index: 10;
+        }
+
+        .ai-node.active {
+            border-color: #fff;
+            box-shadow: 0 0 30px #fff;
+        }
+
+        /* Chat Interface Layer */
+        .ui-layer {
+            position: relative;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100vh;
+            padding-bottom: 50px;
+            pointer-events: none; /* Klicks gehen durch zum Hintergrund */
+        }
+
+        .chat-window {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glow);
+            border-radius: 15px;
+            padding: 20px;
+            pointer-events: all; /* Chat ist wieder klickbar */
+        }
+
+        #messages {
+            height: 200px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            border-bottom: 1px solid rgba(179, 148, 29, 0.3);
+        }
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1;
+            background: transparent;
+            border: 1px solid var(--glow);
+            color: var(--accent);
+            padding: 10px;
+            outline: none;
+        }
+
+        button {
+            background: var(--glow);
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        h1 {
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 10px;
+            color: var(--glow);
+            text-shadow: 0 0 10px var(--glow);
+            z-index: 21;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>IONOS-OS</h1>
+    
+    <canvas id="canvas"></canvas>
+
+    <div class="orbit-container" id="orbit"></div>
+
+    <div class="ui-layer">
+        <div class="chat-window">
+            <div id="messages"></div>
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Kommando eingeben...">
+                <button onclick="sendMessage()">SENDEN</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const agents = [
+            { name: "SINGULOS", img: "/static/assets/485162690_633070702946459_1586708230197748827_n.jpg" },
+            { name: "IONOS-7", img: "/static/assets/485757034_633272239592972_4485396945655343285_n.jpg" },
+            { name: "AUTOKRYPT", img: "/static/assets/485767621_633070649613131_1338202806268659889_n.jpg" },
+            { name: "NEBULA", img: "/static/assets/485859062_633070676279795_6562805666499386787_n.jpg" },
+            { name: "VOID", img: "/static/assets/485882728_633070572946472_5767379511211919431_n.jpg" },
+            { name: "ZENITH", img: "/static/assets/486018216_633070716279791_3449585248192640788_n.jpg" },
+            { name: "ORION", img: "/static/assets/486038969_633070742946455_4833754367084671820_n.jpg" },
+            { name: "QUANTUM", img: "/static/assets/491211109_651979431055586_3670960072143517125_n.jpg" },
+            { name: "CHRONOS", img: "/static/assets/491512015_651981284388734_2916737210557661386_n.jpg" },
+            { name: "ULTRA", img: "/static/assets/491856978_651981491055380_7975018969703101198_n.jpg" }
+        ];
+
+        let activeAI = agents[0];
+        let angle = 0;
+
+        // 1. Initialisierung der kreisenden Bilder
+        function initOrbit() {
+            const orbit = document.getElementById('orbit');
+            agents.forEach((agent, i) => {
+                const node = document.createElement('div');
+                node.className = 'ai-node';
+                node.id = 'node-' + i;
+                node.style.backgroundImage = `url('${agent.img}')`;
+                node.onclick = () => selectAI(i);
+                orbit.appendChild(node);
+            });
+            updateOrbit();
+        }
+
+        function selectAI(index) {
+            activeAI = agents[index];
+            document.querySelectorAll('.ai-node').forEach(n => n.classList.remove('active'));
+            document.getElementById('node-' + index).classList.add('active');
+            document.getElementById('messages').innerHTML += `<div style="color:gray">System: Verbindung zu ${activeAI.name} hergestellt...</div>`;
+        }
+
+        // 2. Die kreisende Animation
+        function updateOrbit() {
+            angle += 0.005; // Geschwindigkeit der Rotation
+            const radius = 250; // Wie weit die Bilder vom Zentrum weg sind
+
+            agents.forEach((_, i) => {
+                const node = document.getElementById('node-' + i);
+                const currentAngle = angle + (i * (Math.PI * 2 / agents.length));
+                const x = Math.cos(currentAngle) * radius;
+                const y = Math.sin(currentAngle) * radius;
+                
+                node.style.left = x + 'px';
+                node.style.top = y + 'px';
+            });
+            requestAnimationFrame(updateOrbit);
+        }
+
+        // 3. Heilige Geometrie (Canvas Hintergrund)
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        function drawGeometry() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const time = Date.now() * 0.001;
+
+            ctx.strokeStyle = "rgba(179, 148, 29, 0.2)";
+            ctx.lineWidth = 1;
+
+            for (let i = 0; i < 6; i++) {
+                ctx.beginPath();
+                const r = 100 + Math.sin(time + i) * 20;
+                ctx.arc(centerX, centerY, r, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+            requestAnimationFrame(drawGeometry);
+        }
+
+        // 4. Chat Logik
+        async function sendMessage() {
+            const input = document.getElementById('userInput');
+            const box = document.getElementById('messages');
+            if (!input.value) return;
+
+            const userText = input.value;
+            box.innerHTML += `<div><b>Du:</b> ${userText}</div>`;
+            input.value = '';
+
+            const res = await fetch('/chat', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({message: userText, assistant: activeAI.name})
+            });
+            const data = await res.json();
+            box.innerHTML += `<div style="color:var(--accent)"><b>${activeAI.name}:</b> ${data.reply}</div>`;
+            box.scrollTop = box.scrollHeight;
+        }
+
+        initOrbit();
+        drawGeometry();
+        selectAI(0);
+    </script>
+</body>
+</html>
