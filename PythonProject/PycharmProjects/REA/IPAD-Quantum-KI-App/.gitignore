@@ -1,0 +1,26 @@
+# Xcode iOS Development Files
+.DS_Store
+.xcodeproj/
+xcuserdata/
+*.xcworkspace/
+*.playground
+.swiftpm/
+DerivedData/
+.build/
+*.o
+*.swiftmodule
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.log
+

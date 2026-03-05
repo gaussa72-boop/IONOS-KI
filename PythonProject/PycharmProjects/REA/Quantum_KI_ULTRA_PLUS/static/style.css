@@ -1,0 +1,76 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: black;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('/static/images/bg1.jpg') center/cover no-repeat;
+    animation: rotate 40s linear infinite;
+    opacity: 0.35;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg) scale(1.1); }
+    to { transform: rotate(360deg) scale(1.1); }
+}
+
+.avatar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background: url('/static/images/bg2.jpg') center/cover no-repeat;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: pulse 4s infinite alternate;
+    border: 2px solid gold;
+}
+
+@keyframes pulse {
+    from { box-shadow: 0 0 20px gold; }
+    to { box-shadow: 0 0 60px gold; }
+}
+
+.chat-container {
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 15%;
+    height: 70%;
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,215,0,0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    color: #fff;
+}
+
+.input-area {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    background: gold;
+    border: none;
+    cursor: pointer;
+}

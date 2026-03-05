@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="95" fill="#ff1493"/>
+    <text x="100" y="120" font-size="60" text-anchor="middle">🚀</text>
+    <text x="100" y="185" font-size="14" text-anchor="middle" fill="#000">ULTRA</text>
+</svg>
