@@ -2,49 +2,30 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiegelwelt KI Interface</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Spiegelwelt KI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-   <div class="portal-card" onclick="selectPortal('RPG_QUEST')">
-    <img src="{{ url_for('static', filename='images/1.jpg.jpg') }}" alt="Portal">
-    <p>RPG Quest</p>
-</div>
-
-<div class="portal-card" onclick="selectPortal('SPACE_BATTLE')">
-    <img src="{{ url_for('static', filename='images/4.jpg.jpg') }}" alt="Portal">
-    <p>Space Battle</p>
-</div>
-
-<div class="create-box">
-    <input type="text" id="userPrompt" placeholder="Deine Idee...">
-    <button class="glow-button" onclick="startGeneration()">LOS!</button>
-</div>
-<script>
-let activePortal = "Allgemein";
-
-function selectPortal(name) {
-    activePortal = name;
-    // Visuelles Feedback:
-    alert("KI Modus gewechselt zu: " + name);
-}
-
-async function startGeneration() {
-    const input = document.getElementById('userPrompt').value;
-    if(!input) return;
-
-    // Sende Daten an dein Python-Backend
-    const response = await fetch('/generate', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ prompt: input, portal: activePortal })
-    });
-
-    const result = await response.json();
-    // Antwort im Chat-Fenster anzeigen
-    document.querySelector('.chat-content').innerHTML += `<div><b>Bot:</b> ${result.answer}</div>`;
-}
-</script>
+    <div class="main-header"><h1>SPIEGELWELT INTERFACE</h1></div>
+    <div class="container">
+        <div class="create-box">
+            <h2>CREATE YOUR GAME</h2>
+            <input type="text" id="userPrompt" placeholder="Deine Vision...">
+            <button onclick="startGeneration()">LOS!</button>
+        </div>
+        <div id="chatWindow" style="border:1px solid gold; height:300px; overflow-y:auto; padding:10px;"></div>
+    </div>
+    <script>
+        async function startGeneration() {
+            const input = document.getElementById('userPrompt');
+            const response = await fetch('/generate', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ prompt: input.value })
+            });
+            const data = await response.json();
+            document.getElementById('chatWi    ').innerHTML += "<div><b>KI:</b> " + data.answer + "</div>";
+        }
+    </script>
 </body>
 </html>

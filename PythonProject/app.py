@@ -15,17 +15,11 @@ def generate():
     user_prompt = data.get('prompt')
     portal_type = data.get('portal', 'Allgemein')
     
-    instructions = {
-        "RPG_QUEST": "Du bist ein Dungeon Master.",
-        "SPACE_BATTLE": "Du bist ein Flottenkommandant.",
-        "Allgemein": "Du bist MasterCat."
-    }
-    
     try:
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": instructions.get(portal_type, instructions["Allgemein"])},
+                {"role": "system", "content": f"Du bist MasterCat im Modus {portal_type}."},
                 {"role": "user", "content": user_prompt}
             ]
         )
