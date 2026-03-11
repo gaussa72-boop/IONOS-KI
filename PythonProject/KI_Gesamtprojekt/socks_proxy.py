@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import logging
+import my_logging
 import ssl
 
 import socksio

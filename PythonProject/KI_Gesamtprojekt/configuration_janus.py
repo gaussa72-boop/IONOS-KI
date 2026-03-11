@@ -19,7 +19,7 @@
 # limitations under the License.
 
 from ...configuration_utils import PreTrainedConfig
-from ...utils import logging
+from ...utils import my_logging
 from ..auto import CONFIG_MAPPING, AutoConfig
 
 

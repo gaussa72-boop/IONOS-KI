@@ -1,4 +1,4 @@
-import logging
+import my_logging
 import numpy
 from numpy.testing import assert_allclose
 import pytest

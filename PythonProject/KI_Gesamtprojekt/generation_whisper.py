@@ -33,7 +33,7 @@ from ...generation.logits_process import (
 )
 from ...generation.stopping_criteria import StoppingCriteriaList
 from ...modeling_outputs import BaseModelOutput
-from ...utils import logging
+from ...utils import my_logging
 from .tokenization_whisper import TASK_IDS, TO_LANGUAGE_CODE
 
 

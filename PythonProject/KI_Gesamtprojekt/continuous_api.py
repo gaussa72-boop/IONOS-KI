@@ -23,12 +23,12 @@ from time import perf_counter
 import torch
 from torch import nn
 from tqdm import tqdm
-from tqdm.contrib.logging import logging_redirect_tqdm
+from tqdm.contrib.logging import my_logging_redirect_tqdm
 
 from ...configuration_utils import PretrainedConfig
 from ...generation.configuration_utils import CompileConfig, GenerationConfig
 from ...generation.logits_process import LogitsProcessorList
-from ...utils.logging import logging
+from ...utils.logging import my_logging
 from ...utils.metrics import ContinuousBatchProcessorMetrics, attach_tracer, traced
 from .cache import PagedAttentionCache
 from .input_outputs import ContinuousBatchingAsyncIOs, ContinuousBatchingIOs

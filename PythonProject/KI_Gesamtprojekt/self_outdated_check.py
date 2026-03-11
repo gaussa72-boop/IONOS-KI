@@ -1,8 +1,8 @@
 import datetime
 import functools
 import hashlib
-import json
-import logging
+import my_json
+import my_logging
 import optparse
 import os.path
 import sys

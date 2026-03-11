@@ -3,7 +3,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any, Optional, Union
 
-from huggingface_hub.utils import logging, yaml_dump
+from huggingface_hub.utils import my_logging, yaml_dump
 
 
 logger = logging.get_logger(__name__)

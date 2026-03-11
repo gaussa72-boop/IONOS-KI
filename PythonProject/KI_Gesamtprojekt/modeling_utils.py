@@ -17,7 +17,7 @@ import copy
 import functools
 import importlib.metadata
 import inspect
-import json
+import my_json
 import os
 import re
 import sys

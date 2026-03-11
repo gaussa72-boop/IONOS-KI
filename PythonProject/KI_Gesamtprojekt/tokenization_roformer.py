@@ -17,7 +17,7 @@ from tokenizers import Tokenizer, decoders, models, normalizers, pre_tokenizers,
 from tokenizers.pre_tokenizers import BertPreTokenizer, PreTokenizer
 
 from ...tokenization_utils_tokenizers import PreTrainedTokenizerFast
-from ...utils import logging
+from ...utils import my_logging
 from .tokenization_utils import JiebaPreTokenizer
 
 

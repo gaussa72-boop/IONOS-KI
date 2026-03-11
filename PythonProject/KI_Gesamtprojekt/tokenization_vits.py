@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization class for VITS."""
 
-import json
+import my_json
 import os
 import re
 from typing import Any

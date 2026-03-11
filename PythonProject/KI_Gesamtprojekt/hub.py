@@ -15,7 +15,7 @@
 Hub utilities: utilities related to download and cache models
 """
 
-import json
+import my_json
 import os
 import re
 import sys

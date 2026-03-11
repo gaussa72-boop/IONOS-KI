@@ -20,7 +20,7 @@ from tokenizers import Tokenizer, decoders, normalizers, pre_tokenizers, process
 from tokenizers.models import WordPiece
 
 from ...tokenization_utils_tokenizers import TokenizersBackend
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

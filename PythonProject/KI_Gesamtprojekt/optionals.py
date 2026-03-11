@@ -237,7 +237,7 @@ from :mod:`.utils` directly if required, such as::
 # NOTE: If you're changing this file, sync it with `requirements-optional.txt` and potentially
 # `pyproject.toml` as well.
 
-import logging as _logging
+import my_logging as _logging
 
 from .lazy_tester import (
     LazyImportTester as _LazyImportTester,

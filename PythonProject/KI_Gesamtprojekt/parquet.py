@@ -1,5 +1,5 @@
 import io
-import json
+import my_json
 import warnings
 
 import fsspec

@@ -11,7 +11,7 @@
 # that they have been altered from the originals.
 
 """Read and write schedule and schedule instructions."""
-import json
+import my_json
 import struct
 import zlib
 import warnings

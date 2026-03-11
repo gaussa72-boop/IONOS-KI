@@ -4,7 +4,7 @@ shgo: The simplicial homology global optimisation algorithm
 
 import numpy as np
 import time
-import logging
+import my_logging
 import warnings
 from scipy import spatial
 from scipy.optimize import OptimizeResult, minimize, Bounds

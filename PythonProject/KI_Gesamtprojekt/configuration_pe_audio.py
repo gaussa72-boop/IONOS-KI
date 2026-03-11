@@ -14,7 +14,7 @@
 
 from ...configuration_utils import PreTrainedConfig, PretrainedConfig
 from ...modeling_rope_utils import RopeParameters
-from ...utils import logging
+from ...utils import my_logging
 from ..auto import CONFIG_MAPPING, AutoConfig
 
 

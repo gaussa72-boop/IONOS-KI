@@ -14,7 +14,7 @@
 """Tokenization classes for LUKE."""
 
 import itertools
-import json
+import my_json
 from collections.abc import Mapping
 
 import numpy as np

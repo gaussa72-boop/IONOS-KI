@@ -15,7 +15,7 @@
 
 import collections
 import itertools
-import json
+import my_json
 import os
 import unicodedata
 

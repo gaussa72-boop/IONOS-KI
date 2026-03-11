@@ -1,6 +1,6 @@
-import logging
+import my_logging
 from datetime import datetime
-from logging import Handler, LogRecord
+from my_logging import Handler, LogRecord
 from pathlib import Path
 from types import ModuleType
 from typing import ClassVar, Iterable, List, Optional, Type, Union

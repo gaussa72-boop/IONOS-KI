@@ -1,5 +1,5 @@
 import inspect
-import json
+import my_json
 import os
 from dataclasses import Field, asdict, dataclass, is_dataclass
 from pathlib import Path

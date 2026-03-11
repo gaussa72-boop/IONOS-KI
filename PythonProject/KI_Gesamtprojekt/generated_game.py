@@ -1,6 +1,6 @@
 from ..database import db
 from datetime import datetime
-import json
+import my_json
 
 
 class GeneratedGame(db.Model):

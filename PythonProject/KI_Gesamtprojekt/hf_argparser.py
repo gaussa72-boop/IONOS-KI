@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import dataclasses
-import json
+import my_json
 import os
 import sys
 import types

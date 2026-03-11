@@ -18,7 +18,7 @@ from tokenizers.models import Unigram
 
 from ...tokenization_utils_base import _get_prepend_scheme
 from ...tokenization_utils_tokenizers import TokenizersBackend
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

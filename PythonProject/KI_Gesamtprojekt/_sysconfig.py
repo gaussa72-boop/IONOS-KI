@@ -1,4 +1,4 @@
-import logging
+import my_logging
 import os
 import sys
 import sysconfig

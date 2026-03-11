@@ -23,7 +23,7 @@ from ... import initialization as init
 from ...cache_utils import Cache, StaticCache
 from ...modeling_flash_attention_utils import _flash_attention_forward, flash_attn_supports_top_left_mask
 from ...modeling_utils import PreTrainedModel
-from ...utils import logging
+from ...utils import my_logging
 from ..gemma.modeling_gemma import GemmaForCausalLM
 from ..llama.modeling_llama import (
     LlamaDecoderLayer,

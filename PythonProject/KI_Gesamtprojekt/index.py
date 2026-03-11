@@ -5,7 +5,7 @@
 # See LICENSE.txt and CONTRIBUTORS.txt.
 #
 import hashlib
-import logging
+import my_logging
 import os
 import shutil
 import subprocess

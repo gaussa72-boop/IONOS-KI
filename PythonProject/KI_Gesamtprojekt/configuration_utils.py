@@ -14,7 +14,7 @@
 """Generation configuration class and utilities."""
 
 import copy
-import json
+import my_json
 import os
 from abc import ABC, abstractmethod
 from collections.abc import Callable

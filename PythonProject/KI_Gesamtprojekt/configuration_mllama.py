@@ -13,7 +13,7 @@
 """Mllama model configuration"""
 
 from ...configuration_utils import PreTrainedConfig
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

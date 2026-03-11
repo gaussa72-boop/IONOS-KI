@@ -15,7 +15,7 @@
 
 from ...configuration_utils import PreTrainedConfig
 from ...models.auto.modeling_auto import MODEL_FOR_CAUSAL_LM_MAPPING_NAMES
-from ...utils import logging
+from ...utils import my_logging
 from ..auto import CONFIG_MAPPING, AutoConfig
 
 

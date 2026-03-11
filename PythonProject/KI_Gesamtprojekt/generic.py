@@ -18,7 +18,7 @@ Generic utilities
 from __future__ import annotations
 
 import inspect
-import json
+import my_json
 import os
 import warnings
 from collections import OrderedDict, UserDict
@@ -31,7 +31,7 @@ from typing import TYPE_CHECKING, Any, TypedDict
 
 import numpy as np
 
-from ..utils import logging
+from ..utils import my_logging
 from .import_utils import is_mlx_available, is_torch_available, is_torch_fx_proxy
 
 

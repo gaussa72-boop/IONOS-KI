@@ -21,7 +21,7 @@ from .image_processing_base import BatchFeature, ImageProcessingMixin
 from .image_transforms import center_crop, normalize, rescale
 from .image_utils import ChannelDimension, ImageInput, get_image_size
 from .processing_utils import ImagesKwargs, Unpack
-from .utils import logging
+from .utils import my_logging
 from .utils.import_utils import requires
 
 

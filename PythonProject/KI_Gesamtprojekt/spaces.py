@@ -26,7 +26,7 @@ Usage:
 
 import enum
 import functools
-import json
+import my_json
 import os
 import shlex
 import shutil

@@ -651,7 +651,7 @@ class PulseQobj:
 
         .. code-block::
 
-            import json
+            import my_json
             import numpy
 
             class QobjEncoder(json.JSONEncoder):

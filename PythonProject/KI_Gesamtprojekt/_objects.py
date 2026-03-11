@@ -45,8 +45,8 @@ import csv
 import hashlib
 import hmac
 import os
-import logging
-import logging.handlers
+import my_logging
+import my_logging.handlers
 import optparse
 # import __hello__
 import threading

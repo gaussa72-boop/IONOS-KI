@@ -15,7 +15,7 @@
 
 import importlib
 import inspect
-import json
+import my_json
 from collections import OrderedDict
 from typing import TYPE_CHECKING
 

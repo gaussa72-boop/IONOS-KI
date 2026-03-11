@@ -16,7 +16,7 @@ from __future__ import absolute_import
 from __future__ import print_function
 
 from collections import namedtuple
-import json
+import my_json
 import sys
 
 _metadata_lib = None

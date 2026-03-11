@@ -19,7 +19,7 @@ import warnings
 from enum import Enum
 
 from ...tokenization_python import PreTrainedTokenizer
-from ...utils import logging
+from ...utils import my_logging
 from .utils import DataProcessor, InputExample, InputFeatures
 
 

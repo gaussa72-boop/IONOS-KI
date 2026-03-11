@@ -13,7 +13,7 @@
 """Reduce 1Q gate complexity by commuting through 2Q gates and resynthesizing."""
 
 from copy import copy
-import logging
+import my_logging
 from collections import deque
 
 from qiskit.dagcircuit import DAGCircuit

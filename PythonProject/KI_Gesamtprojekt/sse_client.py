@@ -12,7 +12,7 @@ License:
 Provides a generator of SSE received through an existing HTTP response.
 """
 
-import logging
+import my_logging
 
 __author__ = 'Maxime Petazzoni <maxime.petazzoni@bulix.org>'
 __email__ = 'maxime.petazzoni@bulix.org'

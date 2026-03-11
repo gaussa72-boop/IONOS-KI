@@ -1,6 +1,6 @@
 """Module containing bug report helper(s)."""
 
-import json
+import my_json
 import platform
 import ssl
 import sys

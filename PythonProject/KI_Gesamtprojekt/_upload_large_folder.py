@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import enum
-import logging
+import my_logging
 import os
 import queue
 import shutil

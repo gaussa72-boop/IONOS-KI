@@ -26,7 +26,7 @@ any of the backends.
 
 from __future__ import annotations
 
-import logging
+import my_logging
 import os
 import shutil
 import subprocess

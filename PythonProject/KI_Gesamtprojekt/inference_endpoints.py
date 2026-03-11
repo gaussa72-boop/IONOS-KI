@@ -1,6 +1,6 @@
 """CLI commands for Hugging Face Inference Endpoints."""
 
-import json
+import my_json
 from typing import Annotated, Any, Optional
 
 import typer

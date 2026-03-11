@@ -1,6 +1,6 @@
 import functools
 import importlib.metadata
-import logging
+import my_logging
 import os
 import pathlib
 import sys

@@ -13,7 +13,7 @@
 """Map a DAGCircuit onto a ``coupling_map`` adding swap gates."""
 
 import itertools
-import logging
+import my_logging
 from math import inf
 import numpy as np
 

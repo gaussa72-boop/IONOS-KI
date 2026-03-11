@@ -14,7 +14,7 @@
 """Contains helper utilities for hf CLI extensions."""
 
 import errno
-import json
+import my_json
 import os
 import re
 import shutil

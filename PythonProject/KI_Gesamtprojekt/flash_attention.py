@@ -1,7 +1,7 @@
 import torch
 
 from ..modeling_flash_attention_utils import _flash_attention_forward, flash_attn_supports_top_left_mask
-from ..utils import logging
+from ..utils import my_logging
 
 
 logger = logging.get_logger(__name__)

@@ -17,7 +17,7 @@ from collections.abc import Mapping, Sequence
 from ...feature_extraction_utils import BatchFeature
 from ...image_utils import ImageInput
 from ...processing_utils import Unpack
-from ...utils import logging
+from ...utils import my_logging
 from ..gemma3.processing_gemma3 import Gemma3Processor, Gemma3ProcessorKwargs
 
 

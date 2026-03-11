@@ -3,7 +3,7 @@
 At least 3 of these characters on a line * - _
 """
 
-import logging
+import my_logging
 
 from ..common.utils import isStrSpace
 from .state_block import StateBlock

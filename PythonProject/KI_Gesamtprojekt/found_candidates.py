@@ -9,7 +9,7 @@ something.
 """
 
 import functools
-import logging
+import my_logging
 from collections.abc import Sequence
 from typing import TYPE_CHECKING, Any, Callable, Iterator, Optional, Set, Tuple
 

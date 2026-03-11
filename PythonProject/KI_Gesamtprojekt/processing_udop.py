@@ -15,7 +15,7 @@
 Processor class for UDOP.
 """
 
-from transformers import logging
+from transformers import my_logging
 
 from ...image_processing_utils import BatchFeature
 from ...image_utils import ImageInput

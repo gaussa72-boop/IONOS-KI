@@ -13,7 +13,7 @@
 # limitations under the License.
 import copy
 import inspect
-import json
+import my_json
 import os
 import re
 from dataclasses import replace

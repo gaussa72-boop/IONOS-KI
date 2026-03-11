@@ -14,7 +14,7 @@
 """NemotronH model configuration"""
 
 from transformers.configuration_utils import PretrainedConfig
-from transformers.utils import logging
+from transformers.utils import my_logging
 
 
 logger = logging.get_logger(__name__)

@@ -6,7 +6,7 @@ so commands which don't always hit the network (e.g. list w/o --outdated or
 --uptodate) don't need waste time importing PipSession and friends.
 """
 
-import logging
+import my_logging
 import os
 import sys
 from optparse import Values

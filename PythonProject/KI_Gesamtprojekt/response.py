@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
 import io
-import logging
+import my_logging
 import sys
 import warnings
 import zlib

@@ -1,6 +1,6 @@
 """Base option parser setup"""
 
-import logging
+import my_logging
 import optparse
 import shutil
 import sys

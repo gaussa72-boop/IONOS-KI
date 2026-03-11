@@ -18,7 +18,7 @@ This module contains the core buckets logic used by both the CLI and the Python 
 """
 
 import fnmatch
-import json
+import my_json
 import mimetypes
 import os
 import sys

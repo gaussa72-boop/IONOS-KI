@@ -13,13 +13,13 @@
 # limitations under the License.
 """Tokenization classes for FastSpeech2Conformer."""
 
-import json
+import my_json
 import os
 
 import regex
 
 from ...tokenization_python import PreTrainedTokenizer
-from ...utils import logging, requires_backends
+from ...utils import my_logging, requires_backends
 
 
 logger = logging.get_logger(__name__)

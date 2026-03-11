@@ -20,7 +20,7 @@ from pathlib import Path
 import transformers
 
 from .convert_slow_tokenizer import SLOW_TO_FAST_CONVERTERS
-from .utils import logging
+from .utils import my_logging
 
 
 logging.set_verbosity_info()

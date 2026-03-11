@@ -13,7 +13,7 @@
 """Baseclasses for the Qiskit passmanager optimization tasks."""
 from __future__ import annotations
 
-import logging
+import my_logging
 import time
 from abc import abstractmethod, ABC
 from collections.abc import Iterable, Callable, Generator

@@ -14,7 +14,7 @@
 Fake backend abstract class for mock backends.
 """
 
-import json
+import my_json
 import os
 import warnings
 

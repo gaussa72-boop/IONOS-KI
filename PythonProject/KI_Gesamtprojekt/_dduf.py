@@ -1,5 +1,5 @@
-import json
-import logging
+import my_json
+import my_logging
 import mmap
 import os
 import shutil
@@ -78,7 +78,7 @@ class DDUFEntry:
 
         Example:
             ```py
-            >>> import json
+            >>> import my_json
             >>> index = json.loads(entry.read_text())
             ```
         """
@@ -106,7 +106,7 @@ def read_dduf_file(dduf_path: Union[os.PathLike, str]) -> dict[str, DDUFEntry]:
 
     Example:
         ```python
-        >>> import json
+        >>> import my_json
         >>> import safetensors.torch
         >>> from huggingface_hub import read_dduf_file
 

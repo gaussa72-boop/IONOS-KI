@@ -14,7 +14,7 @@
 """Contains pytorch-specific helpers."""
 
 import importlib
-import json
+import my_json
 import os
 import re
 from collections import defaultdict, namedtuple
@@ -325,7 +325,7 @@ def split_torch_state_dict_into_shards(
 
     Example:
     ```py
-    >>> import json
+    >>> import my_json
     >>> import os
     >>> from safetensors.torch import save_file as safe_save_file
     >>> from huggingface_hub import split_torch_state_dict_into_shards

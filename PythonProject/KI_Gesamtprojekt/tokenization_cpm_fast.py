@@ -17,7 +17,7 @@ import os
 from shutil import copyfile
 
 from ...tokenization_utils_tokenizers import AddedToken, PreTrainedTokenizerFast
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

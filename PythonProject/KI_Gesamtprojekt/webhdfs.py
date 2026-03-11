@@ -1,6 +1,6 @@
 # https://hadoop.apache.org/docs/r1.0.4/webhdfs.html
 
-import logging
+import my_logging
 import os
 import secrets
 import shutil

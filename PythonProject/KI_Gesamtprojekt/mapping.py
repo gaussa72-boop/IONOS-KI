@@ -1,5 +1,5 @@
 import array
-import logging
+import my_logging
 import posixpath
 import warnings
 from collections.abc import MutableMapping

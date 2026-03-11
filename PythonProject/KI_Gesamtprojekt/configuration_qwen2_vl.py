@@ -17,7 +17,7 @@ import inspect
 
 from ...configuration_utils import PreTrainedConfig, layer_type_validation
 from ...modeling_rope_utils import RopeParameters
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

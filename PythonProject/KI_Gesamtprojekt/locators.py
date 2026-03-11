@@ -7,8 +7,8 @@
 
 import gzip
 from io import BytesIO
-import json
-import logging
+import my_json
+import my_logging
 import os
 import posixpath
 import re

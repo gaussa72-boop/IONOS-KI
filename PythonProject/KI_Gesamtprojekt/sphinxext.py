@@ -18,7 +18,7 @@ from __future__ import print_function
 
 import os.path
 
-from sphinx.util import logging
+from sphinx.util import my_logging
 
 from pbr._compat.five import configparser
 import pbr.version

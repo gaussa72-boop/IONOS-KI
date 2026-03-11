@@ -19,7 +19,7 @@ from typing import Annotated, Optional
 
 import typer
 
-from huggingface_hub import logging
+from huggingface_hub import my_logging
 from huggingface_hub.utils import ANSI, disable_progress_bars
 
 from ._cli_utils import (

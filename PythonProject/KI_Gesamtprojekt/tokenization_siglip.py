@@ -28,7 +28,7 @@ from ...tokenization_utils_sentencepiece import SentencePieceBackend
 
 if TYPE_CHECKING:
     from ...tokenization_utils_base import TextInput
-from ...utils import logging, requires_backends
+from ...utils import my_logging, requires_backends
 from ...utils.import_utils import requires
 
 

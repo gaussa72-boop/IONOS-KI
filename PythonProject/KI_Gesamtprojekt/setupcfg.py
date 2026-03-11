@@ -56,7 +56,7 @@ try:
     import multiprocessing  # noqa
 except ImportError:
     pass
-import logging  # noqa
+import my_logging  # noqa
 
 import io
 import os

@@ -15,7 +15,7 @@
 
 import os
 
-from ...utils import logging
+from ...utils import my_logging
 from .configuration_rag import RagConfig
 
 

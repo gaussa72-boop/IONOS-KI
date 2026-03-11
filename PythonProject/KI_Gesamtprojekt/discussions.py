@@ -14,7 +14,7 @@
 """Contains commands to interact with discussions and pull requests on the Hugging Face Hub."""
 
 import enum
-import json
+import my_json
 import sys
 from pathlib import Path
 from typing import Annotated, Optional

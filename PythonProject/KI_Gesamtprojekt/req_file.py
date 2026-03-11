@@ -4,7 +4,7 @@ Requirements file parsing
 
 import codecs
 import locale
-import logging
+import my_logging
 import optparse
 import os
 import re

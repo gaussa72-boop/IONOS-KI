@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes for Speech2Text."""
 
-import json
+import my_json
 import os
 from pathlib import Path
 from shutil import copyfile
@@ -22,7 +22,7 @@ from typing import Any
 import sentencepiece
 
 from ...tokenization_python import PreTrainedTokenizer
-from ...utils import logging
+from ...utils import my_logging
 from ...utils.import_utils import requires
 
 

@@ -1,5 +1,5 @@
 import configparser
-import logging
+import my_logging
 import os
 from typing import List, Optional, Tuple
 

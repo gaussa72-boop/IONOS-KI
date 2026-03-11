@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization class for Pop2Piano."""
 
-import json
+import my_json
 import os
 
 import numpy as np

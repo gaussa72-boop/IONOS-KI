@@ -11,7 +11,7 @@ try:
     import ujson as json
 except ImportError:
     if not TYPE_CHECKING:
-        import json
+        import my_json
 
 if TYPE_CHECKING:
     from collections.abc import Iterator

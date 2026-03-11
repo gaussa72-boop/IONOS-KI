@@ -1,7 +1,7 @@
 """Base Command class, and related routines"""
 
-import logging
-import logging.config
+import my_logging
+import my_logging.config
 import optparse
 import os
 import sys

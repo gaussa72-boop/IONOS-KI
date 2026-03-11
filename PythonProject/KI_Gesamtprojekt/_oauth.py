@@ -1,6 +1,6 @@
 import datetime
 import hashlib
-import logging
+import my_logging
 import os
 import time
 import urllib.parse

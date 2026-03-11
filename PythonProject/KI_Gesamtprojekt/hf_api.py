@@ -17,7 +17,7 @@ from __future__ import annotations
 import base64
 import inspect
 import itertools
-import json
+import my_json
 import re
 import struct
 import time

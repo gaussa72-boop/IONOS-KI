@@ -1,7 +1,7 @@
 """Utilities related archives.
 """
 
-import logging
+import my_logging
 import os
 import shutil
 import stat

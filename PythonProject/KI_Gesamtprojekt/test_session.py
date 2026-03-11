@@ -69,7 +69,7 @@ if __name__ == '__main__' and len(sys.argv) >= 3 and sys.argv[1] == '--child':
 # Create various kinds of objects to test different internal logics.
 
 ## Modules.
-import json  # top-level module
+import my_json  # top-level module
 import urllib as url  # top-level module under alias
 from xml import sax  # submodule
 import xml.dom.minidom as dom  # submodule under alias

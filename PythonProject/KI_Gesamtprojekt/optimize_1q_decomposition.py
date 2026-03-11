@@ -12,7 +12,7 @@
 
 """Optimize chains of single-qubit gates using Euler 1q decomposer"""
 
-import logging
+import my_logging
 import math
 
 from qiskit.transpiler.basepasses import TransformationPass

@@ -14,7 +14,7 @@
 
 import argparse
 import importlib.util
-import json
+import my_json
 import os
 import re
 import sys

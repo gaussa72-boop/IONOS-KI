@@ -1,7 +1,7 @@
 """Orchestrator for building wheels from InstallRequirements.
 """
 
-import logging
+import my_logging
 import os.path
 import re
 import shutil

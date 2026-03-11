@@ -69,7 +69,7 @@ except ImportError:  # Platform-specific: Python 3
     _fileobject = None
     from ..packages.backports.makefile import backport_makefile
 
-import logging
+import my_logging
 import ssl
 import sys
 import warnings

@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization class for Wav2Vec2Phoneme."""
 
-import json
+import my_json
 import os
 from dataclasses import dataclass
 from itertools import groupby

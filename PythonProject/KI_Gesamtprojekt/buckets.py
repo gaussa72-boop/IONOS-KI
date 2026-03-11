@@ -14,7 +14,7 @@
 # limitations under the License.
 """Contains commands to interact with buckets via the CLI."""
 
-import json
+import my_json
 import os
 import sys
 import tempfile
@@ -23,7 +23,7 @@ from typing import Annotated, Optional, Union
 
 import typer
 
-from huggingface_hub import logging
+from huggingface_hub import my_logging
 from huggingface_hub._buckets import (
     BUCKET_PREFIX,
     BucketFile,

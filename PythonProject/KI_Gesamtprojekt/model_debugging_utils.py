@@ -14,13 +14,13 @@
 # limitations under the License.
 
 import functools
-import json
+import my_json
 import os
 import re
 from contextlib import contextmanager, redirect_stdout
 from io import StringIO
 
-from .utils import logging
+from .utils import my_logging
 from .utils.import_utils import is_torch_available, requires
 
 

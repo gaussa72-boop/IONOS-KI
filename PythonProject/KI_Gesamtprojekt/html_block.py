@@ -1,7 +1,7 @@
 # HTML block
 from __future__ import annotations
 
-import logging
+import my_logging
 import re
 
 from ..common.html_blocks import block_names

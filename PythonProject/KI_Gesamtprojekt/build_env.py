@@ -1,7 +1,7 @@
 """Build Environment used for isolation during sdist building
 """
 
-import logging
+import my_logging
 import os
 import pathlib
 import site

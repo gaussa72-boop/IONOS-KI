@@ -15,7 +15,7 @@
 from collections.abc import Callable
 from functools import wraps
 
-from ..utils import logging
+from ..utils import my_logging
 from ..utils.generic import GeneralInterface
 from ..utils.import_utils import is_grouped_mm_available, is_torch_available, is_torchdynamo_compiling
 

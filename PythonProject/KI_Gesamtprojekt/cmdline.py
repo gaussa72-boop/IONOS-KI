@@ -136,7 +136,7 @@ def _print_list(what):
 
 
 def _print_list_as_json(requested_items):
-    import json
+    import my_json
     result = {}
     if 'lexer' in requested_items:
         info = {}

@@ -19,7 +19,7 @@ from typing import Annotated
 
 import typer
 
-from ..utils import logging
+from ..utils import my_logging
 
 
 logger = logging.get_logger(__name__)  # pylint: disable=invalid-name

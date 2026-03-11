@@ -1,5 +1,5 @@
 import os
-import logging
+import my_logging
 import re
 
 from sympy.external import import_module

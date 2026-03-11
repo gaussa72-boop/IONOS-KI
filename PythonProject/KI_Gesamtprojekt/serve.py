@@ -20,7 +20,7 @@ import copy
 import enum
 import gc
 import io
-import json
+import my_json
 import re
 import tempfile
 import threading
@@ -53,7 +53,7 @@ from .. import (
     LogitsProcessorList,
     TextIteratorStreamer,
 )
-from ..utils import logging
+from ..utils import my_logging
 
 
 if TYPE_CHECKING:

@@ -19,7 +19,7 @@ from collections.abc import Callable
 
 from ...backbone_utils import BackboneConfigMixin
 from ...configuration_utils import PreTrainedConfig
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

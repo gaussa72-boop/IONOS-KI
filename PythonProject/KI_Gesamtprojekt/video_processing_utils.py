@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import json
+import my_json
 import os
 import warnings
 from collections.abc import Callable

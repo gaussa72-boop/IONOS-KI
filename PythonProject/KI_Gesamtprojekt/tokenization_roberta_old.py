@@ -13,13 +13,13 @@
 # limitations under the License.
 """Fast Tokenization classes for RoBERTa."""
 
-import json
+import my_json
 
 from tokenizers import processors
 
 from ...tokenization_utils_base import AddedToken, BatchEncoding
 from ...tokenization_utils_tokenizers import PreTrainedTokenizerFast
-from ...utils import logging
+from ...utils import my_logging
 from .tokenization_roberta import RobertaTokenizer
 
 

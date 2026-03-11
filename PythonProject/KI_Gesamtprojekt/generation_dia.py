@@ -31,7 +31,7 @@ from ...generation.utils import GenerateOutput, GenerationConfig, GenerationMixi
 from ...integrations.deepspeed import is_deepspeed_zero3_enabled
 from ...integrations.fsdp import is_fsdp_managed_module
 from ...modeling_utils import PreTrainedModel
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

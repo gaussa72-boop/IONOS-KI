@@ -13,7 +13,7 @@
 """Backend abstract interface for providers."""
 
 from __future__ import annotations
-import logging
+import my_logging
 import warnings
 from typing import List, Iterable, Any, Dict, Optional
 

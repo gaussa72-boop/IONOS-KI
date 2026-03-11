@@ -7,7 +7,7 @@ import sys
 import pickle
 from pathlib import Path
 import os
-import json
+import my_json
 import platform
 
 from numpy.testing import (assert_equal, assert_array_equal,

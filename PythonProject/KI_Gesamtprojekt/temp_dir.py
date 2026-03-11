@@ -1,6 +1,6 @@
 import errno
 import itertools
-import logging
+import my_logging
 import os.path
 import tempfile
 import traceback

@@ -1,4 +1,4 @@
-import logging
+import my_logging
 import shutil
 import sys
 import textwrap

@@ -12,7 +12,7 @@
 """
 These are the CNOT structure methods: anything that you need for creating CNOT structures.
 """
-import logging
+import my_logging
 import math
 
 import numpy as np

@@ -1,6 +1,6 @@
 """ PEP 610 """
 
-import json
+import my_json
 import re
 import urllib.parse
 from dataclasses import dataclass

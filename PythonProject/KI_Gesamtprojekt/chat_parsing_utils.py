@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import json
+import my_json
 import re
 
 from transformers.utils import is_jmespath_available

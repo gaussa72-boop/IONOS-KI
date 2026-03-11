@@ -21,8 +21,8 @@ import functools
 import gc
 import importlib
 import inspect
-import json
-import logging
+import my_json
+import my_logging
 import multiprocessing
 import os
 import re
@@ -51,7 +51,7 @@ import httpx
 from huggingface_hub import create_repo, delete_repo
 from packaging import version
 
-from transformers import logging as transformers_logging
+from transformers import my_logging as transformers_logging
 
 
 if TYPE_CHECKING:
@@ -1713,7 +1713,7 @@ class CaptureLogger:
     Example:
 
     ```python
-    >>> from transformers import logging
+    >>> from transformers import my_logging
     >>> from transformers.testing_utils import CaptureLogger
 
     >>> msg = "Testing 1, 2, 3"

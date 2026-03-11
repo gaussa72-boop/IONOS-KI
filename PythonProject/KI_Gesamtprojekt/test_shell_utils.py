@@ -1,6 +1,6 @@
 import pytest
 import subprocess
-import json
+import my_json
 import sys
 
 from numpy.distutils import _shell_utils
@@ -59,7 +59,7 @@ def test_join_matches_subprocess(Parser, runner, argv):
     # invoke python to return its arguments as json
     cmd = [
         sys.executable, '-c',
-        'import json, sys; print(json.dumps(sys.argv[1:]))'
+        'import my_json, sys; print(json.dumps(sys.argv[1:]))'
     ]
     joined = Parser.join(cmd + argv)
     json_out = runner(joined).decode()

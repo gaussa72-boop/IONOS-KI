@@ -17,7 +17,7 @@
 import copy
 import dataclasses
 import importlib.metadata
-import json
+import my_json
 import os
 from dataclasses import dataclass, is_dataclass
 from enum import Enum

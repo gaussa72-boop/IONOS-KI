@@ -19,7 +19,7 @@ from collections.abc import Callable
 from collections import OrderedDict
 from typing import Type
 
-import logging
+import my_logging
 
 from qiskit.exceptions import QiskitError
 from qiskit.providers.backend import Backend

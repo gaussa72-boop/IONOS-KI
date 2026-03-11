@@ -14,7 +14,7 @@
 
 import collections
 import copy
-import logging
+import my_logging
 import math
 
 from qiskit.circuit.library.standard_gates import SwapGate

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable
-import logging
+import my_logging
 from typing import TYPE_CHECKING
 
 from . import rules_block

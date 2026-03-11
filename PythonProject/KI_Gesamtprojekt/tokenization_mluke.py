@@ -14,7 +14,7 @@
 """Tokenization classes for mLUKE."""
 
 import itertools
-import json
+import my_json
 import os
 from collections.abc import Mapping
 

@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import json
+import my_json
 import os
 import warnings
 from pathlib import Path
@@ -21,7 +21,7 @@ from typing import Any
 import sentencepiece
 
 from ...tokenization_python import PreTrainedTokenizer
-from ...utils import logging
+from ...utils import my_logging
 from ...utils.import_utils import requires
 
 

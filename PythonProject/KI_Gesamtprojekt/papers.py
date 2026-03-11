@@ -29,7 +29,7 @@ Usage:
 
 import datetime
 import enum
-import json
+import my_json
 from typing import Annotated, Optional, get_args
 
 import typer

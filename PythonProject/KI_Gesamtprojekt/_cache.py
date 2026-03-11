@@ -17,8 +17,8 @@ import glob
 import hashlib
 import importlib.metadata as importlib_metadata
 import itertools
-import json
-import logging
+import my_json
+import my_logging
 import os
 import os.path
 import struct

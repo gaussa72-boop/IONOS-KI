@@ -20,7 +20,7 @@
 # WARNING
 import asyncio
 import base64
-import logging
+import my_logging
 import os
 import re
 import warnings

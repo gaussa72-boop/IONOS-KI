@@ -16,7 +16,7 @@
 
 import atexit
 import io
-import json
+import my_json
 import os
 import re
 import threading
@@ -43,7 +43,7 @@ from ..errors import (
     RepositoryNotFoundError,
     RevisionNotFoundError,
 )
-from . import logging
+from . import my_logging
 from ._lfs import SliceFileObj
 from ._typing import HTTP_METHOD_T
 

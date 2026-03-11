@@ -14,7 +14,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable
-import logging
+import my_logging
 
 from qiskit.circuit import Qubit, Clbit, Instruction
 from qiskit.circuit.delay import Delay

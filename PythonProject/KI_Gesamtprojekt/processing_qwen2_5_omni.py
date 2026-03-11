@@ -16,7 +16,7 @@
 Processor class for Qwen2.5Omni.
 """
 
-import logging
+import my_logging
 import re
 
 import numpy as np

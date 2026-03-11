@@ -16,7 +16,7 @@
 import dataclasses
 import datetime
 import importlib.metadata
-import json
+import my_json
 import os
 import re
 import time

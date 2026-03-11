@@ -13,7 +13,7 @@
 # limitations under the License.
 """Image processor class for OneFormer."""
 
-import json
+import my_json
 import os
 from collections.abc import Iterable
 from typing import Any

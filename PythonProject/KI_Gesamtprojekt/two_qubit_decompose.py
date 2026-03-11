@@ -31,7 +31,7 @@ import base64
 import warnings
 from typing import Optional, Type, TYPE_CHECKING
 
-import logging
+import my_logging
 
 import numpy as np
 

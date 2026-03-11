@@ -763,7 +763,7 @@ class ParseResults(object):
             print(type(result_dict), repr(result_dict)) # -> <class 'dict'> {'day': '1999', 'year': '12', 'month': '31'}
 
             # even though a ParseResults supports dict-like access, sometime you just need to have a dict
-            import json
+            import my_json
             print(json.dumps(result)) # -> Exception: TypeError: ... is not JSON serializable
             print(json.dumps(result.asDict())) # -> {"month": "31", "day": "1999", "year": "12"}
         """

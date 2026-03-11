@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import collections.abc as cabc
-import json
+import my_json
 import typing as t
 
 from .encoding import want_bytes

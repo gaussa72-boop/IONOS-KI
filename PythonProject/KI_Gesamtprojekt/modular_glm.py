@@ -17,7 +17,7 @@ from typing import Optional
 import torch
 import torch.nn as nn
 
-from ...utils import logging
+from ...utils import my_logging
 from ..llama.modeling_llama import (
     LlamaAttention,
     LlamaForCausalLM,

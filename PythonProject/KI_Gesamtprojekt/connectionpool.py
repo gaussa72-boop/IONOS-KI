@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
 import errno
-import logging
+import my_logging
 import re
 import socket
 import sys

@@ -23,7 +23,7 @@ from torch import nn
 from ... import initialization as init
 from ...modeling_rope_utils import RopeParameters
 from ...modeling_utils import PreTrainedModel
-from ...utils import logging
+from ...utils import my_logging
 from ..deepseek_v3.configuration_deepseek_v3 import DeepseekV3Config
 from ..deepseek_v3.modeling_deepseek_v3 import DeepseekV3Attention
 from ..llama.modeling_llama import (

@@ -6,8 +6,8 @@ import collections
 import email.message
 import functools
 import itertools
-import json
-import logging
+import my_json
+import my_logging
 import os
 import urllib.parse
 import urllib.request

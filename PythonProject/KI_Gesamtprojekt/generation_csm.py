@@ -27,7 +27,7 @@ from ...generation import (
 from ...generation.logits_process import LogitsProcessorList
 from ...generation.stopping_criteria import MaxLengthCriteria, StoppingCriteriaList
 from ...generation.utils import GenerateNonBeamOutput
-from ...utils import logging
+from ...utils import my_logging
 
 
 if TYPE_CHECKING:

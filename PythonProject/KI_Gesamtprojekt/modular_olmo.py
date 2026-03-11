@@ -26,7 +26,7 @@ import torch.nn.functional as F
 from ...cache_utils import Cache
 from ...modeling_rope_utils import dynamic_rope_update
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
-from ...utils import logging
+from ...utils import my_logging
 from ...utils.generic import maybe_autocast
 from ..llama.modeling_llama import (
     LlamaAttention,

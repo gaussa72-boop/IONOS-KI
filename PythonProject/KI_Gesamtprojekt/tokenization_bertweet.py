@@ -21,7 +21,7 @@ import re
 import regex
 
 from ...tokenization_python import PreTrainedTokenizer
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

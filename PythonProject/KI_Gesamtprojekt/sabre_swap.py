@@ -12,7 +12,7 @@
 
 """Routing via SWAP insertion using the SABRE method from Li et al."""
 
-import logging
+import my_logging
 from copy import deepcopy
 import time
 

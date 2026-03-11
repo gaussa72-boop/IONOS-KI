@@ -7,7 +7,7 @@ __all__ = (
     "TLSStream",
 )
 
-import logging
+import my_logging
 import re
 import ssl
 import sys

@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes for FNet model."""
 
-from ...utils import logging
+from ...utils import my_logging
 from ..albert.tokenization_albert import AlbertTokenizer
 
 

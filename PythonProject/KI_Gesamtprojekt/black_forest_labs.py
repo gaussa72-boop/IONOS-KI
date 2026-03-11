@@ -4,7 +4,7 @@ from typing import Any, Optional, Union
 from huggingface_hub.hf_api import InferenceProviderMapping
 from huggingface_hub.inference._common import RequestParameters, _as_dict
 from huggingface_hub.inference._providers._common import TaskProviderHelper, filter_none
-from huggingface_hub.utils import logging
+from huggingface_hub.utils import my_logging
 from huggingface_hub.utils._http import get_session
 
 

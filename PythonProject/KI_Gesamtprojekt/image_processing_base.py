@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import copy
-import json
+import my_json
 import os
 from typing import Any, TypeVar
 

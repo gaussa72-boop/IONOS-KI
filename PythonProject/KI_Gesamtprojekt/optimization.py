@@ -23,7 +23,7 @@ from torch.optim.lr_scheduler import LambdaLR, ReduceLROnPlateau
 
 from .trainer_pt_utils import LayerWiseDummyOptimizer, LayerWiseDummyScheduler
 from .trainer_utils import SchedulerType
-from .utils import logging
+from .utils import my_logging
 
 
 logger = logging.get_logger(__name__)

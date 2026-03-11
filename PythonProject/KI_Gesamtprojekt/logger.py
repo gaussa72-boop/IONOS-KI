@@ -46,7 +46,7 @@ __all__ = ['adapter', 'logger', 'trace']
 import codecs
 import contextlib
 import locale
-import logging
+import my_logging
 import math
 import os
 from functools import partial
@@ -94,7 +94,7 @@ ASCII_MAP = str.maketrans({"│": "|", "├": "|", "┬": "+", "└": "`"})
 #                   Formatter.formatMessage ->
 #                     PercentStyle.format       # does: self._fmt % vars(record)
 #
-# NOTE: All methods from the second line on are from logging.__init__.py
+# NOTE: All methods from the second line on are from my_logging.__init__.py
 
 class TraceAdapter(logging.LoggerAdapter):
     """

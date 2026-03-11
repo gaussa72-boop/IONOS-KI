@@ -17,7 +17,7 @@ import math
 import torch
 import torch.nn as nn
 
-from ...utils import logging
+from ...utils import my_logging
 from ..gemma.modeling_gemma import GemmaForCausalLM, GemmaForSequenceClassification, GemmaForTokenClassification
 from ..granite.modeling_granite import GraniteAttention
 from ..llama.modeling_llama import LlamaDecoderLayer, LlamaMLP, LlamaModel, LlamaPreTrainedModel, LlamaRotaryEmbedding

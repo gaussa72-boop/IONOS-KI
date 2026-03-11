@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import inspect
-import logging
+import my_logging
 import os
 import tempfile
 import time

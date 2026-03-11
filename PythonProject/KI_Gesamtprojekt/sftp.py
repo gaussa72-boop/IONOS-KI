@@ -1,5 +1,5 @@
 import datetime
-import logging
+import my_logging
 import os
 import types
 import uuid

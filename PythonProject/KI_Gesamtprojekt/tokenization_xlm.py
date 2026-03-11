@@ -13,14 +13,14 @@
 # limitations under the License.
 """Tokenization classes for XLM."""
 
-import json
+import my_json
 import os
 import re
 import sys
 import unicodedata
 
 from ...tokenization_python import PreTrainedTokenizer
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

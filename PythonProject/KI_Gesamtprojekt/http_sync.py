@@ -1,7 +1,7 @@
 """This file is largely copied from http.py"""
 
 import io
-import logging
+import my_logging
 import re
 import urllib.error
 import urllib.parse

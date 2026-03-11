@@ -15,7 +15,7 @@
 Processor class for Bark
 """
 
-import json
+import my_json
 import os
 
 import numpy as np

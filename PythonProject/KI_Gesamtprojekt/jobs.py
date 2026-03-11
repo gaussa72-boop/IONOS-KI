@@ -61,7 +61,7 @@ Usage:
 
 """
 
-import json
+import my_json
 import multiprocessing
 import multiprocessing.pool
 import os
@@ -78,7 +78,7 @@ import typer
 
 from huggingface_hub import SpaceHardware, get_token
 from huggingface_hub.errors import CLIError, HfHubHTTPError
-from huggingface_hub.utils import logging
+from huggingface_hub.utils import my_logging
 from huggingface_hub.utils._cache_manager import _format_size
 from huggingface_hub.utils._dotenv import load_dotenv
 

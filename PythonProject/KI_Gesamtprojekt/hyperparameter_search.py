@@ -26,7 +26,7 @@ from .trainer_utils import (
     default_hp_space_ray,
     default_hp_space_wandb,
 )
-from .utils import logging
+from .utils import my_logging
 
 
 logger = logging.get_logger(__name__)

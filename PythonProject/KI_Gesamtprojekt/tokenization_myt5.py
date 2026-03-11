@@ -13,13 +13,13 @@
 # limitations under the License.
 """Tokenization class for model MyT5."""
 
-import json
+import my_json
 import os
 import warnings
 from collections import defaultdict
 
 from ...tokenization_python import AddedToken, PreTrainedTokenizer
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

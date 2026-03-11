@@ -1,5 +1,5 @@
 import itertools
-import logging
+import my_logging
 import os
 import posixpath
 import urllib.parse

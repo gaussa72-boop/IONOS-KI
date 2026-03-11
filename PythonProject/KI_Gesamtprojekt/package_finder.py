@@ -3,7 +3,7 @@
 import enum
 import functools
 import itertools
-import logging
+import my_logging
 import re
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, FrozenSet, Iterable, List, Optional, Set, Tuple, Union

@@ -14,7 +14,7 @@
 
 from __future__ import annotations
 
-import json
+import my_json
 import os
 from typing import Any
 from pathlib import Path

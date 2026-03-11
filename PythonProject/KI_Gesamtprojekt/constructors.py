@@ -9,7 +9,7 @@ InstallRequirement.
 """
 
 import copy
-import logging
+import my_logging
 import os
 import re
 from dataclasses import dataclass

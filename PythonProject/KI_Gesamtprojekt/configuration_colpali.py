@@ -13,7 +13,7 @@
 # limitations under the License.
 """ColPali model configuration"""
 
-import logging
+import my_logging
 from copy import deepcopy
 
 from ...configuration_utils import PreTrainedConfig

@@ -29,8 +29,8 @@ access to OS distribution information is needed. See `Python issue 1322
 """
 
 import argparse
-import json
-import logging
+import my_json
+import my_logging
 import os
 import re
 import shlex

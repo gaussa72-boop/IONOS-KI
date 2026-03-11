@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import inspect
-import json
+import my_json
 import re
 import types
 from collections.abc import Callable
@@ -26,7 +26,7 @@ from typing import Any, Literal, Union, get_args, get_origin, get_type_hints, no
 
 from packaging import version
 
-from . import logging
+from . import my_logging
 from .import_utils import is_jinja_available, is_torch_available, is_vision_available
 
 

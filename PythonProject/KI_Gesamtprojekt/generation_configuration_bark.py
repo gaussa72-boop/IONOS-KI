@@ -16,7 +16,7 @@
 import copy
 
 from ...generation.configuration_utils import GenerationConfig
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

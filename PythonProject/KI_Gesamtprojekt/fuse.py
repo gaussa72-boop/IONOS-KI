@@ -1,5 +1,5 @@
 import argparse
-import logging
+import my_logging
 import os
 import stat
 import threading

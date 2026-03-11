@@ -21,7 +21,7 @@ import torch
 from torch import nn
 from torch.autograd import Function
 
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

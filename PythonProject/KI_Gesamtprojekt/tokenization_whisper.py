@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes for Whisper."""
 
-import json
+import my_json
 import os
 import re
 from functools import lru_cache
@@ -23,7 +23,7 @@ from tokenizers import AddedToken, Tokenizer, decoders, pre_tokenizers, processo
 from tokenizers.models import BPE
 
 from ...tokenization_utils_tokenizers import TokenizersBackend
-from ...utils import logging
+from ...utils import my_logging
 from .english_normalizer import BasicTextNormalizer, EnglishTextNormalizer
 
 

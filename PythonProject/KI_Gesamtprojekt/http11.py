@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import enum
-import logging
+import my_logging
 import ssl
 import time
 import types

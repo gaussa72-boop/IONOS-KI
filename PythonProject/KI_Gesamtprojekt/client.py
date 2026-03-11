@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-import json
+import my_json
 from collections import deque
 from typing import Iterator, Literal, Optional, TypedDict, Union
 

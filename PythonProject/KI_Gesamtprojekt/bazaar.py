@@ -1,4 +1,4 @@
-import logging
+import my_logging
 from typing import List, Optional, Tuple
 
 from pip._internal.utils.misc import HiddenText, display_path

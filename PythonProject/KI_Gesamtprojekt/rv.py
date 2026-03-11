@@ -1638,7 +1638,7 @@ class Distribution(Basic):
             samps = do_sample_numpy(self, _size, rand_state)
         elif library in ('pymc', 'pymc3'):
             from sympy.stats.sampling.sample_pymc import do_sample_pymc
-            import logging
+            import my_logging
             logging.getLogger("pymc").setLevel(logging.ERROR)
             try:
                 import pymc

@@ -21,7 +21,7 @@ of output with special method for the Fast tokenizers)
 from __future__ import annotations
 
 import copy
-import json
+import my_json
 import os
 import re
 import warnings

@@ -38,7 +38,7 @@ is_py3 = _ver[0] == 3
 
 # Note: We've patched out simplejson support in pip because it prevents
 #       upgrading simplejson on Windows.
-import json
+import my_json
 from json import JSONDecodeError
 
 # Keep OrderedDict for backwards compatibility.

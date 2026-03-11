@@ -13,7 +13,7 @@
 """Dynamical Decoupling insertion pass."""
 from __future__ import annotations
 
-import logging
+import my_logging
 import numpy as np
 
 from qiskit.circuit import Gate, ParameterExpression, Qubit

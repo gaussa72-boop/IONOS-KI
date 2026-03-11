@@ -19,7 +19,7 @@ import inspect
 
 from huggingface_hub import repo_exists
 
-from .utils import logging
+from .utils import my_logging
 
 
 logger = logging.get_logger(__name__)

@@ -16,7 +16,7 @@
 
 from collections import defaultdict
 import io
-import json
+import my_json
 import struct
 import uuid
 import warnings

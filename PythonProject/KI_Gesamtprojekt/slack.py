@@ -8,7 +8,7 @@ Usage:
 
 ![screenshot](https://tqdm.github.io/img/screenshot-slack.png)
 """
-import logging
+import my_logging
 from os import getenv
 
 try:

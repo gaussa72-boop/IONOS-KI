@@ -13,7 +13,7 @@
 
 """VF2PostLayout pass to find a layout after transpile using subgraph isomorphism"""
 from enum import Enum
-import logging
+import my_logging
 import inspect
 import itertools
 import time

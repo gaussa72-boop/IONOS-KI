@@ -13,12 +13,12 @@
 # limitations under the License.
 """Tokenization classes for Salesforce CTRL."""
 
-import json
+import my_json
 
 import regex as re
 
 from ...tokenization_python import PreTrainedTokenizer
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

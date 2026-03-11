@@ -32,7 +32,7 @@ from __future__ import annotations
 import math
 import uuid
 import time
-import logging
+import my_logging
 import warnings
 
 from collections import Counter

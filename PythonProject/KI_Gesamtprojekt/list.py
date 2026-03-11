@@ -1,5 +1,5 @@
-import json
-import logging
+import my_json
+import my_logging
 from optparse import Values
 from typing import TYPE_CHECKING, Generator, List, Optional, Sequence, Tuple, cast
 

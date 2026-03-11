@@ -18,7 +18,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 from ...configuration_utils import PreTrainedConfig, layer_type_validation
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

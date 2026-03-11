@@ -15,7 +15,7 @@
 
 import copy
 import dataclasses
-import logging
+import my_logging
 import functools
 import time
 

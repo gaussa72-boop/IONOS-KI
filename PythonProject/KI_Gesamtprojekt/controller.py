@@ -9,7 +9,7 @@ The httplib2 algorithms ported for use with requests.
 from __future__ import annotations
 
 import calendar
-import logging
+import my_logging
 import re
 import time
 from email.utils import parsedate_tz

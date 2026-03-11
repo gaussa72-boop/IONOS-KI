@@ -4,7 +4,7 @@ import threading
 
 from .trainer_callback import TrainerCallback
 from .trainer_utils import PREFIX_CHECKPOINT_DIR
-from .utils import logging
+from .utils import my_logging
 
 
 logger = logging.get_logger(__name__)

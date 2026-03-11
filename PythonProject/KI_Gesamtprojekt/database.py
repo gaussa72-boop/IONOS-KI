@@ -11,7 +11,7 @@ import base64
 import codecs
 import contextlib
 import hashlib
-import logging
+import my_logging
 import os
 import posixpath
 import sys

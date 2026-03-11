@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import contextlib
-import json
+import my_json
 import math
 import os
 import warnings

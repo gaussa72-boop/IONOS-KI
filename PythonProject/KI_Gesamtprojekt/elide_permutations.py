@@ -13,7 +13,7 @@
 
 """Remove any swap gates in the circuit by pushing it through into a qubit permutation."""
 
-import logging
+import my_logging
 
 from qiskit.circuit.library.standard_gates import SwapGate
 from qiskit.circuit.library.generalized_gates import PermutationGate

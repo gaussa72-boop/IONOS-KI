@@ -14,7 +14,7 @@
 """VF2Layout pass to find a layout using subgraph isomorphism"""
 from enum import Enum
 import itertools
-import logging
+import my_logging
 import time
 
 from rustworkx import vf2_mapping

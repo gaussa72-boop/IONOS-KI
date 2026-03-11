@@ -14,7 +14,7 @@
 """Translates gates to a target basis using a given equivalence library."""
 
 import time
-import logging
+import my_logging
 
 from functools import singledispatchmethod
 from itertools import zip_longest

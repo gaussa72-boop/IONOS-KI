@@ -135,7 +135,7 @@ def show(mode=DisplayModes.stdout.value):
             print(yaml.dump(CONFIG))
         except ModuleNotFoundError:
             import warnings
-            import json
+            import my_json
 
             warnings.warn("Install `pyyaml` for better output", stacklevel=1)
             print(json.dumps(CONFIG, indent=2))

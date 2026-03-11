@@ -14,7 +14,7 @@
 """PyTorch UDOP model."""
 
 import collections
-import logging
+import my_logging
 import math
 import random
 from abc import ABC, abstractmethod

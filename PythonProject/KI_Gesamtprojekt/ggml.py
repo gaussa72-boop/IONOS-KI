@@ -25,7 +25,7 @@ from tokenizers.models import BPE, Unigram
 
 from .. import AddedToken
 from ..convert_slow_tokenizer import GemmaConverter, GPT2Converter, LlamaConverter, Qwen2Converter, T5Converter
-from ..utils import logging
+from ..utils import my_logging
 from ..utils.logging import tqdm
 
 

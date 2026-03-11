@@ -16,7 +16,7 @@ Feature extraction saving/loading class for common feature extractors.
 """
 
 import copy
-import json
+import my_json
 import os
 from collections import UserDict
 from typing import TYPE_CHECKING, Any, TypeVar, Union

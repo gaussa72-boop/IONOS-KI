@@ -53,7 +53,7 @@ from typing import Annotated, Optional
 
 import typer
 
-from huggingface_hub import logging
+from huggingface_hub import my_logging
 from huggingface_hub._commit_scheduler import CommitScheduler
 from huggingface_hub.errors import RevisionNotFoundError
 from huggingface_hub.utils import disable_progress_bars, enable_progress_bars

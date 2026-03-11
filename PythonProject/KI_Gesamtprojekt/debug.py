@@ -1,5 +1,5 @@
 import locale
-import logging
+import my_logging
 import os
 import sys
 from optparse import Values

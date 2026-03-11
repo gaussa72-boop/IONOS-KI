@@ -27,7 +27,7 @@ from collections.abc import Mapping
 from collections import defaultdict
 import datetime
 import io
-import logging
+import my_logging
 import inspect
 
 import rustworkx as rx

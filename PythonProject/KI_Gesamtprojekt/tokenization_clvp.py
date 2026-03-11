@@ -13,13 +13,13 @@
 # limitations under the License.
 """Tokenization class for CLVP."""
 
-import json
+import my_json
 from functools import lru_cache
 
 import regex as re
 
 from ...tokenization_python import AddedToken, PreTrainedTokenizer
-from ...utils import logging
+from ...utils import my_logging
 from .number_normalizer import EnglishNormalizer
 
 

@@ -1,4 +1,4 @@
-import json
+import my_json
 import os
 import sys
 import tempfile

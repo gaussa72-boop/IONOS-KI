@@ -19,7 +19,7 @@ import contextlib
 import functools
 import glob
 import inspect
-import json
+import my_json
 import math
 import os
 import random

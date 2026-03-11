@@ -1371,7 +1371,7 @@ class PythonBackend(PreTrainedTokenizerBase):
         Returns:
             `tuple[str, ...]`: Paths to the files saved, or empty tuple if no files saved.
         """
-        import json
+        import my_json
         import os
 
         vocab_attr = getattr(self, "encoder", None) or getattr(self, "vocab", None)

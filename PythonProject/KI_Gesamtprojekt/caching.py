@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import collections
 import functools
-import logging
+import my_logging
 import math
 import os
 import threading

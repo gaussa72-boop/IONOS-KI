@@ -21,13 +21,13 @@ probability that a question is unanswerable.
 """
 
 import collections
-import json
+import my_json
 import math
 import re
 import string
 
 from ...models.bert import BasicTokenizer
-from ...utils import logging
+from ...utils import my_logging
 
 
 logger = logging.get_logger(__name__)

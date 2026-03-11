@@ -19,7 +19,7 @@ import copy
 import functools
 import importlib.metadata
 import importlib.util
-import json
+import my_json
 import numbers
 import os
 import re

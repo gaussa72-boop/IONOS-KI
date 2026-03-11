@@ -15,7 +15,7 @@
 
 import copy
 import importlib
-import json
+import my_json
 import os
 from collections import OrderedDict
 from collections.abc import Iterator

@@ -18,7 +18,7 @@ Optimizer utilities for the Trainer class.
 from __future__ import annotations
 
 import importlib.metadata
-import logging
+import my_logging
 from collections.abc import Callable
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any

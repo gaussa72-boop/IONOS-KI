@@ -1971,7 +1971,7 @@ class MistralConverter:
 
     def extract_vocab_merges_from_model(self, tiktoken_url: str):
         import base64
-        import json
+        import my_json
 
         with open(self.vocab_file, "r", encoding="utf-8") as f:
             untyped = json.load(f)

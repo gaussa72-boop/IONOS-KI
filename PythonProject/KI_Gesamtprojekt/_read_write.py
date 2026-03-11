@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import atexit
-import logging
+import my_logging
 import os
 import pathlib
 import sqlite3

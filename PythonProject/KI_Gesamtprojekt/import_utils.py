@@ -18,7 +18,7 @@ Import utilities: Utilities related to imports and our lazy inits.
 import importlib.machinery
 import importlib.metadata
 import importlib.util
-import json
+import my_json
 import operator
 import os
 import re
@@ -36,7 +36,7 @@ from typing import Any
 import packaging.version
 from packaging import version
 
-from . import logging
+from . import my_logging
 
 
 logger = logging.get_logger(__name__)  # pylint: disable=invalid-name

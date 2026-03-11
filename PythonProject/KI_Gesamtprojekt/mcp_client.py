@@ -1,5 +1,5 @@
-import json
-import logging
+import my_json
+import my_logging
 from contextlib import AsyncExitStack
 from datetime import timedelta
 from pathlib import Path

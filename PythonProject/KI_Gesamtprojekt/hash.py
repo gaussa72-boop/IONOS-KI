@@ -1,5 +1,5 @@
 import hashlib
-import logging
+import my_logging
 import sys
 from optparse import Values
 from typing import List

@@ -5,7 +5,7 @@ need PackageFinder capability don't unnecessarily import the
 PackageFinder machinery and all its vendored dependencies, etc.
 """
 
-import logging
+import my_logging
 from functools import partial
 from optparse import Values
 from typing import Any, List, Optional, Tuple

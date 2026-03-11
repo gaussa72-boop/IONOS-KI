@@ -12,7 +12,7 @@
 
 """Assemble function for converting a list of circuits into a qobj"""
 import copy
-import logging
+import my_logging
 import uuid
 import warnings
 from time import time

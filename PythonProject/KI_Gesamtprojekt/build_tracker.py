@@ -1,6 +1,6 @@
 import contextlib
 import hashlib
-import logging
+import my_logging
 import os
 from types import TracebackType
 from typing import Dict, Generator, Optional, Type, Union

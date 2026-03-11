@@ -1,5 +1,5 @@
 import functools
-import logging
+import my_logging
 import time
 from collections.abc import Callable
 from enum import Enum

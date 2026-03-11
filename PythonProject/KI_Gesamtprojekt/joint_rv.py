@@ -265,7 +265,7 @@ class SampleJointPymc:
         if dist.__class__.__name__ not in dist_list:
             return None
 
-        import logging
+        import my_logging
         logging.getLogger("pymc3").setLevel(logging.ERROR)
         with pymc.Model():
             pymc_rv_map[dist.__class__.__name__](dist)

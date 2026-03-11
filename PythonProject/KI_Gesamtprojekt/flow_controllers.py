@@ -13,7 +13,7 @@
 """Built-in pass flow controllers."""
 from __future__ import annotations
 
-import logging
+import my_logging
 from collections.abc import Callable, Iterable, Generator
 from typing import Any
 

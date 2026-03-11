@@ -283,7 +283,7 @@ class EnvironBuilder:
     #: The default request class used by :meth:`get_request`.
     request_class = Request
 
-    import json
+    import my_json
 
     #: The serialization function used when ``json`` is passed.
     json_dumps = staticmethod(json.dumps)

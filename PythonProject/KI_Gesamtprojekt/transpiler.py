@@ -13,7 +13,7 @@
 # pylint: disable=invalid-sequence-index
 
 """Circuit transpile function"""
-import logging
+import my_logging
 from time import time
 from typing import List, Union, Dict, Callable, Any, Optional, TypeVar
 import warnings

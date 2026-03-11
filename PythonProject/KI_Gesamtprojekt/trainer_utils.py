@@ -20,7 +20,7 @@ import copy
 import functools
 import gc
 import inspect
-import json
+import my_json
 import os
 import random
 import re

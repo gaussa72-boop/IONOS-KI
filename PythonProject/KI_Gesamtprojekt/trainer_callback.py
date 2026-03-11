@@ -16,7 +16,7 @@ Callbacks to use with the Trainer class and customize the training loop.
 """
 
 import dataclasses
-import json
+import my_json
 import math
 from dataclasses import dataclass
 
@@ -25,7 +25,7 @@ from tqdm.auto import tqdm
 
 from .trainer_utils import IntervalStrategy, SaveStrategy, has_length
 from .training_args import TrainingArguments
-from .utils import logging
+from .utils import my_logging
 
 
 logger = logging.get_logger(__name__)

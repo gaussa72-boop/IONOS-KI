@@ -11,7 +11,7 @@ from ...modeling_flash_attention_utils import FlashAttentionKwargs
 from ...modeling_layers import GenericForSequenceClassification, GenericForTokenClassification
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import logging
+from ...utils import my_logging
 from ...utils.generic import is_flash_attention_requested
 from ..llama.modeling_llama import (
     LlamaDecoderLayer,

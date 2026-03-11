@@ -18,7 +18,7 @@ from enum import IntEnum
 import torch
 
 from ...utils import is_psutil_available, is_torch_xpu_available
-from ...utils.logging import logging
+from ...utils.logging import my_logging
 from ...utils.metrics import traced
 
 

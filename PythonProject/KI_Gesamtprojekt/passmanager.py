@@ -13,7 +13,7 @@
 """Manager for a set of Passes and their scheduling during transpilation."""
 from __future__ import annotations
 
-import logging
+import my_logging
 from abc import ABC, abstractmethod
 from collections.abc import Callable, Iterable
 from itertools import chain

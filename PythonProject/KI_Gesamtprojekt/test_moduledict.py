@@ -28,7 +28,7 @@ def test_decorated():
 
 
 import doctest
-import logging
+import my_logging
 
 logging.basicConfig(level=logging.DEBUG)
 

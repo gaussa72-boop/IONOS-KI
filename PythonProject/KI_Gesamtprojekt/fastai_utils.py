@@ -1,4 +1,4 @@
-import json
+import my_json
 import os
 from pathlib import Path
 from pickle import DEFAULT_PROTOCOL, PicklingError
@@ -15,7 +15,7 @@ from huggingface_hub.utils import (
     get_python_version,
 )
 
-from .utils import logging, validate_hf_hub_args
+from .utils import my_logging, validate_hf_hub_args
 
 
 logger = logging.get_logger(__name__)

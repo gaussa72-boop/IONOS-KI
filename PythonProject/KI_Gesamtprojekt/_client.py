@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import datetime
 import enum
-import logging
+import my_logging
 import time
 import typing
 import warnings

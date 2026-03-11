@@ -1,7 +1,7 @@
 """xmlrpclib.Transport implementation
 """
 
-import logging
+import my_logging
 import urllib.parse
 import xmlrpc.client
 from typing import TYPE_CHECKING, Tuple

@@ -7,7 +7,7 @@ aesara_function_ functions defined below which default to using a new, empty
 cache instead.
 """
 
-import logging
+import my_logging
 
 from sympy.external import import_module
 from sympy.testing.pytest import raises, SKIP

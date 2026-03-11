@@ -1,5 +1,5 @@
 import functools
-import logging
+import my_logging
 import os
 import shutil
 import sys

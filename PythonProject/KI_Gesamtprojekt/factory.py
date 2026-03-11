@@ -1,6 +1,6 @@
 import contextlib
 import functools
-import logging
+import my_logging
 from typing import (
     TYPE_CHECKING,
     Callable,

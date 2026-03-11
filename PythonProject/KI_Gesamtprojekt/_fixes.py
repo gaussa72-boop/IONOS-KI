@@ -12,7 +12,7 @@ import yaml
 from filelock import BaseFileLock, FileLock, SoftFileLock, Timeout
 
 from .. import constants
-from . import logging
+from . import my_logging
 
 
 logger = logging.get_logger(__name__)

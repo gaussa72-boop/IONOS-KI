@@ -17,7 +17,7 @@ from typing import Any
 from ...tokenization_python import BatchEncoding
 from ...tokenization_utils_base import AddedToken
 from ...tokenization_utils_sentencepiece import SentencePieceBackend
-from ...utils import logging
+from ...utils import my_logging
 from ...utils.import_utils import requires
 
 

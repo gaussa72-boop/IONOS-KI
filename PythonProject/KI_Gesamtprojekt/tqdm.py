@@ -81,7 +81,7 @@ Group-based control:
 """
 
 import io
-import logging
+import my_logging
 import os
 import warnings
 from contextlib import contextmanager, nullcontext

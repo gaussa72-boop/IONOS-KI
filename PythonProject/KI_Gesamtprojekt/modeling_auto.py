@@ -17,7 +17,7 @@ import os
 from collections import OrderedDict
 from typing import TYPE_CHECKING
 
-from ...utils import logging
+from ...utils import my_logging
 from .auto_factory import (
     _BaseAutoBackboneClass,
     _BaseAutoModelClass,

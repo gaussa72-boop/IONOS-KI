@@ -33,7 +33,7 @@ def opt_func_info(func_name=None, signature=None):
     >>> dict = np.lib.introspect.opt_func_info(
     ...     func_name="add|abs", signature="float64|complex64"
     ... )
-    >>> import json
+    >>> import my_json
     >>> print(json.dumps(dict, indent=2))   # may vary (architecture)
         {
           "absolute": {

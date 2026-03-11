@@ -19,7 +19,7 @@ import types
 import torch
 from packaging import version
 
-from transformers.utils import logging
+from transformers.utils import my_logging
 from transformers.utils.import_utils import is_torch_available, is_torchao_available
 
 
