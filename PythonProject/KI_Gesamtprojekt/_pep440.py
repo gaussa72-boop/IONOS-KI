@@ -29,7 +29,7 @@ work; they don't recognize anything like alpha/beta/rc/dev versions.
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-import collections
+import my_collections
 import itertools
 import re
 

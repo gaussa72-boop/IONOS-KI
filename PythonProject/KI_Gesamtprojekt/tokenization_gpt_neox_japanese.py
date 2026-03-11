@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes for GPTNeoXJapanese."""
 
-import collections
+import my_collections
 import my_json
 import os
 import re

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from string import ascii_letters, digits, hexdigits
 from urllib.parse import quote as encode_uri_component
 

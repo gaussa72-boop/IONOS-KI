@@ -2,7 +2,7 @@ import os
 import re
 import tempfile
 import threading
-from collections import deque
+from my_collections import deque
 from contextlib import ExitStack
 from copy import deepcopy
 from dataclasses import dataclass, field

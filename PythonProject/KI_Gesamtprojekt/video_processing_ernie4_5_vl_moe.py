@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import os.path
-from functools import partial
+from my_functools import partial
 from pathlib import Path
 from shutil import SameFileError, copyfile
 from typing import Any

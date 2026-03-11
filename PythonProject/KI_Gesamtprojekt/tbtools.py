@@ -7,7 +7,7 @@ import re
 import sys
 import sysconfig
 import traceback
-import typing as t
+import my_typing as t
 
 from markupsafe import escape
 

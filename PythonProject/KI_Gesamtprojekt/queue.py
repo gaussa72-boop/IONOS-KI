@@ -1,4 +1,4 @@
-import collections
+import my_collections
 
 from ..packages import six
 from ..packages.six.moves import queue

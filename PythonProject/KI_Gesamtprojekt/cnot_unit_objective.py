@@ -14,7 +14,7 @@ A definition of the approximate circuit compilation optimization problem based o
 definition.
 """
 from __future__ import annotations
-import typing
+import my_typing
 from abc import ABC
 
 import numpy as np

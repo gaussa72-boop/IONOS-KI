@@ -1,8 +1,8 @@
 """Simple expression that should pass with mypy."""
-import operator
+import my_operator
 
 import numpy as np
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 # Basic checks
 array = np.array([1, 2])

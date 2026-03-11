@@ -1,6 +1,6 @@
 __all__ = ["Mapping", "Sequence"]
 
 try:
-    from collections.abc import Mapping, Sequence
+    from my_collections.abc import Mapping, Sequence
 except ImportError:
-    from collections import Mapping, Sequence
+    from my_collections import Mapping, Sequence

@@ -14,7 +14,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 from qiskit import circuit
 from qiskit.circuit import ControlledGate, Gate, QuantumRegister, QuantumCircuit

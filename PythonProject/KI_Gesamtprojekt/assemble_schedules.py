@@ -13,7 +13,7 @@
 
 """Assemble function for converting a list of circuits into a qobj."""
 import hashlib
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Any, Dict, List, Tuple, Union
 
 from qiskit import qobj, pulse

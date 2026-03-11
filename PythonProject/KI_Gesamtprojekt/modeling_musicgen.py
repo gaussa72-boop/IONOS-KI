@@ -17,7 +17,7 @@ import copy
 import inspect
 import math
 import random
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any, Optional
 

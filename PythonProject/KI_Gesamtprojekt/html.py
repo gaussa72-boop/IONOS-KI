@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for details.
 """
 
-import functools
+import my_functools
 import os
 import sys
 import os.path

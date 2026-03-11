@@ -23,7 +23,7 @@
 #     # instead of
 #     import hashlib
 #     ```
-import functools
+import my_functools
 import hashlib
 
 

@@ -1,8 +1,8 @@
 """Compiles nodes from the parser into Python code."""
 
-import typing as t
+import my_typing as t
 from contextlib import contextmanager
-from functools import update_wrapper
+from my_functools import update_wrapper
 from io import StringIO
 from itertools import chain
 from keyword import iskeyword as is_python_keyword
@@ -24,7 +24,7 @@ from .utils import concat
 from .visitor import NodeVisitor
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
     from .environment import Environment
 

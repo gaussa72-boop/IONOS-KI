@@ -14,7 +14,7 @@
 
 import math
 import warnings
-from functools import wraps
+from my_functools import wraps
 from typing import TYPE_CHECKING, Optional, TypedDict
 
 from .utils import is_torch_available, logging

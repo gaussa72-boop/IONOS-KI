@@ -1,4 +1,4 @@
-from functools import partial
+from my_functools import partial
 
 import numpy as np
 import scipy.fft

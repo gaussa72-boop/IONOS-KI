@@ -1,4 +1,4 @@
-from functools import reduce
+from my_functools import reduce
 
 import pytest
 

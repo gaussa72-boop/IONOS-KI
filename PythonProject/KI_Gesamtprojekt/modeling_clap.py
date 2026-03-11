@@ -13,9 +13,9 @@
 # limitations under the License.
 """PyTorch CLAP model."""
 
-import collections
+import my_collections
 import math
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 

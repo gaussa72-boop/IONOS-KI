@@ -15,7 +15,7 @@
 
 import math
 import warnings
-from functools import partial
+from my_functools import partial
 
 import torch
 from torch.optim import Optimizer

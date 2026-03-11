@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import collections.abc as cabc
+import my_collections.abc as cabc
 import re
-import typing as t
+import my_typing as t
 
 from .._internal import _missing
 from ..exceptions import BadRequestKeyError
@@ -11,7 +11,7 @@ from .structures import iter_multi_items
 from .structures import MultiDict
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
     from _typeshed.wsgi import WSGIEnvironment
 
 T = t.TypeVar("T")

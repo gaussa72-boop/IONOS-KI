@@ -16,7 +16,7 @@
 import copy
 import dataclasses
 import my_logging
-import functools
+import my_functools
 import time
 
 import numpy as np

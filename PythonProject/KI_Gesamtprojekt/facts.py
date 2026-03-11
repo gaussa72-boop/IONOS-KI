@@ -46,7 +46,7 @@ https://en.wikipedia.org/wiki/Inference_rule
 https://en.wikipedia.org/wiki/List_of_rules_of_inference
 """
 
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Iterator
 
 from .logic import Logic, And, Or, Not

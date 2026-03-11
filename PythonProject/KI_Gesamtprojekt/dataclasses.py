@@ -1,9 +1,9 @@
-import collections.abc
+import my_collections.abc
 import inspect
 import sys
 import types
 from dataclasses import _MISSING_TYPE, MISSING, Field, field, fields, make_dataclass
-from functools import lru_cache, wraps
+from my_functools import lru_cache, wraps
 from typing import (
     Annotated,
     Any,

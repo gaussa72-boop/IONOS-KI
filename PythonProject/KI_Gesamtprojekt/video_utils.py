@@ -14,7 +14,7 @@
 
 import os
 import warnings
-from collections.abc import Callable, Iterable, Mapping
+from my_collections.abc import Callable, Iterable, Mapping
 from contextlib import redirect_stdout
 from dataclasses import dataclass, fields
 from io import BytesIO

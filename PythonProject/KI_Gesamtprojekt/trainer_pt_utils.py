@@ -25,7 +25,7 @@ import os
 import re
 import sys
 import warnings
-from collections.abc import Iterator, Mapping
+from my_collections.abc import Iterator, Mapping
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from itertools import chain

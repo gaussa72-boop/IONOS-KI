@@ -15,8 +15,8 @@ Initialize qubit registers to desired arbitrary state.
 """
 
 from __future__ import annotations
-from collections.abc import Sequence
-import typing
+from my_collections.abc import Sequence
+import my_typing
 
 from qiskit.circuit.quantumcircuit import QuantumCircuit
 from qiskit.circuit.quantumregister import QuantumRegister

@@ -1,4 +1,4 @@
-import typing as t
+import my_typing as t
 
 from .filters import FILTERS as DEFAULT_FILTERS  # noqa: F401
 from .tests import TESTS as DEFAULT_TESTS  # noqa: F401
@@ -8,7 +8,7 @@ from .utils import Joiner
 from .utils import Namespace
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
 # defaults for the parser / lexer
 BLOCK_START_STRING = "{%"

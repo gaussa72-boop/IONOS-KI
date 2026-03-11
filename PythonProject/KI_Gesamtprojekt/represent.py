@@ -22,7 +22,7 @@ from sympy.physics.quantum.matrixutils import flatten_scalar
 from sympy.physics.quantum.state import KetBase, BraBase, StateBase
 from sympy.physics.quantum.operator import Operator, OuterProduct
 from sympy.physics.quantum.qapply import qapply
-from sympy.physics.quantum.operatorset import operators_to_state, state_to_operators
+from sympy.physics.quantum.operatorset import my_operators_to_state, state_to_operators
 
 __all__ = [
     'represent',

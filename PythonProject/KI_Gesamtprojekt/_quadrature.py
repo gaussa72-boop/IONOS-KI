@@ -1,11 +1,11 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING, Callable, Dict, Tuple, Any, cast
-import functools
+import my_functools
 import numpy as np
 import math
 import types
 import warnings
-from collections import namedtuple
+from my_collections import namedtuple
 
 from scipy.special import roots_legendre
 from scipy.special import gammaln, logsumexp

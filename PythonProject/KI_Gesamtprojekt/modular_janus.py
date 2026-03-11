@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import copy
-from collections.abc import Callable, Iterable
+from my_collections.abc import Callable, Iterable
 from dataclasses import dataclass
 
 import numpy as np

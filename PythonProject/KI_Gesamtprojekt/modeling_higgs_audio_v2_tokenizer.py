@@ -20,7 +20,7 @@
 
 import math
 from dataclasses import dataclass
-from functools import lru_cache
+from my_functools import lru_cache
 
 import torch
 import torch.nn as nn

@@ -1,5 +1,5 @@
-import operator
-from functools import reduce, singledispatch
+import my_operator
+from my_functools import reduce, singledispatch
 
 from sympy.core.expr import Expr
 from sympy.core.singleton import S

@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch LayoutLMv3 model."""
 
-import collections
+import my_collections
 import math
 
 import torch

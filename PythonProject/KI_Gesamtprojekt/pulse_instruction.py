@@ -18,7 +18,7 @@ import hashlib
 import re
 import warnings
 from enum import Enum
-from functools import singledispatchmethod
+from my_functools import singledispatchmethod
 from typing import Union, List, Iterator, Optional
 import numpy as np
 

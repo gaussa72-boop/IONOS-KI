@@ -1,5 +1,5 @@
 import timeit
-from functools import reduce
+from my_functools import reduce
 
 import numpy as np
 from numpy import float_

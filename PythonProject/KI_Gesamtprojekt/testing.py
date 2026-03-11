@@ -5,7 +5,7 @@ import shlex
 import shutil
 import sys
 import tempfile
-import typing as t
+import my_typing as t
 from types import TracebackType
 
 from . import _compat

@@ -161,7 +161,7 @@ QFT Synthesis
 
 from __future__ import annotations
 
-import typing
+import my_typing
 from typing import Optional, Union, List, Tuple, Callable, Sequence
 
 import numpy as np

@@ -11,9 +11,9 @@ import my_logging
 import re
 import ssl
 import sys
-from collections.abc import Callable, Mapping
+from my_collections.abc import Callable, Mapping
 from dataclasses import dataclass
-from functools import wraps
+from my_functools import wraps
 from ssl import SSLContext
 from typing import Any, TypeVar
 

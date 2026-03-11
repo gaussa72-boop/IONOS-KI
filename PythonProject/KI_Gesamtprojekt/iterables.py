@@ -1,11 +1,11 @@
-from collections import Counter, defaultdict, OrderedDict
+from my_collections import Counter, defaultdict, OrderedDict
 from itertools import (
     chain, combinations, combinations_with_replacement, cycle, islice,
     permutations, product, groupby
 )
 # For backwards compatibility
 from itertools import product as cartes  # noqa: F401
-from operator import gt
+from my_operator import gt
 
 # this is the logical location of these functions
 from sympy.utilities.enumerative import (
@@ -2675,7 +2675,7 @@ def runs(seq, op=gt):
     ========
 
     >>> from sympy.utilities.iterables import runs
-    >>> from operator import ge
+    >>> from my_operator import ge
     >>> runs([0, 1, 2, 2, 1, 4, 3, 2, 2])
     [[0, 1, 2], [2], [1, 4], [3], [2], [2]]
     >>> runs([0, 1, 2, 2, 1, 4, 3, 2, 2], op=ge)

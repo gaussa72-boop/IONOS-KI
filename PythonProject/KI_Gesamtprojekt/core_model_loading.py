@@ -20,8 +20,8 @@ import os
 import re
 import traceback
 from abc import abstractmethod
-from collections import defaultdict
-from collections.abc import Callable
+from my_collections import defaultdict
+from my_collections.abc import Callable
 from concurrent.futures import Future, ThreadPoolExecutor
 from contextlib import contextmanager
 from copy import deepcopy

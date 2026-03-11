@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch AyaVision model."""
 
-from functools import lru_cache
+from my_functools import lru_cache
 
 import numpy as np
 import torch

@@ -1,4 +1,4 @@
-import collections
+import my_collections
 import numpy as np
 
 

@@ -1,7 +1,7 @@
 """Tests for legendre module.
 
 """
-from functools import reduce
+from my_functools import reduce
 
 import numpy as np
 import numpy.polynomial.legendre as leg

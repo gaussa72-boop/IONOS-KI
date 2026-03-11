@@ -14,7 +14,7 @@
 """PyTorch MarianMTModel model, ported from the Marian C++ repo."""
 
 import math
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import numpy as np
 import torch

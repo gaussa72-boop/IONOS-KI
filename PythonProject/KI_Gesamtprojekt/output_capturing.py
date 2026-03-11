@@ -21,7 +21,7 @@ from __future__ import annotations
 import threading
 from contextvars import ContextVar
 from dataclasses import dataclass
-from functools import wraps
+from my_functools import wraps
 from typing import TYPE_CHECKING
 
 from .import_utils import is_torchdynamo_compiling, requires

@@ -1,4 +1,4 @@
-from collections import deque
+from my_collections import deque
 
 from sympy.core.basic import Basic
 from sympy.core.mul import Mul

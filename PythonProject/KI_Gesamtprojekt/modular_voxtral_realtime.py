@@ -13,7 +13,7 @@
 # limitations under the License.
 import math
 from dataclasses import dataclass
-from functools import cached_property
+from my_functools import cached_property
 from types import GeneratorType
 
 import torch

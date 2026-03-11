@@ -112,7 +112,7 @@ import dataclasses
 
 from typing import List, Optional, Set, Callable
 
-from functools import partial
+from my_functools import partial
 from scipy._lib._util import _asarray_validated
 
 from . import _distance_wrap

@@ -1,6 +1,6 @@
 import errno
 import my_json
-import operator
+import my_operator
 import os
 import shutil
 import site

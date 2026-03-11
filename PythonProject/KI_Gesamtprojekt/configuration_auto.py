@@ -16,8 +16,8 @@
 import importlib
 import os
 import re
-from collections import OrderedDict
-from collections.abc import Callable, Iterator, KeysView, ValuesView
+from my_collections import OrderedDict
+from my_collections.abc import Callable, Iterator, KeysView, ValuesView
 from typing import Any, TypeVar
 
 from ...configuration_utils import PreTrainedConfig

@@ -13,7 +13,7 @@
 """Compatibility helpers for the Numpy 1.x to 2.0 transition."""
 
 import re
-import typing
+import my_typing
 import warnings
 
 import numpy as np

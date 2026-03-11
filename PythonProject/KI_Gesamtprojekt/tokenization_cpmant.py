@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes for CPMAnt."""
 
-import collections
+import my_collections
 import os
 
 from transformers.utils import is_rjieba_available, requires_backends

@@ -19,7 +19,7 @@ AQC Synthesis Plugin (in :mod:`qiskit.transpiler.passes.synthesis.aqc_plugin`)
 
    AQCSynthesisPlugin
 """
-from functools import partial
+from my_functools import partial
 import math
 
 from qiskit.converters import circuit_to_dag

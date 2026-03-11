@@ -14,7 +14,7 @@
 
 import multiprocessing as mp
 import warnings
-from collections.abc import Callable, Mapping
+from my_collections.abc import Callable, Mapping
 from dataclasses import dataclass
 from random import randint
 from typing import Any

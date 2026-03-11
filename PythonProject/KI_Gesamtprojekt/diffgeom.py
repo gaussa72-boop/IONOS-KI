@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Any
 
-from functools import reduce
+from my_functools import reduce
 from itertools import permutations
 
 from sympy.combinatorics import Permutation

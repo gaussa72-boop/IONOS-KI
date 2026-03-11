@@ -13,7 +13,7 @@
 # limitations under the License.
 import threading
 from abc import ABC, abstractmethod
-from collections import deque
+from my_collections import deque
 
 from ...utils.metrics import attach_tracer, traced
 from .cache import PagedAttentionCache

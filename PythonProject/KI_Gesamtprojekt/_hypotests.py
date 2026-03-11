@@ -1,4 +1,4 @@
-from collections import namedtuple
+from my_collections import namedtuple
 from dataclasses import make_dataclass
 from math import comb
 import numpy as np

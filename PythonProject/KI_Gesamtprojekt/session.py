@@ -37,7 +37,7 @@ from ._dill import (
 
 def _module_map():
     """get map of imported modules"""
-    from collections import defaultdict
+    from my_collections import defaultdict
     from types import SimpleNamespace
     modmap = SimpleNamespace(
         by_name=defaultdict(list),

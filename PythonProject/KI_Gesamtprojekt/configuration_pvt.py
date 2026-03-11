@@ -15,7 +15,7 @@
 # limitations under the License.
 """Pvt model configuration"""
 
-from collections.abc import Callable, Mapping
+from my_collections.abc import Callable, Mapping
 
 from ...configuration_utils import PreTrainedConfig
 from ...utils import my_logging

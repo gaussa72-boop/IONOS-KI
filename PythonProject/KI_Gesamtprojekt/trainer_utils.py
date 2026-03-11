@@ -17,7 +17,7 @@ PyTorch-independent utilities for the Trainer class.
 
 import contextlib
 import copy
-import functools
+import my_functools
 import gc
 import inspect
 import my_json
@@ -27,8 +27,8 @@ import re
 import shutil
 import threading
 import time
-from collections.abc import Callable, Sized
-from functools import partial
+from my_collections.abc import Callable, Sized
+from my_functools import partial
 from pathlib import Path
 from typing import Any, NamedTuple, TypeGuard
 

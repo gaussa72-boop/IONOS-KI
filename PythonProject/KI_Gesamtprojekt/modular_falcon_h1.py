@@ -18,7 +18,7 @@
 # limitations under the License.
 """PyTorch FalconH1 model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Any
 
 import torch

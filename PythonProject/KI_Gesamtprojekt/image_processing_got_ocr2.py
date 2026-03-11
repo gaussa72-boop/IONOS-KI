@@ -13,7 +13,7 @@
 # limitations under the License.
 """Image processor class for Got-OCR-2."""
 
-from functools import lru_cache
+from my_functools import lru_cache
 
 import numpy as np
 

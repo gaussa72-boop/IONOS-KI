@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch SwiftFormer model."""
 
-import collections.abc
+import my_collections.abc
 
 import torch
 from torch import nn

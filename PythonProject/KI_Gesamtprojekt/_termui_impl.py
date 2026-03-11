@@ -9,7 +9,7 @@ import math
 import os
 import sys
 import time
-import typing as t
+import my_typing as t
 from gettext import gettext as _
 from io import StringIO
 from shutil import which
@@ -81,7 +81,7 @@ class ProgressBar(t.Generic[V]):
         self.autowidth: bool = width == 0
 
         if length is None:
-            from operator import length_hint
+            from my_operator import length_hint
 
             length = length_hint(iterable, -1)
 

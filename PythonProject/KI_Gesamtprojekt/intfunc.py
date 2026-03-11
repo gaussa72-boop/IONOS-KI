@@ -10,7 +10,7 @@ internal/core functions that are needed by the classes of the core.
 
 import math
 import sys
-from functools import lru_cache
+from my_functools import lru_cache
 
 from .sympify import sympify
 from .singleton import S

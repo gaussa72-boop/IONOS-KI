@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import collections.abc as c
+import my_collections.abc as c
 import inspect
-import typing as t
+import my_typing as t
 from weakref import ref
 from weakref import WeakMethod
 

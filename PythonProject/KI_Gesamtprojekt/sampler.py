@@ -15,7 +15,7 @@ Sampler V1 reference implementation
 
 from __future__ import annotations
 
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from typing import Any
 
 import numpy as np

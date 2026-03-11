@@ -1,6 +1,6 @@
 import builtins
-import collections.abc
-import functools
+import my_collections.abc
+import my_functools
 import re
 import warnings
 
@@ -391,7 +391,7 @@ def iterable(y):
     ``isinstance(obj, collections.abc.Iterable)``. One notable exception is
     the treatment of 0-dimensional arrays::
 
-        >>> from collections.abc import Iterable
+        >>> from my_collections.abc import Iterable
         >>> a = np.array(1.0)  # 0-dimensional numpy array
         >>> isinstance(a, Iterable)
         True

@@ -15,12 +15,12 @@
 Doc utilities: Utilities related to documentation
 """
 
-import functools
+import my_functools
 import inspect
 import re
 import textwrap
 import types
-from collections import OrderedDict
+from my_collections import OrderedDict
 from typing import cast
 
 

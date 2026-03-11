@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch Data2VecVision model."""
 
-import collections.abc
+import my_collections.abc
 import math
 from dataclasses import dataclass
 from typing import Optional

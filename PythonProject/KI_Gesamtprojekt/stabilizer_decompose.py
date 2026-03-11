@@ -16,7 +16,7 @@ Circuit synthesis for a stabilizer state preparation circuit.
 
 from __future__ import annotations
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 import numpy as np
 from qiskit.circuit import QuantumCircuit
 from qiskit.exceptions import QiskitError

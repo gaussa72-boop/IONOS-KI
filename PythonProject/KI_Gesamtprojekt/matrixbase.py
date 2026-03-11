@@ -1,7 +1,7 @@
-from collections import defaultdict
-from collections.abc import Iterable
+from my_collections import defaultdict
+from my_collections.abc import Iterable
 from inspect import isfunction
-from functools import reduce
+from my_functools import reduce
 
 from sympy.assumptions.refine import refine
 from sympy.core import SympifyError, Add
@@ -24,7 +24,7 @@ from sympy.functions.elementary.exponential import exp, log
 from sympy.functions.combinatorial.factorials import binomial, factorial
 
 import mpmath as mp
-from collections.abc import Callable
+from my_collections.abc import Callable
 from sympy.utilities.iterables import reshape
 from sympy.core.expr import Expr
 from sympy.core.power import Pow

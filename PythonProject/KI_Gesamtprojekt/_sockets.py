@@ -6,7 +6,7 @@ import socket
 import ssl
 import stat
 import sys
-from collections.abc import Awaitable
+from my_collections.abc import Awaitable
 from dataclasses import dataclass
 from ipaddress import IPv4Address, IPv6Address, ip_address
 from os import PathLike, chmod

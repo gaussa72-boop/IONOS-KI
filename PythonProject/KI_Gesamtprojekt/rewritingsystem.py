@@ -1,4 +1,4 @@
-from collections import deque
+from my_collections import deque
 from sympy.combinatorics.rewritingsystem_fsm import StateMachine
 
 

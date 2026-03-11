@@ -23,7 +23,7 @@ References
 
 """
 
-from collections import defaultdict
+from my_collections import defaultdict
 from enum import Enum
 import itertools
 

@@ -14,7 +14,7 @@
 """
 
 import math
-from collections import OrderedDict, defaultdict, namedtuple
+from my_collections import OrderedDict, defaultdict, namedtuple
 from typing import Dict, List, Generator, Any
 
 import numpy as np

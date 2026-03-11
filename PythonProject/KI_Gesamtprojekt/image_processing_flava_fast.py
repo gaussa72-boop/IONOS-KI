@@ -15,7 +15,7 @@
 
 import math
 import random
-from functools import lru_cache
+from my_functools import lru_cache
 from typing import Any, Optional
 
 import torch

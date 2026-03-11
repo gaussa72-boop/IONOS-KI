@@ -21,7 +21,7 @@ These two key functions are `test` and `doctest`.
 
 """
 
-import functools
+import my_functools
 import importlib.util
 import os
 import pathlib

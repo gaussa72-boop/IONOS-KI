@@ -1,5 +1,5 @@
 import itertools
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 from sympy.core._print_helpers import Printable
 from sympy.core.containers import Tuple

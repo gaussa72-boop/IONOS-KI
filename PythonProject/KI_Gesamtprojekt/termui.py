@@ -2,7 +2,7 @@ import inspect
 import io
 import itertools
 import sys
-import typing as t
+import my_typing as t
 from gettext import gettext as _
 
 from ._compat import isatty

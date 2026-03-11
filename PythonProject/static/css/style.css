@@ -1,0 +1,4 @@
+body { background: #000; color: #ffcc00; font-family: sans-serif; }
+.chat-window { border: 2px solid #ffcc00; padding: 20px; background: rgba(20,10,0,0.9); }
+.bot-msg { color: #ffd700; text-shadow: 0 0 5px #ffaa00; }
+.cat-avatar { width: 150px; border-radius: 50%; border: 2px solid #ffcc00; }

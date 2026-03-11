@@ -27,7 +27,7 @@ client = httpx.Client(transport=transport)
 from __future__ import annotations
 
 import contextlib
-import typing
+import my_typing
 from types import TracebackType
 
 if typing.TYPE_CHECKING:

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import math
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 
 import numpy as np
 

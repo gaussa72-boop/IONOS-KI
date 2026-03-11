@@ -82,7 +82,7 @@ def operators_to_state(operators, **options):
     ========
 
     >>> from sympy.physics.quantum.cartesian import XOp, PxOp
-    >>> from sympy.physics.quantum.operatorset import operators_to_state
+    >>> from sympy.physics.quantum.operatorset import my_operators_to_state
     >>> from sympy.physics.quantum.operator import Operator
     >>> operators_to_state(XOp)
     |x>

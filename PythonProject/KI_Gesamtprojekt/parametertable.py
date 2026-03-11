@@ -13,7 +13,7 @@
 Look-up table for variable parameters in QuantumCircuit.
 """
 
-from collections.abc import MappingView
+from my_collections.abc import MappingView
 
 
 class ParameterView(MappingView):

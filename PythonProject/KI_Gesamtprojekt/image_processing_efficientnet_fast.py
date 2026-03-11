@@ -13,7 +13,7 @@
 # limitations under the License.
 """Fast Image processor class for EfficientNet."""
 
-from functools import lru_cache
+from my_functools import lru_cache
 from typing import Optional
 
 import torch

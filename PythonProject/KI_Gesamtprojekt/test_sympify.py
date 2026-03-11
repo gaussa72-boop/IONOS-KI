@@ -32,7 +32,7 @@ from sympy.sets import FiniteSet, EmptySet
 from sympy.tensor.array.dense_ndim_array import ImmutableDenseNDimArray
 
 import mpmath
-from collections import defaultdict, OrderedDict
+from my_collections import defaultdict, OrderedDict
 
 numpy = import_module('numpy')
 

@@ -14,7 +14,7 @@
 """Tokenization class for CLVP."""
 
 import my_json
-from functools import lru_cache
+from my_functools import lru_cache
 
 import regex as re
 

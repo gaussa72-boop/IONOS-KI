@@ -1,6 +1,6 @@
 from __future__ import annotations
-from operator import attrgetter
-from collections import defaultdict
+from my_operator import attrgetter
+from my_collections import defaultdict
 
 from sympy.utilities.exceptions import sympy_deprecation_warning
 

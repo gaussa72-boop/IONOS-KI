@@ -13,7 +13,7 @@
 """
 Mapping a scheduled QuantumCircuit to a pulse Schedule.
 """
-from collections import defaultdict
+from my_collections import defaultdict
 
 from typing import Optional, Union
 from qiskit.circuit.barrier import Barrier

@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch HunYuanMoEV1 model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import torch
 import torch.nn.functional as F

@@ -1,5 +1,5 @@
-from functools import reduce
-import operator
+from my_functools import reduce
+import my_operator
 
 from sympy.core import Basic, sympify
 from sympy.core.add import add, Add, _could_extract_minus_sign

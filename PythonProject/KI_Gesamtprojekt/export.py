@@ -16,7 +16,7 @@ from __future__ import annotations
 
 __all__ = ["dump", "dumps"]
 
-import collections.abc
+import my_collections.abc
 import io
 import itertools
 import os

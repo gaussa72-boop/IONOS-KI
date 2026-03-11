@@ -8,7 +8,7 @@ function-based counterpart in `../from_numeric.py`.
 
 from __future__ import annotations
 
-import operator
+import my_operator
 from typing import cast, Any
 
 import numpy as np

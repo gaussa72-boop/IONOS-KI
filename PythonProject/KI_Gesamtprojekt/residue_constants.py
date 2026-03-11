@@ -15,10 +15,10 @@
 
 """Constants used in AlphaFold."""
 
-import collections
+import my_collections
 import copy
-import functools
-from collections.abc import Mapping, Sequence
+import my_functools
+from my_collections.abc import Mapping, Sequence
 from importlib import resources
 
 import numpy as np

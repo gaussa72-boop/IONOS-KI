@@ -18,9 +18,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import collections.abc
+import my_collections.abc
 import math
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
 
 import numpy as np

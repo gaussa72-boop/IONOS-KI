@@ -1,4 +1,4 @@
-from functools import singledispatch
+from my_functools import singledispatch
 
 from sympy.core import Basic, Tuple
 from sympy.core.numbers import pi

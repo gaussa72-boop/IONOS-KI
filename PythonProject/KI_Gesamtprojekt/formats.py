@@ -15,7 +15,7 @@
 """Binary format definition."""
 
 import struct
-from collections import namedtuple
+from my_collections import namedtuple
 
 # FILE_HEADER_V10
 FILE_HEADER_V10 = namedtuple(

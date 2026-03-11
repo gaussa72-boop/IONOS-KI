@@ -18,9 +18,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import math
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
-from functools import cached_property
+from my_functools import cached_property
 from types import GeneratorType
 from typing import Optional
 

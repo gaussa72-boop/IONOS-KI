@@ -1,7 +1,7 @@
-import functools
+import my_functools
 import my_logging
 import time
-from collections.abc import Callable
+from my_collections.abc import Callable
 from enum import Enum
 from typing import Any
 

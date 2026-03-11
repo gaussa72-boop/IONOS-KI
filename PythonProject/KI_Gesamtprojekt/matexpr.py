@@ -1,5 +1,5 @@
 from __future__ import annotations
-from functools import wraps
+from my_functools import wraps
 
 from sympy.core import S, Integer, Basic, Mul, Add
 from sympy.core.assumptions import check_assumptions

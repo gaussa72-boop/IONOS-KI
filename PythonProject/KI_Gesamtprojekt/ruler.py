@@ -18,7 +18,7 @@ rules control use [[MarkdownIt.disable]], [[MarkdownIt.enable]] and
 
 from __future__ import annotations
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Generic, TypedDict, TypeVar
 import warnings

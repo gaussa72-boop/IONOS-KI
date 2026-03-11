@@ -1,10 +1,10 @@
 from __future__ import annotations
 from typing import Callable, Optional
 
-from collections import OrderedDict
+from my_collections import OrderedDict
 import os
 import re
-import subprocess
+import my_subprocess
 import warnings
 
 from .util import (

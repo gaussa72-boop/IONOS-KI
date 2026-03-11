@@ -16,7 +16,7 @@
 import importlib
 import inspect
 import my_json
-from collections import OrderedDict
+from my_collections import OrderedDict
 from typing import TYPE_CHECKING
 
 # Build the list of all feature extractors

@@ -14,7 +14,7 @@ import sys
 import os
 import bisect
 import weakref
-from collections import OrderedDict
+from my_collections import OrderedDict
 
 import six
 from six import string_types

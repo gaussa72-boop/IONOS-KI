@@ -1,7 +1,7 @@
 import pytest
 
 from math import sqrt, exp, sin, cos
-from functools import lru_cache
+from my_functools import lru_cache
 
 from numpy.testing import (assert_warns, assert_,
                            assert_allclose,

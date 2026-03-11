@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes."""
 
-import collections
+import my_collections
 import copy
 import os
 import unicodedata

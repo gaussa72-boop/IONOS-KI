@@ -7,7 +7,7 @@ import pathlib
 import site
 import sys
 import textwrap
-from collections import OrderedDict
+from my_collections import OrderedDict
 from types import TracebackType
 from typing import TYPE_CHECKING, Iterable, List, Optional, Set, Tuple, Type, Union
 

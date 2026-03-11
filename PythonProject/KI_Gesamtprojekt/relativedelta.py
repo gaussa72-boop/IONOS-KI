@@ -2,7 +2,7 @@
 import datetime
 import calendar
 
-import operator
+import my_operator
 from math import copysign
 
 from six import integer_types

@@ -208,7 +208,7 @@ BLAS Level 3 functions
 __all__ = ['get_blas_funcs', 'find_best_blas_type']
 
 import numpy as _np
-import functools
+import my_functools
 
 from scipy.linalg import _fblas
 

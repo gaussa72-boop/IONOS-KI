@@ -13,7 +13,7 @@
 """Add single-pulse RX calibrations that are bootstrapped from the SX calibration."""
 
 from typing import Union
-from functools import lru_cache
+from my_functools import lru_cache
 import numpy as np
 
 from qiskit.circuit import Instruction

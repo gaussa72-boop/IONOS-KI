@@ -10,7 +10,7 @@ __all__ = (
 )
 
 import sys
-from collections.abc import Awaitable, Callable, Generator
+from my_collections.abc import Awaitable, Callable, Generator
 from concurrent.futures import Future
 from contextlib import (
     AbstractAsyncContextManager,
@@ -18,7 +18,7 @@ from contextlib import (
     contextmanager,
 )
 from dataclasses import dataclass, field
-from functools import partial
+from my_functools import partial
 from inspect import isawaitable
 from threading import Lock, Thread, current_thread, get_ident
 from types import TracebackType

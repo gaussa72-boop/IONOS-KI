@@ -6,7 +6,7 @@ __all__ = (
     "StapledObjectStream",
 )
 
-from collections.abc import Callable, Mapping, Sequence
+from my_collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from typing import Any, Generic, TypeVar
 

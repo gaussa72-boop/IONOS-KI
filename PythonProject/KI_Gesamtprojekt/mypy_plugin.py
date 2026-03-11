@@ -33,7 +33,7 @@ To enable the plugin, one must add it to their mypy `configuration file`_:
 
 from __future__ import annotations
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from typing import Final, TYPE_CHECKING, Callable
 
 import numpy as np

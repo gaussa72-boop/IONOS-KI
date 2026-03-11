@@ -6,7 +6,7 @@ from sympy.tensor.array.mutable_ndim_array import MutableNDimArray
 from sympy.tensor.array.ndim_array import NDimArray, ImmutableNDimArray
 from sympy.utilities.iterables import flatten
 
-import functools
+import my_functools
 
 
 class SparseNDimArray(NDimArray):

@@ -1,8 +1,8 @@
 import builtins
 import numpy as np
 from numpy.testing import suppress_warnings
-from operator import index
-from collections import namedtuple
+from my_operator import index
+from my_collections import namedtuple
 
 __all__ = ['binned_statistic',
            'binned_statistic_2d',

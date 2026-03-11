@@ -1,4 +1,4 @@
-from functools import reduce
+from my_functools import reduce
 from itertools import product
 
 from sympy.core.basic import Basic

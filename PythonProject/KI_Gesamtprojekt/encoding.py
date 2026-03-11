@@ -3,7 +3,7 @@ from __future__ import annotations
 import base64
 import string
 import struct
-import typing as t
+import my_typing as t
 
 from .exc import BadData
 

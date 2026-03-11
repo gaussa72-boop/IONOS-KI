@@ -14,7 +14,7 @@
 """Auto Model class."""
 
 import os
-from collections import OrderedDict
+from my_collections import OrderedDict
 from typing import TYPE_CHECKING
 
 from ...utils import my_logging

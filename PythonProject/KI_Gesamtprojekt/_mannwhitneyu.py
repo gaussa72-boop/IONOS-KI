@@ -1,5 +1,5 @@
 import numpy as np
-from collections import namedtuple
+from my_collections import namedtuple
 from scipy import special
 from scipy import stats
 from ._axis_nan_policy import _axis_nan_policy_factory

@@ -1,6 +1,6 @@
 import os
-import functools
-import operator
+import my_functools
+import my_operator
 from scipy._lib import _pep440
 
 import numpy as np

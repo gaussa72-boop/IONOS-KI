@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import itertools
 
 from sympy.core import Basic, Tuple

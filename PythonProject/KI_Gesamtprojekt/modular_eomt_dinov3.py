@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch EoMT model backed by DINOv3."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Optional
 
 import torch

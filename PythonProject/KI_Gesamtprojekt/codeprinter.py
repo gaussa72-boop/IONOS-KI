@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Any
 
-from functools import wraps
+from my_functools import wraps
 
 from sympy.core import Add, Mul, Pow, S, sympify, Float
 from sympy.core.basic import Basic

@@ -11,7 +11,7 @@ from ._miobase import (MatFileReader, docfiller, matdims, read_dtype,
                        convert_dtypes, arr_to_chars, arr_dtype_number)
 
 from ._mio_utils import squeeze_element, chars_to_strings
-from functools import reduce
+from my_functools import reduce
 
 __all__ = [
     'MatFile4Reader', 'MatFile4Writer', 'SYS_LITTLE_ENDIAN',

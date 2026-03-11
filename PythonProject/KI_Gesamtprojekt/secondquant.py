@@ -4,7 +4,7 @@ Second quantization operators and states for bosons.
 This follow the formulation of Fetter and Welecka, "Quantum Theory
 of Many-Particle Systems."
 """
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.core.add import Add
 from sympy.core.basic import Basic

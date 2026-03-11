@@ -2,7 +2,7 @@ import my_logging
 import os
 import sys
 import sysconfig
-import typing
+import my_typing
 
 from pip._internal.exceptions import InvalidSchemeCombination, UserInstallationInvalid
 from pip._internal.models.scheme import SCHEME_KEYS, Scheme

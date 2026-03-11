@@ -14,7 +14,7 @@
 import importlib.metadata
 import os
 import re
-from collections.abc import Callable
+from my_collections.abc import Callable
 from contextlib import contextmanager
 from types import ModuleType
 

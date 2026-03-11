@@ -1,6 +1,6 @@
 import itertools
 import contextlib
-import operator
+import my_operator
 import pytest
 
 import numpy as np

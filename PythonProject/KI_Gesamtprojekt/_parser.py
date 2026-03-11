@@ -7,7 +7,7 @@ from __future__ import annotations
 import string
 import sys
 import warnings
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from types import MappingProxyType
 from typing import IO, Any, Final, NamedTuple
 

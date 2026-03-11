@@ -1,4 +1,4 @@
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import TYPE_CHECKING, Annotated, Any, overload
 
 import click

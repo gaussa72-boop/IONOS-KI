@@ -1,4 +1,4 @@
-import collections
+import my_collections
 from sympy.core.expr import Expr
 from sympy.core import sympify, S, preorder_traversal
 from sympy.vector.coordsysrect import CoordSys3D

@@ -1,5 +1,5 @@
 """Hypergeometric and Meijer G-functions"""
-from collections import Counter
+from my_collections import Counter
 
 from sympy.core import S, Mod
 from sympy.core.add import Add

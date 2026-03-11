@@ -7,7 +7,7 @@ __all__ = (
 )
 
 import sys
-from collections.abc import Callable, Iterable, Mapping
+from my_collections.abc import Callable, Iterable, Mapping
 from dataclasses import dataclass, field
 from typing import Any, SupportsIndex
 

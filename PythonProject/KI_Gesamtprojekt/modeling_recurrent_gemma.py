@@ -15,7 +15,7 @@
 """PyTorch RecurrentGemma model."""
 
 import math
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Optional
 
 import torch

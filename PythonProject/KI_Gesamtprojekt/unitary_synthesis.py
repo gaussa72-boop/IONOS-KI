@@ -25,7 +25,7 @@ from __future__ import annotations
 from math import pi, inf, isclose
 from typing import Any
 from itertools import product
-from functools import partial
+from my_functools import partial
 import numpy as np
 
 from qiskit.circuit.controlflow import CONTROL_FLOW_OP_NAMES

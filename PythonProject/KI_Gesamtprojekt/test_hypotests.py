@@ -1,7 +1,7 @@
 from itertools import product
 
 import numpy as np
-import functools
+import my_functools
 import pytest
 from numpy.testing import (assert_, assert_equal, assert_allclose,
                            assert_almost_equal)  # avoid new uses

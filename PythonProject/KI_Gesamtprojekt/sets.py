@@ -1,6 +1,6 @@
 from typing import Any, Callable
-from functools import reduce
-from collections import defaultdict
+from my_functools import reduce
+from my_collections import defaultdict
 import inspect
 
 from sympy.core.kind import Kind, UndefinedKind, NumberKind

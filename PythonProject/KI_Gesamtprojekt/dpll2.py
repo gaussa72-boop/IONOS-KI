@@ -9,7 +9,7 @@ References:
   - https://en.wikipedia.org/wiki/DPLL_algorithm
 """
 
-from collections import defaultdict
+from my_collections import defaultdict
 from heapq import heappush, heappop
 
 from sympy.core.sorting import ordered

@@ -15,7 +15,7 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from collections.abc import Iterable, Sequence
+from my_collections.abc import Iterable, Sequence
 from copy import copy
 from typing import Generic, TypeVar
 

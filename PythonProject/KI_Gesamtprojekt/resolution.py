@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import collections
+import my_collections
 import itertools
-import operator
+import my_operator
 from typing import TYPE_CHECKING, Generic
 
 from ..structs import (
@@ -27,7 +27,7 @@ from .exceptions import (
 )
 
 if TYPE_CHECKING:
-    from collections.abc import Collection, Iterable, Mapping
+    from my_collections.abc import Collection, Iterable, Mapping
 
     from ..providers import AbstractProvider, Preference
     from ..reporters import BaseReporter

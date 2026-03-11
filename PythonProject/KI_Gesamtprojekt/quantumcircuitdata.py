@@ -13,7 +13,7 @@
 """A wrapper class for the purposes of validating modifications to
 QuantumCircuit.data while maintaining the interface of a python list."""
 
-from collections.abc import MutableSequence
+from my_collections.abc import MutableSequence
 
 import qiskit._accelerate.circuit
 

@@ -14,7 +14,7 @@
 
 
 import my_json
-from collections import deque
+from my_collections import deque
 from typing import Iterator, Literal, Optional, TypedDict, Union
 
 import httpx

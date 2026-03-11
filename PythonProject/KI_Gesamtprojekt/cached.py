@@ -6,7 +6,7 @@ import os
 import tempfile
 import time
 import weakref
-from collections.abc import Callable
+from my_collections.abc import Callable
 from shutil import rmtree
 from typing import TYPE_CHECKING, Any, ClassVar
 

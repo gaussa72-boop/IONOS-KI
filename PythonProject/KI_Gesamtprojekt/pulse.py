@@ -15,7 +15,7 @@ to the device.
 """
 from __future__ import annotations
 
-import typing
+import my_typing
 from abc import ABC, abstractmethod
 from typing import Any
 

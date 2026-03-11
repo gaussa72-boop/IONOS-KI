@@ -2,7 +2,7 @@ import contextlib
 import ctypes
 import platform
 import ssl
-import typing
+import my_typing
 from ctypes import (
     CDLL,
     POINTER,

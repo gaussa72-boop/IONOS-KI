@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import dataclasses
 import re
-from collections.abc import Mapping
+from my_collections.abc import Mapping
 
 from pip._vendor.packaging.requirements import Requirement
 

@@ -12,7 +12,7 @@
 
 """Tools useful for creating decorators, and other high-level callables."""
 
-import functools
+import my_functools
 import inspect
 import types
 from typing import Type, Callable

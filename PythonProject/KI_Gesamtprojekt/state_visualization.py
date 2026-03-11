@@ -19,7 +19,7 @@ Visualization functions for quantum states.
 
 import math
 from typing import List, Union
-from functools import reduce
+from my_functools import reduce
 import colorsys
 
 import numpy as np

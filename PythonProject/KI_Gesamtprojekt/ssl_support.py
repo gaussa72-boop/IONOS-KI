@@ -2,7 +2,7 @@ import os
 import socket
 import atexit
 import re
-import functools
+import my_functools
 
 from setuptools.extern.six.moves import urllib, http_client, map, filter
 

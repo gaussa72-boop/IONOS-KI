@@ -15,7 +15,7 @@
 """MaskFormer Swin Transformer. The reason Swin Transformer is implemented here is because MaskFormer uses the hidden
 states before downsampling, which is different from the default Swin Transformer."""
 
-import collections.abc
+import my_collections.abc
 import math
 from dataclasses import dataclass
 

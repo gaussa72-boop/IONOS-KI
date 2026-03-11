@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch ViTDet backbone."""
 
-import collections.abc
+import my_collections.abc
 import math
 
 import torch

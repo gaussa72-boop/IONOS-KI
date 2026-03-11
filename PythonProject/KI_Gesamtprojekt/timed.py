@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import collections.abc as cabc
+import my_collections.abc as cabc
 import time
-import typing as t
+import my_typing as t
 from datetime import datetime
 from datetime import timezone
 

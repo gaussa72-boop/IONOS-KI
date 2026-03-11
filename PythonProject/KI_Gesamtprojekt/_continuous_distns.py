@@ -4,8 +4,8 @@
 #          SciPy Developers 2004-2011
 #
 import warnings
-from collections.abc import Iterable
-from functools import wraps, cached_property
+from my_collections.abc import Iterable
+from my_functools import wraps, cached_property
 import ctypes
 
 import numpy as np

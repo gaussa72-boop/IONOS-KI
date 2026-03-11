@@ -13,7 +13,7 @@
 """Padding pass to fill empty timeslot."""
 from __future__ import annotations
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 import my_logging
 
 from qiskit.circuit import Qubit, Clbit, Instruction

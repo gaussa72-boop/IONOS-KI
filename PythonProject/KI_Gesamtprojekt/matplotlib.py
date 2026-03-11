@@ -49,7 +49,7 @@
 
 """Draw a rustworkx graph with matplotlib."""
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from itertools import islice, cycle
 from numbers import Number
 

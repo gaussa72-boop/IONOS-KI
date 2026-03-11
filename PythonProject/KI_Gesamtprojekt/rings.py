@@ -3,8 +3,8 @@
 from __future__ import annotations
 from typing import Any
 
-from operator import add, mul, lt, le, gt, ge
-from functools import reduce
+from my_operator import add, mul, lt, le, gt, ge
+from my_functools import reduce
 from types import GeneratorType
 
 from sympy.core.expr import Expr

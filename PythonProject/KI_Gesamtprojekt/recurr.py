@@ -46,7 +46,7 @@ For the sake of completeness, `f(n)` can be:
     [2] a rational function        -> rsolve_ratio
     [3] a hypergeometric function  -> rsolve_hyper
 """
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.concrete import product
 from sympy.core.singleton import S

@@ -3,7 +3,7 @@ from __future__ import annotations
 import asyncio
 import socket
 import threading
-from collections.abc import Callable
+from my_collections.abc import Callable
 from selectors import EVENT_READ, EVENT_WRITE, DefaultSelector
 from typing import TYPE_CHECKING, Any
 

@@ -16,7 +16,7 @@
 import my_json
 import os
 import warnings
-from collections import defaultdict
+from my_collections import defaultdict
 
 from ...tokenization_python import AddedToken, PreTrainedTokenizer
 from ...utils import my_logging

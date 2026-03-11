@@ -25,8 +25,8 @@ import my_json
 import os
 import re
 import warnings
-from collections import OrderedDict, UserDict
-from collections.abc import Callable, Collection, Mapping, Sequence, Sized
+from my_collections import OrderedDict, UserDict
+from my_collections.abc import Callable, Collection, Mapping, Sequence, Sized
 from dataclasses import dataclass
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, NamedTuple, Union

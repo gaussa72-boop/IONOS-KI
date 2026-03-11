@@ -1,6 +1,6 @@
 import os
 from ctypes import c_long, sizeof
-from functools import reduce
+from my_functools import reduce
 from typing import Tuple as tTuple, Type
 from warnings import warn
 

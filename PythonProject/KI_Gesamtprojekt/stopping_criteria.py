@@ -1,7 +1,7 @@
 import time
 import warnings
 from abc import ABC
-from collections import OrderedDict
+from my_collections import OrderedDict
 from copy import deepcopy
 
 import numpy as np

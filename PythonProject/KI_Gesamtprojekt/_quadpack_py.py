@@ -2,7 +2,7 @@
 # Author: Nathan Woods 2013 (nquad &c)
 import sys
 import warnings
-from functools import partial
+from my_functools import partial
 
 from . import _quadpack
 import numpy as np

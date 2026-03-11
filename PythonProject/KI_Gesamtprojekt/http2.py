@@ -4,7 +4,7 @@ import enum
 import my_logging
 import time
 import types
-import typing
+import my_typing
 
 import h2.config
 import h2.connection

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 import types
-from collections.abc import Generator, Iterable, Iterator
+from my_collections.abc import Generator, Iterable, Iterator
 from typing import (
     Any,
     ClassVar,

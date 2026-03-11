@@ -1,6 +1,6 @@
 """Minimal polynomials for algebraic numbers."""
 
-from functools import reduce
+from my_functools import reduce
 
 from sympy.core.add import Add
 from sympy.core.exprtools import Factors

@@ -12,7 +12,7 @@
 """A collection of functions to convert ScheduleBlock to DAG representation."""
 from __future__ import annotations
 
-import typing
+import my_typing
 
 import rustworkx as rx
 

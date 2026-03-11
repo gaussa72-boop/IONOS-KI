@@ -1,8 +1,8 @@
 import sys
 import copy
 import heapq
-import collections
-import functools
+import my_collections
+import my_functools
 
 import numpy as np
 

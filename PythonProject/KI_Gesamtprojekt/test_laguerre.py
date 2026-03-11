@@ -1,7 +1,7 @@
 """Tests for laguerre module.
 
 """
-from functools import reduce
+from my_functools import reduce
 
 import numpy as np
 import numpy.polynomial.laguerre as lag

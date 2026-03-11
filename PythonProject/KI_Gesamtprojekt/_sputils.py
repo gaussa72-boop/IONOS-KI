@@ -2,7 +2,7 @@
 """
 
 import sys
-import operator
+import my_operator
 import numpy as np
 from scipy._lib._util import prod
 import scipy.sparse as sp

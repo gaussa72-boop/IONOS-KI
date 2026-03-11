@@ -13,7 +13,7 @@
 # limitations under the License.
 """ProphetNet model configuration"""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 from ...configuration_utils import PreTrainedConfig
 from ...utils import my_logging

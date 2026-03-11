@@ -1,7 +1,7 @@
 import itertools
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Tuple as tTuple, Union as tUnion, FrozenSet, Dict as tDict, List, Optional
-from functools import singledispatch
+from my_functools import singledispatch
 from itertools import accumulate
 
 from sympy import MatMul, Basic, Wild, KroneckerProduct

@@ -1,5 +1,5 @@
 ### The base class for all series
-from collections.abc import Callable
+from my_collections.abc import Callable
 from sympy.calculus.util import continuous_domain
 from sympy.concrete import Sum, Product
 from sympy.core.containers import Tuple

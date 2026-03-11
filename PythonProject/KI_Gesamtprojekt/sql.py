@@ -40,7 +40,7 @@
     :license: BSD, see LICENSE for details.
 """
 
-import collections
+import my_collections
 import re
 
 from pygments.lexer import Lexer, RegexLexer, do_insertions, bygroups, words

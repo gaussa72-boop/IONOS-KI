@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization class for TAPAS model."""
 
-import collections
+import my_collections
 import datetime
 import enum
 import itertools
@@ -21,7 +21,7 @@ import math
 import os
 import re
 import unicodedata
-from collections.abc import Callable, Generator
+from my_collections.abc import Callable, Generator
 from dataclasses import dataclass
 from typing import Union
 

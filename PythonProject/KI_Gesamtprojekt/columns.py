@@ -1,6 +1,6 @@
-from collections import defaultdict
+from my_collections import defaultdict
 from itertools import chain
-from operator import itemgetter
+from my_operator import itemgetter
 from typing import Dict, Iterable, List, Optional, Tuple
 
 from .align import Align, AlignMethod

@@ -17,7 +17,7 @@ PyTorch DistilBERT model adapted in part from Facebook, Inc XLM model (https://g
 part from HuggingFace PyTorch version of Google AI Bert model (https://github.com/google-research/bert)
 """
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import numpy as np
 import torch

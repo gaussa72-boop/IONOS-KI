@@ -9,8 +9,8 @@ convenience routines for converting between Expr and the poly domains as well
 as unifying matrices with different domains.
 
 """
-from collections import Counter
-from functools import reduce
+from my_collections import Counter
+from my_functools import reduce
 from typing import Union as tUnion, Tuple as tTuple
 
 from sympy.external.gmpy import GROUND_TYPES

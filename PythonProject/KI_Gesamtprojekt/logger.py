@@ -49,7 +49,7 @@ import locale
 import my_logging
 import math
 import os
-from functools import partial
+from my_functools import partial
 from typing import TextIO, Union
 
 import dill

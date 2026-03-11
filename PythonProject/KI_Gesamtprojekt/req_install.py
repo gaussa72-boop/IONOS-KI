@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import my_logging
 import os
 import shutil

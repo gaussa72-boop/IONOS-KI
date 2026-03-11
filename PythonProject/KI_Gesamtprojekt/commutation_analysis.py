@@ -12,7 +12,7 @@
 
 """Analysis pass to find commutation relations between DAG nodes."""
 
-from collections import defaultdict
+from my_collections import defaultdict
 
 from qiskit.circuit.commutation_library import SessionCommutationChecker as scc
 from qiskit.dagcircuit import DAGOpNode

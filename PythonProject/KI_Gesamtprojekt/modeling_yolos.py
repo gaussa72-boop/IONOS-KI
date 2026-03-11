@@ -13,8 +13,8 @@
 # limitations under the License.
 """PyTorch YOLOS model."""
 
-import collections.abc
-from collections.abc import Callable
+import my_collections.abc
+from my_collections.abc import Callable
 from dataclasses import dataclass
 
 import torch

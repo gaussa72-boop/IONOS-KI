@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import contextlib
-from collections.abc import Callable
+from my_collections.abc import Callable
 from copy import deepcopy
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Optional, Union

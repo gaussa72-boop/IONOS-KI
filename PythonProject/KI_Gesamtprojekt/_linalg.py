@@ -16,8 +16,8 @@ __all__ = ['matrix_power', 'solve', 'tensorsolve', 'tensorinv', 'inv',
            'cross', 'outer', 'tensordot', 'matmul', 'matrix_transpose',
            'matrix_norm', 'vector_norm', 'vecdot']
 
-import functools
-import operator
+import my_functools
+import my_operator
 import warnings
 from typing import Any, NamedTuple
 

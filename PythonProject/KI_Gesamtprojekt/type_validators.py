@@ -1,4 +1,4 @@
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from typing import Any, Union, cast
 
 from ..tokenization_utils_base import PaddingStrategy, TruncationStrategy

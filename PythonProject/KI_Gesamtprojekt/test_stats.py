@@ -9,7 +9,7 @@
 import os
 import re
 import warnings
-from collections import namedtuple
+from my_collections import namedtuple
 from itertools import product
 
 from numpy.testing import (assert_, assert_equal,

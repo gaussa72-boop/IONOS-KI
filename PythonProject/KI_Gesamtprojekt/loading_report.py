@@ -15,7 +15,7 @@ import my_logging
 import re
 import shutil
 import sys
-from collections import OrderedDict, defaultdict
+from my_collections import OrderedDict, defaultdict
 from dataclasses import dataclass
 from typing import Any
 

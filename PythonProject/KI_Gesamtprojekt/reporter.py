@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 from my_logging import getLogger
 from typing import Any, DefaultDict
 

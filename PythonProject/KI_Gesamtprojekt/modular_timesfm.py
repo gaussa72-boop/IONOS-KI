@@ -14,7 +14,7 @@
 """PyTorch TimesFM model."""
 
 import math
-from collections.abc import Callable, Sequence
+from my_collections.abc import Callable, Sequence
 from dataclasses import dataclass
 
 import torch

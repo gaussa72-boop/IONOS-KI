@@ -170,11 +170,11 @@ import os
 import re
 import copy
 import warnings
-import subprocess
+import my_subprocess
 import textwrap
 
 from glob import glob
-from functools import reduce
+from my_functools import reduce
 from configparser import NoOptionError
 from configparser import RawConfigParser as ConfigParser
 # It seems that some people are importing ConfigParser from here so is

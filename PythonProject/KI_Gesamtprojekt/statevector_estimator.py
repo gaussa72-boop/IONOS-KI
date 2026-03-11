@@ -15,7 +15,7 @@ Statevector Estimator V2 class
 
 from __future__ import annotations
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 import numpy as np
 

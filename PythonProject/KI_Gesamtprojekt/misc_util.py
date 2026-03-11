@@ -11,7 +11,7 @@ import multiprocessing
 import textwrap
 import importlib.util
 from threading import local as tlocal
-from functools import reduce
+from my_functools import reduce
 
 import distutils
 from distutils.errors import DistutilsError

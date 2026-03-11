@@ -9,7 +9,7 @@ from sympy.external.gmpy import SYMPY_INTS
 from sympy.printing.defaults import Printable
 
 import itertools
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 
 class ArrayKind(Kind):

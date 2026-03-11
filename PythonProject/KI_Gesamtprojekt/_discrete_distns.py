@@ -2,7 +2,7 @@
 # Author:  Travis Oliphant  2002-2011 with contributions from
 #          SciPy Developers 2004-2011
 #
-from functools import partial
+from my_functools import partial
 import warnings
 
 from scipy import special

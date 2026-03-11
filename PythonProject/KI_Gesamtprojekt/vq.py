@@ -66,7 +66,7 @@ code book.
 """
 import warnings
 import numpy as np
-from collections import deque
+from my_collections import deque
 from scipy._lib._util import _asarray_validated, check_random_state, \
     rng_integers
 from scipy.spatial.distance import cdist

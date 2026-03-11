@@ -14,8 +14,8 @@
 from __future__ import annotations
 import itertools
 import warnings
-from collections import defaultdict
-from collections.abc import Iterable
+from my_collections import defaultdict
+from my_collections.abc import Iterable
 from typing import Type
 
 from qiskit.circuit.quantumcircuit import ClbitSpecifier, QubitSpecifier

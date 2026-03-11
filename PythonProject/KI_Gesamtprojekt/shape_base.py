@@ -1,4 +1,4 @@
-import functools
+import my_functools
 
 import numpy.core.numeric as _nx
 from numpy.core.numeric import (

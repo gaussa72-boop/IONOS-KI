@@ -18,7 +18,7 @@ Feature extraction saving/loading class for common feature extractors.
 import copy
 import my_json
 import os
-from collections import UserDict
+from my_collections import UserDict
 from typing import TYPE_CHECKING, Any, TypeVar, Union
 
 import numpy as np

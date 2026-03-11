@@ -1,4 +1,4 @@
-from functools import wraps
+from my_functools import wraps
 
 from sympy.utilities.decorator import threaded, xthreaded, memoize_property, deprecated
 from sympy.testing.pytest import warns_deprecated_sympy

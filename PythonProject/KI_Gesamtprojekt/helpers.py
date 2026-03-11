@@ -3,10 +3,10 @@ from __future__ import annotations
 import importlib.util
 import os
 import sys
-import typing as t
+import my_typing as t
 from datetime import datetime
-from functools import lru_cache
-from functools import update_wrapper
+from my_functools import lru_cache
+from my_functools import update_wrapper
 
 import werkzeug.utils
 from werkzeug.exceptions import abort as _wz_abort

@@ -5,7 +5,7 @@ from sympy.core.sympify import _sympify
 from sympy.utilities.iterables import flatten, iterable
 from sympy.utilities.misc import as_int
 
-from collections import defaultdict
+from my_collections import defaultdict
 
 
 class Prufer(Basic):

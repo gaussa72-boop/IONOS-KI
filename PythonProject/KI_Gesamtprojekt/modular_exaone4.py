@@ -14,7 +14,7 @@
 # limitations under the License.
 """LG AI Research EXAONE Lab"""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import torch
 from torch import nn

@@ -18,8 +18,8 @@ This code is the same as the original Vision Transformer (ViT) with 2 modificati
 - addition of a mixture-of-experts MLP layer
 """
 
-import collections.abc
-from collections.abc import Callable
+import my_collections.abc
+from my_collections.abc import Callable
 
 import torch
 from torch import nn

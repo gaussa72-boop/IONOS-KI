@@ -13,7 +13,7 @@
 """The Pauli expansion circuit module."""
 
 from typing import Optional, Callable, List, Union
-from functools import reduce
+from my_functools import reduce
 import numpy as np
 
 from qiskit.circuit import QuantumCircuit

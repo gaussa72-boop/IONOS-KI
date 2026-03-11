@@ -13,7 +13,7 @@
 """The evolved operator ansatz."""
 
 from __future__ import annotations
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 
 import numpy as np
 

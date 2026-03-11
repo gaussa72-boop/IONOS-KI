@@ -1,4 +1,4 @@
-import operator
+import my_operator
 
 from numpy.testing import assert_raises
 import numpy as np

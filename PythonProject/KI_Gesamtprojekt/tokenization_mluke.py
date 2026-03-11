@@ -16,7 +16,7 @@
 import itertools
 import my_json
 import os
-from collections.abc import Mapping
+from my_collections.abc import Mapping
 
 import numpy as np
 from tokenizers import Tokenizer, decoders, normalizers, pre_tokenizers

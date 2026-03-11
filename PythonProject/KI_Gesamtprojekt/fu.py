@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy import SYMPY_DEBUG
 from sympy.core.add import Add

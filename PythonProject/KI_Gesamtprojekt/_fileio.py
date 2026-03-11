@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 import pathlib
 import sys
-from collections.abc import (
+from my_collections.abc import (
     AsyncIterator,
     Callable,
     Iterable,
@@ -11,7 +11,7 @@ from collections.abc import (
     Sequence,
 )
 from dataclasses import dataclass
-from functools import partial
+from my_functools import partial
 from os import PathLike
 from typing import (
     IO,

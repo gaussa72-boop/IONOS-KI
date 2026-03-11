@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import sys
-from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
+from my_collections.abc import AsyncIterable, Iterable, Mapping, Sequence
 from io import BytesIO
 from os import PathLike
 from subprocess import PIPE, CalledProcessError, CompletedProcess

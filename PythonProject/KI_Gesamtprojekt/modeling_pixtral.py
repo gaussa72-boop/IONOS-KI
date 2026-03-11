@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch Pixtral model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Optional
 
 import torch

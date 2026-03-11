@@ -1,9 +1,9 @@
 from __future__ import absolute_import
 
 try:
-    from collections.abc import Mapping, MutableMapping
+    from my_collections.abc import Mapping, MutableMapping
 except ImportError:
-    from collections import Mapping, MutableMapping
+    from my_collections import Mapping, MutableMapping
 try:
     from threading import RLock
 except ImportError:  # Platform-specific: No threads available
@@ -15,7 +15,7 @@ except ImportError:  # Platform-specific: No threads available
         def __exit__(self, exc_type, exc_value, traceback):
             pass
 
-from collections import OrderedDict
+from my_collections import OrderedDict
 
 from .exceptions import InvalidHeader
 from .packages import six

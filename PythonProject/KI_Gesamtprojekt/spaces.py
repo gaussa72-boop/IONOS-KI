@@ -25,12 +25,12 @@ Usage:
 """
 
 import enum
-import functools
+import my_functools
 import my_json
 import os
 import shlex
 import shutil
-import subprocess
+import my_subprocess
 import sys
 import tempfile
 import time

@@ -21,7 +21,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import codecs
-from collections.abc import Callable
+from my_collections.abc import Callable
 import re
 
 REGEX_SEPARATORS = re.compile(r"[\x2E\u3002\uFF0E\uFF61]")

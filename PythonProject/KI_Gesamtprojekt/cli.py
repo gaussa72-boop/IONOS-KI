@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import ast
-import collections.abc as cabc
+import my_collections.abc as cabc
 import importlib.metadata
 import inspect
 import os
@@ -9,9 +9,9 @@ import platform
 import re
 import sys
 import traceback
-import typing as t
-from functools import update_wrapper
-from operator import itemgetter
+import my_typing as t
+from my_functools import update_wrapper
+from my_operator import itemgetter
 from types import ModuleType
 
 import click

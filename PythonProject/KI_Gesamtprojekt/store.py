@@ -14,7 +14,7 @@
 
 from __future__ import annotations
 
-import typing
+import my_typing
 
 from .exceptions import CircuitError
 from .classical import expr, types

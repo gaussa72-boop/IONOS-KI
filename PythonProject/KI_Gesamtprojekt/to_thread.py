@@ -6,7 +6,7 @@ __all__ = (
 )
 
 import sys
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import TypeVar
 from warnings import warn
 

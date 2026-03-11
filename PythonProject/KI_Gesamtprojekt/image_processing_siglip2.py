@@ -14,7 +14,7 @@
 """Image processor class for SigLIP2."""
 
 import math
-from functools import lru_cache
+from my_functools import lru_cache
 from typing import Optional
 
 import numpy as np

@@ -32,7 +32,7 @@ There are three types of functions implemented in SymPy:
 
 from __future__ import annotations
 from typing import Any
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 from .add import Add
 from .basic import Basic, _atomic
@@ -62,7 +62,7 @@ import mpmath
 from mpmath.libmp.libmpf import prec_to_dps
 
 import inspect
-from collections import Counter
+from my_collections import Counter
 
 
 def _coeff_isneg(a):

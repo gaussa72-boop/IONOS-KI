@@ -6,10 +6,10 @@ import importlib.util
 import os
 import posixpath
 import sys
-import typing as t
+import my_typing as t
 import weakref
 import zipimport
-from collections import abc
+from my_collections import abc
 from hashlib import sha1
 from importlib import import_module
 from types import ModuleType

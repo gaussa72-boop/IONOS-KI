@@ -7,7 +7,7 @@ __all__ = ['spdiags', 'eye', 'identity', 'kron', 'kronsum',
            'hstack', 'vstack', 'bmat', 'rand', 'random', 'diags', 'block_diag']
 
 import numbers
-from functools import partial
+from my_functools import partial
 import numpy as np
 
 from scipy._lib._util import check_random_state, rng_integers

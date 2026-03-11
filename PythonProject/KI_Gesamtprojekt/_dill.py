@@ -88,10 +88,10 @@ import gc
 import abc
 import dataclasses
 from weakref import ReferenceType, ProxyType, CallableProxyType
-from collections import OrderedDict
+from my_collections import OrderedDict
 from enum import Enum, EnumMeta
-from functools import partial
-from operator import itemgetter, attrgetter
+from my_functools import partial
+from my_operator import itemgetter, attrgetter
 
 GENERATOR_FAIL = False
 import importlib.machinery
@@ -174,7 +174,7 @@ ItemGetterType = type(itemgetter(0))
 AttrGetterType = type(attrgetter('__repr__'))
 
 try:
-    from functools import _lru_cache_wrapper as LRUCacheType
+    from my_functools import _lru_cache_wrapper as LRUCacheType
 except ImportError:
     LRUCacheType = None
 
@@ -226,7 +226,7 @@ except NameError:
     IPYTHON_SINGLETONS = ()
 
 import inspect
-import typing
+import my_typing
 
 
 ### Shims for different versions of Python and dill
@@ -1064,7 +1064,7 @@ def _create_cell(contents=None):
 def _create_weakref(obj, *args):
     from weakref import ref
     if obj is None:  # it's dead
-        from collections import UserDict
+        from my_collections import UserDict
         return ref(UserDict(), *args)
     return ref(obj, *args)
 
@@ -1073,7 +1073,7 @@ def _create_weakproxy(obj, callable=False, *args):
     from weakref import proxy
     if obj is None:  # it's dead
         if callable: return proxy(lambda x: x, *args)
-        from collections import UserDict
+        from my_collections import UserDict
         return proxy(UserDict(), *args)
     return proxy(obj, *args)
 
@@ -1102,7 +1102,7 @@ def _create_namedtuple(name, fieldnames, modulename, defaults=None):
     class_ = _import_module(modulename + '.' + name, safe=True)
     if class_ is not None:
         return class_
-    import collections
+    import my_collections
     t = collections.namedtuple(name, fieldnames, defaults=defaults, module=modulename)
     return t
 
@@ -1609,7 +1609,7 @@ if InputType:
         return
 
 if LRUCacheType is not None:
-    from functools import lru_cache
+    from my_functools import lru_cache
 
 
     @register(LRUCacheType)

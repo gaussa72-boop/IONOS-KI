@@ -1,4 +1,4 @@
-from functools import update_wrapper, lru_cache
+from my_functools import update_wrapper, lru_cache
 
 from ._pocketfft import helper as _helper
 

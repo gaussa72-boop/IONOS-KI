@@ -1,6 +1,6 @@
-import collections
+import my_collections
 import itertools
-import operator
+import my_operator
 
 from .providers import AbstractResolver
 from .structs import DirectedGraph, IteratorMapping, build_iter_view

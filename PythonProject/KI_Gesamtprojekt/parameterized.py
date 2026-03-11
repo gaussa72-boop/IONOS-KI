@@ -33,9 +33,9 @@ either expressed or implied, of David Wolever.
 import re
 import inspect
 import warnings
-from functools import wraps
+from my_functools import wraps
 from types import MethodType
-from collections import namedtuple
+from my_collections import namedtuple
 
 from unittest import TestCase
 

@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch SAM 2 model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
 from typing import Union
 

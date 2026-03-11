@@ -15,8 +15,8 @@
 
 from __future__ import annotations
 
-from collections.abc import Callable, Sequence
-from functools import cache
+from my_collections.abc import Callable, Sequence
+from my_functools import cache
 from typing import Any
 
 import numpy as np

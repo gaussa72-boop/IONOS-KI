@@ -15,7 +15,7 @@
 into smaller sub-blocks, and to consolidate blocks."""
 from __future__ import annotations
 
-from collections.abc import Iterable, Callable
+from my_collections.abc import Iterable, Callable
 
 from qiskit.dagcircuit import DAGDepNode
 

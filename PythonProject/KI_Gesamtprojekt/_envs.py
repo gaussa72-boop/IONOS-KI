@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import importlib.metadata
 import my_logging
 import os

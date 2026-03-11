@@ -5,7 +5,7 @@ Authors:
 * Matt Curry
 """
 
-from functools import reduce
+from my_functools import reduce
 
 from sympy.core.basic import Basic
 from sympy.core.singleton import S

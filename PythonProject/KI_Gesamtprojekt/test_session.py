@@ -253,10 +253,10 @@ def test_runtime_module():
 
 
 def test_refimported_imported_as():
-    import collections
+    import my_collections
     import concurrent.futures
     import types
-    import typing
+    import my_typing
     mod = sys.modules['__test__'] = types.ModuleType('__test__')
     dill.executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
     mod.Dict = collections.UserDict  # select by type

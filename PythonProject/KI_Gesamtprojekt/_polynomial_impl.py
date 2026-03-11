@@ -6,7 +6,7 @@ __all__ = ['poly', 'roots', 'polyint', 'polyder', 'polyadd',
            'polysub', 'polymul', 'polydiv', 'polyval', 'poly1d',
            'polyfit']
 
-import functools
+import my_functools
 import re
 import warnings
 

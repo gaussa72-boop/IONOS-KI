@@ -2,8 +2,8 @@
 
 import inspect
 import io
-from collections import defaultdict
-from collections.abc import Iterable
+from my_collections import defaultdict
+from my_collections.abc import Iterable
 from gettext import gettext as _
 from os import getenv
 from typing import Any, Literal

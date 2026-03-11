@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import asyncio
-import functools
+import my_functools
 from contextlib import asynccontextmanager
 from typing import TYPE_CHECKING
 
@@ -11,7 +11,7 @@ from ._read_write import ReadWriteLock
 
 if TYPE_CHECKING:
     import os
-    from collections.abc import AsyncGenerator, Callable
+    from my_collections.abc import AsyncGenerator, Callable
     from concurrent import futures
     from types import TracebackType
 

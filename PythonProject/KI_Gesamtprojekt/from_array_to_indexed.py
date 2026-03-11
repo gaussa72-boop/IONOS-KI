@@ -1,5 +1,5 @@
-import collections.abc
-import operator
+import my_collections.abc
+import my_operator
 from itertools import accumulate
 
 from sympy import Mul, Sum, Dummy, Add

@@ -31,12 +31,12 @@ lowered when the tensor is put in canonical form.
 
 from __future__ import annotations
 from typing import Any
-from functools import reduce
+from my_functools import reduce
 from math import prod
 
 from abc import abstractmethod, ABC
-from collections import defaultdict
-import operator
+from my_collections import defaultdict
+import my_operator
 import itertools
 from sympy.core.numbers import (Integer, Rational)
 from sympy.combinatorics import Permutation

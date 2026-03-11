@@ -1,4 +1,4 @@
-import collections.abc
+import my_collections.abc
 
 import numpy as np
 from numpy import matrix, asmatrix, bmat

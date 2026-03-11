@@ -8,7 +8,7 @@ import base64
 import hashlib
 import itertools
 import warnings
-from functools import wraps
+from my_functools import wraps
 
 from setuptools.extern import six
 from setuptools.extern.six.moves import urllib, http_client, configparser, map

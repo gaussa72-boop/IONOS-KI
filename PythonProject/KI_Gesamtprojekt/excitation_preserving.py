@@ -13,7 +13,7 @@
 """The ExcitationPreserving 2-local circuit."""
 
 from __future__ import annotations
-from collections.abc import Callable
+from my_collections.abc import Callable
 from numpy import pi
 
 from qiskit.circuit import QuantumCircuit, Parameter

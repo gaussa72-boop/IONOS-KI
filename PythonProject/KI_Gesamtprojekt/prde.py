@@ -15,7 +15,7 @@ the right hand side of the equation (i.e., qi in k[t]).  See the docstring of
 each function for more information.
 """
 import itertools
-from functools import reduce
+from my_functools import reduce
 
 from sympy.core.intfunc import ilcm
 from sympy.core import Dummy, Add, Mul, Pow, S

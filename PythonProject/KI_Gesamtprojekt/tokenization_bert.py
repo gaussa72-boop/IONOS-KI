@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes for Bert."""
 
-import collections
+import my_collections
 
 from tokenizers import Tokenizer, decoders, normalizers, pre_tokenizers, processors
 from tokenizers.models import WordPiece

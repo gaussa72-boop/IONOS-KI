@@ -21,7 +21,7 @@ from __future__ import absolute_import
 from __future__ import print_function
 
 import itertools
-import operator
+import my_operator
 import sys
 
 import pbr._compat.metadata

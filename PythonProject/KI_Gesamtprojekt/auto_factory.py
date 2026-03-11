@@ -17,8 +17,8 @@ import copy
 import importlib
 import my_json
 import os
-from collections import OrderedDict
-from collections.abc import Iterator
+from my_collections import OrderedDict
+from my_collections.abc import Iterator
 from typing import Any, TypeVar
 
 from huggingface_hub import repo_exists

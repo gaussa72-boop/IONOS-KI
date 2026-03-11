@@ -14,13 +14,13 @@ import pickle
 import stat
 import sys
 import tempfile
-import typing as t
+import my_typing as t
 from hashlib import sha1
 from io import BytesIO
 from types import CodeType
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
     from .environment import Environment
 

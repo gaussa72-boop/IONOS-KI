@@ -14,7 +14,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from typing import Any, Generic, TypeVar
 
 from .pub_result import PubResult

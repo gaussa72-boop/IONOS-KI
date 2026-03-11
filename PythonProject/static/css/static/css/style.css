@@ -1,0 +1,97 @@
+body {
+    background: radial-gradient(circle, #1a0f00 0%, #000000 100%);
+    color: #ffcc00;
+    font-family: 'Garamond', serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 20px #ffaa00;
+    letter-spacing: 8px;
+    margin: 40px 0;
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Portale & Create Box */
+.portals-section {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    gap: 20px;
+    flex: 1;
+}
+
+.portal-card {
+    border: 2px solid #ffcc00;
+    border-radius: 50% 50% 0 0; /* Bogenform wie im Bild */
+    padding: 5px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+.portal-card img {
+    width: 100%;
+    border-radius: 50% 50% 0 0;
+}
+
+.create-box {
+    grid-column: span 2;
+    border: 4px double #ffcc00;
+    padding: 40px;
+    text-align: center;
+    background: rgba(20, 10, 0, 0.8);
+    box-shadow: 0 0 50px #ffaa00 inset;
+    border-radius: 20px;
+}
+
+.glow-button {
+    background: #ffaa00;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ffaa00;
+}
+
+/* Chat Fenster */
+.chat-section {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.chat-window {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #ffcc00;
+    background: rgba(10, 5, 0, 0.9);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(255, 170, 0, 0.2);
+}
+
+.chat-header {
+    background: #ffcc00;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cat-avatar {
+    width: 200px;
+    margin-top: -50px; /* Lässt den Kater leicht überlappen */
+    filter: drop-shadow(0 0 15px #ffaa00);
+}

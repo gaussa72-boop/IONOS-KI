@@ -15,8 +15,8 @@
 from __future__ import annotations
 
 import math
-from collections import defaultdict
-from collections.abc import Iterable
+from my_collections import defaultdict
+from my_collections.abc import Iterable
 from dataclasses import dataclass
 
 import numpy as np

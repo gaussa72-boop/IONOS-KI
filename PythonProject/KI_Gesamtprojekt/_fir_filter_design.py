@@ -2,7 +2,7 @@
 """Functions for FIR filter design."""
 
 from math import ceil, log
-import operator
+import my_operator
 import warnings
 
 import numpy as np

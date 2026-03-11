@@ -1,8 +1,8 @@
 """ Basic functions for manipulating 2d arrays
 
 """
-import functools
-import operator
+import my_functools
+import my_operator
 
 from numpy._core import iinfo, overrides
 from numpy._core._multiarray_umath import _array_converter

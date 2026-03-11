@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import typing as t
+import my_typing as t
 
 from werkzeug.exceptions import BadRequest
 from werkzeug.exceptions import HTTPException

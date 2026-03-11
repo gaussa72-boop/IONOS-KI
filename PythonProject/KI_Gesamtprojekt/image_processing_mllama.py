@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import math
-from functools import lru_cache
+from my_functools import lru_cache
 
 import numpy as np
 

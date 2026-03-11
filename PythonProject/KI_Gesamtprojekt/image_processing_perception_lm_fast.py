@@ -13,7 +13,7 @@
 """Fast Image processor class for PerceptionLM."""
 
 import math
-from functools import reduce
+from my_functools import reduce
 
 import numpy as np
 import torch

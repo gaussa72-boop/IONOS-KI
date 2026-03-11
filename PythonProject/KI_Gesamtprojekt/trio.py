@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import ssl
-import typing
+import my_typing
 
 import trio
 

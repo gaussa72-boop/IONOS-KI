@@ -146,7 +146,7 @@ def import_module(module, min_module_version=None, min_python_version=None,
         mod = __import__(module, **import_kwargs)
 
         ## there's something funny about imports with matplotlib and py3k. doing
-        ##    from matplotlib import collections
+        ##    from matplotlib import my_collections
         ## gives python's stdlib collections module. explicitly re-importing
         ## the module fixes this.
         from_list = import_kwargs.get('fromlist', ())

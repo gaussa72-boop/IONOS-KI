@@ -24,7 +24,7 @@ from huggingface_hub.cli._errors import format_known_exception
 from huggingface_hub.cli.auth import auth_cli
 from huggingface_hub.cli.buckets import buckets_cli, sync
 from huggingface_hub.cli.cache import cache_cli
-from huggingface_hub.cli.collections import collections_cli
+from huggingface_hub.cli.collections import my_collections_cli
 from huggingface_hub.cli.datasets import datasets_cli
 from huggingface_hub.cli.discussions import discussions_cli
 from huggingface_hub.cli.download import DOWNLOAD_EXAMPLES, download

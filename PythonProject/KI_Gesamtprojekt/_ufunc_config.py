@@ -3,7 +3,7 @@ Functions for changing global ufunc configuration
 
 This provides helpers which wrap `umath.geterrobj` and `umath.seterrobj`
 """
-import collections.abc
+import my_collections.abc
 import contextlib
 import contextvars
 

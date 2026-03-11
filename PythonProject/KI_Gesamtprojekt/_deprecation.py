@@ -1,5 +1,5 @@
 import warnings
-from functools import wraps
+from my_functools import wraps
 from inspect import Parameter, signature
 from typing import Iterable, Optional
 

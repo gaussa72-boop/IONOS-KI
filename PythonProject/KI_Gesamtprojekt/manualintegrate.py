@@ -25,8 +25,8 @@ from __future__ import annotations
 from typing import NamedTuple, Type, Callable, Sequence
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from collections import defaultdict
-from collections.abc import Mapping
+from my_collections import defaultdict
+from my_collections.abc import Mapping
 
 from sympy.core.add import Add
 from sympy.core.cache import cacheit

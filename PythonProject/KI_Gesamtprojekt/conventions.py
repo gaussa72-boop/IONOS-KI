@@ -4,7 +4,7 @@ A few practical conventions common to all printers.
 
 import re
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from sympy.core.function import Derivative
 
 _name_with_digits_p = re.compile(r'^([^\W\d_]+)(\d+)$', re.U)

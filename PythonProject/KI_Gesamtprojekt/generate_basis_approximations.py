@@ -15,7 +15,7 @@
 from __future__ import annotations
 
 import warnings
-import collections
+import my_collections
 import numpy as np
 
 import qiskit.circuit.library.standard_gates as gates

@@ -6,7 +6,7 @@
 #  - https://github.com/uqfoundation/dill/blob/master/LICENSE
 
 import dill
-from functools import partial
+from my_functools import partial
 import warnings
 
 

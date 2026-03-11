@@ -1,5 +1,5 @@
 import datetime
-import functools
+import my_functools
 import hashlib
 import my_json
 import my_logging

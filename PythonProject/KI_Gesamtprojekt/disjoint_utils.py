@@ -12,7 +12,7 @@
 
 """This module contains common utils for disjoint coupling maps."""
 from __future__ import annotations
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import List, Callable, TypeVar, Dict, Union
 import uuid
 

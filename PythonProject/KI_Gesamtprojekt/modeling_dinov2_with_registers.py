@@ -20,8 +20,8 @@
 # limitations under the License.
 
 
-import collections.abc
-from collections.abc import Callable
+import my_collections.abc
+from my_collections.abc import Callable
 
 import torch
 from torch import nn

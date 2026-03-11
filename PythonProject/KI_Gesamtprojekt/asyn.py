@@ -1,13 +1,13 @@
 import asyncio
 import asyncio.events
-import functools
+import my_functools
 import inspect
 import io
 import numbers
 import os
 import re
 import threading
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from glob import has_magic
 from typing import TYPE_CHECKING
 

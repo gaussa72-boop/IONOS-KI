@@ -10,7 +10,7 @@ from numpy.core.overrides import (
     array_function_dispatch, ARRAY_FUNCTION_ENABLED,
 )
 import warnings
-import functools
+import my_functools
 
 
 def _deprecate_out_named_y(f):

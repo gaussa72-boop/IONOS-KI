@@ -14,7 +14,7 @@ except ImportError:
         import my_json
 
 if TYPE_CHECKING:
-    from collections.abc import Iterator
+    from my_collections.abc import Iterator
     from typing import Any, Literal, TypeAlias
 
     from .cached import CachingFileSystem

@@ -13,7 +13,7 @@
 
 """Replace each sequence of CX and SWAP gates by a single LinearFunction gate."""
 
-from functools import partial
+from my_functools import partial
 
 from qiskit.circuit.library.generalized_gates import LinearFunction
 from qiskit.transpiler.passes.optimization.collect_and_collapse import (

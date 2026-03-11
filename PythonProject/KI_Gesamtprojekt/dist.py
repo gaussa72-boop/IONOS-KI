@@ -12,7 +12,7 @@ import os
 import re
 import sys
 import warnings
-from collections import defaultdict
+from my_collections import defaultdict
 from distutils.debug import DEBUG
 from distutils.errors import (
     DistutilsOptionError, DistutilsPlatformError, DistutilsSetupError,

@@ -8,7 +8,7 @@ All the functions in this file are used by more than one solvers so, instead of 
 instances in other classes for using them it is better to keep it here as separate helpers.
 
 """
-from collections import defaultdict
+from my_collections import defaultdict
 from sympy.core import Add, S
 from sympy.core.function import diff, expand, _mexpand, expand_mul
 from sympy.core.relational import Eq

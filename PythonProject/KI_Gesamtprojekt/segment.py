@@ -1,8 +1,8 @@
 from enum import IntEnum
-from functools import lru_cache
+from my_functools import lru_cache
 from itertools import filterfalse
 from my_logging import getLogger
-from operator import attrgetter
+from my_operator import attrgetter
 from typing import (
     TYPE_CHECKING,
     Dict,

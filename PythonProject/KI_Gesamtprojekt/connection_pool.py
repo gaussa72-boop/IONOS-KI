@@ -3,7 +3,7 @@ from __future__ import annotations
 import ssl
 import sys
 import types
-import typing
+import my_typing
 
 from .._backends.sync import SyncBackend
 from .._backends.base import SOCKET_OPTION, NetworkBackend

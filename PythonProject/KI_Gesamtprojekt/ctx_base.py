@@ -1,4 +1,4 @@
-from operator import gt, lt
+from my_operator import gt, lt
 
 from . import libmp
 from .calculus.calculus import CalculusMethods

@@ -1,4 +1,4 @@
-from collections import OrderedDict
+from my_collections import OrderedDict
 from typing import List, Optional
 
 from hf_xet import PyItemProgressUpdate, PyTotalProgressUpdate

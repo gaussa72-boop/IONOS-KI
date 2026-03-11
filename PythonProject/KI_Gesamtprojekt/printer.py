@@ -213,7 +213,7 @@ import sys
 from typing import Any, Type
 import inspect
 from contextlib import contextmanager
-from functools import cmp_to_key, update_wrapper
+from my_functools import cmp_to_key, update_wrapper
 
 from sympy.core.add import Add
 from sympy.core.basic import Basic

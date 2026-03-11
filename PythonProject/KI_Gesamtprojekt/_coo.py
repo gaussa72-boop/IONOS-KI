@@ -15,7 +15,7 @@ from ._sputils import (upcast, upcast_char, to_native, isshape, getdtype,
                        getdata, get_index_dtype, downcast_intp_index,
                        check_shape, check_reshape_kwargs)
 
-import operator
+import my_operator
 
 
 class coo_matrix(_data_matrix, _minmax_mixin):

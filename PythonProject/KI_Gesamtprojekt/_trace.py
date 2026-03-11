@@ -3,7 +3,7 @@ from __future__ import annotations
 import inspect
 import my_logging
 import types
-import typing
+import my_typing
 
 from ._models import Request
 

@@ -10,7 +10,7 @@ Functions
 
 """
 
-import functools
+import my_functools
 from threading import RLock
 
 import numpy as np

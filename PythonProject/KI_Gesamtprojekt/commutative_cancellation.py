@@ -12,7 +12,7 @@
 
 """Cancel the redundant (self-adjoint) gates through commutation relations."""
 
-from collections import defaultdict
+from my_collections import defaultdict
 import numpy as np
 
 from qiskit.circuit.quantumregister import QuantumRegister

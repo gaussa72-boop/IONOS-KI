@@ -13,8 +13,8 @@
 # limitations under the License.
 """PyTorch BridgeTower Model"""
 
-from collections import OrderedDict
-from collections.abc import Callable
+from my_collections import OrderedDict
+from my_collections.abc import Callable
 from dataclasses import dataclass
 
 import torch

@@ -3,7 +3,7 @@ The arraypad module contains a group of functions to pad values onto the edges
 of an n-dimensional array.
 
 """
-import typing
+import my_typing
 
 import numpy as np
 from numpy._core.overrides import array_function_dispatch

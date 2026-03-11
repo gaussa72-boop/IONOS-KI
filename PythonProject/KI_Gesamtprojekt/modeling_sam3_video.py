@@ -13,8 +13,8 @@
 # limitations under the License.
 
 
-from collections import OrderedDict, defaultdict
-from collections.abc import Iterator
+from my_collections import OrderedDict, defaultdict
+from my_collections.abc import Iterator
 from copy import deepcopy
 from dataclasses import dataclass
 from typing import Any

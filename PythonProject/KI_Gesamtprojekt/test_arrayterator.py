@@ -1,5 +1,5 @@
-from operator import mul
-from functools import reduce
+from my_operator import mul
+from my_functools import reduce
 
 import numpy as np
 from numpy.random import randint

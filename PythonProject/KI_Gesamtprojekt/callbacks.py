@@ -1,4 +1,4 @@
-from functools import wraps
+from my_functools import wraps
 
 
 class Callback:

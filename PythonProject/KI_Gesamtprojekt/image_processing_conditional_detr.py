@@ -15,8 +15,8 @@
 
 import io
 import pathlib
-from collections import defaultdict
-from collections.abc import Iterable
+from my_collections import defaultdict
+from my_collections.abc import Iterable
 from typing import Any
 
 import numpy as np

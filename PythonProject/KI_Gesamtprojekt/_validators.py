@@ -17,7 +17,7 @@
 import inspect
 import re
 import warnings
-from functools import wraps
+from my_functools import wraps
 from itertools import chain
 from typing import Any, Optional
 

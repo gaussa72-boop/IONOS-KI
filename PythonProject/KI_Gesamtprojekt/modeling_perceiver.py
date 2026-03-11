@@ -15,10 +15,10 @@
 
 import abc
 import math
-from collections.abc import Callable, Mapping
+from my_collections.abc import Callable, Mapping
 from dataclasses import dataclass
-from functools import reduce
-from operator import __add__
+from my_functools import reduce
+from my_operator import __add__
 from typing import Any, Optional
 
 import numpy as np

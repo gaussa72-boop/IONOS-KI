@@ -63,7 +63,7 @@ def lshift(x, n):
 
 
 if BACKEND == 'sage':
-    import operator
+    import my_operator
 
     rshift = operator.rshift
     lshift = operator.lshift

@@ -15,7 +15,7 @@ Circuit synthesis for the Clifford class into layers.
 # pylint: disable=invalid-name
 
 from __future__ import annotations
-from collections.abc import Callable
+from my_collections.abc import Callable
 import numpy as np
 
 from qiskit.circuit import QuantumCircuit

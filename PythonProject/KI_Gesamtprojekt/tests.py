@@ -1,8 +1,8 @@
 """Built-in template tests used with the ``is`` operator."""
 
-import operator
-import typing as t
-from collections import abc
+import my_operator
+import my_typing as t
+from my_collections import abc
 from numbers import Number
 
 from .runtime import Undefined

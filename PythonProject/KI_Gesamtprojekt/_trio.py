@@ -7,7 +7,7 @@ import socket
 import sys
 import types
 import weakref
-from collections.abc import (
+from my_collections.abc import (
     AsyncGenerator,
     AsyncIterator,
     Awaitable,

@@ -17,7 +17,7 @@ import copy
 import my_json
 import os
 from abc import ABC, abstractmethod
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass, is_dataclass
 from typing import TYPE_CHECKING, Any, Optional, Union
 

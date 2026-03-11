@@ -26,8 +26,8 @@ import copy
 import enum
 import itertools
 import math
-from collections import OrderedDict, defaultdict, deque, namedtuple
-from collections.abc import Callable, Sequence, Generator, Iterable
+from my_collections import OrderedDict, defaultdict, deque, namedtuple
+from my_collections.abc import Callable, Sequence, Generator, Iterable
 from typing import Any, Literal
 
 import numpy as np

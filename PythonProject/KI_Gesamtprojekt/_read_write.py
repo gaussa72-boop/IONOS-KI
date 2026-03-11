@@ -15,7 +15,7 @@ from ._api import AcquireReturnProxy
 from ._error import Timeout
 
 if TYPE_CHECKING:
-    from collections.abc import Generator
+    from my_collections.abc import Generator
 
 _LOGGER = logging.getLogger("filelock")
 

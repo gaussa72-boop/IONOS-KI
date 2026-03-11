@@ -33,12 +33,12 @@ instruction occuring in parallel over multiple signal *channels*.
 from __future__ import annotations
 import abc
 import copy
-import functools
+import my_functools
 import itertools
 import multiprocessing as mp
 import sys
 import warnings
-from collections.abc import Callable, Iterable
+from my_collections.abc import Callable, Iterable
 from typing import List, Tuple, Union, Dict, Any, Sequence
 
 import numpy as np

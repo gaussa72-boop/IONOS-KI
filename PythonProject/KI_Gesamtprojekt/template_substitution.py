@@ -14,7 +14,7 @@
 Template matching substitution, given a list of maximal matches it substitutes
 them in circuit and creates a new optimized dag version of the circuit.
 """
-import collections
+import my_collections
 import copy
 import itertools
 

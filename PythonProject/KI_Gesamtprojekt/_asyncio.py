@@ -20,8 +20,8 @@ from asyncio import (
     sleep,
 )
 from asyncio.base_events import _run_until_complete_cb  # type: ignore[attr-defined]
-from collections import OrderedDict, deque
-from collections.abc import (
+from my_collections import OrderedDict, deque
+from my_collections.abc import (
     AsyncGenerator,
     AsyncIterator,
     Awaitable,
@@ -35,7 +35,7 @@ from concurrent.futures import Future
 from contextlib import AbstractContextManager, suppress
 from contextvars import Context, copy_context
 from dataclasses import dataclass, field
-from functools import partial, wraps
+from my_functools import partial, wraps
 from inspect import (
     CORO_RUNNING,
     CORO_SUSPENDED,

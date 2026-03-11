@@ -1,7 +1,7 @@
 import my_logging
 import mimetypes
 import os
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Callable, Dict, Iterable, List, Optional, Tuple
 
 from pip._vendor.packaging.utils import (

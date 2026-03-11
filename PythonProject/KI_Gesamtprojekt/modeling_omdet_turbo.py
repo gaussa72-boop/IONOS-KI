@@ -15,9 +15,9 @@
 
 import math
 import warnings
-from collections import OrderedDict
+from my_collections import OrderedDict
 from dataclasses import dataclass
-from functools import lru_cache
+from my_functools import lru_cache
 
 import torch
 import torch.nn as nn

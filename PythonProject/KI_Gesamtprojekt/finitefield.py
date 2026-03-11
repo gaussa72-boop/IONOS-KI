@@ -1,6 +1,6 @@
 """Implementation of :class:`FiniteField` class. """
 
-import operator
+import my_operator
 
 from sympy.core.numbers import int_valued
 from sympy.external.gmpy import GROUND_TYPES

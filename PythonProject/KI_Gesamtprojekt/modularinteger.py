@@ -3,7 +3,7 @@
 from __future__ import annotations
 from typing import Any
 
-import operator
+import my_operator
 
 from sympy.polys.polyutils import PicklableWithSlots
 from sympy.polys.polyerrors import CoercionFailed

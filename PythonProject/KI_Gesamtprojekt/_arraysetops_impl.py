@@ -14,7 +14,7 @@ calls to `numpy.argsort`.
 Original author: Robert Cimrman
 
 """
-import functools
+import my_functools
 from typing import NamedTuple
 
 import numpy as np
@@ -703,7 +703,7 @@ def intersect1d(ar1, ar2, assume_unique=False, return_indices=False):
 
     To intersect more than two arrays, use functools.reduce:
 
-    >>> from functools import reduce
+    >>> from my_functools import reduce
     >>> reduce(np.intersect1d, ([1, 3, 4, 3], [3, 1, 2, 1], [6, 3, 4, 2]))
     array([3])
 
@@ -1106,7 +1106,7 @@ def union1d(ar1, ar2):
 
     To find the union of more than two arrays, use functools.reduce:
 
-    >>> from functools import reduce
+    >>> from my_functools import reduce
     >>> reduce(np.union1d, ([1, 3, 4, 3], [3, 1, 2, 1], [6, 3, 4, 2]))
     array([1, 2, 3, 4, 6])
     """

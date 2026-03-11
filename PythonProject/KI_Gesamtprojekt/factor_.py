@@ -2,7 +2,7 @@
 Integer factorization
 """
 
-from collections import defaultdict
+from my_collections import defaultdict
 import math
 
 from sympy.core.containers import Dict

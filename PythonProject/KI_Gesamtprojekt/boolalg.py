@@ -2,7 +2,7 @@
 Boolean algebra module for SymPy
 """
 
-from collections import defaultdict
+from my_collections import defaultdict
 from itertools import chain, combinations, product, permutations
 from sympy.core.add import Add
 from sympy.core.basic import Basic

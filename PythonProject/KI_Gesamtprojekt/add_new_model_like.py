@@ -16,7 +16,7 @@ import os
 import re
 import subprocess
 import textwrap
-from collections.abc import Callable
+from my_collections.abc import Callable
 from datetime import date
 from pathlib import Path
 from typing import Annotated, Any

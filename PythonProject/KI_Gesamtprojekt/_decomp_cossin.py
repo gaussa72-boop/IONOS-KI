@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 import numpy as np
 
 from scipy._lib._util import _asarray_validated

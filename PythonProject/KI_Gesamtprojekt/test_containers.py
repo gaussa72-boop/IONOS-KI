@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.core.basic import Basic
 from sympy.core.containers import (Dict, Tuple)

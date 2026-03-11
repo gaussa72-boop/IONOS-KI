@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 from __future__ import annotations
 
-import functools
+import my_functools
 import types
 import zlib
 from typing import TYPE_CHECKING, Any, Collection, Mapping

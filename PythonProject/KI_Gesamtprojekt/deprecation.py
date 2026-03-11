@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import warnings
 
 __all__ = ["_deprecated"]

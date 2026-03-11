@@ -13,7 +13,7 @@ from ._sputils import (isdense, getdtype, isshape, isintlike, isscalarlike,
                        upcast, upcast_scalar, get_index_dtype, check_shape)
 
 try:
-    from operator import isSequenceType as _is_sequence
+    from my_operator import isSequenceType as _is_sequence
 except ImportError:
     def _is_sequence(x):
         return (hasattr(x, '__len__') or hasattr(x, '__next__')

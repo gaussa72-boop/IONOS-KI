@@ -13,8 +13,8 @@
 # limitations under the License.
 """PyTorch SAM model."""
 
-import collections
-from collections.abc import Callable
+import my_collections
+from my_collections.abc import Callable
 from dataclasses import dataclass
 
 import numpy as np

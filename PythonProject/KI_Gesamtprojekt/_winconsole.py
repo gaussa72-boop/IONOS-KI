@@ -9,7 +9,7 @@
 import io
 import sys
 import time
-import typing as t
+import my_typing as t
 from ctypes import byref
 from ctypes import c_char
 from ctypes import c_char_p

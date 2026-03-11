@@ -12,8 +12,8 @@ question of adding time to length has no meaning.
 
 from __future__ import annotations
 
-import collections
-from functools import reduce
+import my_collections
+from my_functools import reduce
 
 from sympy.core.basic import Basic
 from sympy.core.containers import (Dict, Tuple)

@@ -24,7 +24,7 @@ will return the fraction (fa, fd). Other variable names probably come
 from the names used in Bronstein's book.
 """
 from types import GeneratorType
-from functools import reduce
+from my_functools import reduce
 
 from sympy.core.function import Lambda
 from sympy.core.mul import Mul

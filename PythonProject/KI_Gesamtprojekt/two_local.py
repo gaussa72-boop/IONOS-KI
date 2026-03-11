@@ -13,8 +13,8 @@
 """The two-local gate circuit."""
 
 from __future__ import annotations
-import typing
-from collections.abc import Callable, Sequence
+import my_typing
+from my_collections.abc import Callable, Sequence
 
 from qiskit.circuit.quantumcircuit import QuantumCircuit
 from qiskit.circuit import Gate, Instruction

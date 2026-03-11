@@ -1,4 +1,4 @@
-from functools import singledispatch
+from my_functools import singledispatch
 from sympy.external import import_module
 from sympy.stats.crv_types import BetaDistribution, CauchyDistribution, ChiSquaredDistribution, ExponentialDistribution, \
     GammaDistribution, LogNormalDistribution, NormalDistribution, ParetoDistribution, UniformDistribution, \

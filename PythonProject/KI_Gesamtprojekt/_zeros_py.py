@@ -1,6 +1,6 @@
 import warnings
-from collections import namedtuple
-import operator
+from my_collections import namedtuple
+import my_operator
 from . import _zeros
 import numpy as np
 

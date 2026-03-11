@@ -14,10 +14,10 @@
 
 from __future__ import annotations
 
-import collections
+import my_collections
 import itertools
-import typing
-from collections.abc import Callable, Mapping, Sequence
+import my_typing
+from my_collections.abc import Callable, Mapping, Sequence
 
 import numpy
 from qiskit.circuit.quantumcircuit import QuantumCircuit

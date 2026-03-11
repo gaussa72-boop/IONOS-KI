@@ -1,6 +1,6 @@
 import textwrap, re, sys, subprocess, shlex
 from pathlib import Path
-from collections import namedtuple
+from my_collections import namedtuple
 
 import pytest
 

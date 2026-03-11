@@ -12,7 +12,7 @@
 
 """Code from commutative_analysis pass that checks commutation relations between DAG nodes."""
 
-from functools import lru_cache
+from my_functools import lru_cache
 from typing import List, Union, Set, Optional
 import numpy as np
 

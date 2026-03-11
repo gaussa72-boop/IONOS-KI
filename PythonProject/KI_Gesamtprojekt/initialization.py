@@ -13,7 +13,7 @@
 # limitations under the License.
 import math
 import sys
-from collections import defaultdict
+from my_collections import defaultdict
 from contextlib import contextmanager
 
 import torch

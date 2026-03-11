@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
 from .sympify import sympify, SympifyError
 from sympy.utilities.iterables import iterable, uniq

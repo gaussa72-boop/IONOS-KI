@@ -1,5 +1,5 @@
 import numpy as np
-import operator
+import my_operator
 from . import (linear_sum_assignment, OptimizeResult)
 from ._optimize import _check_unknown_options
 

@@ -11,10 +11,10 @@
 # that they have been altered from the originals.
 """Basic rescheduling functions which take schedule or instructions and return new schedules."""
 from __future__ import annotations
-import typing
+import my_typing
 import warnings
-from collections import defaultdict
-from collections.abc import Iterable
+from my_collections import defaultdict
+from my_collections.abc import Iterable
 from typing import Type
 
 import numpy as np

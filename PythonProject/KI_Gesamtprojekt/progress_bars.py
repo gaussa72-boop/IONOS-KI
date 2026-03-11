@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import sys
 from typing import Callable, Generator, Iterable, Iterator, Optional, Tuple
 

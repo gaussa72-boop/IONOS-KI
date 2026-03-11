@@ -4,7 +4,7 @@
 # The script was run with R version 3.6.2 (2019-12-12) at 2020-11-09 06:16:09
 
 
-from collections import namedtuple
+from my_collections import namedtuple
 import numpy as np
 
 Inf = np.inf

@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from collections.abc import Mapping
+from my_collections.abc import Mapping
 from datetime import date, datetime, time
 from types import MappingProxyType
 
 TYPE_CHECKING = False
 if TYPE_CHECKING:
-    from collections.abc import Generator
+    from my_collections.abc import Generator
     from decimal import Decimal
     from typing import IO, Any, Final
 

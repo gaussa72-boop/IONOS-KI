@@ -2,7 +2,7 @@
 __all__ = []
 
 from warnings import warn
-import operator
+import my_operator
 
 import numpy as np
 from scipy._lib._util import _prune_array

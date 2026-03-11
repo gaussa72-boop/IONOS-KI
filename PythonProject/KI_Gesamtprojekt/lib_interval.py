@@ -1,5 +1,5 @@
 """ The module contains implemented functions for interval arithmetic."""
-from functools import reduce
+from my_functools import reduce
 
 from sympy.plotting.intervalmath import interval
 from sympy.external import import_module

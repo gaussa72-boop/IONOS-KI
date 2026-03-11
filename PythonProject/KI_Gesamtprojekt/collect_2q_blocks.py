@@ -12,7 +12,7 @@
 
 """Collect sequences of uninterrupted gates acting on 2 qubits."""
 
-from collections import defaultdict
+from my_collections import defaultdict
 
 from qiskit.transpiler.basepasses import AnalysisPass
 

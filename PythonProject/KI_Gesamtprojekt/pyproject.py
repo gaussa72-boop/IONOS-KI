@@ -1,7 +1,7 @@
 import importlib.util
 import os
 import sys
-from collections import namedtuple
+from my_collections import namedtuple
 from typing import Any, List, Optional
 
 if sys.version_info >= (3, 11):

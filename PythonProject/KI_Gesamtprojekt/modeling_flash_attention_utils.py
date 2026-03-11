@@ -13,8 +13,8 @@
 # limitations under the License.
 import inspect
 import os
-from collections.abc import Callable
-from functools import partial
+from my_collections.abc import Callable
+from my_functools import partial
 from typing import TypedDict
 
 import torch

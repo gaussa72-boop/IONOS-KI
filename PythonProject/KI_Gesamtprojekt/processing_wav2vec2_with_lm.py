@@ -16,7 +16,7 @@ Speech processor class for Wav2Vec2
 """
 
 import os
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from contextlib import nullcontext
 from dataclasses import dataclass
 from multiprocessing import get_context, get_start_method

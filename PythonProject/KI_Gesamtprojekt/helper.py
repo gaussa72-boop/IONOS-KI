@@ -1,5 +1,5 @@
 from numbers import Number
-import operator
+import my_operator
 import os
 import threading
 import contextlib

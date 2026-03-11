@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import typing
+import my_typing
 from urllib.parse import parse_qs, unquote, urlencode
 
 import idna
@@ -402,7 +402,7 @@ class URL:
 
     @property
     def raw(self) -> tuple[bytes, bytes, int, bytes]:  # pragma: nocover
-        import collections
+        import my_collections
         import warnings
 
         warnings.warn("URL.raw is deprecated.")

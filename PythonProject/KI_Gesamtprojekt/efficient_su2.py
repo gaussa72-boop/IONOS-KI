@@ -14,8 +14,8 @@
 
 from __future__ import annotations
 
-import typing
-from collections.abc import Callable
+import my_typing
+from my_collections.abc import Callable
 
 from numpy import pi
 from qiskit.circuit import QuantumCircuit

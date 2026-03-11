@@ -1,6 +1,6 @@
 """Implementation of __array_function__ overrides from NEP-18."""
-import collections
-import functools
+import my_collections
+import my_functools
 import os
 
 from numpy.core._multiarray_umath import (

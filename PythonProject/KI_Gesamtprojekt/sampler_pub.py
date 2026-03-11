@@ -17,7 +17,7 @@ Sampler Pub class
 
 from __future__ import annotations
 
-from collections.abc import Mapping
+from my_collections.abc import Mapping
 from numbers import Integral
 from typing import Tuple, Union
 

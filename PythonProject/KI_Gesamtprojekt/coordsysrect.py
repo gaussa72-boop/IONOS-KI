@@ -1,4 +1,4 @@
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 from sympy.core.basic import Basic
 from sympy.core.cache import cacheit

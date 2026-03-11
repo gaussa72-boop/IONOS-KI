@@ -31,7 +31,7 @@ import os
 import shutil
 import subprocess
 import tempfile
-import typing
+import my_typing
 from warnings import warn
 
 from qiskit import user_config

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import email.utils
 import re
-import typing as t
+import my_typing as t
 import warnings
 from datetime import date
 from datetime import datetime

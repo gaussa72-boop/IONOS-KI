@@ -70,7 +70,7 @@ nc = _newclass2()
 m = _mclass()
 
 if sys.hexversion < 0x03090000:
-    import typing
+    import my_typing
 
 
     class customIntList(typing.List[int]):
@@ -120,7 +120,7 @@ def test_specialtypes():
     assert dill.pickles(type(EnumMeta))
 
 
-from collections import namedtuple
+from my_collections import namedtuple
 
 Z = namedtuple("Z", ['a', 'b'])
 Zi = Z(0, 1)

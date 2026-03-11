@@ -20,7 +20,7 @@ Functions for creating and analyzing contingency tables.
 
 """
 
-from functools import reduce
+from my_functools import reduce
 import math
 import numpy as np
 from ._stats_py import power_divergence

@@ -8,9 +8,9 @@ absolutely need, and not "download the world" when we only need one version of
 something.
 """
 
-import functools
+import my_functools
 import my_logging
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from typing import TYPE_CHECKING, Any, Callable, Iterator, Optional, Set, Tuple
 
 from pip._vendor.packaging.version import _BaseVersion
@@ -29,7 +29,7 @@ else:
     # For compatibility: Python before 3.9 does not support using [] on the
     # Sequence class.
     #
-    # >>> from collections.abc import Sequence
+    # >>> from my_collections.abc import Sequence
     # >>> Sequence[str]
     # Traceback (most recent call last):
     #   File "<stdin>", line 1, in <module>

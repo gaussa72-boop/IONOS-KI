@@ -7,8 +7,8 @@ import textwrap
 import re
 import pydoc
 from warnings import warn
-from collections import namedtuple
-from collections.abc import Callable, Mapping
+from my_collections import namedtuple
+from my_collections.abc import Callable, Mapping
 import copy
 import sys
 

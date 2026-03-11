@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import collections
+import my_collections
 import os
 import unicodedata
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 from ...tokenization_python import PreTrainedTokenizer, _is_control, _is_punctuation, _is_whitespace
 from ...utils import my_logging

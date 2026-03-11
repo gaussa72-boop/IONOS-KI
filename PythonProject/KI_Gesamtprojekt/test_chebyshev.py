@@ -1,7 +1,7 @@
 """Tests for chebyshev module.
 
 """
-from functools import reduce
+from my_functools import reduce
 
 import numpy as np
 import numpy.polynomial.chebyshev as cheb

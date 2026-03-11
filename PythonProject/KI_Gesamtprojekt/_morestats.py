@@ -1,7 +1,7 @@
 from __future__ import annotations
 import math
 import warnings
-from collections import namedtuple
+from my_collections import namedtuple
 
 import numpy as np
 from numpy import (isscalar, r_, log, around, unique, asarray, zeros,

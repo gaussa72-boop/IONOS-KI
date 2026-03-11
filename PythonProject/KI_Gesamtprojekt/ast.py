@@ -129,7 +129,7 @@ There is a function constructing a loop (or a complete function) like this in
 from __future__ import annotations
 from typing import Any
 
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.core.relational import (Ge, Gt, Le, Lt)
 from sympy.core import Symbol, Tuple, Dummy

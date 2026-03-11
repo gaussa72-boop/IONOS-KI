@@ -16,7 +16,7 @@ Driver for a synthesis routine which emits optimal XX-based circuits.
 from __future__ import annotations
 import heapq
 import math
-from operator import itemgetter
+from my_operator import itemgetter
 from typing import Callable
 
 import numpy as np

@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import itertools
 import my_logging
 import os

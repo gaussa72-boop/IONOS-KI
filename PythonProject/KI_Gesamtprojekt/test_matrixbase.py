@@ -1,6 +1,6 @@
 import concurrent.futures
 import random
-from collections.abc import Hashable
+from my_collections.abc import Hashable
 
 from sympy import (
     Abs, Add, Array, DeferredVector, E, Expr, FiniteSet, Float, Function,

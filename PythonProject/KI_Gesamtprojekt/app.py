@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-import collections.abc as cabc
+import my_collections.abc as cabc
 import os
 import sys
-import typing as t
+import my_typing as t
 import weakref
 from datetime import timedelta
 from inspect import iscoroutinefunction
@@ -26,7 +26,7 @@ from werkzeug.serving import is_running_from_reloader
 from werkzeug.wrappers import Response as BaseResponse
 
 from . import cli
-from . import typing as ft
+from . import my_typing as ft
 from .ctx import AppContext
 from .ctx import RequestContext
 from .globals import _cv_app

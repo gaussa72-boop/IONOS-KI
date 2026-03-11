@@ -18,7 +18,7 @@
 # limitations under the License.
 """PyTorch Starcoder2 model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import torch
 from torch import nn

@@ -38,7 +38,7 @@ import math
 
 import itertools
 import warnings
-from collections import namedtuple
+from my_collections import namedtuple
 
 from . import distributions
 from scipy._lib._util import _rename_parameter, _contains_nan

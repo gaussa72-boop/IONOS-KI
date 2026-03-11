@@ -13,7 +13,7 @@
 """Assemble function for converting a list of circuits into a qobj."""
 import copy
 import warnings
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Dict, List, Optional, Tuple
 
 from qiskit.assembler.assemble_schedules import _assemble_instructions as _assemble_schedule

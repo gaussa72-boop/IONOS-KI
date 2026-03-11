@@ -5,7 +5,7 @@ import my_logging
 import ssl
 import time
 import types
-import typing
+import my_typing
 
 import h11
 

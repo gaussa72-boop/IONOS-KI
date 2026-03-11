@@ -14,7 +14,7 @@
 import os
 import re
 import shutil
-from collections.abc import Callable, Sequence
+from my_collections.abc import Callable, Sequence
 from enum import Enum
 from pathlib import Path
 from typing import Any, Literal, Union, overload

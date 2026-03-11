@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import math
-from collections.abc import Generator
+from my_collections.abc import Generator
 from contextlib import contextmanager
 from types import TracebackType
 

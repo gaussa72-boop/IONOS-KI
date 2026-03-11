@@ -13,7 +13,7 @@
 # limitations under the License.
 """Fast Image processor class for BridgeTower."""
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from typing import Optional
 
 import torch

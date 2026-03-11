@@ -5,8 +5,8 @@ import itertools
 import os
 import re
 import shutil
-from collections import defaultdict
-from collections.abc import Iterator
+from my_collections import defaultdict
+from my_collections.abc import Iterator
 from typing import IO, TYPE_CHECKING
 
 import pytest

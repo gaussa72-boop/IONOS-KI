@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
-from collections.abc import Iterable
-from functools import reduce
+from my_collections.abc import Iterable
+from my_functools import reduce
 import re
 
 from .sympify import sympify, _sympify
@@ -23,7 +23,7 @@ from mpmath.libmp.libintmath import giant_steps
 if TYPE_CHECKING:
     from .numbers import Number
 
-from collections import defaultdict
+from my_collections import defaultdict
 
 
 def _corem(eq, c):  # helper for extract_additively

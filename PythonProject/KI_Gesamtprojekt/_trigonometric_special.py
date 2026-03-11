@@ -34,7 +34,7 @@ References
 """
 from __future__ import annotations
 from typing import Callable
-from functools import reduce
+from my_functools import reduce
 from sympy.core.expr import Expr
 from sympy.core.singleton import S
 from sympy.core.intfunc import igcdex

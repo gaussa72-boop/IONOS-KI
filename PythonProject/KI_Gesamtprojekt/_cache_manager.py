@@ -16,7 +16,7 @@
 
 import os
 import shutil
-from collections import defaultdict
+from my_collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal, Optional, Union

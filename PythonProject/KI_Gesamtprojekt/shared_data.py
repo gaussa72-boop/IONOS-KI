@@ -11,12 +11,12 @@ Serve Shared Static Files
 
 from __future__ import annotations
 
-import collections.abc as cabc
+import my_collections.abc as cabc
 import importlib.util
 import mimetypes
 import os
 import posixpath
-import typing as t
+import my_typing as t
 from datetime import datetime
 from datetime import timezone
 from io import BytesIO

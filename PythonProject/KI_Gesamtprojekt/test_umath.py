@@ -5,10 +5,10 @@ import itertools
 import pytest
 import sys
 import os
-import operator
+import my_operator
 from fractions import Fraction
-from functools import reduce
-from collections import namedtuple
+from my_functools import reduce
+from my_collections import namedtuple
 
 import numpy.core.umath as ncu
 from numpy.core import _umath_tests as ncu_tests
@@ -265,7 +265,7 @@ class TestOut:
 
 
 class TestComparisons:
-    import operator
+    import my_operator
 
     @pytest.mark.parametrize('dtype', np.sctypes['uint'] + np.sctypes['int'] +
                              np.sctypes['float'] + [np.bool_])

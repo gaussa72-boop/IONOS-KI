@@ -1,7 +1,7 @@
 import random
-from collections import defaultdict
-from collections.abc import Iterable
-from functools import reduce
+from my_collections import defaultdict
+from my_collections.abc import Iterable
+from my_functools import reduce
 
 from sympy.core.parameters import global_parameters
 from sympy.core.basic import Atom
@@ -2869,7 +2869,7 @@ class Permutation(Atom):
         .. [3] https://web.archive.org/web/20171008094331/http://www.wou.edu/~burtonl/josephus.html
 
         """
-        from collections import deque
+        from my_collections import deque
         m -= 1
         Q = deque(list(range(n)))
         perm = []

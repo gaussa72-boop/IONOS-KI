@@ -15,8 +15,8 @@
 
 import math
 import random
-from collections.abc import Iterable
-from functools import lru_cache
+from my_collections.abc import Iterable
+from my_functools import lru_cache
 from typing import Any
 
 import numpy as np

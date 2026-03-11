@@ -1,6 +1,6 @@
 import dis
 import array
-import collections
+import my_collections
 
 try:
     import html

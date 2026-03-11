@@ -18,7 +18,7 @@
 # limitations under the License.
 """PyTorch Persimmon model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Optional
 
 import torch

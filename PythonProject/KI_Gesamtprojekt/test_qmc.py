@@ -1,5 +1,5 @@
 import os
-from collections import Counter
+from my_collections import Counter
 from itertools import combinations, product
 
 import pytest

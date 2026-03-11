@@ -15,7 +15,7 @@
 from __future__ import annotations
 
 import warnings
-from collections import defaultdict
+from my_collections import defaultdict
 from dataclasses import dataclass
 from typing import Iterable
 

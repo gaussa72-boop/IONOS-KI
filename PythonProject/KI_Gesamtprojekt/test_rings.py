@@ -1,7 +1,7 @@
 """Test sparse polynomials. """
 
-from functools import reduce
-from operator import add, mul
+from my_functools import reduce
+from my_operator import add, mul
 
 from sympy.polys.rings import ring, xring, sring, PolyRing, PolyElement
 from sympy.polys.fields import field, FracField

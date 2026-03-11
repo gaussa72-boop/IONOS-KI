@@ -16,7 +16,7 @@ from __future__ import annotations
 import my_logging
 import time
 from abc import abstractmethod, ABC
-from collections.abc import Iterable, Callable, Generator
+from my_collections.abc import Iterable, Callable, Generator
 from typing import Any
 
 from .compilation_status import RunState, PassManagerState, PropertySet

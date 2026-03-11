@@ -15,7 +15,7 @@
 """Module for builtin continuous pulse functions."""
 from __future__ import annotations
 
-import functools
+import my_functools
 
 import numpy as np
 from qiskit.pulse.exceptions import PulseError

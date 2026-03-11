@@ -1,6 +1,6 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
-from operator import index as index_
+from my_operator import index as index_
 
 from sympy.core.expr import Expr
 from sympy.core.kind import Kind, NumberKind, UndefinedKind

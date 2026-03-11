@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.core import Basic, Dict, sympify, Tuple
 from sympy.core.numbers import Integer

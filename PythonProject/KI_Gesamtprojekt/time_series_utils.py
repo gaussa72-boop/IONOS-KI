@@ -16,7 +16,7 @@
 Time series distributional output classes and utilities.
 """
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import torch
 from torch import nn

@@ -2,8 +2,8 @@
 Histogram-related functions
 """
 import contextlib
-import functools
-import operator
+import my_functools
+import my_operator
 import warnings
 
 import numpy as np

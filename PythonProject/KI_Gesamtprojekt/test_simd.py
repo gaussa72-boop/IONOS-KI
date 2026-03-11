@@ -2,7 +2,7 @@
 # may be involved in their functionality.
 import pytest, math, re
 import itertools
-import operator
+import my_operator
 from numpy.core._simd import targets, clear_floatstatus, get_floatstatus
 from numpy.core._multiarray_umath import __cpu_baseline__
 

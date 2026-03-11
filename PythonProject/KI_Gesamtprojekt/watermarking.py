@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import collections
+import my_collections
 from dataclasses import dataclass
-from functools import lru_cache
+from my_functools import lru_cache
 from typing import TYPE_CHECKING, Any, Union
 
 import numpy as np

@@ -13,7 +13,7 @@ function name, setup and teardown functions and so on - see
 ``nose.tools`` for more information.
 
 """
-import collections.abc
+import my_collections.abc
 import warnings
 
 from .utils import SkipTest, assert_warns, HAS_REFCOUNT

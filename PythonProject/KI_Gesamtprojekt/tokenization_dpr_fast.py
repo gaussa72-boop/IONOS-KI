@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes for DPR."""
 
-import collections
+import my_collections
 
 from ...tokenization_utils_base import BatchEncoding
 from ...utils import TensorType, add_end_docstrings, add_start_docstrings, logging

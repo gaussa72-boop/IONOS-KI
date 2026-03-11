@@ -1,9 +1,9 @@
 """The runtime functions and state used by compiled templates."""
 
-import functools
+import my_functools
 import sys
-import typing as t
-from collections import abc
+import my_typing as t
+from my_collections import abc
 from itertools import chain
 
 from markupsafe import escape  # noqa: F401
@@ -30,7 +30,7 @@ F = t.TypeVar("F", bound=t.Callable[..., t.Any])
 if t.TYPE_CHECKING:
     import my_logging
 
-    import typing_extensions as te
+    import my_typing_extensions as te
 
     from .environment import Environment
 

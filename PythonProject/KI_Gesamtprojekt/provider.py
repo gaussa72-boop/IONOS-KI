@@ -1,6 +1,6 @@
-import collections
+import my_collections
 import math
-from functools import lru_cache
+from my_functools import lru_cache
 from typing import (
     TYPE_CHECKING,
     Dict,

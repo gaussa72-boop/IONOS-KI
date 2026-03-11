@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 import sys
 import tempfile
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from io import BytesIO, TextIOWrapper
 from types import TracebackType
 from typing import (

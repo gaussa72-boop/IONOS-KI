@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-import functools
+import my_functools
 import socket
 import ssl
 import sys
-import typing
+import my_typing
 
 from .._exceptions import (
     ConnectError,

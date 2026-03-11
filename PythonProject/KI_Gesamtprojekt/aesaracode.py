@@ -5,7 +5,7 @@ from sympy.external import import_module
 from sympy.printing.printer import Printer
 from sympy.utilities.iterables import is_sequence
 import sympy
-from functools import partial
+from my_functools import partial
 
 aesara = import_module('aesara')
 

@@ -13,7 +13,7 @@
 """Management of schedule block references."""
 
 from typing import Tuple
-from collections import UserDict
+from my_collections import UserDict
 from qiskit.pulse.exceptions import PulseError
 
 

@@ -1,6 +1,6 @@
 from __future__ import annotations
 import re
-import typing
+import my_typing
 from itertools import product
 from typing import Any, Callable
 

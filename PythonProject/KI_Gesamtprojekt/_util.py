@@ -1,9 +1,9 @@
 from contextlib import contextmanager
-import functools
-import operator
+import my_functools
+import my_operator
 import warnings
 import numbers
-from collections import namedtuple
+from my_collections import namedtuple
 import inspect
 import math
 from typing import (

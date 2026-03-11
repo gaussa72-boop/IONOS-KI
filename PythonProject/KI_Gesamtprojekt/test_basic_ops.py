@@ -180,7 +180,7 @@ def test_almost_equal():
 
 
 def test_arithmetic_functions():
-    import operator
+    import my_operator
     ops = [(operator.add, fadd), (operator.sub, fsub), (operator.mul, fmul),
            (operator.truediv, fdiv)]
     a = mpf(0.27)

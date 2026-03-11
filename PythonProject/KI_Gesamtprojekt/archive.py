@@ -1,4 +1,4 @@
-import operator
+import my_operator
 
 from fsspec import AbstractFileSystem
 from fsspec.utils import tokenize

@@ -7,7 +7,7 @@ __all__ = (
 )
 
 import warnings
-from collections import OrderedDict, deque
+from my_collections import OrderedDict, deque
 from dataclasses import dataclass, field
 from types import TracebackType
 from typing import Generic, NamedTuple, TypeVar

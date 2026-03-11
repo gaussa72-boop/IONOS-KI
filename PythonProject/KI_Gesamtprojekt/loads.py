@@ -1,5 +1,5 @@
 from abc import ABC
-from collections import namedtuple
+from my_collections import namedtuple
 from sympy.physics.mechanics.body_base import BodyBase
 from sympy.physics.vector import Vector, ReferenceFrame, Point
 

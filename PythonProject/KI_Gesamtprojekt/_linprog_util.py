@@ -10,7 +10,7 @@ from scipy.optimize._remove_redundancy import (
     _remove_redundancy_svd, _remove_redundancy_pivot_sparse,
     _remove_redundancy_pivot_dense, _remove_redundancy_id
 )
-from collections import namedtuple
+from my_collections import namedtuple
 
 _LPProblem = namedtuple('_LPProblem',
                         'c A_ub b_ub A_eq b_eq bounds x0 integrality')

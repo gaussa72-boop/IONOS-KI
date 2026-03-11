@@ -1,5 +1,5 @@
 import sys
-from functools import lru_cache
+from my_functools import lru_cache
 from marshal import dumps, loads
 from random import randint
 from typing import Any, Dict, Iterable, List, Optional, Type, Union, cast

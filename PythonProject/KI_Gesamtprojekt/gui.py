@@ -25,7 +25,7 @@ class tqdm_gui(std_tqdm):  # pragma: no cover
     """Experimental Matplotlib GUI version of tqdm!"""
     # TODO: @classmethod: write() on GUI?
     def __init__(self, *args, **kwargs):
-        from collections import deque
+        from my_collections import deque
 
         import matplotlib as mpl
         import matplotlib.pyplot as plt

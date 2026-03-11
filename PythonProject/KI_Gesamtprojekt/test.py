@@ -3,8 +3,8 @@ from __future__ import annotations
 import dataclasses
 import mimetypes
 import sys
-import typing as t
-from collections import defaultdict
+import my_typing as t
+from my_collections import defaultdict
 from datetime import datetime
 from io import BytesIO
 from itertools import chain
@@ -46,7 +46,7 @@ from .wsgi import ClosingIterator
 from .wsgi import get_current_url
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
     from _typeshed.wsgi import WSGIApplication
     from _typeshed.wsgi import WSGIEnvironment
 

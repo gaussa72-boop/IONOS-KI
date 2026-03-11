@@ -16,7 +16,7 @@ Tokenizer class for Nougat.
 """
 
 import re
-from functools import partial
+from my_functools import partial
 from multiprocessing import Pool
 
 import numpy as np

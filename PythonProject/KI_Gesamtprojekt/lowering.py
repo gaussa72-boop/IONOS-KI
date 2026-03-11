@@ -13,7 +13,7 @@
 """Lower gates to schedules. The relative timing within gates is respected. This
 module handles the translation, but does not handle timing.
 """
-from collections import namedtuple
+from my_collections import namedtuple
 from typing import Dict, List, Optional, Union
 
 from qiskit.circuit.barrier import Barrier

@@ -1,5 +1,5 @@
 from copy import copy
-from functools import partial
+from my_functools import partial
 
 from .auto import tqdm as tqdm_auto
 

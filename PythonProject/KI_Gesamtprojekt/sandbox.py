@@ -2,13 +2,13 @@
 Useful when the template itself comes from an untrusted source.
 """
 
-import operator
+import my_operator
 import types
-import typing as t
+import my_typing as t
 from _string import formatter_field_name_split  # type: ignore
-from collections import abc
-from collections import deque
-from functools import update_wrapper
+from my_collections import abc
+from my_collections import deque
+from my_functools import update_wrapper
 from string import Formatter
 
 from markupsafe import EscapeFormatter

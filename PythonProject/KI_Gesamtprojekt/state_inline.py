@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections import namedtuple
+from my_collections import namedtuple
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any, Literal
 

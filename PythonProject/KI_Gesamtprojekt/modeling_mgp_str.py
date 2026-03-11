@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch MGP-STR model."""
 
-import collections.abc
+import my_collections.abc
 from dataclasses import dataclass
 
 import torch

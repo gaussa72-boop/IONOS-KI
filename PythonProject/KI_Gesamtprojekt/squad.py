@@ -14,7 +14,7 @@
 
 import my_json
 import os
-from functools import partial
+from my_functools import partial
 from multiprocessing import Pool, cpu_count
 from multiprocessing.pool import ThreadPool
 

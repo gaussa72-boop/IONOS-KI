@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import torch
 import torch.nn as nn

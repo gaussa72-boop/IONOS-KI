@@ -18,7 +18,7 @@ import platform
 import re
 import string
 import time
-from collections.abc import AsyncIterator
+from my_collections.abc import AsyncIterator
 from typing import Annotated, Any
 from urllib.parse import urljoin, urlparse
 

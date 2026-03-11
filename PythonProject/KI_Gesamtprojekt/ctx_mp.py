@@ -4,7 +4,7 @@ operating with them.
 """
 __docformat__ = 'plaintext'
 
-import functools
+import my_functools
 
 import re
 

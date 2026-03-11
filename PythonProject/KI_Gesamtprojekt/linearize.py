@@ -6,8 +6,8 @@ from sympy.utilities.iterables import flatten
 from sympy.physics.vector import dynamicsymbols
 from sympy.physics.mechanics.functions import msubs, _parse_linear_solver
 
-from collections import namedtuple
-from collections.abc import Iterable
+from my_collections import namedtuple
+from my_collections.abc import Iterable
 
 
 class Linearizer:

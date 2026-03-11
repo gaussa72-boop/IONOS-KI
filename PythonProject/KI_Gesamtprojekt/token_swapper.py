@@ -28,7 +28,7 @@
 
 from __future__ import annotations
 import my_logging
-from collections.abc import Mapping
+from my_collections.abc import Mapping
 
 import numpy as np
 import rustworkx as rx

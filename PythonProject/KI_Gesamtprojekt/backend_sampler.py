@@ -15,7 +15,7 @@
 from __future__ import annotations
 
 import math
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from typing import Any
 
 from qiskit.circuit.quantumcircuit import QuantumCircuit

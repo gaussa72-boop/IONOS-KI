@@ -14,7 +14,7 @@
 
 import base64
 import os
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from dataclasses import dataclass
 from io import BytesIO
 from typing import Optional, Union

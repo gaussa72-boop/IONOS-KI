@@ -13,7 +13,7 @@
 """Gate equivalence library."""
 
 import copy
-from collections import namedtuple
+from my_collections import namedtuple
 
 from rustworkx.visualization import graphviz_draw
 import rustworkx as rx

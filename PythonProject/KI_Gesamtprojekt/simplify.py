@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.concrete.products import Product
 from sympy.concrete.summations import Sum

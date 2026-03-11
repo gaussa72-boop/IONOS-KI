@@ -1,4 +1,4 @@
-import collections.abc
+import my_collections.abc
 import textwrap
 from io import BytesIO
 from os import path

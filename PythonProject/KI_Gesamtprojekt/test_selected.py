@@ -112,7 +112,7 @@ def test_frame_related():
 
 
 def test_typing():
-    import typing
+    import my_typing
     x = typing.Any
     assert x == dill.copy(x)
     x = typing.Dict[int, str]

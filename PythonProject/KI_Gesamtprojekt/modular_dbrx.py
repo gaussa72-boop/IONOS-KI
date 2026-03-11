@@ -13,7 +13,7 @@
 # limitations under the License.
 """Modular components for DBRX model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Any
 
 import torch

@@ -15,7 +15,7 @@ from __future__ import annotations
 import inspect
 import warnings
 from abc import ABCMeta, abstractmethod
-from collections.abc import Sequence, Callable
+from my_collections.abc import Sequence, Callable
 from enum import IntEnum
 from typing import Any
 

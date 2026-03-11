@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import collections
+import my_collections
 from typing import TYPE_CHECKING, Any, Generic, Iterable, NamedTuple
 
 from ..structs import CT, KT, RT, DirectedGraph

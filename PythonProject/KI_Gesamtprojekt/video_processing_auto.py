@@ -15,7 +15,7 @@
 
 import importlib
 import os
-from collections import OrderedDict
+from my_collections import OrderedDict
 from typing import TYPE_CHECKING
 
 # Build the list of all video processors

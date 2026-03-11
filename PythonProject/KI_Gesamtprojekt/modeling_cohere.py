@@ -26,7 +26,7 @@
 # This file is based on the LLama model definition file in transformers
 
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Optional
 
 import torch

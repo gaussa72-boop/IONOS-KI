@@ -9,10 +9,10 @@ __all__ = (
     "reduce",
 )
 
-import functools
+import my_functools
 import sys
-from collections import OrderedDict
-from collections.abc import (
+from my_collections import OrderedDict
+from my_collections.abc import (
     AsyncIterable,
     Awaitable,
     Callable,
@@ -20,7 +20,7 @@ from collections.abc import (
     Hashable,
     Iterable,
 )
-from functools import update_wrapper
+from my_functools import update_wrapper
 from inspect import iscoroutinefunction
 from typing import (
     Any,

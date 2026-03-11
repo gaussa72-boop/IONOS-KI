@@ -6,7 +6,7 @@ from os.path import join, dirname, normpath
 
 compilers = ['ArmFlangCompiler']
 
-import functools
+import my_functools
 
 
 class ArmFlangCompiler(FCompiler):

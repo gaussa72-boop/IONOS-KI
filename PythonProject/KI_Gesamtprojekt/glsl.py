@@ -5,7 +5,7 @@ from sympy.core.function import Lambda
 from sympy.core.numbers import equal_valued
 from sympy.printing.codeprinter import CodePrinter
 from sympy.printing.precedence import precedence
-from functools import reduce
+from my_functools import reduce
 
 known_functions = {
     'Abs': 'abs',

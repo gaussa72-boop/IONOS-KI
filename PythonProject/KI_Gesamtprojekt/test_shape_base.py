@@ -1,5 +1,5 @@
 import numpy as np
-import functools
+import my_functools
 import sys
 import pytest
 

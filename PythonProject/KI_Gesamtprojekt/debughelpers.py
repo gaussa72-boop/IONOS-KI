@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import typing as t
+import my_typing as t
 
 from jinja2.loaders import BaseLoader
 from werkzeug.routing import RequestRedirect

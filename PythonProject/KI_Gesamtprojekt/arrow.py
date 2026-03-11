@@ -4,7 +4,7 @@ import os
 import secrets
 import shutil
 from contextlib import suppress
-from functools import cached_property, wraps
+from my_functools import cached_property, wraps
 from urllib.parse import parse_qs
 
 from fsspec.spec import AbstractFileSystem

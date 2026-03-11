@@ -13,9 +13,9 @@
 # limitations under the License.
 import math
 import sys
-from collections.abc import Callable, Sequence
+from my_collections.abc import Callable, Sequence
 from dataclasses import dataclass
-from functools import partial
+from my_functools import partial
 
 import numpy as np
 import torch

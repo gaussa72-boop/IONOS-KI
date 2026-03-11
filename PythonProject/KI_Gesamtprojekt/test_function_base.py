@@ -1,4 +1,4 @@
-import operator
+import my_operator
 import warnings
 import sys
 import decimal

@@ -1,5 +1,5 @@
 import copy
-from collections import defaultdict
+from my_collections import defaultdict
 from dataclasses import dataclass
 from typing import Any, Optional, Union
 

@@ -12,10 +12,10 @@
 """A generic implementation of Approximate Quantum Compiler."""
 from __future__ import annotations
 
-import typing
-from functools import partial
+import my_typing
+from my_functools import partial
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Protocol
 
 import numpy as np

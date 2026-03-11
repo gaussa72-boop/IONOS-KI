@@ -17,7 +17,7 @@ Gate described by the time evolution of a Hermitian Hamiltonian operator.
 from __future__ import annotations
 
 import math
-import typing
+import my_typing
 from numbers import Number
 
 import numpy as np

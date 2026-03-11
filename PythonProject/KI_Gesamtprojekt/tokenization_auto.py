@@ -16,7 +16,7 @@
 import importlib
 import my_json
 import os
-from collections import OrderedDict
+from my_collections import OrderedDict
 from typing import Any
 
 from transformers.utils.import_utils import is_mistral_common_available

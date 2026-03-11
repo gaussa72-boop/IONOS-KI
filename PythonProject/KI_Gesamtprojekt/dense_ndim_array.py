@@ -1,4 +1,4 @@
-import functools
+import my_functools
 from typing import List
 
 from sympy.core.basic import Basic

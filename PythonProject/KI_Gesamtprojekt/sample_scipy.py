@@ -1,4 +1,4 @@
-from functools import singledispatch
+from my_functools import singledispatch
 
 from sympy.core.symbol import Dummy
 from sympy.functions.elementary.exponential import exp

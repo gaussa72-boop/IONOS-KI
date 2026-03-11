@@ -129,7 +129,7 @@ Utility classes:
 
 import warnings
 import bisect
-from collections import deque
+from my_collections import deque
 
 import numpy as np
 from . import _hierarchy, _optimal_leaf_ordering

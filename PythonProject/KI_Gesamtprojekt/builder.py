@@ -410,14 +410,14 @@ how the program is built.
 """
 from __future__ import annotations
 import contextvars
-import functools
+import my_functools
 import itertools
 import sys
 import uuid
 import warnings
-from collections.abc import Generator, Callable, Iterable
+from my_collections.abc import Generator, Callable, Iterable
 from contextlib import contextmanager
-from functools import singledispatchmethod
+from my_functools import singledispatchmethod
 from typing import TypeVar, ContextManager, TypedDict, Union, Optional, Dict
 
 import numpy as np

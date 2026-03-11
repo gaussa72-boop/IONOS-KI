@@ -4,7 +4,7 @@ import io
 import mimetypes
 import os
 import re
-import typing
+import my_typing
 from pathlib import Path
 
 from ._types import (

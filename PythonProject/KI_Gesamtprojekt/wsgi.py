@@ -15,7 +15,7 @@
 from __future__ import print_function
 
 import argparse
-import functools
+import my_functools
 import sys
 
 

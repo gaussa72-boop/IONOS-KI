@@ -29,7 +29,7 @@ References
 import warnings
 import math
 from math import gcd
-from collections import namedtuple, Counter
+from my_collections import namedtuple, Counter
 
 import numpy as np
 from numpy import array, asarray, ma

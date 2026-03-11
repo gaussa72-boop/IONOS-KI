@@ -2,8 +2,8 @@ import array
 import my_logging
 import posixpath
 import warnings
-from collections.abc import MutableMapping
-from functools import cached_property
+from my_collections.abc import MutableMapping
+from my_functools import cached_property
 
 from fsspec.core import url_to_fs
 

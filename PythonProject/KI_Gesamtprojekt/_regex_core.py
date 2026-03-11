@@ -16,7 +16,7 @@
 import enum
 import string
 import unicodedata
-from collections import defaultdict
+from my_collections import defaultdict
 
 from regex import _regex
 

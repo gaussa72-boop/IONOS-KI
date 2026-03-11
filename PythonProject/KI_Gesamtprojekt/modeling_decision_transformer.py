@@ -14,7 +14,7 @@
 """PyTorch DecisionTransformer model."""
 
 import math
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
 
 import torch

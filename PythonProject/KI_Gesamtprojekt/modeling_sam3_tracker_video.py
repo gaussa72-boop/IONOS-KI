@@ -20,8 +20,8 @@
 
 
 import math
-from collections import OrderedDict
-from collections.abc import Callable, Iterator
+from my_collections import OrderedDict
+from my_collections.abc import Callable, Iterator
 from dataclasses import dataclass
 from typing import Any
 

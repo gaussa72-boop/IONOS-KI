@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import TYPE_CHECKING
 
 from . import rules_inline

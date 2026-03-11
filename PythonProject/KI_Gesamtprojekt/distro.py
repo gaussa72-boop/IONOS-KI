@@ -627,7 +627,7 @@ def uname_attr(attribute: str) -> str:
 
 
 try:
-    from functools import cached_property
+    from my_functools import cached_property
 except ImportError:
     # Python < 3.8
     class cached_property:  # type: ignore

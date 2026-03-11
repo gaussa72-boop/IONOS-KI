@@ -34,9 +34,9 @@ for the documentation.
 import re
 import sys
 import inspect
-import operator
+import my_operator
 import itertools
-import collections
+import my_collections
 
 from inspect import getfullargspec
 

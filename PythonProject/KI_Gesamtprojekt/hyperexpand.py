@@ -56,8 +56,8 @@ It is described in great(er) detail in the Sphinx documentation.
 # o Deciding if one index quadruple is reachable from another is tricky. For
 #   this reason, we use hand-built routines to match and instantiate formulas.
 #
-from collections import defaultdict
-from functools import reduce
+from my_collections import defaultdict
+from my_functools import reduce
 from itertools import product
 from math import prod
 

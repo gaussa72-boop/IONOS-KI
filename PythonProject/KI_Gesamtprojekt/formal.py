@@ -1,6 +1,6 @@
 """Formal Power Series"""
 
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.core.numbers import (nan, oo, zoo)
 from sympy.core.add import Add

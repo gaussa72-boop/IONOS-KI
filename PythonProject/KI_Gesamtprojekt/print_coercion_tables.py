@@ -3,7 +3,7 @@
 
 """
 import numpy as np
-from collections import namedtuple
+from my_collections import namedtuple
 
 
 # Generic object that can be added, but doesn't do anything else

@@ -12,7 +12,7 @@
 
 """This module contains common utils for vf2 layout passes."""
 
-from collections import defaultdict
+from my_collections import defaultdict
 import statistics
 import random
 

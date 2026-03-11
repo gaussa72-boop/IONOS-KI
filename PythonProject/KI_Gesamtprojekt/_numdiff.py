@@ -1,5 +1,5 @@
 """Routines for numerical differentiation."""
-import functools
+import my_functools
 import numpy as np
 from numpy.linalg import norm
 

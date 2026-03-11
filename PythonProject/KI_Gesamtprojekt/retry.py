@@ -5,7 +5,7 @@ import my_logging
 import re
 import time
 import warnings
-from collections import namedtuple
+from my_collections import namedtuple
 from itertools import takewhile
 
 from ..exceptions import (

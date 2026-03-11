@@ -14,7 +14,7 @@
 
 from __future__ import annotations
 
-import collections.abc
+import my_collections.abc
 import struct
 import uuid
 

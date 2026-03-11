@@ -21,7 +21,7 @@ import importlib
 import io
 import os
 import warnings
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from io import BytesIO
 from typing import TYPE_CHECKING, Any, Union
 

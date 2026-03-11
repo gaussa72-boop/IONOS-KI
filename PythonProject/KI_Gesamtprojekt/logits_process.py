@@ -14,7 +14,7 @@
 
 import inspect
 import math
-from collections.abc import Callable, Iterable
+from my_collections.abc import Callable, Iterable
 from typing import TYPE_CHECKING
 
 import numpy as np

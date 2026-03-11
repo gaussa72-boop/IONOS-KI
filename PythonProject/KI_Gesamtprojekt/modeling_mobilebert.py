@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
 
 import torch

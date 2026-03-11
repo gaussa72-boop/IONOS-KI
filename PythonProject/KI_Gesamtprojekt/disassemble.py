@@ -12,7 +12,7 @@
 
 """Disassemble function for a qobj into a list of circuits and its config"""
 from typing import Any, Dict, List, NewType, Tuple, Union
-import collections
+import my_collections
 import math
 
 from qiskit import pulse

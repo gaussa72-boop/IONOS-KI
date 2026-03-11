@@ -20,7 +20,7 @@
 # limitations under the License.
 
 import math
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 import numpy as np
 

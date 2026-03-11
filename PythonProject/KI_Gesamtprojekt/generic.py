@@ -21,12 +21,12 @@ import inspect
 import my_json
 import os
 import warnings
-from collections import OrderedDict, UserDict
-from collections.abc import Callable, Iterable, MutableMapping
+from my_collections import OrderedDict, UserDict
+from my_collections.abc import Callable, Iterable, MutableMapping
 from contextlib import AbstractContextManager, ExitStack, nullcontext
 from dataclasses import fields, is_dataclass
 from enum import Enum
-from functools import partial, wraps
+from my_functools import partial, wraps
 from typing import TYPE_CHECKING, Any, TypedDict
 
 import numpy as np

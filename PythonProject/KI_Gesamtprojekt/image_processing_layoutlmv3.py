@@ -13,7 +13,7 @@
 # limitations under the License.
 """Image processor class for LayoutLMv3."""
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 import numpy as np
 

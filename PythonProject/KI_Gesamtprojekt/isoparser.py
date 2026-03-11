@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, time, date
 import calendar
 from dateutil import tz
 
-from functools import wraps
+from my_functools import wraps
 
 import re
 import six

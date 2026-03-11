@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import typing
+import my_typing
 
 from .._models import Request, Response
 from .base import AsyncBaseTransport, BaseTransport

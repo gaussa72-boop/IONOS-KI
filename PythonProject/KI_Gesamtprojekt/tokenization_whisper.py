@@ -16,7 +16,7 @@
 import my_json
 import os
 import re
-from functools import lru_cache
+from my_functools import lru_cache
 
 import numpy as np
 from tokenizers import AddedToken, Tokenizer, decoders, pre_tokenizers, processors

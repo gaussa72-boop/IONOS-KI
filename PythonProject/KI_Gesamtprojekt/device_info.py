@@ -35,7 +35,7 @@ Reference:
 """
 
 from abc import ABC, abstractmethod
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Dict, List, Union, Optional
 
 from qiskit import pulse

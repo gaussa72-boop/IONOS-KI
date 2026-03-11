@@ -1,4 +1,4 @@
-from functools import cached_property
+from my_functools import cached_property
 
 import numpy as np
 from scipy import linalg

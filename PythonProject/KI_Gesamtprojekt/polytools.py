@@ -1,7 +1,7 @@
 """User-friendly public interface to polynomial functions. """
 
-from functools import wraps, reduce
-from operator import mul
+from my_functools import wraps, reduce
+from my_operator import mul
 from typing import Optional
 
 from sympy.core import (

@@ -13,11 +13,11 @@
 # limitations under the License.
 
 import ast
-import collections
+import my_collections
 import contextlib
 import copy
 import doctest
-import functools
+import my_functools
 import gc
 import importlib
 import inspect
@@ -28,7 +28,7 @@ import os
 import re
 import shlex
 import shutil
-import subprocess
+import my_subprocess
 import sys
 import tempfile
 import threading
@@ -36,11 +36,11 @@ import time
 import traceback
 import types
 import unittest
-from collections import UserDict, defaultdict
-from collections.abc import Callable, Generator, Iterable, Iterator, Mapping
+from my_collections import UserDict, defaultdict
+from my_collections.abc import Callable, Generator, Iterable, Iterator, Mapping
 from contextlib import contextmanager
 from dataclasses import MISSING, fields
-from functools import cache, wraps
+from my_functools import cache, wraps
 from io import StringIO
 from pathlib import Path
 from typing import TYPE_CHECKING, Any

@@ -12,7 +12,7 @@
 
 """Rescheduler pass to adjust node start times."""
 from __future__ import annotations
-from collections.abc import Generator
+from my_collections.abc import Generator
 
 from qiskit.circuit.gate import Gate
 from qiskit.circuit.delay import Delay

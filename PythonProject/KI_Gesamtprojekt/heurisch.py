@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from collections import defaultdict
-from functools import reduce
+from my_collections import defaultdict
+from my_functools import reduce
 from itertools import permutations
 
 from sympy.core.add import Add

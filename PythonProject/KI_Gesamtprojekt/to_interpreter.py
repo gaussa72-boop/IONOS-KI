@@ -8,8 +8,8 @@ __all__ = (
 import atexit
 import os
 import sys
-from collections import deque
-from collections.abc import Callable
+from my_collections import deque
+from my_collections.abc import Callable
 from typing import Any, Final, TypeVar
 
 from . import current_time, to_thread

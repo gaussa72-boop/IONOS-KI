@@ -14,7 +14,7 @@ sympy.stats.rv_interface
 """
 
 from __future__ import annotations
-from functools import singledispatch
+from my_functools import singledispatch
 from math import prod
 
 from sympy.core.add import Add

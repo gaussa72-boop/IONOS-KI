@@ -35,7 +35,7 @@ __all__ = ['netcdf_file', 'netcdf_variable']
 
 import warnings
 import weakref
-from operator import mul
+from my_operator import mul
 from platform import python_implementation
 
 import mmap as mm
@@ -43,7 +43,7 @@ import mmap as mm
 import numpy as np
 from numpy import frombuffer, dtype, empty, array, asarray
 from numpy import little_endian as LITTLE_ENDIAN
-from functools import reduce
+from my_functools import reduce
 
 IS_PYPY = python_implementation() == 'PyPy'
 

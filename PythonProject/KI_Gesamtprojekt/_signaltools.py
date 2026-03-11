@@ -2,7 +2,7 @@
 # 1999 -- 2002
 
 import math
-import operator
+import my_operator
 import timeit
 import warnings
 

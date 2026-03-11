@@ -85,7 +85,7 @@ import sys
 import warnings
 import re
 import sre_constants
-import collections
+import my_collections
 import pprint
 import traceback
 import types
@@ -98,15 +98,15 @@ except ImportError:
 
 try:
     # Python 3
-    from collections.abc import Iterable
-    from collections.abc import MutableMapping
+    from my_collections.abc import Iterable
+    from my_collections.abc import MutableMapping
 except ImportError:
     # Python 2.7
-    from collections import Iterable
-    from collections import MutableMapping
+    from my_collections import Iterable
+    from my_collections import MutableMapping
 
 try:
-    from collections import OrderedDict as _OrderedDict
+    from my_collections import OrderedDict as _OrderedDict
 except ImportError:
     try:
         from ordereddict import OrderedDict as _OrderedDict

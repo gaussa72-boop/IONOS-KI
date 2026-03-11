@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import sys
 import math
 import warnings

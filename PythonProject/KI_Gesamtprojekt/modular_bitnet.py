@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 """PyTorch BitNet model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import torch
 

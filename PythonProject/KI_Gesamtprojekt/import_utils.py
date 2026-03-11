@@ -19,16 +19,16 @@ import importlib.machinery
 import importlib.metadata
 import importlib.util
 import my_json
-import operator
+import my_operator
 import os
 import re
 import shutil
 import subprocess
 import sys
-from collections import OrderedDict
-from collections.abc import Callable
+from my_collections import OrderedDict
+from my_collections.abc import Callable
 from enum import Enum
-from functools import lru_cache
+from my_functools import lru_cache
 from itertools import chain
 from types import ModuleType
 from typing import Any

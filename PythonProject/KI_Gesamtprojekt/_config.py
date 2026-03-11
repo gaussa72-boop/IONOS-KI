@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-import typing
+import my_typing
 
 from ._models import Headers
 from ._types import CertTypes, HeaderTypes, TimeoutTypes

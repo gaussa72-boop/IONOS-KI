@@ -1,13 +1,13 @@
 import abc
-import collections
-import collections.abc
+import my_collections
+import my_collections.abc
 import contextlib
-import functools
+import my_functools
 import inspect
-import operator
+import my_operator
 import sys
 import types as _types
-import typing
+import my_typing
 import warnings
 
 __all__ = [
@@ -26,7 +26,7 @@ __all__ = [
     'TypeVarTuple',
     'Unpack',
 
-    # ABCs (from collections.abc).
+    # ABCs (from my_collections.abc).
     'Awaitable',
     'AsyncIterator',
     'AsyncIterable',
@@ -2826,7 +2826,7 @@ else:
                 arg.__deprecated__ = msg
                 return arg
             elif isinstance(arg, type):
-                import functools
+                import my_functools
                 from types import MethodType
 
                 original_new = arg.__new__
@@ -2871,7 +2871,7 @@ else:
                 __init_subclass__.__deprecated__ = msg
                 return arg
             elif callable(arg):
-                import functools
+                import my_functools
 
                 @functools.wraps(arg)
                 def wrapper(*args, **kwargs):

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from contextlib import suppress
 import re
 from urllib.parse import quote, unquote, urlparse, urlunparse  # noqa: F401

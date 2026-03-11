@@ -13,7 +13,7 @@
 # limitations under the License.
 """Tokenization classes for RoCBert."""
 
-import collections
+import my_collections
 import itertools
 import my_json
 import os

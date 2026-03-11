@@ -20,7 +20,7 @@ __all__ = [
     "structurally_equivalent",
 ]
 
-import typing
+import my_typing
 
 from . import expr
 

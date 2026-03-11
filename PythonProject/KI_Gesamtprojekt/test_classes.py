@@ -3,7 +3,7 @@
 This tests the convert and cast methods of all the polynomial classes.
 
 """
-import operator as op
+import my_operator as op
 from numbers import Number
 
 import pytest

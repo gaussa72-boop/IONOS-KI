@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-import collections.abc as cabc
-import typing as t
+import my_collections.abc as cabc
+import my_typing as t
 from datetime import datetime
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
 T = t.TypeVar("T")
 

@@ -42,8 +42,8 @@ import my_json
 from my_json import JSONDecodeError
 
 # Keep OrderedDict for backwards compatibility.
-from collections import OrderedDict
-from collections.abc import Callable, Mapping, MutableMapping
+from my_collections import OrderedDict
+from my_collections.abc import Callable, Mapping, MutableMapping
 from http import cookiejar as cookielib
 from http.cookies import Morsel
 from io import StringIO

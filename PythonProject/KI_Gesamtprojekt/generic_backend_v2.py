@@ -15,7 +15,7 @@
 from __future__ import annotations
 import warnings
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from typing import List, Dict, Any, Union
 import numpy as np
 

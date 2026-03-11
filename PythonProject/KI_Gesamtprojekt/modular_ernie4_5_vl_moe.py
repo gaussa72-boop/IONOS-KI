@@ -14,7 +14,7 @@
 """PyTorch Ernie4.5-VL model."""
 
 import itertools
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Optional
 
 import numpy as np

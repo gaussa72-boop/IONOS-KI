@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch Qwen3-Next model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Any, Optional
 
 import torch

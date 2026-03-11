@@ -18,7 +18,7 @@
 import dataclasses
 import re
 import string
-from collections.abc import Iterator, Mapping, Sequence
+from my_collections.abc import Iterator, Mapping, Sequence
 from typing import Any
 
 import numpy as np

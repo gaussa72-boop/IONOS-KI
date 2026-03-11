@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import math
-from collections.abc import Callable, Sequence
+from my_collections.abc import Callable, Sequence
 from dataclasses import dataclass
 from typing import Any, Literal
 

@@ -13,12 +13,12 @@
 """Lazy testers for optional features."""
 
 import abc
-import collections
+import my_collections
 import contextlib
-import functools
+import my_functools
 import importlib
 import subprocess
-import typing
+import my_typing
 import warnings
 from typing import Union, Iterable, Dict, Optional, Callable, Type
 

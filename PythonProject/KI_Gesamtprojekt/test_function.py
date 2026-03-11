@@ -1082,7 +1082,7 @@ def test_issue_8469():
         return 1 / (1 + exp(w - theta))
 
     ws = symbols(['w%i' % i for i in range(N)])
-    import functools
+    import my_functools
     expr = functools.reduce(g, ws)
     assert isinstance(expr, Pow)
 

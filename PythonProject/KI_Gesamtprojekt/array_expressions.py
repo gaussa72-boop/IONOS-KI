@@ -1,12 +1,12 @@
-import collections.abc
-import operator
-from collections import defaultdict, Counter
-from functools import reduce
+import my_collections.abc
+import my_operator
+from my_collections import defaultdict, Counter
+from my_functools import reduce
 import itertools
 from itertools import accumulate
 from typing import Optional, List, Tuple as tTuple
 
-import typing
+import my_typing
 
 from sympy.core.numbers import Integer
 from sympy.core.relational import Equality

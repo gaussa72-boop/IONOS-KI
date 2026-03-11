@@ -14,10 +14,10 @@
 from __future__ import annotations
 
 import math
-import operator
+import my_operator
 import os
 import re
-from functools import reduce
+from my_functools import reduce
 
 from ..distributed import DistributedConfig
 from ..utils import is_torch_greater_or_equal, logging

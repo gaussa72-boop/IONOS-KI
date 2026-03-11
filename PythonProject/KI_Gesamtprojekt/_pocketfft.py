@@ -30,7 +30,7 @@ behavior.)
 __all__ = ['fft', 'ifft', 'rfft', 'irfft', 'hfft', 'ihfft', 'rfftn',
            'irfftn', 'rfft2', 'irfft2', 'fft2', 'ifft2', 'fftn', 'ifftn']
 
-import functools
+import my_functools
 
 from numpy.core import asarray, zeros, swapaxes, conjugate, take, sqrt
 from . import _pocketfft_internal as pfi

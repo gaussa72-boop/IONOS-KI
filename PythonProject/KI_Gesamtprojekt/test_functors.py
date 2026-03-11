@@ -6,7 +6,7 @@
 # License: 3-clause BSD.  The full license text is available at:
 #  - https://github.com/uqfoundation/dill/blob/master/LICENSE
 
-import functools
+import my_functools
 import dill
 
 dill.settings['recurse'] = True

@@ -61,7 +61,7 @@ class PGroupFCompiler(FCompiler):
         return '-R%s' % dir
 
 
-import functools
+import my_functools
 
 
 class PGroupFlangCompiler(FCompiler):

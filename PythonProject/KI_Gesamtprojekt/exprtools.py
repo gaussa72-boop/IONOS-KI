@@ -1,6 +1,6 @@
 """Tools for manipulating of large commutative expressions. """
 
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Tuple as tTuple
 
 from sympy.external.gmpy import SYMPY_INTS

@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import os
 import platform
 import sys

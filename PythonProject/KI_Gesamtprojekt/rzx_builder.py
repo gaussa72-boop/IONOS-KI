@@ -16,7 +16,7 @@ from __future__ import annotations
 import enum
 import math
 import warnings
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from math import pi, erf
 
 import numpy as np

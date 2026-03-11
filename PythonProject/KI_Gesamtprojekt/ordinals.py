@@ -1,5 +1,5 @@
 from sympy.core import Basic, Integer
-import operator
+import my_operator
 
 
 class OmegaPower(Basic):

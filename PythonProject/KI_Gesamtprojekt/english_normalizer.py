@@ -15,7 +15,7 @@
 
 import re
 import unicodedata
-from collections.abc import Iterator
+from my_collections.abc import Iterator
 from fractions import Fraction
 from re import Match
 

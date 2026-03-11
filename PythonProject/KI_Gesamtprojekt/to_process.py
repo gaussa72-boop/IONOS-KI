@@ -8,10 +8,10 @@ __all__ = (
 
 import os
 import pickle
-import subprocess
+import my_subprocess
 import sys
-from collections import deque
-from collections.abc import Callable
+from my_collections import deque
+from my_collections.abc import Callable
 from importlib.util import module_from_spec, spec_from_file_location
 from typing import TypeVar, cast
 

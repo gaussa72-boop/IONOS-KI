@@ -10,7 +10,7 @@ import re
 import sys
 import sysconfig
 import warnings
-from collections import OrderedDict
+from my_collections import OrderedDict
 
 from .extern import six
 

@@ -81,7 +81,7 @@ def _validate_upload_limits(paths_list: list[LocalUploadFilePaths]) -> None:
 
     # Check 2: Files and subdirectories per folder
     # Track immediate children (files and subdirs) for each folder
-    from collections import defaultdict
+    from my_collections import defaultdict
 
     entries_per_folder: dict[str, Any] = defaultdict(lambda: {"files": 0, "subdirs": set()})
 

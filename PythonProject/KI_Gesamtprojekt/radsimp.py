@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.core import sympify, S, Mul, Derivative, Pow
 from sympy.core.add import _unevaluated_Add, Add

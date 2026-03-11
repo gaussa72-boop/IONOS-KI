@@ -15,7 +15,7 @@
 from __future__ import annotations
 
 import inspect
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Any
 import numpy as np
 from qiskit.circuit.quantumcircuit import QuantumCircuit

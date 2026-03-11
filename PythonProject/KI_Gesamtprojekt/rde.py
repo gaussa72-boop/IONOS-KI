@@ -21,8 +21,8 @@ See Chapter 6 of "Symbolic Integration I: Transcendental Functions" by
 Manuel Bronstein.  See also the docstring of risch.py.
 """
 
-from operator import mul
-from functools import reduce
+from my_operator import mul
+from my_functools import reduce
 
 from sympy.core import oo
 from sympy.core.symbol import Dummy

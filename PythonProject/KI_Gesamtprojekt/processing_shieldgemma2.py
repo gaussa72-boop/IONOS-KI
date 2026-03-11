@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from collections.abc import Mapping, Sequence
+from my_collections.abc import Mapping, Sequence
 
 from ...feature_extraction_utils import BatchFeature
 from ...image_utils import ImageInput

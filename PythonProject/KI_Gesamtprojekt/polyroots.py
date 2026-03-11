@@ -1,7 +1,7 @@
 """Algorithms for computing symbolic roots of polynomials. """
 
 import math
-from functools import reduce
+from my_functools import reduce
 
 from sympy.core import S, I, pi
 from sympy.core.exprtools import factor_terms

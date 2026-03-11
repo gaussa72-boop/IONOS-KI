@@ -1,7 +1,7 @@
 import contextlib
 import itertools
 import re
-import typing
+import my_typing
 from enum import Enum
 from typing import Callable
 

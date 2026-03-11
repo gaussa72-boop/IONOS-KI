@@ -4,8 +4,8 @@ Module for the SDM class.
 
 """
 
-from operator import add, neg, pos, sub, mul
-from collections import defaultdict
+from my_operator import add, neg, pos, sub, mul
+from my_collections import defaultdict
 
 from sympy.external.gmpy import GROUND_TYPES
 from sympy.utilities.decorator import doctest_depends_on

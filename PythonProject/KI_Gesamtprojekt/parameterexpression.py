@@ -17,7 +17,7 @@ from __future__ import annotations
 from typing import Callable, Union
 
 import numbers
-import operator
+import my_operator
 
 import numpy
 import symengine

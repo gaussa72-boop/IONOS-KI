@@ -1,5 +1,5 @@
 import my_logging
-from collections import OrderedDict
+from my_collections import OrderedDict
 from typing import Dict, List
 
 from pip._vendor.packaging.utils import canonicalize_name

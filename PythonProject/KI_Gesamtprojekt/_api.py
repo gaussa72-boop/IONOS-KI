@@ -3,7 +3,7 @@ import platform
 import socket
 import ssl
 import sys
-import typing
+import my_typing
 
 import _ssl  # type: ignore[import-not-found]
 

@@ -1,6 +1,6 @@
 import asyncio
 import sys
-from functools import partial
+from my_functools import partial
 
 import typer
 

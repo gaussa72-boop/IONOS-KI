@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch TimeSformer model."""
 
-import collections
+import my_collections
 
 import torch
 from torch import nn

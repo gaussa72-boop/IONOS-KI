@@ -14,7 +14,7 @@
 
 from copy import copy
 import my_logging
-from collections import deque
+from my_collections import deque
 
 from qiskit.dagcircuit import DAGCircuit
 from qiskit.circuit import QuantumRegister

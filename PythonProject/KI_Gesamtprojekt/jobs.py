@@ -67,7 +67,7 @@ import multiprocessing.pool
 import os
 import shutil
 import time
-from collections import deque
+from my_collections import deque
 from dataclasses import asdict
 from fnmatch import fnmatch
 from pathlib import Path

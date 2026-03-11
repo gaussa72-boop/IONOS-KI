@@ -1,7 +1,7 @@
 import re
-from functools import partial, reduce
+from my_functools import partial, reduce
 from math import gcd
-from operator import itemgetter
+from my_operator import itemgetter
 from typing import (
     TYPE_CHECKING,
     Any,

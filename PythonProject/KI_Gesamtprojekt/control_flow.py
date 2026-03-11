@@ -14,7 +14,7 @@
 
 from __future__ import annotations
 
-import typing
+import my_typing
 from abc import ABC, abstractmethod
 
 from qiskit.circuit.instruction import Instruction

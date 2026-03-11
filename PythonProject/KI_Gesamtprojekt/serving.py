@@ -21,7 +21,7 @@ import selectors
 import socket
 import socketserver
 import sys
-import typing as t
+import my_typing as t
 from datetime import datetime as dt
 from datetime import timedelta
 from datetime import timezone

@@ -1,6 +1,6 @@
 from sympy import sympify
 from sympy.physics.vector import Point, Dyadic, ReferenceFrame, outer
-from collections import namedtuple
+from my_collections import namedtuple
 
 __all__ = ['inertia', 'inertia_of_point_mass', 'Inertia']
 

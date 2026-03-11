@@ -1,8 +1,8 @@
 """ Basic functions for manipulating 2d arrays
 
 """
-import functools
-import operator
+import my_functools
+import my_operator
 
 from numpy.core.numeric import (
     asanyarray, arange, zeros, greater_equal, multiply, ones,

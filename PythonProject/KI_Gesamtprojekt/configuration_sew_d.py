@@ -13,8 +13,8 @@
 # limitations under the License.
 """SEW-D model configuration"""
 
-import functools
-import operator
+import my_functools
+import my_operator
 
 from ...configuration_utils import PreTrainedConfig
 from ...utils import my_logging

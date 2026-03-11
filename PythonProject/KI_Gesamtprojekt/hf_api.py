@@ -22,11 +22,11 @@ import re
 import struct
 import time
 import warnings
-from collections import defaultdict
+from my_collections import defaultdict
 from concurrent.futures import Future, ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
-from functools import wraps
+from my_functools import wraps
 from itertools import islice
 from pathlib import Path
 from typing import (

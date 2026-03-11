@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import inspect
 import math
-from collections.abc import Callable
+from my_collections.abc import Callable
 import numpy as np
 from qiskit.circuit.quantumcircuit import QuantumCircuit
 from qiskit.quantum_info.operators import SparsePauliOp, Pauli

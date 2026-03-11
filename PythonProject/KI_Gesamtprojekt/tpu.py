@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import functools
+import my_functools
 import os
 
 import torch

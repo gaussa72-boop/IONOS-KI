@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 from sympy.core.containers import Tuple
 from sympy.core.singleton import S
 from sympy.core.symbol import (Dummy, Symbol)

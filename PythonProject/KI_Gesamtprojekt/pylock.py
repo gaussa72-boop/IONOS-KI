@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import dataclasses
 import re
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import TYPE_CHECKING, Any

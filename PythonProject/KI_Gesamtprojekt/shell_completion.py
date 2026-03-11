@@ -1,6 +1,6 @@
 import os
 import re
-import typing as t
+import my_typing as t
 from gettext import gettext as _
 
 from .core import Argument
@@ -304,7 +304,7 @@ class BashComplete(ShellComplete):
     @staticmethod
     def _check_version() -> None:
         import shutil
-        import subprocess
+        import my_subprocess
 
         bash_exe = shutil.which("bash")
 

@@ -1,10 +1,10 @@
-import typing as t
+import my_typing as t
 
 from . import nodes
 from .visitor import NodeVisitor
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
 VAR_LOAD_PARAMETER = "param"
 VAR_LOAD_RESOLVE = "resolve"

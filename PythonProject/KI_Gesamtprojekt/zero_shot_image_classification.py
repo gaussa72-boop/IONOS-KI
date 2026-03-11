@@ -1,4 +1,4 @@
-from collections import UserDict
+from my_collections import UserDict
 from typing import Any, Union, overload
 
 from ..utils import (

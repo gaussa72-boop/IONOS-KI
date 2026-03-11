@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import collections
+import my_collections
 import contextlib
-import functools
+import my_functools
 import os
 import re
 import sys

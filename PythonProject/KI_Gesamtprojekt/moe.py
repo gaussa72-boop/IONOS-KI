@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from collections.abc import Callable
-from functools import wraps
+from my_collections.abc import Callable
+from my_functools import wraps
 
 from ..utils import my_logging
 from ..utils.generic import GeneralInterface

@@ -1,7 +1,7 @@
 """Automatically adapted for numpy Sep 19, 2005 by convertcode.py
 
 """
-import functools
+import my_functools
 import warnings
 
 __all__ = ['iscomplexobj', 'isrealobj', 'imag', 'iscomplex',

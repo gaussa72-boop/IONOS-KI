@@ -14,8 +14,8 @@
 Visualization functions for measurement counts.
 """
 
-from collections import OrderedDict
-import functools
+from my_collections import OrderedDict
+import my_functools
 
 import numpy as np
 

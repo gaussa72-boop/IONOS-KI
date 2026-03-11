@@ -16,7 +16,7 @@ Integrations with other Python libraries.
 """
 
 import copy
-import functools
+import my_functools
 import importlib.metadata
 import importlib.util
 import my_json

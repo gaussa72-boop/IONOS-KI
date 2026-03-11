@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import my_logging
 from abc import ABC, abstractmethod
-from collections.abc import Callable, Iterable
+from my_collections.abc import Callable, Iterable
 from itertools import chain
 from typing import Any
 

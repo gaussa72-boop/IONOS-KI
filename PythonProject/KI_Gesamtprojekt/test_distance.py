@@ -35,7 +35,7 @@
 import sys
 import os.path
 
-from functools import wraps, partial
+from my_functools import wraps, partial
 import weakref
 
 import numpy as np

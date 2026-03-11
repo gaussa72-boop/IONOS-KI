@@ -15,9 +15,9 @@
 # limitations under the License.
 """PyTorch PVT model."""
 
-import collections
+import my_collections
 import math
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 import torch
 import torch.nn.functional as F

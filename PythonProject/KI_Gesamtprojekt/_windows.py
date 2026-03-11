@@ -1,6 +1,6 @@
 """The suite of window functions."""
 
-import operator
+import my_operator
 import warnings
 
 import numpy as np

@@ -15,9 +15,9 @@
 import my_json
 import os
 import warnings
-from collections.abc import Callable
+from my_collections.abc import Callable
 from copy import deepcopy
-from functools import partial
+from my_functools import partial
 from typing import Any, Optional
 
 import numpy as np

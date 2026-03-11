@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from collections import defaultdict
-from collections.abc import Collection, Iterable
+from my_collections import defaultdict
+from my_collections.abc import Collection, Iterable
 from math import ceil
 from typing import Optional, Union
 

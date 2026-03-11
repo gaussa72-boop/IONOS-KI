@@ -1,7 +1,7 @@
 import sys
 import warnings
-import functools
-import operator
+import my_functools
+import my_operator
 
 import pytest
 

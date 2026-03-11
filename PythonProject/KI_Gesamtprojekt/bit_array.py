@@ -16,8 +16,8 @@ BitArray
 
 from __future__ import annotations
 
-from collections import defaultdict
-from functools import partial
+from my_collections import defaultdict
+from my_functools import partial
 from itertools import chain, repeat
 from typing import Callable, Iterable, Literal, Mapping, Sequence
 

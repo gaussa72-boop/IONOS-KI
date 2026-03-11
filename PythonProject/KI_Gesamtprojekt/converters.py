@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-import typing as t
+import my_typing as t
 import uuid
 from urllib.parse import quote
 

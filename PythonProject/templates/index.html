@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiegelwelt KI Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-$END$
+   <div class="portal-card" onclick="selectPortal('RPG_QUEST')">
+    <img src="{{ url_for('static', filename='images/1.jpg.jpg') }}" alt="Portal">
+    <p>RPG Quest</p>
+</div>
+
+<div class="portal-card" onclick="selectPortal('SPACE_BATTLE')">
+    <img src="{{ url_for('static', filename='images/4.jpg.jpg') }}" alt="Portal">
+    <p>Space Battle</p>
+</div>
+
+<div class="create-box">
+    <input type="text" id="userPrompt" placeholder="Deine Idee...">
+    <button class="glow-button" onclick="startGeneration()">LOS!</button>
+</div>
+<script>
+let activePortal = "Allgemein";
+
+function selectPortal(name) {
+    activePortal = name;
+    // Visuelles Feedback:
+    alert("KI Modus gewechselt zu: " + name);
+}
+
+async function startGeneration() {
+    const input = document.getElementById('userPrompt').value;
+    if(!input) return;
+
+    // Sende Daten an dein Python-Backend
+    const response = await fetch('/generate', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ prompt: input, portal: activePortal })
+    });
+
+    const result = await response.json();
+    // Antwort im Chat-Fenster anzeigen
+    document.querySelector('.chat-content').innerHTML += `<div><b>Bot:</b> ${result.answer}</div>`;
+}
+</script>
 </body>
 </html>

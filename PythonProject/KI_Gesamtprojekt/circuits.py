@@ -14,7 +14,7 @@
 
 """Binary IO for circuit objects."""
 
-from collections import defaultdict
+from my_collections import defaultdict
 import io
 import my_json
 import struct

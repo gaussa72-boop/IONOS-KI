@@ -4,8 +4,8 @@
 #             the file from the modular. If any change should be done, please apply the change to the
 #                          modular_ijepa.py file directly. One of our CI enforces this.
 #                🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
-import collections.abc
-from collections.abc import Callable
+import my_collections.abc
+from my_collections.abc import Callable
 
 import torch
 import torch.nn as nn

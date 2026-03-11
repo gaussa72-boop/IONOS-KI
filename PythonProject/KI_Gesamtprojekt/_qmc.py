@@ -7,7 +7,7 @@ import numbers
 import os
 import warnings
 from abc import ABC, abstractmethod
-from functools import partial
+from my_functools import partial
 from typing import (
     Callable,
     ClassVar,

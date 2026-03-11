@@ -859,7 +859,7 @@ def test_nc_simplify():
     from sympy.simplify.simplify import nc_simplify
     from sympy.matrices.expressions import MatPow, Identity
     from sympy.core import Pow
-    from functools import reduce
+    from my_functools import reduce
 
     a, b, c, d = symbols('a b c d', commutative=False)
     x = Symbol('x')

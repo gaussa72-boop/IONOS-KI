@@ -15,9 +15,9 @@
 from __future__ import annotations
 
 import inspect
-from collections.abc import Callable
+from my_collections.abc import Callable
 from typing import Any
-from functools import partial
+from my_functools import partial
 import numpy as np
 from qiskit.circuit.parameterexpression import ParameterExpression
 from qiskit.circuit.quantumcircuit import QuantumCircuit

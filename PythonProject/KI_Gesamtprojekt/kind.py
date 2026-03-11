@@ -25,7 +25,7 @@ This module defines basic kinds for core objects. Other kinds such as
        See https://github.com/sympy/sympy/pull/20549.
 """
 
-from collections import defaultdict
+from my_collections import defaultdict
 
 from .cache import cacheit
 from sympy.multipledispatch.dispatcher import (Dispatcher,

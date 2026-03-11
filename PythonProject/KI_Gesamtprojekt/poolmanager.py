@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
-import collections
-import functools
+import my_collections
+import my_functools
 import my_logging
 
 from ._collections import HTTPHeaderDict, RecentlyUsedContainer

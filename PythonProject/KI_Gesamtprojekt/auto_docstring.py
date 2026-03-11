@@ -15,14 +15,14 @@ from __future__ import annotations
 
 import inspect
 import os
-from collections.abc import Mapping
-from functools import lru_cache
+from my_collections.abc import Mapping
+from my_functools import lru_cache
 from pathlib import Path
 from types import UnionType
 from typing import Union, get_args, get_origin
 
 import regex as re
-import typing_extensions
+import my_typing_extensions
 
 from .doc import (
     MODELS_TO_PIPELINE,

@@ -18,7 +18,7 @@ from sympy.physics.quantum.matrixutils import (numpy_ndarray,
                                                to_scipy_sparse, to_sympy)
 from sympy.physics.quantum.cartesian import XKet, XOp, XBra
 from sympy.physics.quantum.qapply import qapply
-from sympy.physics.quantum.operatorset import operators_to_state
+from sympy.physics.quantum.operatorset import my_operators_to_state
 from sympy.testing.pytest import raises
 
 Amat = Matrix([[1, I], [-I, 1]])

@@ -35,7 +35,7 @@ import time
 import my_logging
 import warnings
 
-from collections import Counter
+from my_collections import Counter
 import numpy as np
 
 from qiskit.circuit import QuantumCircuit

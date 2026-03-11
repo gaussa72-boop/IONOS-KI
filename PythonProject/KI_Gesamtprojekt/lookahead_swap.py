@@ -12,7 +12,7 @@
 
 """Map input circuit onto a backend topology via insertion of SWAPs."""
 
-import collections
+import my_collections
 import copy
 import my_logging
 import math

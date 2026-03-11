@@ -5,7 +5,7 @@ and wrapping math/cmath functions so that they can be called with either
 real or complex arguments.
 """
 
-import operator
+import my_operator
 import math
 import cmath
 

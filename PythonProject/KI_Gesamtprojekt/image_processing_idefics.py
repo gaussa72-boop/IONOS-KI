@@ -13,7 +13,7 @@
 # limitations under the License.
 """Image processor class for Idefics."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 from PIL import Image
 

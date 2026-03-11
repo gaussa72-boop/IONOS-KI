@@ -1,7 +1,7 @@
 import errno
 import select
 import sys
-from functools import partial
+from my_functools import partial
 
 try:
     from time import monotonic

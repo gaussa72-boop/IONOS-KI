@@ -2,7 +2,7 @@ import contextlib
 import sys
 import warnings
 import itertools
-import operator
+import my_operator
 import platform
 from numpy.compat import _pep440
 import pytest

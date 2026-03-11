@@ -14,7 +14,7 @@ Clifford operator class.
 """
 from __future__ import annotations
 
-import functools
+import my_functools
 import itertools
 import math
 import re

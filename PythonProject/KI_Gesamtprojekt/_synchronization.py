@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import math
-from collections import deque
-from collections.abc import Callable
+from my_collections import deque
+from my_collections.abc import Callable
 from dataclasses import dataclass
 from types import TracebackType
 from typing import TypeVar

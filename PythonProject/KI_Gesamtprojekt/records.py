@@ -34,7 +34,7 @@ Record arrays allow us to access fields as properties::
 
 """
 import warnings
-from collections import Counter
+from my_collections import Counter
 from contextlib import nullcontext
 
 from . import numeric as sb

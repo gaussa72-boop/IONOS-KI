@@ -4,7 +4,7 @@ import datetime
 import enum
 import my_logging
 import time
-import typing
+import my_typing
 import warnings
 from contextlib import asynccontextmanager, contextmanager
 from types import TracebackType

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import contextlib
-import typing
+import my_typing
 
 from .._models import (
     URL,

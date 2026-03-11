@@ -2,7 +2,7 @@ import numpy as np
 from . import pypocketfft as pfft
 from .helper import (_asfarray, _init_nd_shape_and_axes, _datacopied,
                      _fix_shape, _fix_shape_1d, _normalization, _workers)
-import functools
+import my_functools
 
 
 def _r2r(forward, transform, x, type=2, n=None, axis=-1, norm=None,

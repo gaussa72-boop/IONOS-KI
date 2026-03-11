@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import TYPE_CHECKING, Any, Union, overload
 
 from ..image_utils import load_image

@@ -1,4 +1,4 @@
-import operator
+import my_operator
 from dataclasses import dataclass
 import numpy as np
 from scipy.special import ndtri

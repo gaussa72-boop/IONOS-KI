@@ -1,4 +1,4 @@
-import typing
+import my_typing
 
 import sympy
 from sympy.core import Add, Mul

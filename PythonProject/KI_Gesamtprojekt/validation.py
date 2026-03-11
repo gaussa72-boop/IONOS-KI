@@ -18,8 +18,8 @@ but are here for backwards compatibility with deprecated functions.
 
 from __future__ import annotations
 
-from collections.abc import Sequence
-import typing
+from my_collections.abc import Sequence
+import my_typing
 import numpy as np
 
 from qiskit.circuit import QuantumCircuit, ControlFlowOp, Measure

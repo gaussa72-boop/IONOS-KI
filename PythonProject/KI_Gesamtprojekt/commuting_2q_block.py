@@ -13,7 +13,7 @@
 """A gate made of commuting two-qubit gates."""
 from __future__ import annotations
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 from qiskit.exceptions import QiskitError
 from qiskit.circuit import Gate, Qubit, Clbit

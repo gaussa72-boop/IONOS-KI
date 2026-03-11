@@ -13,9 +13,9 @@
 # limitations under the License.
 """PyTorch Chameleon model."""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
-from functools import cached_property
+from my_functools import cached_property
 from typing import Optional
 
 import torch

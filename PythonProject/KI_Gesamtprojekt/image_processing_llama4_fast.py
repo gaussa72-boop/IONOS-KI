@@ -14,8 +14,8 @@
 """Fast Image processor class for Got-OCR-2."""
 
 import math
-from collections import defaultdict
-from functools import lru_cache
+from my_collections import defaultdict
+from my_functools import lru_cache
 from typing import Optional
 
 import torch

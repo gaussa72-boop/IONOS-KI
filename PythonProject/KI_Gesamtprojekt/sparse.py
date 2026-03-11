@@ -1,4 +1,4 @@
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 from sympy.core.containers import Dict
 from sympy.utilities.exceptions import sympy_deprecation_warning

@@ -14,7 +14,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from itertools import accumulate
 
 import numpy as np

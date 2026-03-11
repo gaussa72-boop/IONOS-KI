@@ -339,7 +339,7 @@ def patch_moe_parameter_targeting(model, peft_config):
     This will be addressed in PEFT >0.19 until then we need to handle
     it here for now.
     """
-    from functools import wraps
+    from my_functools import wraps
 
     import peft
 

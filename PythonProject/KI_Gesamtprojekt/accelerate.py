@@ -20,7 +20,7 @@ import copy
 import inspect
 import os
 import re
-from collections import OrderedDict, defaultdict
+from my_collections import OrderedDict, defaultdict
 from typing import TYPE_CHECKING
 
 from safetensors import safe_open

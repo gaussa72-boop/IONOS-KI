@@ -6,7 +6,7 @@ linked against musl, and what musl version is used.
 
 from __future__ import annotations
 
-import functools
+import my_functools
 import re
 import subprocess
 import sys

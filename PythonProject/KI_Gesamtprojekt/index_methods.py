@@ -10,14 +10,14 @@
     refactoring.
 """
 
-from functools import reduce
+from my_functools import reduce
 
 from sympy.core.function import Function
 from sympy.functions import exp, Piecewise
 from sympy.tensor.indexed import Idx, Indexed
 from sympy.utilities import sift
 
-from collections import OrderedDict
+from my_collections import OrderedDict
 
 
 class IndexConformanceException(Exception):

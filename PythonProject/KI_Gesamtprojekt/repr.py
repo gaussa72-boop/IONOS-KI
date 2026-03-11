@@ -1,5 +1,5 @@
 import inspect
-from functools import partial
+from my_functools import partial
 from typing import (
     Any,
     Callable,

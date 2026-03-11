@@ -1,6 +1,6 @@
 import itertools
 
-from .compat import collections_abc
+from .compat import my_collections_abc
 
 
 class DirectedGraph(object):

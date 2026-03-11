@@ -5,7 +5,7 @@
 :version: $Id: testutils.py 3529 2007-11-13 08:01:14Z jarrod.millman $
 
 """
-import operator
+import my_operator
 
 import numpy as np
 from numpy import ndarray, float_

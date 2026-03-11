@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-import collections.abc as cabc
+import my_collections.abc as cabc
 import hashlib
 import hmac
-import typing as t
+import my_typing as t
 
 from .encoding import _base64_alphabet
 from .encoding import base64_decode

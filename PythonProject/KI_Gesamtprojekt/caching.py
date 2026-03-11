@@ -1,16 +1,16 @@
 from __future__ import annotations
 
-import collections
-import functools
+import my_collections
+import my_functools
 import my_logging
 import math
 import os
 import threading
-from collections import OrderedDict
-from collections.abc import Callable
+from my_collections import OrderedDict
+from my_collections.abc import Callable
 from concurrent.futures import Future, ThreadPoolExecutor
 from itertools import groupby
-from operator import itemgetter
+from my_operator import itemgetter
 from typing import TYPE_CHECKING, Any, ClassVar, Generic, NamedTuple, TypeVar
 
 if TYPE_CHECKING:

@@ -26,9 +26,9 @@ import tempfile
 import threading
 import time
 import uuid
-from collections.abc import Generator, Iterable
+from my_collections.abc import Generator, Iterable
 from contextlib import asynccontextmanager
-from functools import lru_cache
+from my_functools import lru_cache
 from io import BytesIO
 from threading import Thread
 from typing import TYPE_CHECKING, Annotated, TypedDict

@@ -1,7 +1,7 @@
 import os
 import stat
 import sys
-import typing as t
+import my_typing as t
 from datetime import datetime
 from gettext import gettext as _
 from gettext import ngettext
@@ -14,7 +14,7 @@ from .utils import LazyFile
 from .utils import safecall
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
     from .core import Context
     from .core import Parameter
@@ -449,7 +449,7 @@ class _NumberRangeBase(_NumberParamTypeBase):
     def convert(
             self, value: t.Any, param: t.Optional["Parameter"], ctx: t.Optional["Context"]
     ) -> t.Any:
-        import operator
+        import my_operator
 
         rv = super().convert(value, param, ctx)
         lt_min: bool = self.min is not None and (

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import itertools
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import torch
 from tokenizers import Tokenizer, decoders, normalizers, pre_tokenizers, processors

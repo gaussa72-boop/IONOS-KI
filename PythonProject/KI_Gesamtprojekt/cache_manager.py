@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 from abc import ABC, abstractmethod
-from collections import deque
-from collections.abc import Iterator
+from my_collections import deque
+from my_collections.abc import Iterator
 from math import ceil
 from typing import TypeVar
 

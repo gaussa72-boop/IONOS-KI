@@ -1,6 +1,6 @@
-from functools import reduce
+from my_functools import reduce
 import itertools
-from operator import add
+from my_operator import add
 
 from sympy.codegen.matrix_nodes import MatrixSolve
 from sympy.core.add import Add

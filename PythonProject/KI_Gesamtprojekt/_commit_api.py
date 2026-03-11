@@ -6,7 +6,7 @@ import base64
 import io
 import os
 import warnings
-from collections import defaultdict
+from my_collections import defaultdict
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from itertools import groupby

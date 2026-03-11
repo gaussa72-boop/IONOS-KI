@@ -14,7 +14,7 @@
 """
 
 import importlib.metadata as importlib_metadata
-import operator
+import my_operator
 from unittest import mock
 
 from stevedore import exception

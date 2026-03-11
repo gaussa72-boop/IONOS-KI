@@ -3,7 +3,7 @@ from __future__ import annotations
 # NOTE: Import `Sequence` from `typing` as we it is needed for a type-alias,
 # not an annotation
 import sys
-from collections.abc import Collection, Callable
+from my_collections.abc import Collection, Callable
 from typing import Any, Sequence, Protocol, Union, TypeVar, runtime_checkable
 from numpy import (
     ndarray,

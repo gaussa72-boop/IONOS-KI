@@ -1,5 +1,5 @@
-from collections import defaultdict
-from functools import reduce
+from my_collections import defaultdict
+from my_functools import reduce
 
 from sympy.core import (sympify, Basic, S, Expr, factor_terms,
                         Mul, Add, bottom_up)

@@ -13,9 +13,9 @@
 # limitations under the License.
 """PyTorch FLAVA model."""
 
-import collections
+import my_collections
 import math
-from collections import OrderedDict
+from my_collections import OrderedDict
 from dataclasses import dataclass
 from typing import Any
 

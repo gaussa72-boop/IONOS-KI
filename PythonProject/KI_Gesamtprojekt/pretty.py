@@ -1,12 +1,12 @@
 import builtins
-import collections
+import my_collections
 import dataclasses
 import inspect
 import os
 import reprlib
 import sys
 from array import array
-from collections import Counter, UserDict, UserList, defaultdict, deque
+from my_collections import Counter, UserDict, UserList, defaultdict, deque
 from dataclasses import dataclass, fields, is_dataclass
 from inspect import isclass
 from itertools import islice

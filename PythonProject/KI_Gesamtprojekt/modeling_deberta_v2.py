@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch DeBERTa-v2 model."""
 
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 
 import torch
 from torch import nn

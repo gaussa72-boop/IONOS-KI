@@ -12,7 +12,7 @@ module.
 """
 
 from abc import ABC, abstractmethod
-from functools import cached_property
+from my_functools import cached_property
 
 from sympy.core.symbol import Symbol
 from sympy.core.numbers import Float, Integer, Rational

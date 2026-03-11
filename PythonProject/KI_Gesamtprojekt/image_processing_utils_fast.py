@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from copy import deepcopy
-from functools import lru_cache, partial
+from my_functools import lru_cache, partial
 from typing import Any, Optional, Union
 
 import numpy as np

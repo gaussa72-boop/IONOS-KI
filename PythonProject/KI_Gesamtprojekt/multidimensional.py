@@ -4,7 +4,7 @@ Provides functionality for multidimensional usage of scalar-functions.
 Read the vectorize docstring for more details.
 """
 
-from functools import wraps
+from my_functools import wraps
 
 
 def apply_on_element(f, args, kwargs, n):

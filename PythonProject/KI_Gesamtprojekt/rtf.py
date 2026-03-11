@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for details.
 """
 
-from collections import OrderedDict
+from my_collections import OrderedDict
 from pip._vendor.pygments.formatter import Formatter
 from pip._vendor.pygments.style import _ansimap
 from pip._vendor.pygments.util import get_bool_opt, get_int_opt, get_list_opt, surrogatepair

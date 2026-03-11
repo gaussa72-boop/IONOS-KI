@@ -20,7 +20,7 @@
 # limitations under the License.
 
 import math
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 import torch
 from torch import nn

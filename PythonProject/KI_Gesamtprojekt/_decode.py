@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from collections.abc import Sequence
-import functools
+from my_collections.abc import Sequence
+import my_functools
 import re
 
 DECODE_DEFAULT_CHARS = ";/?:@&=+$,#"

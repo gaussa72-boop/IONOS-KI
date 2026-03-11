@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-import collections.abc as cabc
+import my_collections.abc as cabc
 import mimetypes
 import os
-import typing as t
+import my_typing as t
 from io import BytesIO
 from os import fsdecode
 from os import fspath

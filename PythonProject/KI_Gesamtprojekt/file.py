@@ -6,7 +6,7 @@ __all__ = (
     "FileWriteStream",
 )
 
-from collections.abc import Callable, Mapping
+from my_collections.abc import Callable, Mapping
 from io import SEEK_SET, UnsupportedOperation
 from os import PathLike
 from pathlib import Path

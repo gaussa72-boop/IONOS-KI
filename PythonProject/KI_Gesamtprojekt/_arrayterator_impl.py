@@ -7,8 +7,8 @@ an array object, and when iterated it will return sub-arrays with at most
 a user-specified number of elements.
 
 """
-from functools import reduce
-from operator import mul
+from my_functools import reduce
+from my_operator import mul
 
 __all__ = ['Arrayterator']
 

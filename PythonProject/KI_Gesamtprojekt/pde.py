@@ -32,7 +32,7 @@ more information on each (run help(pde)):
     variable coefficients.
 
 """
-from functools import reduce
+from my_functools import reduce
 
 from itertools import combinations_with_replacement
 from sympy.simplify import simplify  # type: ignore
@@ -49,7 +49,7 @@ from sympy.solvers.deutils import _preprocess, ode_order, _desolve
 from sympy.solvers.solvers import solve
 from sympy.simplify.radsimp import collect
 
-import operator
+import my_operator
 
 allhints = (
     "1st_linear_constant_coeff_homogeneous",

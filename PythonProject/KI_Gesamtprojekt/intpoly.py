@@ -15,7 +15,7 @@ Computational Mechanics 56.6 (2015): 967-981
 PDF link : http://dilbert.engr.ucdavis.edu/~suku/quadrature/cls-integration.pdf
 """
 
-from functools import cmp_to_key
+from my_functools import cmp_to_key
 
 from sympy.abc import x, y, z
 from sympy.core import S, diff, Expr, Symbol

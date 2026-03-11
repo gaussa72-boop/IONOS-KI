@@ -8,7 +8,7 @@ requests (cookies, auth, proxies).
 import os
 import sys
 import time
-from collections import OrderedDict
+from my_collections import OrderedDict
 from datetime import timedelta
 
 from ._internal_utils import to_native_string

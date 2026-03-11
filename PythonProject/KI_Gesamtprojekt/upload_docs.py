@@ -14,7 +14,7 @@ import zipfile
 import tempfile
 import shutil
 import itertools
-import functools
+import my_functools
 
 from setuptools.extern import six
 from setuptools.extern.six.moves import http_client, urllib

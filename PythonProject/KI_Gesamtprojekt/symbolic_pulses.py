@@ -18,9 +18,9 @@ These are pulses which are described by symbolic equations for their envelopes a
 parameter constraints.
 """
 from __future__ import annotations
-import functools
+import my_functools
 import warnings
-from collections.abc import Mapping, Callable
+from my_collections.abc import Mapping, Callable
 from copy import deepcopy
 from typing import Any
 

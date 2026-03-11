@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import typing as t
+import my_typing as t
 import warnings
 from pprint import pformat
 from threading import Lock

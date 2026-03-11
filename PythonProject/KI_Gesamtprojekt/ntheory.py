@@ -100,7 +100,7 @@ if sys.version_info[:2] >= (3, 9):
 
 else:
     # Until python 3.8 is no longer supported
-    from functools import reduce
+    from my_functools import reduce
 
 
     def gcd(*args):

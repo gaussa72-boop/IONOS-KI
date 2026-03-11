@@ -18,7 +18,7 @@ import os
 import sys
 import types
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser, ArgumentTypeError
-from collections.abc import Callable, Iterable
+from my_collections.abc import Callable, Iterable
 from copy import copy
 from enum import Enum
 from inspect import isclass

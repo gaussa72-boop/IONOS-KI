@@ -5,7 +5,7 @@ Need function load / save / roundtrip tests
 
 '''
 import os
-from collections import OrderedDict
+from my_collections import OrderedDict
 from os.path import join as pjoin, dirname
 from glob import glob
 from io import BytesIO

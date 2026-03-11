@@ -1,8 +1,8 @@
-import typing as t
+import my_typing as t
 from threading import local
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
     from .core import Context
 

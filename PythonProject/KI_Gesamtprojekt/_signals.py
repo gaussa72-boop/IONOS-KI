@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import AsyncIterator
+from my_collections.abc import AsyncIterator
 from contextlib import AbstractContextManager
 from signal import Signals
 

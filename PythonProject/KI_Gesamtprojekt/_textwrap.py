@@ -1,5 +1,5 @@
 import textwrap
-import typing as t
+import my_typing as t
 from contextlib import contextmanager
 
 

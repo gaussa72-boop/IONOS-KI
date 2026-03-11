@@ -14,7 +14,7 @@
 from __future__ import annotations
 
 import my_logging
-from collections.abc import Callable, Iterable, Generator
+from my_collections.abc import Callable, Iterable, Generator
 from typing import Any
 
 from .base_tasks import BaseController, Task

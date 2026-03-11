@@ -20,7 +20,7 @@ import warnings
 from dataclasses import asdict, dataclass, field, fields
 from datetime import timedelta
 from enum import Enum
-from functools import cached_property
+from my_functools import cached_property
 from typing import Any
 
 from .debug_utils import DebugOption

@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch GroupViT model."""
 
-import collections.abc
+import my_collections.abc
 from dataclasses import dataclass
 from typing import Any
 

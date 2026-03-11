@@ -15,11 +15,11 @@
 """PyTorch REFORMER model."""
 
 import sys
-from collections import namedtuple
-from collections.abc import Iterable
+from my_collections import namedtuple
+from my_collections.abc import Iterable
 from dataclasses import dataclass
-from functools import reduce
-from operator import mul
+from my_functools import reduce
+from my_operator import mul
 from typing import Any
 
 import numpy as np

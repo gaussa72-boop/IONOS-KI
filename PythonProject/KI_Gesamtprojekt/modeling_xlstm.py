@@ -38,8 +38,8 @@ if is_xlstm_available():
         pass
 
 else:
-    from collections.abc import Callable
-    from functools import partial
+    from my_collections.abc import Callable
+    from my_functools import partial
     from typing import Literal
 
     from .configuration_xlstm import round_up_to_next_multiple_of

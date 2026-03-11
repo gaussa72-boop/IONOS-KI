@@ -1,6 +1,6 @@
-import functools
-import operator
-from collections import defaultdict
+import my_functools
+import my_operator
+from my_collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Literal, Optional
 

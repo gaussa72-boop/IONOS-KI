@@ -1,6 +1,6 @@
 """ Tools for doing common subexpression elimination.
 """
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.core import Basic, Mul, Add, Pow, sympify
 from sympy.core.containers import Tuple, OrderedSet

@@ -20,7 +20,7 @@ additional na_prob.json file is provided. This file is expected to map question 
 probability that a question is unanswerable.
 """
 
-import collections
+import my_collections
 import my_json
 import math
 import re

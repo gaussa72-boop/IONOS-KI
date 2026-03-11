@@ -15,7 +15,7 @@
 import queue
 import threading
 from abc import abstractmethod
-from collections.abc import Generator
+from my_collections.abc import Generator
 from contextlib import contextmanager
 from math import ceil
 from time import perf_counter

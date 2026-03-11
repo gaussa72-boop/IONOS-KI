@@ -1,4 +1,4 @@
-from collections import Counter
+from my_collections import Counter
 
 from sympy.core import Mul, sympify
 from sympy.core.add import Add

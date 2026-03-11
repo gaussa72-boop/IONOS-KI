@@ -1,7 +1,7 @@
 """Routines related to PyPI, indexes"""
 
 import enum
-import functools
+import my_functools
 import itertools
 import my_logging
 import re

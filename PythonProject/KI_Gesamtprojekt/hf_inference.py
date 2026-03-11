@@ -1,5 +1,5 @@
 import my_json
-from functools import lru_cache
+from my_functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional, Union
 from urllib.parse import urlparse, urlunparse

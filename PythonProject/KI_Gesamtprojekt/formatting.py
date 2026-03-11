@@ -1,4 +1,4 @@
-import typing as t
+import my_typing as t
 from contextlib import contextmanager
 from gettext import gettext as _
 

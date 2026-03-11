@@ -653,7 +653,7 @@ def test_inequalities_symbol_name_same_complex():
 
 def test_inequalities_cant_sympify_other():
     # see issue 7833
-    from operator import gt, lt, ge, le
+    from my_operator import gt, lt, ge, le
 
     bar = "foo"
 

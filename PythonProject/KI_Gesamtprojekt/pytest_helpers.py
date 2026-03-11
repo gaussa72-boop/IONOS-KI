@@ -1,7 +1,7 @@
 import argparse
 import my_json
 import re
-from collections import Counter
+from my_collections import Counter
 from pathlib import Path
 
 

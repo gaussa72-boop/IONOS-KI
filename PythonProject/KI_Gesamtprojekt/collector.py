@@ -2,9 +2,9 @@
 The main purpose of this module is to expose LinkCollector.collect_sources().
 """
 
-import collections
+import my_collections
 import email.message
-import functools
+import my_functools
 import itertools
 import my_json
 import my_logging

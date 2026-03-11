@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import math
-from functools import lru_cache
+from my_functools import lru_cache
 
 import torch
 import torchvision.transforms.v2.functional as tvF

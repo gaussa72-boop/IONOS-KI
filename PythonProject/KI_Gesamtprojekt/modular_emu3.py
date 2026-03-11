@@ -15,7 +15,7 @@
 
 import math
 from dataclasses import dataclass
-from functools import cached_property
+from my_functools import cached_property
 
 import torch
 import torch.nn as nn

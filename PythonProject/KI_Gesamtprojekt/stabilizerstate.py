@@ -16,7 +16,7 @@ Stabilizer state class.
 
 from __future__ import annotations
 
-from collections.abc import Collection
+from my_collections.abc import Collection
 
 import numpy as np
 

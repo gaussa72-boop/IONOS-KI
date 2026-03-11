@@ -13,8 +13,8 @@
 # limitations under the License.
 import my_logging
 import math
-from collections.abc import Callable, Iterable, Sequence
-from functools import partial
+from my_collections.abc import Callable, Iterable, Sequence
+from my_functools import partial
 from typing import Any
 
 import torch

@@ -4,7 +4,7 @@ tests would take too long.
 
 This takes about 10 minutes to run on a 2.7 GHz i7 Macbook Pro.
 """
-from functools import lru_cache
+from my_functools import lru_cache
 import os
 from time import time
 

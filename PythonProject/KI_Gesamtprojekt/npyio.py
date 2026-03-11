@@ -1,13 +1,13 @@
 import os
 import re
-import functools
+import my_functools
 import itertools
 import warnings
 import weakref
 import contextlib
-import operator
-from operator import itemgetter, index as opindex, methodcaller
-from collections.abc import Mapping
+import my_operator
+from my_operator import itemgetter, index as opindex, methodcaller
+from my_collections.abc import Mapping
 
 import numpy as np
 from . import format
@@ -1244,7 +1244,7 @@ def loadtxt(fname, dtype=float, comments='#', delimiter=None,
     is applied to all columns:
 
     >>> s = StringIO("0xDE 0xAD\n0xC0 0xDE")
-    >>> import functools
+    >>> import my_functools
     >>> conv = functools.partial(int, base=16)
     >>> np.loadtxt(s, converters=conv)
     array([[222., 173.],

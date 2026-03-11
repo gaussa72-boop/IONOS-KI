@@ -19,8 +19,8 @@ see tokenization_utils.py
 import copy
 import my_json
 import os
-from collections import defaultdict
-from collections.abc import Iterable
+from my_collections import defaultdict
+from my_collections.abc import Iterable
 from shutil import copyfile
 from typing import Any
 

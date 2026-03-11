@@ -29,10 +29,10 @@ An instance of this class is instantiated by Pulse-enabled backends and populate
 
 """
 from __future__ import annotations
-import functools
+import my_functools
 import warnings
-from collections import defaultdict
-from collections.abc import Iterable, Callable
+from my_collections import defaultdict
+from my_collections.abc import Iterable, Callable
 
 from qiskit import circuit
 from qiskit.circuit.parameterexpression import ParameterExpression

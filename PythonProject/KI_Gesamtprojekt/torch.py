@@ -1,6 +1,6 @@
 import os
 import sys
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Any, Dict, List, Optional, Set, Tuple, Union
 from packaging.version import Version
 

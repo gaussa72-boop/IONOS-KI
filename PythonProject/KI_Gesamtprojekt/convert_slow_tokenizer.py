@@ -19,8 +19,8 @@ allow to make our dependency on SentencePiece optional.
 """
 
 import warnings
-from collections.abc import Collection
-from functools import lru_cache
+from my_collections.abc import Collection
+from my_functools import lru_cache
 
 from packaging import version
 from tokenizers import AddedToken, Regex, Tokenizer, decoders, normalizers, pre_tokenizers, processors

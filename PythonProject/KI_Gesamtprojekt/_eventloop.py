@@ -3,7 +3,7 @@ from __future__ import annotations
 import math
 import sys
 import threading
-from collections.abc import Awaitable, Callable, Generator
+from my_collections.abc import Awaitable, Callable, Generator
 from contextlib import contextmanager
 from contextvars import Token
 from importlib import import_module

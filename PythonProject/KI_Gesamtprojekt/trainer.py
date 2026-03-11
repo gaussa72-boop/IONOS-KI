@@ -16,7 +16,7 @@ The Trainer class, to easily train a 🤗 Transformers from scratch or finetune 
 """
 
 import contextlib
-import functools
+import my_functools
 import glob
 import inspect
 import my_json
@@ -28,8 +28,8 @@ import sys
 import tempfile
 import time
 import warnings
-from collections.abc import Callable, Iterator, Mapping
-from functools import partial
+from my_collections.abc import Callable, Iterator, Mapping
+from my_functools import partial
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 

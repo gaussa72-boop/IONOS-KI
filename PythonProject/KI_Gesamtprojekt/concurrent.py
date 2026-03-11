@@ -2,7 +2,7 @@
 Thin wrappers around `concurrent.futures`.
 """
 from contextlib import contextmanager
-from operator import length_hint
+from my_operator import length_hint
 from os import cpu_count
 
 from ..auto import tqdm as tqdm_auto

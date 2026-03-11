@@ -1,5 +1,5 @@
 """Implementation of the Kronecker product"""
-from functools import reduce
+from my_functools import reduce
 from math import prod
 
 from sympy.core import Mul, sympify

@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import collections.abc as cabc
+import my_collections.abc as cabc
 import my_json
-import typing as t
+import my_typing as t
 
 from .encoding import want_bytes
 from .exc import BadPayload
@@ -11,7 +11,7 @@ from .signer import _make_keys_list
 from .signer import Signer
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
     # This should be either be str or bytes. To avoid having to specify the
     # bound type, it falls back to a union if structural matching fails.

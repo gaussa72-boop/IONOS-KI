@@ -17,7 +17,7 @@ Pearu Peterson
 import pprint
 import sys
 import types
-from functools import reduce
+from my_functools import reduce
 
 from . import __version__
 from . import cfuncs

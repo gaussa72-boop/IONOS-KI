@@ -1,13 +1,13 @@
 import inspect
-import typing as t
-from functools import WRAPPER_ASSIGNMENTS
-from functools import wraps
+import my_typing as t
+from my_functools import WRAPPER_ASSIGNMENTS
+from my_functools import wraps
 
 from .utils import _PassArg
 from .utils import pass_eval_context
 
 if t.TYPE_CHECKING:
-    import typing_extensions as te
+    import my_typing_extensions as te
 
 V = t.TypeVar("V")
 

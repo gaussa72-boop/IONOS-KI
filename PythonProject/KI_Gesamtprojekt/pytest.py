@@ -2,7 +2,7 @@
 
 import sys
 import re
-import functools
+import my_functools
 import os
 import contextlib
 import warnings

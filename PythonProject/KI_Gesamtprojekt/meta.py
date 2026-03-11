@@ -2,7 +2,7 @@
 interesting for introspection.
 """
 
-import typing as t
+import my_typing as t
 
 from . import nodes
 from .compiler import CodeGenerator

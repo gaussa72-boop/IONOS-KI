@@ -13,7 +13,7 @@ and the Diffie-Hellman key exchange.
 """
 
 from string import whitespace, ascii_uppercase as uppercase, printable
-from functools import reduce
+from my_functools import reduce
 import warnings
 
 from itertools import cycle

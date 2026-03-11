@@ -29,7 +29,7 @@ case we do not bother implementing e.g. __mod__ so that we can be sure we
 are not using it when gmpy2 is installed either.
 """
 
-import operator
+import my_operator
 from math import gcd
 from decimal import Decimal
 from fractions import Fraction

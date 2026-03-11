@@ -1,6 +1,6 @@
 """Primitive circuit operations on quantum circuits."""
 
-from functools import reduce
+from my_functools import reduce
 
 from sympy.core.sorting import default_sort_key
 from sympy.core.containers import Tuple

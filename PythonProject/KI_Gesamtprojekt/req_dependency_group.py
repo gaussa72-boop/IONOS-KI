@@ -1,4 +1,4 @@
-from collections.abc import Iterable, Iterator
+from my_collections.abc import Iterable, Iterator
 from typing import Any
 
 from pip._vendor.dependency_groups import DependencyGroupResolver

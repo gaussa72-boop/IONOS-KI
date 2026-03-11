@@ -1,5 +1,5 @@
-from collections import defaultdict
-from functools import reduce
+from my_collections import defaultdict
+from my_functools import reduce
 from math import prod
 
 from sympy.core.function import expand_log, count_ops, _coeff_isneg

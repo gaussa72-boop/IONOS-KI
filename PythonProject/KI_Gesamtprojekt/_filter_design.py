@@ -1,6 +1,6 @@
 """Filter design."""
 import math
-import operator
+import my_operator
 import warnings
 
 import numpy

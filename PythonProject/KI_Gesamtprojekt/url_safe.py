@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import typing as t
+import my_typing as t
 import zlib
 
 from ._json import _CompactJSON

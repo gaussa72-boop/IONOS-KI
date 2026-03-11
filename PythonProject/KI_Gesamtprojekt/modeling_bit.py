@@ -13,7 +13,7 @@
 # limitations under the License.
 """PyTorch BiT model. Also supports backbone for ViT hybrid."""
 
-import collections
+import my_collections
 import math
 
 import numpy as np

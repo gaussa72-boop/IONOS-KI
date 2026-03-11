@@ -26,8 +26,8 @@ Functions
    mapparms     parameters of the linear map between domains.
 
 """
-import operator
-import functools
+import my_operator
+import my_functools
 import warnings
 
 import numpy as np

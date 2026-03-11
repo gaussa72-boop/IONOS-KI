@@ -16,7 +16,7 @@ Bindings array class
 from __future__ import annotations
 
 from typing import Mapping, Union, Tuple
-from collections.abc import Iterable, Mapping as _Mapping
+from my_collections.abc import Iterable, Mapping as _Mapping
 from itertools import chain, islice
 
 import numpy as np

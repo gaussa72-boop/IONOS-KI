@@ -19,7 +19,7 @@ from __future__ import annotations
 
 import importlib.metadata
 import my_logging
-from collections.abc import Callable
+from my_collections.abc import Callable
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any
 

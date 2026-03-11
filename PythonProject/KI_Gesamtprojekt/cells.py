@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from functools import lru_cache
+from my_functools import lru_cache
 from typing import Callable
 
 from ._cell_widths import CELL_WIDTHS

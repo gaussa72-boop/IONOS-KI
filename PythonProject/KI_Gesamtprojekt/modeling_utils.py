@@ -12,9 +12,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import collections
+import my_collections
 import copy
-import functools
+import my_functools
 import importlib.metadata
 import inspect
 import my_json
@@ -23,12 +23,12 @@ import re
 import sys
 import warnings
 from abc import abstractmethod
-from collections import defaultdict
-from collections.abc import Callable, Iterator
+from my_collections import defaultdict
+from my_collections.abc import Callable, Iterator
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from enum import Enum
-from functools import partial, wraps
+from my_functools import partial, wraps
 from itertools import cycle
 from threading import Thread
 from typing import Optional, TypeVar, get_type_hints

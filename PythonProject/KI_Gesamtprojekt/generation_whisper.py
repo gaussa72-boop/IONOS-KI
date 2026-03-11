@@ -14,7 +14,7 @@
 import copy
 import math
 import zlib
-from collections.abc import Callable, Iterator
+from my_collections.abc import Callable, Iterator
 
 import numpy as np
 import torch

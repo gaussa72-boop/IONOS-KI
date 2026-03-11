@@ -15,7 +15,7 @@
 # limitations under the License.
 """Pvt V2 model configuration"""
 
-from collections.abc import Callable
+from my_collections.abc import Callable
 
 from ...backbone_utils import BackboneConfigMixin
 from ...configuration_utils import PreTrainedConfig

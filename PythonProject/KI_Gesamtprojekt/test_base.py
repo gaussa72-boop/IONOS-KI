@@ -9,8 +9,8 @@ class for generic tests" section.
 """
 
 import contextlib
-import functools
-import operator
+import my_functools
+import my_operator
 import platform
 import itertools
 import sys

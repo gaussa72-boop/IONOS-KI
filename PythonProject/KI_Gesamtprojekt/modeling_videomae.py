@@ -13,8 +13,8 @@
 # limitations under the License.
 """PyTorch VideoMAE (masked autoencoder) model."""
 
-import collections.abc
-from collections.abc import Callable
+import my_collections.abc
+from my_collections.abc import Callable
 from copy import deepcopy
 from dataclasses import dataclass
 

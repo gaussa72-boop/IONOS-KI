@@ -13,7 +13,7 @@
 
 """Replace each sequence of Clifford gates by a single Clifford gate."""
 
-from functools import partial
+from my_functools import partial
 
 from qiskit.transpiler.passes.optimization.collect_and_collapse import (
     CollectAndCollapse,

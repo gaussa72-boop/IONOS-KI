@@ -13,7 +13,7 @@
 # limitations under the License.
 """Image processor class for Vilt."""
 
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from typing import Any
 
 import numpy as np

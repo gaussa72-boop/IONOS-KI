@@ -1,4 +1,4 @@
-from collections import defaultdict, deque
+from my_collections import defaultdict, deque
 from itertools import filterfalse
 
 

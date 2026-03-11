@@ -7,7 +7,7 @@ from __future__ import annotations
 import importlib.metadata
 import os
 import sys
-import typing as t
+import my_typing as t
 from textwrap import wrap
 
 from markupsafe import escape

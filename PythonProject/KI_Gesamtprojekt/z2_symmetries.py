@@ -15,7 +15,7 @@
 from __future__ import annotations
 
 import itertools
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 from copy import deepcopy
 import math
 from typing import Union, cast

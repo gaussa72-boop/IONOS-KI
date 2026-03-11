@@ -16,7 +16,7 @@
 import os
 import pickle
 import time
-from collections.abc import Iterable
+from my_collections.abc import Iterable
 
 import numpy as np
 

@@ -4,7 +4,7 @@ import shutil
 import stat
 import tempfile
 import time
-from functools import partial
+from my_functools import partial
 from pathlib import Path
 from typing import Callable, Generator, Optional, Union
 

@@ -12,7 +12,7 @@
 
 """A swap strategy pass for blocks of commuting gates."""
 from __future__ import annotations
-from collections import defaultdict
+from my_collections import defaultdict
 
 from qiskit.circuit import Gate, QuantumCircuit, Qubit
 from qiskit.converters import circuit_to_dag

@@ -18,7 +18,7 @@ Estimator Pub class
 from __future__ import annotations
 
 from numbers import Real
-from collections.abc import Mapping
+from my_collections.abc import Mapping
 from typing import Tuple, Union
 
 import numpy as np

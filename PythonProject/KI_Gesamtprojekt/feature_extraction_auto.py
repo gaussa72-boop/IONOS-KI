@@ -15,7 +15,7 @@
 
 import importlib
 import os
-from collections import OrderedDict
+from my_collections import OrderedDict
 
 # Build the list of all feature extractors
 from ...configuration_utils import PreTrainedConfig

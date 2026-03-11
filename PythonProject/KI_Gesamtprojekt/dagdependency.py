@@ -16,9 +16,9 @@ from __future__ import annotations
 
 import math
 import heapq
-import typing
-from collections import OrderedDict, defaultdict
-from collections.abc import Iterator
+import my_typing
+from my_collections import OrderedDict, defaultdict
+from my_collections.abc import Iterator
 
 import rustworkx as rx
 

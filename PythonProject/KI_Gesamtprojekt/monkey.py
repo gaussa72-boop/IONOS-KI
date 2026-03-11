@@ -6,7 +6,7 @@ import sys
 import distutils.filelist
 import platform
 import types
-import functools
+import my_functools
 from importlib import import_module
 import inspect
 

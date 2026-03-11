@@ -18,7 +18,7 @@ tokenization_utils_tokenizers.py
 
 import bisect
 import unicodedata
-from collections import OrderedDict
+from my_collections import OrderedDict
 from typing import Any, overload
 
 from .tokenization_utils_base import (

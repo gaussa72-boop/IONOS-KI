@@ -16,12 +16,12 @@
 
 from __future__ import annotations
 
-import collections.abc
+import my_collections.abc
 import copy as _copy
 import itertools
 import multiprocessing as mp
-import typing
-from collections import OrderedDict, defaultdict, namedtuple
+import my_typing
+from my_collections import OrderedDict, defaultdict, namedtuple
 from typing import (
     Union,
     Optional,

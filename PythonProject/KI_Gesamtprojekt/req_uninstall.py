@@ -1,4 +1,4 @@
-import functools
+import my_functools
 import os
 import sys
 import sysconfig

@@ -1,5 +1,5 @@
 """ Integral Transforms """
-from functools import reduce, wraps
+from my_functools import reduce, wraps
 from itertools import repeat
 from sympy.core import S, pi
 from sympy.core.add import Add

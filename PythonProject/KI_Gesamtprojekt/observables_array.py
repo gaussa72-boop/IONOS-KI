@@ -17,9 +17,9 @@ ND-Array container class for Estimator observables.
 from __future__ import annotations
 
 import re
-from collections import defaultdict
-from collections.abc import Iterable, Mapping as _Mapping
-from functools import lru_cache
+from my_collections import defaultdict
+from my_collections.abc import Iterable, Mapping as _Mapping
+from my_functools import lru_cache
 from typing import Union, Mapping, overload
 from numbers import Complex
 

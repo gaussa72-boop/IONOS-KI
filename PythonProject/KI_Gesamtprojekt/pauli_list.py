@@ -15,7 +15,7 @@ Optimized list of Pauli operators
 
 from __future__ import annotations
 
-from collections import defaultdict
+from my_collections import defaultdict
 from typing import Literal
 
 import numpy as np

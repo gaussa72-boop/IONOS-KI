@@ -15,7 +15,7 @@
 from __future__ import annotations
 import math
 
-import typing
+import my_typing
 import numpy
 
 from qiskit import _numpy_compat

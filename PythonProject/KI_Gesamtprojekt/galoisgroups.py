@@ -11,7 +11,7 @@ References
 
 """
 
-from collections import defaultdict
+from my_collections import defaultdict
 import random
 
 from sympy.core.symbol import Dummy, symbols

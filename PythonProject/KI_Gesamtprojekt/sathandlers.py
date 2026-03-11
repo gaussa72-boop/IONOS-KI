@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.assumptions.ask import Q
 from sympy.core import (Add, Mul, Pow, Number, NumberSymbol, Symbol)

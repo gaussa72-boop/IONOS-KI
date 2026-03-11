@@ -4,7 +4,7 @@ mode.  Most of these test are likely to be simply deleted again once NEP 50
 is adopted in the main test suite.  A few may be moved elsewhere.
 """
 
-import operator
+import my_operator
 
 import numpy as np
 

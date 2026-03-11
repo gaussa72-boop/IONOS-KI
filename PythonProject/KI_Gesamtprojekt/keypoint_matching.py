@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from typing import Any, TypeAlias, TypedDict, Union
 
 from typing_extensions import overload

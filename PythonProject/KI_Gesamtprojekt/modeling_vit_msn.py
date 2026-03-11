@@ -13,8 +13,8 @@
 # limitations under the License.
 """PyTorch ViT MSN (masked siamese network) model."""
 
-import collections.abc
-from collections.abc import Callable
+import my_collections.abc
+from my_collections.abc import Callable
 
 import torch
 from torch import nn

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import socket
 import sys
-from collections.abc import Callable, Generator, Iterator
+from my_collections.abc import Callable, Generator, Iterator
 from contextlib import ExitStack, contextmanager
 from inspect import isasyncgenfunction, iscoroutinefunction, ismethod
 from typing import Any, cast

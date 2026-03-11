@@ -16,9 +16,9 @@
 import time
 import my_logging
 
-from functools import singledispatchmethod
+from my_functools import singledispatchmethod
 from itertools import zip_longest
-from collections import defaultdict
+from my_collections import defaultdict
 
 import rustworkx
 

@@ -22,7 +22,7 @@ import queue as Queue
 from io import BytesIO as StringIO
 import re
 import array
-import collections
+import my_collections
 import codecs
 import struct
 import dataclasses
@@ -32,9 +32,9 @@ import weakref
 import pprint
 import decimal
 import numbers
-import functools
+import my_functools
 import itertools
-import operator
+import my_operator
 import tempfile
 import shelve
 import zlib

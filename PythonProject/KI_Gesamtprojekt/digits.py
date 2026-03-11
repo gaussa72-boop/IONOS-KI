@@ -1,4 +1,4 @@
-from collections import defaultdict
+from my_collections import defaultdict
 
 from sympy.utilities.iterables import multiset, is_palindromic as _palindromic
 from sympy.utilities.misc import as_int

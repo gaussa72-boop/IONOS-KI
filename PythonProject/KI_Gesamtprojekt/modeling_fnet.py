@@ -14,7 +14,7 @@
 """PyTorch FNet model."""
 
 from dataclasses import dataclass
-from functools import partial
+from my_functools import partial
 
 import torch
 from torch import nn

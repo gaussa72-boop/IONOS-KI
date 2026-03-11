@@ -14,7 +14,7 @@ source code files that are compilable without further modifications.
 from __future__ import annotations
 from typing import Any
 
-from functools import wraps
+from my_functools import wraps
 from itertools import chain
 
 from sympy.core import S

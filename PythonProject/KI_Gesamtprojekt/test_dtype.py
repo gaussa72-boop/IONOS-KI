@@ -1,5 +1,5 @@
 import sys
-import operator
+import my_operator
 import pytest
 import ctypes
 import gc

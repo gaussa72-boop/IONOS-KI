@@ -22,9 +22,9 @@
 
 from __future__ import absolute_import
 
-import functools
+import my_functools
 import itertools
-import operator
+import my_operator
 import sys
 import types
 

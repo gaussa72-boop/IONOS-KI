@@ -16,7 +16,7 @@
 This implementation is identical to a regular Swin Transformer, without final layer norm on top of the final hidden
 states."""
 
-import collections.abc
+import my_collections.abc
 import math
 from dataclasses import dataclass
 

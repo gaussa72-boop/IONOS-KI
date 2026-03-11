@@ -14,7 +14,7 @@ import importlib.util
 import my_logging
 import os
 import textwrap
-from functools import partial
+from my_functools import partial
 from optparse import SUPPRESS_HELP, Option, OptionGroup, OptionParser, Values
 from textwrap import dedent
 from typing import Any, Callable, Dict, Optional, Tuple

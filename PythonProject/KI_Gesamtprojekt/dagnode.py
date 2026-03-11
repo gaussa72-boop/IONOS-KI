@@ -14,7 +14,7 @@
 """Objects to represent the information at a node in the DAGCircuit."""
 from __future__ import annotations
 
-import typing
+import my_typing
 import uuid
 
 import qiskit._accelerate.circuit

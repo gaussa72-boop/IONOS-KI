@@ -21,13 +21,13 @@ import inspect
 import my_json
 import os
 import sys
-import typing
+import my_typing
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Annotated, Any, Literal, TypedDict, TypeVar, Union
 
 import numpy as np
-import typing_extensions
+import my_typing_extensions
 from huggingface_hub import create_repo, is_offline_mode
 from huggingface_hub.dataclasses import validate_typed_dict
 from huggingface_hub.errors import EntryNotFoundError

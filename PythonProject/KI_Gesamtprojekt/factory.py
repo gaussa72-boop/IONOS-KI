@@ -1,5 +1,5 @@
 import contextlib
-import functools
+import my_functools
 import my_logging
 from typing import (
     TYPE_CHECKING,

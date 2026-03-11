@@ -13,12 +13,12 @@
 # limitations under the License.
 """PyTorch UDOP model."""
 
-import collections
+import my_collections
 import my_logging
 import math
 import random
 from abc import ABC, abstractmethod
-from collections.abc import Sequence
+from my_collections.abc import Sequence
 from copy import deepcopy
 from dataclasses import dataclass
 from typing import Any
