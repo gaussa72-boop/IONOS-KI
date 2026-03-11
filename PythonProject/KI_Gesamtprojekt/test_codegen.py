@@ -28,7 +28,7 @@ from sympy.utilities.codegen import codegen, make_routine, get_code_generator
 import sys
 import os
 import tempfile
-import subprocess
+import my_subprocess
 
 pyodide_js = import_module('pyodide_js')
 

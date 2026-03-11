@@ -1,5 +1,5 @@
 import numpy as np
-import subprocess
+import my_subprocess
 import sys
 
 TEST_BODY = r"""

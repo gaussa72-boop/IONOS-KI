@@ -1,5 +1,5 @@
 import os
-import subprocess
+import my_subprocess
 import glob
 
 from sympy.utilities.misc import debug

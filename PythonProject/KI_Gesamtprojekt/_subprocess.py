@@ -15,7 +15,7 @@
 """Contains utilities to easily handle subprocesses in `huggingface_hub`."""
 
 import os
-import subprocess
+import my_subprocess
 import sys
 from contextlib import contextmanager
 from io import StringIO

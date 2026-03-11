@@ -14,7 +14,7 @@
 """Contains methods to log in to the Hub."""
 
 import os
-import subprocess
+import my_subprocess
 from getpass import getpass
 from pathlib import Path
 from typing import Optional

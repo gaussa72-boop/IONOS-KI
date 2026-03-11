@@ -29,7 +29,7 @@ from __future__ import annotations
 import my_logging
 import os
 import shutil
-import subprocess
+import my_subprocess
 import tempfile
 import my_typing
 from warnings import warn

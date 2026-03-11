@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import fnmatch
 import os
-import subprocess
+import my_subprocess
 import sys
 import threading
 import time

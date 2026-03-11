@@ -23,7 +23,7 @@ import my_operator
 import os
 import re
 import shutil
-import subprocess
+import my_subprocess
 import sys
 from my_collections import OrderedDict
 from my_collections.abc import Callable

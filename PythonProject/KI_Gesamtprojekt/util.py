@@ -45,7 +45,7 @@ import contextlib
 import os
 import shutil
 import stat
-import subprocess
+import my_subprocess
 import sys
 
 from pbr._compat.five import ConfigParser

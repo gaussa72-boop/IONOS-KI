@@ -1,5 +1,5 @@
 import sys
-import subprocess
+import my_subprocess
 
 MODULES = [
     "scipy.cluster",

@@ -6,7 +6,7 @@ import sys
 import itertools
 import traceback
 import textwrap
-import subprocess
+import my_subprocess
 import pytest
 
 import numpy as np

@@ -24,7 +24,7 @@ import errno
 import io
 import os
 import re
-import subprocess
+import my_subprocess
 import time
 
 import pbr._compat.packaging

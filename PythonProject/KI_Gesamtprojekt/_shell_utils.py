@@ -4,7 +4,7 @@ parameters provided in config files.
 """
 import os
 import shlex
-import subprocess
+import my_subprocess
 
 try:
     from shlex import quote

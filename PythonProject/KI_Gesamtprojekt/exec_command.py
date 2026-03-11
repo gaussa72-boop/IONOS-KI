@@ -53,7 +53,7 @@ __all__ = ['exec_command', 'find_executable']
 
 import os
 import sys
-import subprocess
+import my_subprocess
 import locale
 import warnings
 

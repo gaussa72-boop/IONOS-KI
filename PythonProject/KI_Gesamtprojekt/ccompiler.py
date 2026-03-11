@@ -3,7 +3,7 @@ import re
 import sys
 import shlex
 import time
-import subprocess
+import my_subprocess
 from copy import copy
 from distutils import ccompiler
 from distutils.ccompiler import (

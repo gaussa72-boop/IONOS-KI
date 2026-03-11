@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import argparse
-import subprocess
+import my_subprocess
 import sys
 
 from ._implementation import DependencyGroupResolver

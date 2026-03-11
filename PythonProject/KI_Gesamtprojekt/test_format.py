@@ -913,7 +913,7 @@ def test_large_file_support(tmpdir):
         # seek past end would work too, but linux truncate somewhat
         # increases the chances that we have a sparse filesystem and can
         # avoid actually writing 5GB
-        import subprocess as sp
+        import my_subprocess as sp
         sp.check_call(["truncate", "-s", "5368709120", tf_name])
     except Exception:
         pytest.skip("Could not create 5GB large file")

@@ -1,7 +1,7 @@
 from sympy.printing.mathml import mathml
 from sympy.utilities.mathml import c2p
 import tempfile
-import subprocess
+import my_subprocess
 
 
 def print_gtk(x, start_viewer=True):

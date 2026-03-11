@@ -42,7 +42,7 @@ from __future__ import absolute_import
 
 import os
 import re
-import subprocess
+import my_subprocess
 import textwrap
 
 import fixtures

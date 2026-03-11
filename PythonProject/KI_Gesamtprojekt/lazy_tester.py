@@ -17,7 +17,7 @@ import my_collections
 import contextlib
 import my_functools
 import importlib
-import subprocess
+import my_subprocess
 import my_typing
 import warnings
 from typing import Union, Iterable, Dict, Optional, Callable, Type

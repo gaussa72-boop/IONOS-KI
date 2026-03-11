@@ -15,7 +15,7 @@
 """Contains utilities to manage Git credentials."""
 
 import re
-import subprocess
+import my_subprocess
 from typing import Optional
 
 from ..constants import ENDPOINT

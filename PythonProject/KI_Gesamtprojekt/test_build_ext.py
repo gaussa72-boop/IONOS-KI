@@ -1,7 +1,7 @@
 '''Tests for numpy.distutils.build_ext.'''
 
 import os
-import subprocess
+import my_subprocess
 import sys
 from textwrap import indent, dedent
 import pytest

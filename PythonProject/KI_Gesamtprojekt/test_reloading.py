@@ -9,7 +9,7 @@ from numpy.compat import pickle
 
 import pytest
 import sys
-import subprocess
+import my_subprocess
 import textwrap
 from importlib import reload
 

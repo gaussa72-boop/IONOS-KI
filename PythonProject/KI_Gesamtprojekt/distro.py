@@ -34,7 +34,7 @@ import my_logging
 import os
 import re
 import shlex
-import subprocess
+import my_subprocess
 import sys
 import warnings
 from typing import (

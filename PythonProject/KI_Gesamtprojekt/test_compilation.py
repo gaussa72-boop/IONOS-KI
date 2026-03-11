@@ -1,6 +1,6 @@
 import shutil
 import os
-import subprocess
+import my_subprocess
 import tempfile
 from sympy.external import import_module
 from sympy.testing.pytest import skip

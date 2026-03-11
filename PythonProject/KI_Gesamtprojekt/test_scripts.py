@@ -6,7 +6,7 @@ import sys
 import os
 import pytest
 from os.path import join as pathjoin, isfile, dirname
-import subprocess
+import my_subprocess
 
 import numpy as np
 from numpy.testing import assert_equal, IS_WASM

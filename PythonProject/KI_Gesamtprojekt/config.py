@@ -4,7 +4,7 @@
 # Pearu Peterson
 import os
 import signal
-import subprocess
+import my_subprocess
 import sys
 import textwrap
 import warnings

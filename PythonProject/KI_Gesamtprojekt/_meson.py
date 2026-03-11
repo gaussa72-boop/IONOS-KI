@@ -2,7 +2,7 @@ import errno
 import os
 import re
 import shutil
-import subprocess
+import my_subprocess
 import sys
 from itertools import chain
 from pathlib import Path

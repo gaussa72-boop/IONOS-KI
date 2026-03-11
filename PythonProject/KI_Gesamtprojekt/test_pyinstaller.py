@@ -1,4 +1,4 @@
-import subprocess
+import my_subprocess
 from pathlib import Path
 
 import pytest

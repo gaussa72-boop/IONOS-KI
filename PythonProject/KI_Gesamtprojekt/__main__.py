@@ -8,7 +8,7 @@
 import glob
 import os
 import sys
-import subprocess as sp
+import my_subprocess as sp
 
 python = sys.executable
 try:

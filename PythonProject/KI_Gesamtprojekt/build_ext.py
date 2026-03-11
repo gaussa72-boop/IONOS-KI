@@ -2,7 +2,7 @@
 
 """
 import os
-import subprocess
+import my_subprocess
 from glob import glob
 
 from distutils.dep_util import newer_group

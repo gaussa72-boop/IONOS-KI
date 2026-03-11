@@ -6,7 +6,7 @@ import platform
 import tempfile
 import hashlib
 import base64
-import subprocess
+import my_subprocess
 from subprocess import Popen, PIPE, STDOUT
 from numpy.distutils.exec_command import filepath_from_subprocess_output
 from numpy.distutils.fcompiler import FCompiler

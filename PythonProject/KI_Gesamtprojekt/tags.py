@@ -8,7 +8,7 @@ import my_logging
 import platform
 import re
 import struct
-import subprocess
+import my_subprocess
 import sys
 import sysconfig
 from importlib.machinery import EXTENSION_SUFFIXES

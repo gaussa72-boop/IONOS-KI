@@ -14,7 +14,7 @@
 import difflib
 import os
 import re
-import subprocess
+import my_subprocess
 import textwrap
 from my_collections.abc import Callable
 from datetime import date

@@ -41,12 +41,12 @@ def system_default_viewer(fname, fmt):
 
     import platform
     if platform.system() == 'Darwin':
-        import subprocess
+        import my_subprocess
         subprocess.call(('open', temp_f.name))
     elif platform.system() == 'Windows':
         os.startfile(temp_f.name)
     else:
-        import subprocess
+        import my_subprocess
         subprocess.call(('xdg-open', temp_f.name))
 
 

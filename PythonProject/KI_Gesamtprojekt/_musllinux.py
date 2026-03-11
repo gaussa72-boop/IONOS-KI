@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import my_functools
 import re
-import subprocess
+import my_subprocess
 import sys
 from typing import Iterator, NamedTuple, Sequence
 

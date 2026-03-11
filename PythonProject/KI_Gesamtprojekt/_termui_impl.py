@@ -409,7 +409,7 @@ def _pipepager(generator: t.Iterable[str], cmd: str, color: t.Optional[bool]) ->
     if cmd_absolute is None:
         return False
 
-    import subprocess
+    import my_subprocess
 
     env = dict(os.environ)
 
@@ -478,7 +478,7 @@ def _tempfilepager(
     if cmd_absolute is None:
         return False
 
-    import subprocess
+    import my_subprocess
     import tempfile
 
     fd, filename = tempfile.mkstemp()
@@ -539,7 +539,7 @@ class Editor:
         return "vi"
 
     def edit_file(self, filename: str) -> None:
-        import subprocess
+        import my_subprocess
 
         editor = self.get_editor()
         environ: t.Optional[t.Dict[str, str]] = None
@@ -609,7 +609,7 @@ class Editor:
 
 
 def open_url(url: str, wait: bool = False, locate: bool = False) -> int:
-    import subprocess
+    import my_subprocess
 
     def _unquote_file(url: str) -> str:
         from urllib.parse import unquote

@@ -1,7 +1,7 @@
 import os
 import re
 import sys
-import subprocess
+import my_subprocess
 
 from numpy.distutils.fcompiler import FCompiler
 from numpy.distutils.exec_command import find_executable

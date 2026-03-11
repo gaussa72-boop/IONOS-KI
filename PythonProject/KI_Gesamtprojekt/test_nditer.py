@@ -2,7 +2,7 @@ import sys
 import pytest
 
 import textwrap
-import subprocess
+import my_subprocess
 
 import numpy as np
 import numpy.core._multiarray_tests as _multiarray_tests

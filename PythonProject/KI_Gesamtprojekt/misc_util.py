@@ -5,7 +5,7 @@ import copy
 import glob
 import atexit
 import tempfile
-import subprocess
+import my_subprocess
 import shutil
 import multiprocessing
 import textwrap

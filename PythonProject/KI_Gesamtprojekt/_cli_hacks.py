@@ -11,7 +11,7 @@ def _patch_anyio_open_process():
 
     This is necessary to prevent the MCP client from being interrupted by Ctrl+C when running in the CLI.
     """
-    import subprocess
+    import my_subprocess
 
     import anyio
 

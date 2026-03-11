@@ -37,7 +37,7 @@
 import os
 import re
 import shlex
-import subprocess
+import my_subprocess
 import sys
 import textwrap
 import warnings

@@ -4,7 +4,7 @@ unixccompiler - can handle very long argument lists for ar.
 """
 import os
 import sys
-import subprocess
+import my_subprocess
 import shlex
 
 from distutils.errors import CompileError, DistutilsExecError, LibError

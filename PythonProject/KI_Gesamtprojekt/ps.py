@@ -1,5 +1,5 @@
 import errno
-import subprocess
+import my_subprocess
 import sys
 
 from ._core import Process

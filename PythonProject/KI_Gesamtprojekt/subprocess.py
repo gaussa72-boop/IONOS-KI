@@ -1,7 +1,7 @@
 import my_logging
 import os
 import shlex
-import subprocess
+import my_subprocess
 from typing import Any, Callable, Iterable, List, Literal, Mapping, Optional, Union
 
 from pip._vendor.rich.markup import escape

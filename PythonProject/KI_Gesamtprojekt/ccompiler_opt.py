@@ -13,7 +13,7 @@ import inspect
 import os
 import pprint
 import re
-import subprocess
+import my_subprocess
 import textwrap
 
 # These flags are used to compile any C++ source within Numpy.

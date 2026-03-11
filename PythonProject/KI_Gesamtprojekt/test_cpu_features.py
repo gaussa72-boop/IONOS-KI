@@ -15,7 +15,7 @@ def assert_features_equal(actual, desired, fname):
         cpuinfo = str(err)
 
     try:
-        import subprocess
+        import my_subprocess
         auxv = subprocess.check_output(['/bin/true'], env=dict(LD_SHOW_AUXV="1"))
         auxv = auxv.decode()
     except Exception as err:
@@ -95,7 +95,7 @@ class AbstractTest:
         return values
 
     def load_flags_auxv(self):
-        import subprocess
+        import my_subprocess
         auxv = subprocess.check_output(['/bin/true'], env=dict(LD_SHOW_AUXV="1"))
         for at in auxv.split(b'\n'):
             if not at.startswith(b"AT_HWCAP"):

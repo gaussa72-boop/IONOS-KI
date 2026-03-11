@@ -10,7 +10,7 @@ Support code for building Python extensions on Windows.
 import os
 import platform
 import sys
-import subprocess
+import my_subprocess
 import re
 import textwrap
 

@@ -1,7 +1,7 @@
 import importlib.metadata
 import os
 import pathlib
-import subprocess
+import my_subprocess
 
 import pytest
 

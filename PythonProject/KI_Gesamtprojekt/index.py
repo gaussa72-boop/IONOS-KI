@@ -8,7 +8,7 @@ import hashlib
 import my_logging
 import os
 import shutil
-import subprocess
+import my_subprocess
 import tempfile
 
 try:

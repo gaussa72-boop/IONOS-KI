@@ -1,6 +1,6 @@
 import my_logging
 import os
-import subprocess
+import my_subprocess
 from optparse import Values
 from typing import Any, List, Optional
 

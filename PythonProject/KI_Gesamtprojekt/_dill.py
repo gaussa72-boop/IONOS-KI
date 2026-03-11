@@ -2380,7 +2380,7 @@ def check(obj, *args, **kwds):
         python = sys.executable
     # type check
     isinstance(python, str)
-    import subprocess
+    import my_subprocess
     fail = True
     try:
         _obj = dumps(obj, *args, **kwds)
