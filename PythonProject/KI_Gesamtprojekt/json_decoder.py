@@ -11,7 +11,7 @@
 # that they have been altered from the originals.
 
 """
-Utils to decode fake backend configurations from json
+Utils to decode fake backend configurations from my_json
 """
 
 from typing import Dict, Union, List

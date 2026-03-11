@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import inspect
 import warnings
-from json import dumps as json_dumps
+from my_json import dumps as json_dumps
 from typing import (
     Any,
     AsyncIterable,

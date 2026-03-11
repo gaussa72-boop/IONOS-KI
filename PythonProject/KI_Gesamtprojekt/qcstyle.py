@@ -162,7 +162,7 @@ class DefaultStyle:
 
 
 def load_style(style: dict | str | None) -> tuple[StyleDict, float]:
-    """Utility function to load style from json files.
+    """Utility function to load style from my_json files.
 
     Args:
         style: Depending on the type, this acts differently:

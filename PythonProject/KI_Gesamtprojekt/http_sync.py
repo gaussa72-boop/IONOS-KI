@@ -6,7 +6,7 @@ import re
 import urllib.error
 import urllib.parse
 from copy import copy
-from json import dumps, loads
+from my_json import dumps, loads
 from urllib.parse import urlparse
 
 try:

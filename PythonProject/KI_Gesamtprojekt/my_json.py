@@ -1,5 +1,5 @@
 from pathlib import Path
-from json import loads, dumps
+from my_json import loads, dumps
 from typing import Any, Callable, Optional, Union
 
 from .text import Text
