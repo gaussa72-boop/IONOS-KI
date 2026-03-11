@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="007ad67f-5cc7-4dda-949f-d73e32b754c1" name="Changes" comment="Struktur-Fix: Dateien in templates und static verschoben">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="007ad67f-5cc7-4dda-949f-d73e32b754c1" name="Changes" comment="Integration aller Archiv-KIs in das Multiversum-Interface" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773264772763</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Integration aller Archiv-KIs in das Multiversum-Interface">
+      <option name="closed" value="true" />
+      <created>1773271908592</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1773271908592</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -320,7 +325,9 @@
     <MESSAGE value="Dateien umbenannt um Namenskonflikte zu lösen" />
     <MESSAGE value="Finale Spiegel-Struktur mit allen KI-Kodes und Bildern" />
     <MESSAGE value="Struktur-Fix: Dateien in templates und static verschoben" />
-    <option name="LAST_COMMIT_MESSAGE" value="Struktur-Fix: Dateien in templates und static verschoben" />
+    <MESSAGE value="!1" />
+    <MESSAGE value="Integration aller Archiv-KIs in das Multiversum-Interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration aller Archiv-KIs in das Multiversum-Interface" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
