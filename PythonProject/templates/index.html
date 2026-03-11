@@ -2,27 +2,76 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>MasterCat Interface</title>
+    <title>MasterCat Multiversum</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        /* Spiegelbruch Animation */
+        .shatter {
+            animation: shatterEffect 0.5s ease-out forwards;
+        }
+        @keyframes shatterEffect {
+            0% { transform: scale(1); filter: contrast(100%) blur(0px); }
+            50% { transform: scale(1.1); filter: contrast(200%) blur(2px); opacity: 0.8; }
+            100% { transform: scale(1); filter: contrast(100%) blur(0px); opacity: 1; }
+        }
+        .chat-container { display: none; margin-top: 20px; }
+        .active-chat { display: block; animation: fadeIn 1s; }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="portals">
-            <div class="portal" onclick="selectPortal('RPG')">
-                <img src="/static/images/1.jpg.jpg" width="100">
-                <p>RPG QUEST</p>
-            </div>
-            <div class="portal" onclick="selectPortal('SPACE')">
-                <img src="/static/images/4.jpg.jpg" width="100">
-                <p>SPACE BATTLE</p>
-            </div>
+<body id="mainBody">
+    <div class="main-header"><h1>SPIEGELWELT KI</h1></div>
+    
+    <div class="portal-grid">
+        <div class="portal-card" onclick="openKI('QUANTUM', '9.jpg.jpg')">
+            <img src="/static/images/9.jpg.jpg">
+            <p>Quantum Logic</p>
         </div>
-        
-        <div class="chat-area">
-            <div id="chatWindow"></div>
-            <input type="text" id="userPrompt" placeholder="Befehl an MasterCat...">
-            <button onclick="startGeneration()">LOS!</button>
+        <div class="portal-card" onclick="openKI('RESEARCH', '14.jpg.jpg')">
+            <img src="/static/images/14.jpg.jpg">
+            <p>Deep Research</p>
+        </div>
+        <div class="portal-card" onclick="openKI('RPG', '1.jpg.jpg')">
+            <img src="/static/images/1.jpg.jpg">
+            <p>RPG Quest</p>
         </div>
     </div>
+
+    <div id="chatInterface" class="chat-container">
+        <h2 id="kiTitle">KI Modus</h2>
+        <div id="chatWindow" class="chat-window"></div>
+        <input type="text" id="userInput" placeholder="Befehl eingeben...">
+        <button onclick="sendMessage()">SENDEN</button>
+    </div>
+
+    <script>
+        let currentMode = 'Allgemein';
+
+        function openKI(mode, img) {
+            // Spiegelbruch-Effekt auslösen
+            document.getElementById('mainBody').classList.add('shatter');
+            setTimeout(() => {
+                document.getElementById('mainBody').classList.remove('shatter');
+                currentMode = mode;
+                document.getElementById('kiTitle').innerText = mode + " MODUS AKTIV";
+                document.getElementById('chatInterface').classList.add('active-chat');
+                document.getElementById('chatWindow').innerHTML += '<div class="bot-msg">System: Verbindung zum ' + mode + '-Kern hergestellt...</div>';
+            }, 500);
+        }
+
+        async function sendMessage() {
+            const text = document.getElementById('userInput').value;
+            const chat = document.getElementById('chatWindow');
+            chat.innerHTML += "<div><b>Du:</b> " + text + "</div>";
+            
+            const response = await fetch('/generate', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ prompt: text, portal: currentMode })
+            });
+            const data = await response.json();
+            chat.innerHTML += "<div class='bot-msg'><b>MasterCat:</b> " + data.answer + "</div>";
+            document.getElementById('userInput').value = "";
+        }
+    </script>
 </body>
 </html>
