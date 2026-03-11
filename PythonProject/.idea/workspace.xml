@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="007ad67f-5cc7-4dda-949f-d73e32b754c1" name="Changes" comment="Vollständige Struktur mit Bildern und Interface" />
+    <list default="true" id="007ad67f-5cc7-4dda-949f-d73e32b754c1" name="Changes" comment="Finale Spiegel-Struktur mit allen KI-Kodes und Bildern" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -350,7 +350,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773249213887</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finale Spiegel-Struktur mit allen KI-Kodes und Bildern">
+      <option name="closed" value="true" />
+      <created>1773249419392</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1773249419392</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Finale Spiegel-Struktur mit allen KI-Kodes und Bildern">
+      <option name="closed" value="true" />
+      <created>1773249440393</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1773249440393</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,7 +396,8 @@
     <MESSAGE value="2" />
     <MESSAGE value="3" />
     <MESSAGE value="Vollständige Struktur mit Bildern und Interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vollständige Struktur mit Bildern und Interface" />
+    <MESSAGE value="Finale Spiegel-Struktur mit allen KI-Kodes und Bildern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finale Spiegel-Struktur mit allen KI-Kodes und Bildern" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
