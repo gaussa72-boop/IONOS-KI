@@ -2,145 +2,75 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>MasterCat Quantum Portal</title>
+    <title>MasterCat Multiversum</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <style>
-        body { margin: 0; overflow: hidden; background: #000; color: #fff; font-family: 'Cinzel', serif; }
-
-        /* Magisches rotierendes Mandala im Hintergrund */
-        .background-mandala {
-            position: fixed;
-            width: 200%; height: 200%;
-            top: -50%; left: -50%;
-            background: url('https://i.imgur.com/8N4X6m9.png') center/cover no-repeat; /* Blaues Mandala/Lebensblume */
-            animation: rotateMandala 60s linear infinite;
-            opacity: 0.2;
-            filter: hue-rotate(180deg) brightness(1.2);
-            z-index: -1;
+        /* Spiegelbruch Animation */
+        .shatter {
+            animation: shatterEffect 0.5s ease-out forwards;
         }
-        @keyframes rotateMandala { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-        /* Spiegelbruch Effekt */
-        .shatter-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            z-index: 1000;
-            animation: shatterFlash 0.3s ease-out;
+        @keyframes shatterEffect {
+            0% { transform: scale(1); filter: contrast(100%) blur(0px); }
+            50% { transform: scale(1.1); filter: contrast(200%) blur(2px); opacity: 0.8; }
+            100% { transform: scale(1); filter: contrast(100%) blur(0px); opacity: 1; }
         }
-        @keyframes shatterFlash { 0% { opacity: 0; } 50% { opacity: 1; transform: scale(1.1); } 100% { opacity: 0; } }
-
-        /* Portal Auswahl */
-        .portal-grid { display: flex; justify-content: center; gap: 40px; padding: 100px; }
-        .mirror-portal {
-            width: 250px; height: 350px;
-            background: rgba(0,0,0,0.6);
-            border: 2px solid #00c3ff; /* Blaues Licht */
-            border-radius: 15px;
-            cursor: pointer;
-            transition: 0.3s;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        .mirror-portal:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 0 40px #00c3ff; }
-        .mirror-portal img { width: 80%; border-radius: 10px; border: 1px solid #00c3ff; }
-
-        /* Chatfenster Style */
-        .chat-container {
-            display: none;
-            position: absolute; width: 70%; left: 15%; top: 10%; height: 80vh;
-            background: rgba(0, 10, 20, 0.85); /* Tiefblau/Schwarz */
-            border: 2px solid gold;
-            border-radius: 20px;
-            display: flex; flex-direction: column;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.2);
-        }
-        .chat-box { flex: 1; padding: 20px; overflow-y: auto; color: #eee; }
-        .input-area { display: flex; border-top: 1px solid gold; }
-        input { flex: 1; padding: 15px; background: transparent; border: none; color: gold; outline: none; }
-        button { padding: 15px; background: gold; border: none; cursor: pointer; color: #000; font-weight: bold; }
-
-        /* Stern/Hexagon Avatar mit rotierenden Bildern */
-        .avatar-star {
-            position: absolute; top: 10px; right: 10px;
-            width: 100px; height: 100px;
-            background: rgba(0,0,0,0.5);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon */
-            border: 2px solid gold;
-            overflow: hidden;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .avatar-star img {
-            width: 100%;
-            animation: rotateAvatar 10s linear infinite;
-            filter: drop-shadow(0 0 10px gold);
-        }
-        @keyframes rotateAvatar {
-            0% { transform: rotate(0deg); content: url('/static/images/1.jpg'); }
-            33% { content: url('/static/images/9.jpg'); }
-            66% { content: url('/static/images/14.jpg'); }
-            100% { transform: rotate(360deg); content: url('/static/images/1.jpg'); }
-        }
+        .chat-container { display: none; margin-top: 20px; }
+        .active-chat { display: block; animation: fadeIn 1s; }
     </style>
 </head>
-<body>
-    <div class="background-mandala"></div>
-    <div class="shatter-overlay" id="shatterOverlay"></div>
-
-    <div class="portal-grid" id="portalGrid">
-        <div class="mirror-portal" onclick="breakMirror('QUANTUM', '9.jpg')">
-            <img src="/static/images/9.jpg">
-            <h3>QUANTUM CORE</h3>
+<body id="mainBody">
+    <div class="main-header"><h1>SPIEGELWELT KI</h1></div>
+    
+    <div class="portal-grid">
+        <div class="portal-card" onclick="openKI('QUANTUM', '9.jpg.jpg')">
+            <img src="/static/images/9.jpg.jpg">
+            <p>Quantum Logic</p>
         </div>
-        <div class="mirror-portal" onclick="breakMirror('RESEARCH', '14.jpg')">
-            <img src="/static/images/14.jpg">
-            <h3>DEEP RESEARCH</h3>
+        <div class="portal-card" onclick="openKI('RESEARCH', '14.jpg.jpg')">
+            <img src="/static/images/14.jpg.jpg">
+            <p>Deep Research</p>
+        </div>
+        <div class="portal-card" onclick="openKI('RPG', '1.jpg.jpg')">
+            <img src="/static/images/1.jpg.jpg">
+            <p>RPG Quest</p>
         </div>
     </div>
 
     <div id="chatInterface" class="chat-container">
-        <div class="avatar-star">
-            <img src="/static/images/1.jpg" id="starAvatar">
-        </div>
-        <h2 style="text-align: center; color: gold;">MasterCat Interface</h2>
-        <div class="chat-box" id="chatBox"></div>
-        <div class="input-area">
-            <input type="text" id="userInput" placeholder="Befehl an MasterCat...">
-            <button onclick="send()">LOS!</button>
-        </div>
+        <h2 id="kiTitle">KI Modus</h2>
+        <div id="chatWindow" class="chat-window"></div>
+        <input type="text" id="userInput" placeholder="Befehl eingeben...">
+        <button onclick="sendMessage()">SENDEN</button>
     </div>
 
     <script>
-        let currentMode = "Allgemein";
+        let currentMode = 'Allgemein';
 
-        function breakMirror(mode, bg) {
-            const overlay = document.getElementById('shatterOverlay');
-            overlay.style.display = 'block';
+        function openKI(mode, img) {
+            // Spiegelbruch-Effekt auslösen
+            document.getElementById('mainBody').classList.add('shatter');
             setTimeout(() => {
-                overlay.style.display = 'none';
-                document.getElementById('portalGrid').style.display = 'none';
-                document.getElementById('chatInterface').style.display = 'flex';
-                document.body.style.backgroundImage = `url('/static/images/${bg}')`;
+                document.getElementById('mainBody').classList.remove('shatter');
                 currentMode = mode;
-                document.getElementById('chatBox').innerHTML += `<div style="color: cyan;">System: Verbindung zum ${mode}-Netzwerk hergestellt.</div>`;
-            }, 300);
+                document.getElementById('kiTitle').innerText = mode + " MODUS AKTIV";
+                document.getElementById('chatInterface').classList.add('active-chat');
+                document.getElementById('chatWindow').innerHTML += '<div class="bot-msg">System: Verbindung zum ' + mode + '-Kern hergestellt...</div>';
+            }, 500);
         }
 
-        async function send() {
-            const input = document.getElementById('userInput');
-            const chat = document.getElementById('chatBox');
-            const text = input.value;
-            chat.innerHTML += `<div><b>Du:</b> ${text}</div>`;
-            input.value = "";
-
-            // Temporärer Fix für Quota Error: Wir simulieren die Antwort
-            setTimeout(() => {
-                chat.innerHTML += `<div style="color: gold;"><b>MasterCat:</b> [SIMULATION] Ich empfange deine Nachricht im ${currentMode}-Modus. (KI momentan deaktiviert wegen Quota-Error 429).</div>`;
-                chat.scrollTop = chat.scrollHeight;
-            }, 1000);
+        async function sendMessage() {
+            const text = document.getElementById('userInput').value;
+            const chat = document.getElementById('chatWindow');
+            chat.innerHTML += "<div><b>Du:</b> " + text + "</div>";
+            
+            const response = await fetch('/generate', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ prompt: text, portal: currentMode })
+            });
+            const data = await response.json();
+            chat.innerHTML += "<div class='bot-msg'><b>MasterCat:</b> " + data.answer + "</div>";
+            document.getElementById('userInput').value = "";
         }
     </script>
 </body>
