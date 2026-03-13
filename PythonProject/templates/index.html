@@ -1,114 +1,83 @@
-<!DOCTYPE h<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>MasterCat Multiversum</title>
-    <style>
-        body { margin: 0; overflow: hidden; background: #000; color: gold; font-family: 'Courier New', monospace; }
+    <title>MasterCat Hexagon Portal</title>
+<style>
+    /* ... deine bisherigen Styles (Mandala-BG, Grid) ... */
 
-        /* Rotierendes Mandala im Hintergrund */
-        .mandala-bg {
-            position: fixed; width: 200vw; height: 200vw; top: -50vw; left: -50vw;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flower-of-Life-600dpi.png/600px-Flower-of-Life-600dpi.png') center/contain no-repeat;
-            animation: rotate 100s linear infinite; opacity: 0.15; filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); z-index: -1;
-        }
-        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    /* DAS GALAKTISCHE LICHT-PORTAL */
+    #chat-container {
+        display: none; position: fixed; top: 50%; left: 50%;
+        width: 600px; height: 600px; margin-top: -300px; margin-left: -300px; z-index: 10;
+        display: flex; align-items: center; justify-content: center;
+    }
 
-        /* Portal Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 50px; }
-        .portal {
-            cursor: pointer; text-align: center; transition: 0.4s;
-            border: 1px solid rgba(255,215,0,0.3); padding: 10px; background: rgba(0,0,0,0.5);
-        }
-        .portal:hover { transform: scale(1.1) rotate(2deg); border-color: gold; box-shadow: 0 0 20px gold; }
-        .portal img { width: 100%; height: 150px; object-fit: cover; clip-path: polygon(50% 0%, 100% 100%, 0% 100%); }
+    /* Die Lebensblume aus Licht */
+    .flower-of-light {
+        position: absolute; width: 100%; height: 100%;
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flower-of-Life-600dpi.png/600px-Flower-of-Life-600dpi.png');
+        background-size: contain; background-repeat: no-repeat; background-position: center;
+        filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Blaues Leuchten */
+        opacity: 0.6; animation: rotateFlower 200s linear infinite;
+    }
+    @keyframes rotateFlower { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-        /* Shatter Effekt */
-        .shatter { position: fixed; top:0; left:0; width:100%; height:100%; background: white; z-index: 1000; display:none; animation: flash 0.4s; }
-        @keyframes flash { 0% {opacity:0} 50% {opacity:1} 100% {opacity:0} }
+    /* Der Sternen-Kern (Pulsierend) */
+    .star-core {
+        position: absolute; width: 150px; height: 150px;
+        background: radial-gradient(circle, #fff 0%, #gold 40%, transparent 70%);
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Sternform */
+        animation: pulseCore 4s ease-in-out infinite;
+        box-shadow: 0 0 50px gold;
+    }
+    @keyframes pulseCore { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } }
 
-        /* Chat Fenster */
-        #chat { display: none; position: fixed; top: 10%; left: 15%; width: 70%; height: 80vh; background: rgba(0,0,0,0.9); border: 2px solid gold; backdrop-filter: blur(15px); flex-direction: column; }
-        .chat-header { padding: 20px; border-bottom: 1px solid gold; display: flex; justify-content: space-between; align-items: center; }
+    /* Galaktischer Nebel Effekt */
+    .galactic-nebula {
+        position: absolute; width: 100%; height: 100%;
+        background: radial-gradient(circle at center, rgba(100,0,255,0.2) 0%, rgba(0,0,0,0) 70%),
+                    radial-gradient(circle at 30% 30%, rgba(255,100,0,0.1) 0%, rgba(0,0,0,0) 50%);
+        filter: blur(30px); animation: nebulaShift 20s linear infinite;
+    }
+    @keyframes nebulaShift { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
 
-        /* Der rotierende Stern-Avatar */
-        .star-avatar {
-            width: 80px; height: 80px; background: gold;
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-            animation: spin 10s linear infinite; overflow: hidden;
-        }
-        .star-avatar img { width: 100%; height: 100%; object-fit: cover; }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    /* Der Chat-Text (Über allen Ebenen) */
+    .chat-content {
+        position: relative; z-index: 20; color: gold; text-align: center; font-size: 13px;
+    }
+    /* ... Rest des Chat-Contents (Messages, Input) ... */
+</style>
 
-        .messages { flex: 1; overflow-y: auto; padding: 20px; }
-        .input-box { display: flex; padding: 10px; border-top: 1px solid gold; }
-        input { flex: 1; background: transparent; border: none; color: gold; outline: none; padding: 10px; }
-    </style>
-</head>
-<body>
-    <div class="mandala-bg"></div>
-    <div class="shatter" id="shatter"></div>
-
-    <div id="portal-view">
-        <h1 style="text-align: center; margin-top: 30px;">MASTER-CAT MULTIVERSUM</h1>
-        <div class="grid">
-            <div class="portal" onclick="openKI('QUANTUM', '9.jpg.jpg')"><img src="/static/images/9.jpg.jpg"><p>Quantum</p></div>
-            <div class="portal" onclick="openKI('RESEARCH', '14.jpg.jpg')"><img src="/static/images/14.jpg.jpg"><p>Research</p></div>
-            <div class="portal" onclick="openKI('RPG', '1.jpg.jpg')"><img src="/static/images/1.jpg.jpg"><p>RPG</p></div>
-            <div class="portal" onclick="openKI('CYBER', '2.jpg.jpg')"><img src="/static/images/2.jpg.jpg"><p>Cyber</p></div>
-            <div class="portal" onclick="openKI('MYSTIC', '4.jpg.jpg')"><img src="/static/images/4.jpg.jpg"><p>Mystic</p></div>
-            <div class="portal" onclick="openKI('GALACTIC', '5.jpg.jpg')"><img src="/static/images/5.jpg.jpg"><p>Galactic</p></div>
-            <div class="portal" onclick="openKI('ANCIENT', '7.jpg.jpg')"><img src="/static/images/7.jpg.jpg"><p>Ancient</p></div>
-            <div class="portal" onclick="openKI('GOLDEN', '10.jpg.jpg')"><img src="/static/images/10.jpg.jpg"><p>MasterCat Gold</p></div>
+<div id="chat-container">
+    <div class="galactic-nebula"></div>
+    <div class="flower-of-light"></div>
+    <div class="star-core"></div>
+    <div class="chat-content">
         </div>
-    </div>
-
-    <div id="chat">
-        <div class="chat-header">
-            <h2 id="ki-name">KI Modus</h2>
-            <div class="star-avatar"><img src="/static/images/1.jpg.jpg" id="avatar-img"></div>
-            <button onclick="location.reload()" style="background: red; color: white; border: none; cursor: pointer;">X</button>
-        </div>
-        <div class="messages" id="msgs"></div>
-        <div class="input-box">
-            <input type="text" id="userInput" placeholder="Befehl an MasterCat...">
-            <button onclick="send()" style="background: gold; color: black; border: none; padding: 10px 20px; cursor: pointer;">SENDEN</button>
-        </div>
-    </div>
+</div>
 
     <script>
-        let currentMode = "";
-        const avatarImages = ['1.jpg.jpg', '2.jpg.jpg', '4.jpg.jpg', '5.jpg.jpg', '7.jpg.jpg', '9.jpg.jpg', '10.jpg.jpg', '14.jpg.jpg'];
-        let imgIndex = 0;
-
-        // Avatar-Wechsel alle 3 Sekunden
-        setInterval(() => {
-            imgIndex = (imgIndex + 1) % avatarImages.length;
-            document.getElementById('avatar-img').src = "/static/images/" + avatarImages[imgIndex];
-        }, 3000);
-
         function openKI(mode, bg) {
             document.getElementById('shatter').style.display = 'block';
             setTimeout(() => {
                 document.getElementById('shatter').style.display = 'none';
                 document.getElementById('portal-view').style.display = 'none';
-                document.getElementById('chat').style.display = 'flex';
+                document.getElementById('chat-wrapper').style.display = 'block';
                 document.body.style.backgroundImage = `url('/static/images/${bg}')`;
                 document.body.style.backgroundSize = "cover";
-                document.getElementById('ki-name').innerText = "MasterCat: " + mode;
-                currentMode = mode;
+                document.getElementById('modeTitle').innerText = mode;
             }, 400);
         }
 
-        async function send() {
+        function send() {
             const val = document.getElementById('userInput').value;
             const msgs = document.getElementById('msgs');
             msgs.innerHTML += `<div><b>Du:</b> ${val}</div>`;
             document.getElementById('userInput').value = "";
 
-            // Simulation der Antwort (da Quota 429 aktuell blockiert)
             setTimeout(() => {
-                msgs.innerHTML += `<div style="color: cyan;"><b>MasterCat:</b> [Mode: ${currentMode}] Ich empfange dich in meiner Dimension. (Simulation aktiv).</div>`;
+                msgs.innerHTML += `<div style="color: cyan;"><b>MasterCat:</b> Ich höre dich durch das Sechseck der Macht...</div>`;
                 msgs.scrollTop = msgs.scrollHeight;
             }, 800);
         }
