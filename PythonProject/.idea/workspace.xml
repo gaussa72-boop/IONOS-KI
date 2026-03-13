@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="007ad67f-5cc7-4dda-949f-d73e32b754c1" name="Changes" comment="Integration aller Archiv-KIs in das Multiversum-Interface">
+    <list default="true" id="007ad67f-5cc7-4dda-949f-d73e32b754c1" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;PythonProject/templates/index.html">
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quantum-ki/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../quantum-ki/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +18,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="939" />
+    <option name="cachedIndexableFilesCount" value="938" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -303,7 +302,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773272123161</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Integration Multiversum: Spiegelbruch und alle KI-Gehirne">
+      <option name="closed" value="true" />
+      <created>1773407677367</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1773407677367</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;PythonProject/templates/index.html">
+      <option name="closed" value="true" />
+      <created>1773407763031</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1773407763031</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,7 +353,9 @@
     <MESSAGE value="Struktur-Fix: Dateien in templates und static verschoben" />
     <MESSAGE value="!1" />
     <MESSAGE value="Integration aller Archiv-KIs in das Multiversum-Interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration aller Archiv-KIs in das Multiversum-Interface" />
+    <MESSAGE value="Integration Multiversum: Spiegelbruch und alle KI-Gehirne" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;PythonProject/templates/index.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;PythonProject/templates/index.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
