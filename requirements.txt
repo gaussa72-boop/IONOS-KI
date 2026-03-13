@@ -4,4 +4,7 @@ openai
 
 gunicorn
 
+
+flask
+
 python-dotenv
