@@ -5,72 +5,79 @@
     <title>MasterCat Multiversum</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <style>
-        /* Spiegelbruch Animation */
-        .shatter {
-            animation: shatterEffect 0.5s ease-out forwards;
+        /* Der Spiegelbruch-Blitz */
+        #shatter-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: white;
+            z-index: 1000;
+            animation: flash 0.5s ease-out;
         }
-        @keyframes shatterEffect {
-            0% { transform: scale(1); filter: contrast(100%) blur(0px); }
-            50% { transform: scale(1.1); filter: contrast(200%) blur(2px); opacity: 0.8; }
-            100% { transform: scale(1); filter: contrast(100%) blur(0px); opacity: 1; }
+        @keyframes flash {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
         }
-        .chat-container { display: none; margin-top: 20px; }
-        .active-chat { display: block; animation: fadeIn 1s; }
     </style>
 </head>
-<body id="mainBody">
-    <div class="main-header"><h1>SPIEGELWELT KI</h1></div>
-    
-    <div class="portal-grid">
-        <div class="portal-card" onclick="openKI('QUANTUM', '9.jpg.jpg')">
-            <img src="/static/images/9.jpg.jpg">
-            <p>Quantum Logic</p>
-        </div>
-        <div class="portal-card" onclick="openKI('RESEARCH', '14.jpg.jpg')">
-            <img src="/static/images/14.jpg.jpg">
-            <p>Deep Research</p>
-        </div>
-        <div class="portal-card" onclick="openKI('RPG', '1.jpg.jpg')">
-            <img src="/static/images/1.jpg.jpg">
-            <p>RPG Quest</p>
+<body id="mainBody" style="background-color: black; background-size: cover; color: gold;">
+    <div id="shatter-overlay"></div>
+
+    <div id="portal-selection">
+        <h1 style="text-align: center;">WÄHLE DEINEN SPIEGEL</h1>
+        <div style="display: flex; justify-content: center; gap: 20px; padding: 50px;">
+            <div class="mirror" onclick="breakMirror('QUANTUM', '9.jpg.jpg')" style="cursor: pointer; text-align: center;">
+                <img src="/static/images/9.jpg.jpg" style="width: 200px; border: 2px solid gold; clip-path: polygon(50% 0%, 100% 100%, 0% 100%);">
+                <p>QUANTUM CORE</p>
+            </div>
+            <div class="mirror" onclick="breakMirror('RESEARCH', '14.jpg.jpg')" style="cursor: pointer; text-align: center;">
+                <img src="/static/images/14.jpg.jpg" style="width: 200px; border: 2px solid gold; clip-path: polygon(50% 0%, 100% 100%, 0% 100%);">
+                <p>DEEP RESEARCH</p>
+            </div>
         </div>
     </div>
 
-    <div id="chatInterface" class="chat-container">
-        <h2 id="kiTitle">KI Modus</h2>
-        <div id="chatWindow" class="chat-window"></div>
-        <input type="text" id="userInput" placeholder="Befehl eingeben...">
-        <button onclick="sendMessage()">SENDEN</button>
+    <div id="chatInterface" style="display: none; padding: 20px; backdrop-filter: blur(10px); background: rgba(0,0,0,0.8); height: 80vh; margin: 20px; border: 1px solid gold;">
+        <h2 id="currentModeTitle">MasterCat</h2>
+        <div id="chatWindow" style="height: 300px; overflow-y: auto; margin-bottom: 20px; padding: 10px; border-bottom: 1px solid gold;"></div>
+        <input type="text" id="userInput" style="width: 70%; padding: 10px; background: transparent; color: white; border: 1px solid gold;">
+        <button onclick="send()" style="padding: 10px; background: gold; color: black; border: none; cursor: pointer;">SENDEN</button>
+        <button onclick="location.reload()" style="margin-left: 10px; background: red; color: white; border: none; cursor: pointer;">ZURÜCK</button>
     </div>
 
     <script>
-        let currentMode = 'Allgemein';
+        let activePortal = "Allgemein";
 
-        function openKI(mode, img) {
-            // Spiegelbruch-Effekt auslösen
-            document.getElementById('mainBody').classList.add('shatter');
+        function breakMirror(mode, bg) {
+            const overlay = document.getElementById('shatter-overlay');
+            overlay.style.display = 'block';
+
             setTimeout(() => {
-                document.getElementById('mainBody').classList.remove('shatter');
-                currentMode = mode;
-                document.getElementById('kiTitle').innerText = mode + " MODUS AKTIV";
-                document.getElementById('chatInterface').classList.add('active-chat');
-                document.getElementById('chatWindow').innerHTML += '<div class="bot-msg">System: Verbindung zum ' + mode + '-Kern hergestellt...</div>';
+                overlay.style.display = 'none';
+                document.getElementById('portal-selection').style.display = 'none';
+                document.getElementById('chatInterface').style.display = 'block';
+                document.body.style.backgroundImage = `url('/static/images/${bg}')`;
+                document.getElementById('currentModeTitle').innerText = "MasterCat: " + mode + " Modus";
+                activePortal = mode;
             }, 500);
         }
 
-        async function sendMessage() {
-            const text = document.getElementById('userInput').value;
+        async function send() {
+            const input = document.getElementById('userInput');
             const chat = document.getElementById('chatWindow');
-            chat.innerHTML += "<div><b>Du:</b> " + text + "</div>";
-            
-            const response = await fetch('/generate', {
+            const userText = input.value;
+            chat.innerHTML += `<div><b>Du:</b> ${userText}</div>`;
+            input.value = "";
+
+            const res = await fetch('/generate', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ prompt: text, portal: currentMode })
+                body: JSON.stringify({ prompt: userText, portal: activePortal })
             });
-            const data = await response.json();
-            chat.innerHTML += "<div class='bot-msg'><b>MasterCat:</b> " + data.answer + "</div>";
-            document.getElementById('userInput').value = "";
+            const data = await res.json();
+            chat.innerHTML += `<div style="color: cyan;"><b>MasterCat:</b> ${data.answer}</div>`;
+            chat.scrollTop = chat.scrollHeight;
         }
     </script>
 </body>
