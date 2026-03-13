@@ -1,116 +1,155 @@
-<!DOCTYPE h<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>MasterCat Multiversum</title>
+    <title>MasterCat Cosmic Portal</title>
     <style>
-        body { margin: 0; overflow: hidden; background: #000; color: gold; font-family: 'Courier New', monospace; }
+        :root {
+            --gold: #d4af37;
+            --glow: rgba(212, 175, 55, 0.8);
+        }
 
-        /* Rotierendes Mandala im Hintergrund */
-        .mandala-bg {
-            position: fixed; width: 200vw; height: 200vw; top: -50vw; left: -50vw;
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            /* HIER: Geändert auf einfache Endung .jpg */
+            background-image: url('/static/images/9.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 0;
+        }
+
+        .portal-core {
+            position: absolute;
+            top: 45%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px; height: 700px;
             background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flower-of-Life-600dpi.png/600px-Flower-of-Life-600dpi.png') center/contain no-repeat;
-            animation: rotate 100s linear infinite; opacity: 0.15; filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); z-index: -1;
+            filter: invert(1) sepia(1) saturate(5) hue-rotate(-10deg) brightness(1.2);
+            opacity: 0.6;
+            animation: rotatePortal 180s linear infinite;
+            z-index: 1;
         }
-        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes rotatePortal { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
 
-        /* Portal Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; padding: 50px; }
-        .portal {
-            cursor: pointer; text-align: center; transition: 0.4s;
-            border: 1px solid rgba(255,215,0,0.3); padding: 10px; background: rgba(0,0,0,0.5);
+        .sun-center {
+            position: absolute;
+            top: 45%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, #fff 0%, var(--gold) 40%, transparent 70%);
+            box-shadow: 0 0 100px 20px white, 0 0 200px 40px var(--gold);
+            border-radius: 50%;
+            z-index: 2;
         }
-        .portal:hover { transform: scale(1.1) rotate(2deg); border-color: gold; box-shadow: 0 0 20px gold; }
-        .portal img { width: 100%; height: 150px; object-fit: cover; clip-path: polygon(50% 0%, 100% 100%, 0% 100%); }
 
-        /* Shatter Effekt */
-        .shatter { position: fixed; top:0; left:0; width:100%; height:100%; background: white; z-index: 1000; display:none; animation: flash 0.4s; }
-        @keyframes flash { 0% {opacity:0} 50% {opacity:1} 100% {opacity:0} }
-
-        /* Chat Fenster */
-        #chat { display: none; position: fixed; top: 10%; left: 15%; width: 70%; height: 80vh; background: rgba(0,0,0,0.9); border: 2px solid gold; backdrop-filter: blur(15px); flex-direction: column; }
-        .chat-header { padding: 20px; border-bottom: 1px solid gold; display: flex; justify-content: space-between; align-items: center; }
-
-        /* Der rotierende Stern-Avatar */
-        .star-avatar {
-            width: 80px; height: 80px; background: gold;
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-            animation: spin 10s linear infinite; overflow: hidden;
+        .main-title {
+            text-align: center;
+            font-size: 2.5em;
+            letter-spacing: 12px;
+            margin-top: 30px;
+            position: relative;
+            z-index: 10;
+            text-shadow: 0 0 15px var(--gold);
         }
-        .star-avatar img { width: 100%; height: 100%; object-fit: cover; }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-        .messages { flex: 1; overflow-y: auto; padding: 20px; }
-        .input-box { display: flex; padding: 10px; border-top: 1px solid gold; }
-        input { flex: 1; background: transparent; border: none; color: gold; outline: none; padding: 10px; }
+        .portal-labels {
+            position: absolute; width: 100%; top: 45%;
+            display: flex; justify-content: space-between;
+            padding: 0 5%; box-sizing: border-box; z-index: 10;
+        }
+        .portal-item { cursor: pointer; transition: 0.3s; text-shadow: 0 0 10px #000; font-weight: bold; }
+        .portal-item:hover { transform: scale(1.1); color: #fff; text-shadow: 0 0 20px var(--gold); }
+
+        .chat-container {
+            position: fixed; bottom: 30px; left: 50%;
+            transform: translateX(-50%); width: 650px;
+            background: rgba(20, 15, 5, 0.9);
+            border: 2px solid var(--gold);
+            padding: 15px; z-index: 20;
+            box-shadow: 0 0 40px rgba(0,0,0,1);
+        }
+        .interface-header {
+            text-align: center; border-bottom: 1px solid var(--gold);
+            margin-bottom: 10px; font-size: 1.2em; letter-spacing: 5px;
+        }
+        .messages { height: 120px; overflow-y: auto; color: #eee; margin-bottom: 10px; text-align: left; }
+        .input-area { display: flex; gap: 5px; }
+        input { flex: 1; background: var(--gold); border: none; padding: 10px; font-weight: bold; color: #000; outline: none; }
+        button { background: #d4af37; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; }
+        .btn-red { background: #b00; color: white; }
+
+        .hex-avatar {
+            position: fixed; bottom: 30px; left: 30px;
+            width: 180px; height: 180px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            border: 2px solid var(--gold);
+            z-index: 30; background: #000;
+        }
+        /* HIER: Avatar Bild auf einfache Endung gesetzt */
+        .hex-avatar img { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body>
-    <div class="mandala-bg"></div>
-    <div class="shatter" id="shatter"></div>
+    <div class="overlay"></div>
+    <div class="portal-core"></div>
+    <div class="sun-center"></div>
 
-    <div id="portal-view">
-        <h1 style="text-align: center; margin-top: 30px;">MASTER-CAT MULTIVERSUM</h1>
-        <div class="grid">
-            <div class="portal" onclick="openKI('QUANTUM', '9.jpg.jpg')"><img src="/static/images/9.jpg.jpg"><p>Quantum</p></div>
-            <div class="portal" onclick="openKI('RESEARCH', '14.jpg.jpg')"><img src="/static/images/14.jpg.jpg"><p>Research</p></div>
-            <div class="portal" onclick="openKI('RPG', '1.jpg.jpg')"><img src="/static/images/1.jpg.jpg"><p>RPG</p></div>
-            <div class="portal" onclick="openKI('CYBER', '2.jpg.jpg')"><img src="/static/images/2.jpg.jpg"><p>Cyber</p></div>
-            <div class="portal" onclick="openKI('MYSTIC', '4.jpg.jpg')"><img src="/static/images/4.jpg.jpg"><p>Mystic</p></div>
-            <div class="portal" onclick="openKI('GALACTIC', '5.jpg.jpg')"><img src="/static/images/5.jpg.jpg"><p>Galactic</p></div>
-            <div class="portal" onclick="openKI('ANCIENT', '7.jpg.jpg')"><img src="/static/images/7.jpg.jpg"><p>Ancient</p></div>
-            <div class="portal" onclick="openKI('GOLDEN', '10.jpg.jpg')"><img src="/static/images/10.jpg.jpg"><p>MasterCat Gold</p></div>
+    <h1 class="main-title">MasterCat Cosmic Portal</h1>
+
+    <div class="portal-labels">
+        <div style="text-align: left;">
+            <div class="portal-item" onclick="change('STORY QUEST', '1.jpg')">STORY QUEST PORTAL</div><br><br>
+            <div class="portal-item" onclick="change('DEEP RESEARCH', '14.jpg')">DEEP RESEARCH PORTAL</div>
+        </div>
+        <div style="text-align: right;">
+            <div class="portal-item" onclick="change('GOLDEN CORE', '10.jpg')">GOLDEN CORE STATUS</div><br><br>
+            <div class="portal-item" onclick="change('SPACE BATTLE', '2.jpg')">SPACE BATTLE PORTAL</div>
         </div>
     </div>
 
-    <div id="chat">
-        <div class="chat-header">
-            <h2 id="ki-name">KI Modus</h2>
-            <div class="star-avatar"><img src="/static/images/1.jpg.jpg" id="avatar-img"></div>
-            <button onclick="location.reload()" style="background: red; color: white; border: none; cursor: pointer;">X</button>
+    <div class="hex-avatar">
+        <img src="/static/images/10.jpg" id="activeImg">
+    </div>
+
+    <div class="chat-container">
+        <div class="interface-header">SPIEGELWELT INTERFACE</div>
+        <div class="messages" id="box">
+            <div><b>MasterCat:</b> Initialisiere... Wähle ein Portal.</div>
         </div>
-        <div class="messages" id="msgs"></div>
-        <div class="input-box">
-            <input type="text" id="userInput" placeholder="Befehl an MasterCat...">
-            <button onclick="send()" style="background: gold; color: black; border: none; padding: 10px 20px; cursor: pointer;">SENDEN</button>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Befehl...">
+            <button onclick="sendMsg()">SENDEN</button>
+            <button class="btn-red" onclick="location.reload()">RESET</button>
         </div>
     </div>
 
     <script>
-        let currentMode = "";
-        const avatarImages = ['1.jpg.jpg', '2.jpg.jpg', '4.jpg.jpg', '5.jpg.jpg', '7.jpg.jpg', '9.jpg.jpg', '10.jpg.jpg', '14.jpg.jpg'];
-        let imgIndex = 0;
-
-        // Avatar-Wechsel alle 3 Sekunden
-        setInterval(() => {
-            imgIndex = (imgIndex + 1) % avatarImages.length;
-            document.getElementById('avatar-img').src = "/static/images/" + avatarImages[imgIndex];
-        }, 3000);
-
-        function openKI(mode, bg) {
-            document.getElementById('shatter').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('shatter').style.display = 'none';
-                document.getElementById('portal-view').style.display = 'none';
-                document.getElementById('chat').style.display = 'flex';
-                document.body.style.backgroundImage = `url('/static/images/${bg}')`;
-                document.body.style.backgroundSize = "cover";
-                document.getElementById('ki-name').innerText = "MasterCat: " + mode;
-                currentMode = mode;
-            }, 400);
+        function sendMsg() {
+            const i = document.getElementById('userInput');
+            const b = document.getElementById('box');
+            if(!i.value) return;
+            b.innerHTML += `<div><b>Du:</b> ${i.value}</div>`;
+            i.value = "";
+            b.scrollTop = b.scrollHeight;
         }
 
-        async function send() {
-            const val = document.getElementById('userInput').value;
-            const msgs = document.getElementById('msgs');
-            msgs.innerHTML += `<div><b>Du:</b> ${val}</div>`;
-            document.getElementById('userInput').value = "";
-
-            // Simulation der Antwort (da Quota 429 aktuell blockiert)
-            setTimeout(() => {
-                msgs.innerHTML += `<div style="color: cyan;"><b>MasterCat:</b> [Mode: ${currentMode}] Ich empfange dich in meiner Dimension. (Simulation aktiv).</div>`;
-                msgs.scrollTop = msgs.scrollHeight;
-            }, 800);
+        function change(name, img) {
+            // Namen im JavaScript ebenfalls auf einfache Endung korrigiert
+            document.getElementById('activeImg').src = "/static/images/" + img;
+            document.body.style.backgroundImage = `url('/static/images/${img}')`;
+            document.getElementById('box').innerHTML += `<div style="color:var(--gold)">System: Portal ${name} aktiv...</div>`;
         }
     </script>
 </body>
