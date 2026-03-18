@@ -1,32 +1,17 @@
+def mastercat_ai(msg):
 
-import os
-from flask import Flask, render_template, request, jsonify
-from openai import OpenAI
+    msg = msg.lower()
 
-app = Flask(__name__)
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+    if "welt" in msg:
+        return "🌍 Ich erschaffe eine neue Dimension basierend auf deiner Vorstellung..."
 
-memory_store = []
+    if "abenteuer" in msg:
+        return "🗺️ Ein Pfad öffnet sich… du betrittst eine unbekannte Realität."
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+    if "hilfe" in msg:
+        return "🐾 Ich bin MasterCat – dein Führer durch die Spiegelwelt."
 
-@app.route("/chat", methods=["POST"])
-def chat():
-    user_message = request.json.get("message")
-    memory_store.append({"role": "user", "content": user_message})
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=memory_store
-    )
-    reply = response.choices[0].message.content
-    memory_store.append({"role": "assistant", "content": reply})
-    return jsonify({"reply": reply})
+    if "idee" in msg:
+        return "✨ Deine Idee wird zur Realität… ich forme daraus ein Universum."
 
-if __name__ == "__main__":
-    if __name__ == "__main__":
-        import os
-
-        port = int(os.environ.get("PORT", 5000))
-        app.run(host="0.0.0.0", port=port)
+    return "🌌 Die Singularität analysiert deine Gedanken…"
