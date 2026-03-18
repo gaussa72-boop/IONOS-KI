@@ -1,127 +1,29 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>MasterCat Spiegelwelt Ultra</title>
-    <style>
-        :root { --gold: #d4af37; --glow: rgba(212, 175, 55, 0.8); --bg-dark: rgba(10, 10, 20, 0.95); }
-        body { margin: 0; overflow: hidden; background: #000; color: var(--gold); font-family: 'Cinzel', serif; transition: background 1s ease; }
-
-        /* Magischer Hintergrund-Glow */
-        .magic-bg {
-            position: fixed; width: 200vw; height: 200vw; top: -50vw; left: -50vw;
-            background: radial-gradient(circle, rgba(120,0,255,0.1) 0%, rgba(255,100,0,0.05) 30%, rgba(0,0,0,0) 70%);
-            animation: breathe 20s ease-in-out infinite; z-index: -1;
-        }
-        @keyframes breathe { 0%, 100% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.1); opacity: 0.6; } }
-
-        .main-title { text-align: center; font-size: 3em; letter-spacing: 15px; margin-top: 50px; text-shadow: 0 0 20px var(--gold); position: relative; }
-
-        .interface-label {
-            position: fixed; top: 40%; left: 50%; transform: translate(-50%, -50%);
-            font-size: 1.8em; letter-spacing: 6px; border-bottom: 2px solid var(--gold);
-            padding: 10px 30px; background: rgba(0,0,0,0.5); z-index: 5;
-        }
-
-        /* Portale */
-        .portals { position: fixed; width: 100%; top: 45%; transform: translateY(-50%); display: flex; justify-content: space-between; padding: 0 8%; box-sizing: border-box; z-index: 10; }
-        .portal-item {
-            cursor: pointer; transition: 0.4s; text-align: center;
-            border: 1px solid rgba(255,215,0,0.2); padding: 15px 25px; background: rgba(0,0,0,0.4); border-radius: 5px; min-width: 200px;
-        }
-        .portal-item:hover { transform: scale(1.1); border-color: gold; box-shadow: 0 0 30px var(--glow); color: #fff; }
-
-        /* Goldenes Chatfenster */
-        #chat-container {
-            display: none; position: fixed; bottom: 50px; left: 50%; transform: translateX(-50%);
-            width: 700px; height: 400px; background: var(--bg-dark);
-            border: 3px solid var(--gold); backdrop-filter: blur(15px);
-            box-shadow: 0 0 50px rgba(0,0,0,1); flex-direction: column; z-index: 100;
-        }
-
-        .chat-header {
-            padding: 15px; border-bottom: 1px solid var(--gold);
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .mastercat-avatar { width: 65px; height: 65px; border: 2px solid var(--gold); box-shadow: 0 0 15px var(--gold); overflow: hidden; border-radius: 50%; }
-        .mastercat-avatar img { width: 100%; height: 100%; object-fit: cover; }
-
-        .messages { flex: 1; overflow-y: auto; padding: 20px; font-size: 14px; text-align: left; color: #eee; }
-        .input-area { display: flex; padding: 15px; border-top: 1px solid var(--gold); background: rgba(0,0,0,0.3); }
-        input { flex: 1; background: var(--gold); border: none; padding: 12px; font-weight: bold; color: #000; outline: none; }
-        .send-btn { background: #b8860b; color: white; border: none; padding: 12px 20px; cursor: pointer; font-weight: bold; }
-
-        .shatter { position: fixed; top:0; left:0; width:100%; height:100%; background: white; z-index: 1000; display:none; animation: flash 0.4s; }
-        @keyframes flash { 0% {opacity:0} 50% {opacity:1} 100% {opacity:0} }
-    </style>
+    <meta charset="UTF-8"><title>Quantum AI Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="magic-bg"></div>
-    <div class="shatter" id="shatter"></div>
-
-    <div id="portal-view">
-        <h1 class="main-title">MASTERCAT</h1>
-        <div class="interface-label">SPIEGELWELT INTERFACE</div>
-        <div class="portals">
-            <div>
-                <div class="portal-item" onclick="openMode('STORY QUEST', '1.jpg')">RPG STORY QUEST</div><br><br>
-                <div class="portal-item" onclick="openMode('DEEP RESEARCH', '14.jpg')">DEEP RESEARCH AI</div>
-            </div>
-            <div>
-                <div class="portal-item" onclick="openMode('GOLDEN CORE', '10.jpg')">GOLDEN CORE STATUS</div><br><br>
-                <div class="portal-item" onclick="openMode('SPACE BATTLE', '9.jpg')">SPACE BATTLE SIM</div>
-            </div>
+    <div id="loading-screen">
+        <img src="{{ url_for('static', filename='images/singularity.gif') }}">
+        <h1>SINGULARITÄT ENTFACHT...</h1>
+    </div>
+    <div id="kat-ai-container" class="hidden">
+        <div class="chat-header">GOLDENES QUANTEN-INTERFACE ONLINE</div>
+        <div id="chat-messages" class="chat-messages">
+            <p class="ai-msg"><strong>Omniscient-KI:</strong> Das Quantenfeld ist stabil. Wie kann ich dir helfen?</p>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Befehl eingeben...">
+            <button id="send-msg">SENDEN</button>
         </div>
     </div>
-
-    <div id="chat-container">
-        <div class="chat-header">
-            <div>
-                <h3 id="mode-title" style="margin:0; letter-spacing:2px;">MasterCat</h3>
-                <span style="font-size:10px; color: #aaa;">Alice in Quantum Wonderland</span>
-            </div>
-            <div class="mastercat-avatar"><img src="/static/images/10.jpg" id="cat-img"></div>
-            <button onclick="location.reload()" style="background:#b00; color:white; border:none; padding:5px 10px; cursor:pointer;">X</button>
-        </div>
-        <div class="messages" id="box"></div>
-        <div class="input-area">
-            <input type="text" id="userInput" placeholder="Sprich, Alice...">
-            <button class="send-btn" onclick="sendMsg()">SENDEN</button>
-        </div>
-    </div>
-
     <script>
-        function openMode(mode, bg) {
-            document.getElementById('shatter').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('shatter').style.display = 'none';
-                document.getElementById('portal-view').style.display = 'none';
-                document.getElementById('chat-container').style.display = 'flex';
-                document.body.style.backgroundImage = `url('/static/images/${bg}')`;
-                document.body.style.backgroundSize = "cover";
-                document.getElementById('mode-title').innerText = mode;
-
-                const b = document.getElementById('box');
-                if(mode === 'STORY QUEST') b.innerHTML = `<div><b style="color:var(--gold)">MasterCat:</b> Willkommen in der Story-Ebene. Welches Abenteuer erschaffen wir?</div>`;
-                if(mode === 'DEEP RESEARCH') b.innerHTML = `<div><b style="color:var(--gold)">MasterCat:</b> Quanten-Datenanalyse bereit. Was möchtest du erforschen?</div>`;
-                if(mode === 'GOLDEN CORE') b.innerHTML = `<div><b style="color:var(--gold)">MasterCat:</b> Kern-Systeme online. Lebensblume-Synchronisation bei 98%.</div>`;
-                if(mode === 'SPACE BATTLE') b.innerHTML = `<div><b style="color:var(--gold)">MasterCat:</b> Gefechts-Simulation initialisiert. Bereit für galaktische Taktik.</div>`;
-            }, 400);
-        }
-
-        function sendMsg() {
-            const i = document.getElementById('userInput');
-            const b = document.getElementById('box');
-            if(!i.value) return;
-            b.innerHTML += `<div style="margin-top:10px;"><b>Du:</b> ${i.value}</div>`;
-            const val = i.value;
-            i.value = "";
-
-            setTimeout(() => {
-                b.innerHTML += `<div style="color: cyan; margin-top:5px;"><b>MasterCat:</b> *schnurrt* Das Spiegel-Interface verarbeitet "${val}" im Quanten-Modus...</div>`;
-                b.scrollTop = b.scrollHeight;
-            }, 600);
-        }
+        setTimeout(() => {
+            document.getElementById('loading-screen').classList.add('hidden');
+            document.getElementById('kat-ai-container').classList.remove('hidden');
+        }, 3000); // 3 Sek Ladezeit
     </script>
 </body>
 </html>
