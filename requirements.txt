@@ -8,3 +8,5 @@ gunicorn
 flask
 
 python-dotenv
+pillow
+requests
