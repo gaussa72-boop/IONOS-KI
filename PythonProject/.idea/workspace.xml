@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="007ad67f-5cc7-4dda-949f-d73e32b754c1" name="Changes" comment="Merge remote-tracking branch 'origin/master'">
-      <change afterPath="$PROJECT_DIR$/IONOS-KI/ai_core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IONOS-KI/memory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IONOS-KI/social_media.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IONOS-KI/ui_chat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Quantum_KI_Ultra.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Quantum_KI_Ultra.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IONOS-KI/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/IONOS-KI/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IONOS-KI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/IONOS-KI/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IONOS-KI/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IONOS-KI/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="2198" />
+    <option name="cachedIndexableFilesCount" value="12963" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -49,6 +49,16 @@
     &quot;accountId&quot;: &quot;ef249cdc-07f6-458a-bd9a-575af3f2d9e7&quot;
   }
 }</component>
+  <component name="IntelliCopilot_ProjectLevelSettings">
+    <option name="autodetectedPreferableStack">
+      <map>
+        <entry key="CSS" value="44.0" />
+        <entry key="HTML" value="18.0" />
+        <entry key="JavaScript" value="11.0" />
+        <entry key="Python" value="28.0" />
+      </map>
+    </option>
+  </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -74,18 +84,20 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/Querox9396/PycharmProjects/PythonProject/IONOS-KI/static/img",
-    "settings.editor.selected.configurable": "settings.sync",
+    "last_opened_file_path": "/Users/Querox9396/PycharmProjects/PythonProject",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "sweep.chatMode": "Agent",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/IONOS-KI/static/img" />
       <recent name="$PROJECT_DIR$/static/images" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/IONOS" />
       <recent name="$PROJECT_DIR$/IONOS/REA" />
     </key>
@@ -159,7 +171,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+        <option value="bundled-python-sdk-1cd77e80b48f-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.32098.74" />
       </set>
     </attachedChunks>
   </component>
@@ -379,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773861198810</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Merge remote-tracking branch 'origin/master'">
+      <option name="closed" value="true" />
+      <created>1776458200864</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1776458200864</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
