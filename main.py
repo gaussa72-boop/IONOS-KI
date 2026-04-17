@@ -29,3 +29,28 @@ open_button = tk.Button(
 open_button.pack(pady=20)
 
 root.mainloop()
+from automation.system_loop import run_system
+
+if __name__ == "__main__":
+
+    print("🚀 AI AUTONOMY PLATFORM STARTED")
+
+    while True:
+
+        result = run_system()
+
+        print("🤖 SYSTEM OUTPUT:", result)
+        from automation.system_loop import run_system
+
+        if __name__ == "__main__":
+
+            print("🚀 AI SAAS PLATFORM STARTED (LEVEL 1-11+)")
+
+            while True:
+                result = run_system()
+
+                print("🤖 AI OUTPUT:", result)
+                from backend.server import app
+
+                if __name__ == "__main__":
+                    app.run(debug=True)
