@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galactic AI</title>
+</head>
+<body>
+    <h1>Galactic AI Interface</h1>
+
+    <input id="input" placeholder="Enter prompt">
+    <button onclick="send()">Send</button>
+
+    <pre id="output"></pre>
+
+    <script>
+    async function send(){
+        const prompt = document.getElementById("input").value;
+
+        const res = await fetch("http://127.0.0.1:5000/chat", {
+            method: "POST",
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({prompt})
+        });
+
+        const data = await res.json();
+        document.getElementById("output").innerText =
+            JSON.stringify(data, null, 2);
+    }
+    </script>
+</body>
+</html>

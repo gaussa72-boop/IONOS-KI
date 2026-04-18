@@ -1,0 +1,20 @@
+# GALACTIC SINGULARITY ULTRA - Requirements
+# ==========================================
+
+# Web Framework
+flask>=2.0.0
+
+# Security
+werkzeug>=2.0.0
+
+# Optional: OpenAI Integration (für erweiterte KI)
+openai>=1.0.0
+
+# Optional: Environment Variables
+python-dotenv>=1.0.0
+
+# Optional: Erweiterte Features
+# tinydb>=4.0.0  # Für erweiterte Memory-Funktionen
+# gitpython>=3.0.0  # Für Projekt-Memory
+# matplotlib>=3.0.0  # Für Galaxy-Generierung
+# numpy>=1.20.0  # Für mathematische Berechnungen
