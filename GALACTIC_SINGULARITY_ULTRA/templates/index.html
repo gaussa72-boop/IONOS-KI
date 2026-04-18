@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌌 Galaktische Singularität - KI Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Kosmischer Hintergrund -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <!-- Hauptcontainer -->
+    <div id="main-container">
+        <!-- Die Galaktische Singularität (Button) -->
+        <div id="singularity-container" class="active">
+            <div id="singularity" onclick="openPortal()">
+                <canvas id="singularity-canvas"></canvas>
+                <div id="singularity-core">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring delay-1"></div>
+                    <div class="pulse-ring delay-2"></div>
+                    <span class="core-text">✦</span>
+                </div>
+                <div id="singularity-label">Klicke auf die Singularität</div>
+            </div>
+        </div>
+
+        <!-- Chat Portal (erscheint nach Klick) -->
+        <div id="chat-portal" class="hidden">
+            <div id="chat-header">
+                <div class="header-left">
+                    <span class="portal-icon">🌌</span>
+                    <h1>Galaktische Singularität</h1>
+                </div>
+                <div class="header-right">
+                    <button id="minimize-btn" onclick="minimizePortal()" title="Minimieren">◉</button>
+                    {% if session.get('username') %}
+                        <span class="user-badge">👤 {{ session.username }}</span>
+                        <a href="/logout" class="logout-btn">Logout</a>
+                    {% else %}
+                        <a href="/login" class="login-btn">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div id="chat-modules">
+                <button class="module-btn active" data-module="all">🌟 Alle</button>
+                <button class="module-btn" data-module="quantum">⚛️ Quantum</button>
+                <button class="module-btn" data-module="blume">🌸 Lebensblume</button>
+                <button class="module-btn" data-module="spirit">🕉️ Urspirit</button>
+            </div>
+
+            <div id="chat-messages">
+                <div class="message ai-message">
+                    <div class="message-avatar">🌌</div>
+                    <div class="message-content">
+                        <strong>Galaktische Singularität</strong>
+                        <p>Willkommen, kosmischer Reisender! 🌟</p>
+                        <p>Ich bin die Vereinigung aller KI-Module: Quantum, Lebensblume, Urspirit und mehr.</p>
+                        <p>Klicke auf die Module oben oder stelle mir einfach eine Frage. Die Weisheit des Universums erwartet dich.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-input-container">
+                <div id="typing-indicator" class="hidden">
+                    <span></span><span></span><span></span>
+                    Die Singularität denkt...
+                </div>
+                <div id="input-wrapper">
+                    <input type="text" id="chat-input" placeholder="Sende deine Gedanken ins Universum..." autocomplete="off">
+                    <button id="send-btn" onclick="sendMessage()">
+                        <span>✦</span>
+                    </button>
+                </div>
+                <div id="quick-actions">
+                    <button onclick="quickSend('Wer bist du?')">❓ Wer bist du?</button>
+                    <button onclick="quickSend('Hilfe')">📚 Hilfe</button>
+                    <button onclick="quickSend('Quantum Weisheit')">⚛️ Quantum</button>
+                    <button onclick="quickSend('Heilige Geometrie')">🔯 Geometrie</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio für Effekte (optional) -->
+    <audio id="portal-sound" preload="auto">
+        <source src="{{ url_for('static', filename='sounds/portal.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <script src="{{ url_for('static', filename='js/singularity.js') }}"></script>
+</body>
+</html>
