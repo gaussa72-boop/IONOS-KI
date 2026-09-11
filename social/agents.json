@@ -1,0 +1,1 @@
+{"project":"IONOS-KI","agents":[{"id":"ionos-ki","name":"IONOS KI Agent","topic":"ai"},{"id":"assistant","name":"IONOS Assistant","topic":"general"},{"id":"bot","name":"IONOS KI Bot","topic":"automation"}],"social_layer":"Quantum.K/social"}
