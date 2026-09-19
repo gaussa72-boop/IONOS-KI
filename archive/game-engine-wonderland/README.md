@@ -1,0 +1,1 @@
+# Game Engine Wonderland — ARCHIV\n\nStatus: DEAKTIVIERT / GETRENNT\n\nDieses Verzeichnis ist absichtlich nicht Teil des aktiven IONOS-KI-Laufzeitpfads. Die Game-Engine-Funktionalität wird nicht importiert, gestartet oder über die IONOS-KI-Oberfläche aufgerufen. Reaktivierung nur als separates Projekt/Deployment vornehmen.\n

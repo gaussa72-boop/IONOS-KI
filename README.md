@@ -1,12 +1,1 @@
-# IONOS-KI
-
-Flask-basierter IONOS-KI-Prototyp mit Login, Registrierung und Chat-API.
-
-## Code-Bereinigung
-- Hardcodierter Flask-Secret-Key entfernt.
-- Hardcodierter Admin-Benutzer und Klartext-Passwort entfernt.
-- Passwortspeicherung auf sichere Hashes umgestellt.
-- Doppelter/unreachable Backend-Import am Dateiende entfernt.
-- Konfiguration über `SECRET_KEY`, `DATABASE_URL` und `PORT`.
-
-Die vorhandenen Frontend-, AI-, Memory-, Render- und Deployment-Dateien bleiben erhalten und werden separat geprüft.
+# IONOS-KI — IONOS 7\n\nIONOS-KI V2 ist jetzt als eigenständiger KI-Workspace aufgebaut.\n\n- Dashboard an die gelieferte Note-KI-V2-Referenz angelehnt.\n- KI-Chat über `/api/chat`.\n- Optionaler OpenAI-kompatibler Backend-Modus über `OPENAI_API_KEY` und `OPENAI_MODEL`.\n- Lokaler Fallback-Modus ohne API-Key.\n- Healthcheck `/health`.\n- Game Engine Wonderland vom aktiven Workspace getrennt und unter `archive/game-engine-wonderland/` deaktiviert.\n\nSecrets gehören nicht in Git.\n

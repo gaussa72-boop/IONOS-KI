@@ -1,49 +1,5 @@
-// 🌌 Start → Portale
-setTimeout(() => {
-    document.getElementById("startscreen").style.display = "none";
-    document.getElementById("portal-screen").classList.remove("hidden");
-}, 2000);
-
-// 💥 Welt betreten
-function enterWorld(world) {
-
-    document.getElementById("portal-screen").style.display = "none";
-    document.getElementById("explosion").classList.remove("hidden");
-
-    setTimeout(() => {
-        document.getElementById("explosion").style.display = "none";
-        document.getElementById("chat-container").classList.remove("hidden");
-
-        addMessage("System", "🌌 Willkommen in: " + world);
-    }, 1000);
-}
-
-// 🤖 Chat
-function send() {
-    let input = document.getElementById("input");
-    let msg = input.value;
-
-    if (!msg) return;
-
-    addMessage("Du", msg);
-
-    fetch("/chat", {
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({message:msg})
-    })
-    .then(res=>res.json())
-    .then(data=>{
-        addMessage("MasterCat", data.reply);
-    });
-
-    input.value="";
-}
-
-function addMessage(sender,text){
-    let box=document.getElementById("chat-box");
-    let div=document.createElement("div");
-    div.innerHTML="<b>"+sender+":</b> "+text;
-    box.appendChild(div);
-    box.scrollTop=box.scrollHeight;
-}
+const form=document.getElementById("chat-form"),input=document.getElementById("message"),messages=document.getElementById("messages"),reset=document.getElementById("reset");
+function addMessage(kind,text){const row=document.createElement("div");row.className="msg "+(kind==="ai"?"ai-msg":"user-msg");row.innerHTML='<div class="avatar small">'+(kind==="ai"?"A":"I")+'</div><div><b>'+(kind==="ai"?"Alte":"Ich")+':</b><p></p></div>';row.querySelector("p").textContent=text;messages.appendChild(row);messages.scrollTop=messages.scrollHeight}
+form.addEventListener("submit",async e=>{e.preventDefault();const text=input.value.trim();if(!text)return;addMessage("user",text);input.value="";input.disabled=true;try{const r=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:text})});const data=await r.json();addMessage("ai",data.reply||"Keine Antwort erhalten.")}catch(err){addMessage("ai","Die Backend-Verbindung ist gerade nicht verfügbar. Prüfe den Render-Deploy und /health.")}finally{input.disabled=false;input.focus()}});
+reset.addEventListener("click",async()=>{await fetch("/api/reset",{method:"POST"});messages.innerHTML="";addMessage("ai","Kontext zurückgesetzt. IONOS-KI V2 ist bereit.")});
+document.querySelectorAll(".nav-item").forEach(a=>a.addEventListener("click",()=>{document.querySelectorAll(".nav-item").forEach(x=>x.classList.remove("active"));a.classList.add("active")}));

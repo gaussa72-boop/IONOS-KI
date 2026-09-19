@@ -1,7 +1,8 @@
 services:
   - type: web
-    name: ionos-ki
+    name: ionos-ki-v2
     runtime: python
+    region: frankfurt
     plan: free
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
@@ -11,3 +12,5 @@ services:
         generateValue: true
       - key: PYTHON_VERSION
         value: 3.11.11
+      - key: OPENAI_MODEL
+        value: gpt-5.6
