@@ -27,7 +27,15 @@ def load_user(user_id):
 
 @app.get("/health")
 def health():
-    return jsonify({"status":"ok","project":"IONOS-KI","version":"IONOS 7","game_engine":"archived","time":int(time.time())})
+    return jsonify({"status":"ok","project":"IONOS-KI","version":"IONOS 7","model":os.getenv("OPENAI_MODEL","gpt-6-astra"),"game_engine":"active","time":int(time.time())})
+
+@app.get("/engine")
+def engine():
+    return send_from_directory(".", "game_engine.html")
+
+@app.get("/game_engine.js")
+def engine_js():
+    return send_from_directory(".", "game_engine.js")
 
 @app.get("/")
 def index():
