@@ -27,7 +27,7 @@ def load_user(user_id):
 
 @app.get("/health")
 def health():
-    return jsonify({"status":"ok","project":"IONOS-KI","version":"IONOS 7","model":os.getenv("OPENAI_MODEL","gpt-6-astra"),"game_engine":"active","time":int(time.time())})
+    return jsonify({"status":"ok","project":"IONOS-KI","version":"IONOS 7","model":os.getenv("OPENAI_MODEL","gpt-5.6"),"game_engine":"active","time":int(time.time())})
 
 @app.get("/engine")
 def engine():
@@ -85,7 +85,7 @@ def _local_reply(message):
 def _openai_reply(message, history):
     api_key=os.getenv("OPENAI_API_KEY")
     if not api_key: return None
-    model=os.getenv("OPENAI_MODEL","gpt-6-astra")
+    model=os.getenv("OPENAI_MODEL","gpt-5.6")
     try:
         from openai import OpenAI
         client=OpenAI(api_key=api_key)
