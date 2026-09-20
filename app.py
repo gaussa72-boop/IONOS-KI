@@ -3,7 +3,7 @@ import time
 import urllib.request
 import urllib.error
 import json
-from flask import Flask, jsonify, render_template, request, session
+from flask import Flask, jsonify, render_template, request, session, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import LoginManager, UserMixin, current_user, login_user, logout_user
@@ -85,19 +85,26 @@ def _local_reply(message):
 def _openai_reply(message, history):
     api_key=os.getenv("OPENAI_API_KEY")
     if not api_key: return None
-    model=os.getenv("OPENAI_MODEL","gpt-5.6")
-    payload={"model":model,"messages":[
-        {"role":"system","content":"Du bist IONOS-KI V2, ein vielseitiger KI-Assistent. Arbeite präzise, strukturiert und ehrlich. Behaupte keine nicht ausgeführten Aktionen. Bei Code liefere robuste, wartbare Lösungen und weise auf fehlende Secrets oder Tests hin."},
-        *history[-10:],{"role":"user","content":message}
-    ],"temperature":0.4}
-    req=urllib.request.Request("https://api.openai.com/v1/chat/completions",
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Authorization":f"Bearer {api_key}","Content-Type":"application/json"},method="POST")
+    model=os.getenv("OPENAI_MODEL","gpt-6-astra")
     try:
-        with urllib.request.urlopen(req,timeout=45) as resp:
-            data=json.loads(resp.read().decode("utf-8"))
-        return data["choices"][0]["message"]["content"].strip()
-    except (urllib.error.URLError,KeyError,IndexError,json.JSONDecodeError):
+        from openai import OpenAI
+        client=OpenAI(api_key=api_key)
+        tools=[{"type":"web_search","search_context_size":"medium"}] if os.getenv("ENABLE_WEB_SEARCH","true").lower()=="true" else []
+        response=client.responses.create(
+            model=model,
+            reasoning={"effort":"high"},
+            tools=tools,
+            tool_choice="auto",
+            store=False,
+            input=[
+                {"role":"system","content":"Du bist IONOS-KI V2. Arbeite wie ein moderner professioneller KI-Assistent: präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen, nutze Websuche für aktuelle Fakten, liefere robuste Lösungen und behaupte keine nicht ausgeführten Aktionen."},
+                *history[-12:],
+                {"role":"user","content":message}
+            ]
+        )
+        return response.output_text.strip() if response.output_text else None
+    except Exception:
+        app.logger.exception("OpenAI Responses API failure")
         return None
 
 @app.post("/api/chat")
