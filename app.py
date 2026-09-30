@@ -9,9 +9,54 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import LoginManager, UserMixin, current_user, login_user, logout_user
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "dev-only-change-me")
+
+
+# --- Security hardening ---
+from collections import defaultdict, deque
+from time import monotonic
+from html import escape as html_escape
+
+_SECURITY_RATE = defaultdict(deque)
+_SECURITY_WINDOW = 60
+_SECURITY_MAX = 120
+_SECURITY_POST_MAX = 30
+_SECURITY_MAX_BODY = 1024 * 1024
+
+@app.before_request
+def _security_before_request():
+    if request.content_length and request.content_length > _SECURITY_MAX_BODY:
+        return jsonify(error="Request too large."), 413
+    path = request.path or "/"
+    blocked = {"/.env","/.git/config","/server.py","/app.py","/main.py","/package.json","/requirements.txt","/render.yaml","/Procfile"}
+    if path in blocked or path.startswith("/.git/") or path.startswith("/.env"):
+        return jsonify(error="Not Found."), 404
+    ip = request.remote_addr or "unknown"
+    now = monotonic()
+    q = _SECURITY_RATE[ip]
+    while q and now - q[0] > _SECURITY_WINDOW:
+        q.popleft()
+    limit = _SECURITY_POST_MAX if request.method in {"POST","PUT","PATCH","DELETE"} else _SECURITY_MAX
+    if len(q) >= limit:
+        return jsonify(error="Too many requests. Please try again later."), 429
+    q.append(now)
+
+@app.after_request
+def _security_headers(response):
+    response.headers.setdefault("X-Content-Type-Options","nosniff")
+    response.headers.setdefault("X-Frame-Options","DENY")
+    response.headers.setdefault("Referrer-Policy","strict-origin-when-cross-origin")
+    response.headers.setdefault("Permissions-Policy","camera=(), microphone=(), geolocation=()")
+    response.headers.setdefault("Cross-Origin-Opener-Policy","same-origin")
+    response.headers.setdefault("Strict-Transport-Security","max-age=31536000; includeSubDomains")
+    response.headers.setdefault("Cache-Control","no-store" if request.path.startswith("/api/") else "public, max-age=300")
+    response.headers.pop("Server", None)
+    return response
+# --- End security hardening ---
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY") or (_ for _ in ()).throw(RuntimeError("SECRET_KEY must be configured"))
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL", "sqlite:///users.db")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["SESSION_COOKIE_HTTPONLY"] = True
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = "login"
