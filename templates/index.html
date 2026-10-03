@@ -28,7 +28,7 @@
 <main class="main" id="home">
 <header class="topbar">
  <div class="brand"><span>IONOS</span><b>7</b><small>DEINE NOTIZEN · DEINE IDEEN · DEINE WELTEN</small></div>
- <div class="top-actions"><span class="status">● SYSTEM ONLINE</span><span class="pill">GPT-5.6</span><button class="icon-btn">⌕</button><button class="icon-btn">☼</button></div>
+ <div class="top-actions"><span class="status">● SYSTEM ONLINE</span><span class="pill">MULTI-MODEL</span><button class="icon-btn">⌕</button><button class="icon-btn">☼</button></div>
 </header>
 <section class="hero panel">
  <div class="hero-copy"><div class="eyebrow">ALTE · DEIN KI-ASSISTENT</div><h1>Steige ein.<br>Entdecke.<br>Erkenne.<br>Erschaffe.</h1><p>Ich verbinde deine Gedanken, deine Dateien und deine Visionen zu nachvollziehbaren Ergebnissen.</p>
@@ -51,4 +51,28 @@
 <footer><span>IONOS 7 · ALLES BEGINNT MIT EINER IDEE.</span><b>EINE UNENDLICHE REISE WARTET AUF DICH …</b></footer>
 </main></div>
 <script src="/static/js/app.js"></script>
-</body></html>
+</body></html><script>
+(function(){
+const models=[
+["openai/gpt-5.6","OpenAI · GPT-5.6"],
+["anthropic/claude-sonnet-5.5","Anthropic · Claude Sonnet 5.5"],
+["anthropic/claude-opus-5.5","Anthropic · Claude Opus 5.5"],
+["google/gemini-3.8-flash","Google · Gemini 3.8 Flash"],
+["google/gemini-3.1-pro-preview","Google · Gemini 3.1 Pro"],
+["x-ai/grok-4.7","xAI · Grok 4.7"],
+["deepseek/deepseek-v4-pro","DeepSeek · V4 Pro"],
+["deepseek/deepseek-v4.1-flash","DeepSeek · V4.1 Flash"],
+["mistralai/mistral-small-2603","Mistral · Small 4"],
+["mistralai/mistral-medium-3.5","Mistral · Medium 3.5"],
+["z-ai/glm-5.3","Z.ai · GLM 5.3"],
+["qwen/qwen3-max","Qwen · Qwen3 Max"]
+];
+const top=document.querySelector(".top-actions"); if(!top)return;
+const sel=document.createElement("select"); sel.id="ai-model-select"; sel.title="KI-Modell wählen";
+sel.style.cssText="background:#171521;color:#fff;border:1px solid #6f4cff;border-radius:999px;padding:8px 12px;font:inherit;max-width:240px";
+models.forEach(([v,t])=>{const o=document.createElement("option");o.value=v;o.textContent=t;sel.appendChild(o)});
+const saved=localStorage.getItem("ionos_ai_model"); if(saved&&models.some(x=>x[0]===saved))sel.value=saved;
+sel.onchange=()=>localStorage.setItem("ionos_ai_model",sel.value);
+top.insertBefore(sel,top.firstChild);
+})();
+</script>
