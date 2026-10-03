@@ -154,49 +154,56 @@ def _local_reply(message):
         return "Erklärmodus aktiv. Ich strukturiere das Thema verständlich, nenne Annahmen und trenne Fakten, Beispiele und offene Punkte."
     return "IONOS-KI hat deine Anfrage analysiert. Ich kann Wissen strukturieren, Ideen in Projekte übersetzen, Code erzeugen und komplexe Aufgaben in überprüfbare Schritte zerlegen."
 
-def _openai_reply(message, history):
+def _openai_reply(message, history, model=None):
     api_key=os.getenv("OPENAI_API_KEY")
-    if not api_key: return None
-    model=os.getenv("OPENAI_MODEL","gpt-5.6")
+    openrouter_key=os.getenv("OPENROUTER_API_KEY")
+    selected=(model or os.getenv("OPENAI_MODEL","gpt-5.6")).strip()
     try:
         from openai import OpenAI
-        client=OpenAI(api_key=api_key)
+        if selected.startswith(("openai/","anthropic/","google/","x-ai/","deepseek/","mistralai/","z-ai/","qwen/")) and openrouter_key:
+            client=OpenAI(api_key=openrouter_key, base_url="https://openrouter.ai/api/v1")
+            actual=selected
+        elif api_key:
+            client=OpenAI(api_key=api_key)
+            actual=selected.split("/",1)[-1] if selected.startswith("openai/") else os.getenv("OPENAI_MODEL","gpt-5.6")
+        else:
+            return None
         tools=[{"type":"web_search","search_context_size":"medium"}] if os.getenv("ENABLE_WEB_SEARCH","true").lower()=="true" else []
         response=client.responses.create(
-            model=model,
+            model=actual,
             reasoning={"effort":"high"},
             tools=tools,
             tool_choice="auto",
             store=False,
             input=[
-                {"role":"system","content":"Du bist IONOS-KI V2. Arbeite wie ein moderner professioneller KI-Assistent: präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen, nutze Websuche für aktuelle Fakten, liefere robuste Lösungen und behaupte keine nicht ausgeführten Aktionen."},
+                {"role":"system","content":"Du bist IONOS-KI V2. Arbeite präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen, nutze Websuche für aktuelle Fakten und behaupte keine nicht ausgeführten Aktionen."},
                 *history[-12:],
                 {"role":"user","content":message}
             ]
         )
         return response.output_text.strip() if response.output_text else None
     except Exception:
-        app.logger.exception("OpenAI Responses API failure")
+        app.logger.exception("AI model request failed")
         return None
 
-@app.post("/api/chat")
-def chat():
-    data=request.get_json(silent=True) or {}
-    message=(data.get("message") or "").strip()
-    if not message: return jsonify({"error":"message is required"}),400
-    history=session.get("chat_history",[])
-    reply=_openai_reply(message,history) or _local_reply(message)
-    history.extend([{"role":"user","content":message},{"role":"assistant","content":reply}])
-    session["chat_history"]=history[-12:]
-    return jsonify({"reply":reply,"mode":"openai" if os.getenv("OPENAI_API_KEY") else "local"})
+@app.get("/api/models")
+def models():
+    return jsonify({
+        "default":"openai/gpt-5.6",
+        "openrouter_configured":bool(os.getenv("OPENROUTER_API_KEY")),
+        "models":[
+            {"id":"openai/gpt-5.6","provider":"OpenAI","name":"GPT-5.6"},
+            {"id":"anthropic/claude-sonnet-5.5","provider":"Anthropic","name":"Claude Sonnet 5.5"},
+            {"id":"anthropic/claude-opus-5.5","provider":"Anthropic","name":"Claude Opus 5.5"},
+            {"id":"google/gemini-3.8-flash","provider":"Google","name":"Gemini 3.8 Flash"},
+            {"id":"google/gemini-3.1-pro-preview","provider":"Google","name":"Gemini 3.1 Pro"},
+            {"id":"x-ai/grok-4.7","provider":"xAI","name":"Grok 4.7"},
+            {"id":"deepseek/deepseek-v4-pro","provider":"DeepSeek","name":"V4 Pro"},
+            {"id":"deepseek/deepseek-v4.1-flash","provider":"DeepSeek","name":"V4.1 Flash"},
+            {"id":"mistralai/mistral-small-2603","provider":"Mistral","name":"Small 4"},
+            {"id":"mistralai/mistral-medium-3.5","provider":"Mistral","name":"Medium 3.5"},
+            {"id":"z-ai/glm-5.3","provider":"Z.ai","name":"GLM 5.3"},
+            {"id":"qwen/qwen3-max","provider":"Qwen","name":"Qwen3 Max"}
+        ]
+    })
 
-@app.post("/api/reset")
-def reset_chat():
-    session.pop("chat_history",None)
-    return jsonify({"ok":True})
-
-with app.app_context():
-    db.create_all()
-
-if __name__=="__main__":
-    app.run(host="0.0.0.0",port=int(os.getenv("PORT","10000")),debug=False)
