@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <title>Spiegelwelt Interface</title>
 <link rel="stylesheet" href="/static/css/style.css">
+<style id="ionos-cosmic-redesign">
+:root{color-scheme:dark;--gold:#f8d879;--cyan:#73e9ff}
+*{box-sizing:border-box}body{margin:0!important;min-height:100vh;background:radial-gradient(ellipse at 50% 38%,#16315d 0%,#080d24 42%,#02040d 100%) fixed!important;color:#f5f7ff!important;font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 14% 22%,#fff 55%,transparent),radial-gradient(1px 1px at 75% 17%,#8cecff 55%,transparent),radial-gradient(2px 2px at 88% 72%,#fff 55%,transparent),radial-gradient(1px 1px at 30% 81%,#fff 55%,transparent),radial-gradient(1px 1px at 63% 63%,#f8d879 55%,transparent);background-size:310px 260px;opacity:.7;z-index:0}
+#startscreen,#portal-screen,#chat-container,#explosion{position:relative;z-index:1}#startscreen{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,rgba(83,173,255,.14),transparent 45%)}
+#startscreen h1{font-size:clamp(2rem,6vw,5rem);letter-spacing:.16em;text-shadow:0 0 24px #5edcff,0 0 55px #b47aff;color:#fff}
+.singularity{width:clamp(140px,24vw,300px);aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 13px,rgba(118,229,255,.28) 14px 15px),conic-gradient(from 30deg,#71eaff,#9b76ff,#ffdb8a,#71eaff);box-shadow:0 0 35px #57d9ff,0 0 100px #7359ff,inset 0 0 45px #fff;animation:ionos-spin 28s linear infinite}
+.singularity:after{content:"";display:block;width:38%;height:38%;margin:31%;border-radius:50%;background:#fff;box-shadow:0 0 24px 12px #83eaff,0 0 70px 28px #8c69ff}
+@keyframes ionos-spin{to{transform:rotate(360deg)}}
+#portal-screen{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:36px}.portal{min-width:220px;min-height:180px;border:1px solid #79dfff66;border-radius:24px;background:linear-gradient(145deg,#122448dd,#090d20dd);box-shadow:0 0 35px #4fbcff24;display:grid;place-items:center;padding:22px;backdrop-filter:blur(18px)}.portal.main{border-color:#f8d87999;box-shadow:0 0 40px #c9a84a2b}.portal img{max-width:100%;border-radius:16px}.portal input,#chat-container input{width:min(80vw,500px);padding:14px 18px;border-radius:14px;border:1px solid #70ddff66;background:#060b1dcc;color:white}.portal button,#chat-container button{padding:13px 22px;border:1px solid #f8d879;border-radius:14px;background:linear-gradient(120deg,#e9c76b,#a98aff);color:#0b1020;font-weight:800;cursor:pointer}.chat-frame{max-width:1000px;margin:5vh auto;padding:22px;border:1px solid #71dfff66;border-radius:24px;background:#060b1ddd;box-shadow:0 0 55px #327dff28;backdrop-filter:blur(20px)}#chat-box{min-height:45vh;padding:16px}.input-area{display:flex;gap:12px;flex-wrap:wrap}.hidden{display:none!important}
+</style>
 </head>
 
 <body>
