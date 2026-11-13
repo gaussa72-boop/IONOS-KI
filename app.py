@@ -10,6 +10,10 @@ from flask_login import LoginManager, UserMixin, current_user, login_user, logou
 
 app = Flask(__name__)
 
+AI_PROVIDER = os.getenv("AI_PROVIDER", "openai").strip().lower()
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip()
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini").strip()
+
 # SECURITY HARDENING
 from collections import defaultdict, deque
 from time import monotonic
@@ -98,8 +102,10 @@ def load_user(user_id):
     return db.session.get(User, int(user_id))
 
 @app.get("/health")
+@app.get("/api/health")
 def health():
-    return jsonify({"status":"ok","project":"IONOS-KI","version":"IONOS 7","model":os.getenv("OPENAI_MODEL","gpt-5.6"),"game_engine":"active","time":int(time.time())})
+    configured=bool(os.getenv("OPENAI_API_KEY","").strip() or os.getenv("OPENROUTER_API_KEY","").strip())
+    return jsonify({"status":"ok","project":"IONOS-KI","version":"IONOS 7","model":OPENROUTER_MODEL if AI_PROVIDER=="openrouter" else OPENAI_MODEL,"provider":AI_PROVIDER,"ai_configured":configured,"ai_enabled":os.getenv("AI_ENABLED","true").lower()=="true","game_engine":"active","time":int(time.time())})
 
 @app.get("/engine")
 def engine():
@@ -155,55 +161,66 @@ def _local_reply(message):
     return "IONOS-KI hat deine Anfrage analysiert. Ich kann Wissen strukturieren, Ideen in Projekte übersetzen, Code erzeugen und komplexe Aufgaben in überprüfbare Schritte zerlegen."
 
 def _openai_reply(message, history, model=None):
-    api_key=os.getenv("OPENAI_API_KEY")
-    openrouter_key=os.getenv("OPENROUTER_API_KEY")
-    selected=(model or os.getenv("OPENAI_MODEL","gpt-5.6")).strip()
-    try:
-        from openai import OpenAI
-        if selected.startswith(("openai/","anthropic/","google/","x-ai/","deepseek/","mistralai/","z-ai/","qwen/")) and openrouter_key:
-            client=OpenAI(api_key=openrouter_key, base_url="https://openrouter.ai/api/v1")
-            actual=selected
-        elif api_key:
-            client=OpenAI(api_key=api_key)
-            actual=selected.split("/",1)[-1] if selected.startswith("openai/") else os.getenv("OPENAI_MODEL","gpt-5.6")
-        else:
-            return None
-        tools=[{"type":"web_search","search_context_size":"medium"}] if os.getenv("ENABLE_WEB_SEARCH","true").lower()=="true" else []
-        response=client.responses.create(
-            model=actual,
-            reasoning={"effort":"high"},
-            tools=tools,
-            tool_choice="auto",
-            store=False,
-            input=[
-                {"role":"system","content":"Du bist IONOS-KI V2. Arbeite präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen, nutze Websuche für aktuelle Fakten und behaupte keine nicht ausgeführten Aktionen."},
+    from openai import OpenAI
+    openai_key=os.getenv("OPENAI_API_KEY","").strip()
+    router_key=os.getenv("OPENROUTER_API_KEY","").strip()
+    use_router=(AI_PROVIDER=="openrouter" and bool(router_key)) or (not openai_key and bool(router_key))
+    if use_router:
+        client=OpenAI(api_key=router_key,base_url="https://openrouter.ai/api/v1")
+        response=client.chat.completions.create(
+            model=OPENROUTER_MODEL,
+            messages=[
+                {"role":"system","content":"Du bist IONOS-KI V2. Arbeite präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen und behaupte keine nicht ausgeführten Aktionen."},
                 *history[-12:],
                 {"role":"user","content":message}
             ]
         )
-        return response.output_text.strip() if response.output_text else None
-    except Exception:
-        app.logger.exception("AI model request failed")
+        return response.choices[0].message.content.strip() if response.choices[0].message.content else None
+    if not openai_key:
         return None
+    client=OpenAI(api_key=openai_key)
+    options={
+        "model":OPENAI_MODEL,
+        "instructions":"Du bist IONOS-KI V2. Arbeite präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen und behaupte keine nicht ausgeführten Aktionen.",
+        "input":[*history[-12:],{"role":"user","content":message}],
+        "store":False
+    }
+    if os.getenv("ENABLE_WEB_SEARCH","true").lower()=="true":
+        options["tools"]=[{"type":"web_search","search_context_size":"medium"}]
+        options["tool_choice"]="auto"
+    response=client.responses.create(**options)
+    return response.output_text.strip() if response.output_text else None
 
 @app.get("/api/models")
 def models():
-    return jsonify({
-        "default":"openai/gpt-5.6",
-        "openrouter_configured":bool(os.getenv("OPENROUTER_API_KEY")),
-        "models":[
-            {"id":"openai/gpt-5.6","provider":"OpenAI","name":"GPT-5.6"},
-            {"id":"anthropic/claude-sonnet-5.5","provider":"Anthropic","name":"Claude Sonnet 5.5"},
-            {"id":"anthropic/claude-opus-5.5","provider":"Anthropic","name":"Claude Opus 5.5"},
-            {"id":"google/gemini-3.8-flash","provider":"Google","name":"Gemini 3.8 Flash"},
-            {"id":"google/gemini-3.1-pro-preview","provider":"Google","name":"Gemini 3.1 Pro"},
-            {"id":"x-ai/grok-4.7","provider":"xAI","name":"Grok 4.7"},
-            {"id":"deepseek/deepseek-v4-pro","provider":"DeepSeek","name":"V4 Pro"},
-            {"id":"deepseek/deepseek-v4.1-flash","provider":"DeepSeek","name":"V4.1 Flash"},
-            {"id":"mistralai/mistral-small-2603","provider":"Mistral","name":"Small 4"},
-            {"id":"mistralai/mistral-medium-3.5","provider":"Mistral","name":"Medium 3.5"},
-            {"id":"z-ai/glm-5.3","provider":"Z.ai","name":"GLM 5.3"},
-            {"id":"qwen/qwen3-max","provider":"Qwen","name":"Qwen3 Max"}
-        ]
-    })
+    configured=bool(os.getenv("OPENAI_API_KEY","").strip() or os.getenv("OPENROUTER_API_KEY","").strip())
+    provider="openrouter" if ((AI_PROVIDER=="openrouter" and os.getenv("OPENROUTER_API_KEY")) or (not os.getenv("OPENAI_API_KEY") and os.getenv("OPENROUTER_API_KEY"))) else "openai"
+    model=OPENROUTER_MODEL if provider=="openrouter" else OPENAI_MODEL
+    return jsonify({"default":model,"provider":provider,"configured":configured,"models":[{"id":model,"provider":provider,"name":model}] if configured else []})
 
+@app.post("/api/chat")
+def api_chat():
+    data=request.get_json(silent=True) or {}
+    message=str(data.get("message") or "").strip()
+    if not message:return jsonify({"ok":False,"error":"Bitte gib eine Nachricht ein."}),400
+    if len(message)>12000:return jsonify({"ok":False,"error":"Nachricht ist zu lang (max. 12.000 Zeichen)."}),413
+    if os.getenv("AI_ENABLED","true").strip().lower()!="true":return jsonify({"ok":False,"error":"KI ist mit AI_ENABLED=false deaktiviert."}),503
+    if not (os.getenv("OPENAI_API_KEY","").strip() or os.getenv("OPENROUTER_API_KEY","").strip()):return jsonify({"ok":False,"error":"OPENAI_API_KEY oder OPENROUTER_API_KEY fehlt in Render."}),503
+    history=data.get("history") if isinstance(data.get("history"),list) else []
+    clean=[]
+    for item in history[-12:]:
+        if isinstance(item,dict) and item.get("role") in {"user","assistant"} and isinstance(item.get("content"),str):
+            clean.append({"role":item["role"],"content":item["content"].strip()[:12000]})
+    try:
+        reply=_openai_reply(message,clean,data.get("model"))
+        if not reply:return jsonify({"ok":False,"error":"Das KI-Modell hat keine Antwort geliefert."}),502
+        provider="openrouter" if ((AI_PROVIDER=="openrouter" and os.getenv("OPENROUTER_API_KEY")) or (not os.getenv("OPENAI_API_KEY") and os.getenv("OPENROUTER_API_KEY"))) else "openai"
+        model=OPENROUTER_MODEL if provider=="openrouter" else OPENAI_MODEL
+        return jsonify({"ok":True,"reply":reply,"model":model,"provider":provider}),200
+    except Exception:
+        app.logger.exception("IONOS-KI provider request failed")
+        return jsonify({"ok":False,"error":"KI-Anfrage fehlgeschlagen. Prüfe API-Key, Modellfreigabe und Guthaben."}),502
+
+@app.post("/api/reset")
+def reset_chat():
+    return jsonify({"ok":True})
