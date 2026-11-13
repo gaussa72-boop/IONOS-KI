@@ -74,3 +74,13 @@ button {
     border: none;
     cursor: pointer;
 }
+
+
+/* Ultima responsive and rendering efficiency layer */
+html{scroll-behavior:smooth}body{overflow-x:hidden;overflow-y:auto;min-height:100dvh}
+.background{will-change:transform;transform:translateZ(0)}
+.chat-container{max-width:900px;box-sizing:border-box;background:rgba(7,10,20,.78);border-color:rgba(255,215,0,.35);box-shadow:0 24px 70px rgba(0,0,0,.35)}
+button,input{font:inherit}button{transition:transform .18s,box-shadow .18s}button:hover{transform:translateY(-1px);box-shadow:0 0 22px rgba(255,215,0,.18)}
+input:focus,button:focus-visible{outline:2px solid #65e7f0;outline-offset:3px}
+@media(max-width:760px){.chat-container{left:4%;top:12%;width:92%;height:76%;border-radius:16px}.avatar{width:76px;height:76px;top:10px;right:10px}.chat-box{padding:14px}.input-area{gap:6px}.input-area input{min-width:0;width:100%}.input-area button{padding:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
