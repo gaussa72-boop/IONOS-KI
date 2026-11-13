@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "platform": "ULTIMA Agent Nexus",
+  "agents": [
+    {"id":"orchestrator","name":"AUREON","role":"Agenten-Orchestrator","specialty":"Aufgaben zerlegen, Agenten koordinieren, Freigaben und Audit-Trail","accent":"gold"},
+    {"id":"security","name":"AEGIS","role":"Cyber-Security-Agent","specialty":"Sicherheitschecks, Header, Abhängigkeiten, Risiko- und Konfigurationsprüfung","accent":"cyan"},
+    {"id":"devops","name":"ATLAS","role":"DevOps-Agent","specialty":"GitHub, Render, Builds, Deployments, Healthchecks und Rollback-Planung","accent":"blue"},
+    {"id":"commerce","name":"MERCATOR","role":"Commerce-Agent","specialty":"Kataloge, Shopify/Printful-Synchronisation, Warenkorb und Bestellabläufe","accent":"amber"},
+    {"id":"payments","name":"LEDGER","role":"Payment-Agent","specialty":"TXID-Prüfung, Zahlungsstatus, Rechnungen und Abgleich; niemals TXID-Eingaben blind vertrauen","accent":"green"},
+    {"id":"game","name":"NEXUS","role":"Game-Agent","specialty":"Lichtkrieger, Spielwelten, Quests, NPCs, Progression und Performance","accent":"violet"},
+    {"id":"creative","name":"MNEMOS","role":"Creative-Agent","specialty":"Bücher, Adtralis, Ate Rea, Technologie-Enzyklopädie und Redaktion","accent":"pink"},
+    {"id":"quality","name":"ARGUS","role":"QA-Agent","specialty":"Automatisierte Tests, Regression, Barrierefreiheit und mobile Darstellung","accent":"teal"},
+    {"id":"integrations","name":"HERMES","role":"Integration-Agent","specialty":"REST-APIs, Webhooks, Telegram, E-Mail und sichere Connectoren","accent":"orange"},
+    {"id":"research","name":"ORACLE","role":"Research-Agent","specialty":"Dokumentation, technische Recherche, Architekturentscheidungen und Wissensbasis","accent":"silver"}
+  ],
+  "projects": [
+    {"id":"ionos-ki","name":"IONOS-KI","url":"https://ionos-ki.onrender.com","agent":"orchestrator","scope":"Zentrale Agentensteuerung und KI-Workbench"},
+    {"id":"quantum-shield","name":"Quantum-Shield / ULTIMA","url":"https://ultima-membership-api.onrender.com","agent":"security","scope":"Administration, Membership, Monitoring und Cyber-Shield-Prüfungen"},
+    {"id":"lichtkrieger","name":"Lichtkrieger","url":"https://lichtkrieger-dark-mirror-realms.onrender.com","agent":"game","scope":"Game Foundry, Spielsystem und NPC-Architektur"},
+    {"id":"quantum-ai","name":"Quantum AI","url":"https://quantum-ai-zeah.onrender.com","agent":"research","scope":"KI-Forschung und Modellintegration"},
+    {"id":"quantum-ultra","name":"Quantum KI Ultra Pro V2","url":"https://quantum-ki-ultra-pro-v2-renewed.onrender.com","agent":"quality","scope":"KI-Qualität, Tests und Modellverhalten"},
+    {"id":"ate-rea","name":"Ate Rea Vermächtnis","url":"https://ate-rea-vermachtnis.onrender.com","agent":"creative","scope":"Roman, Lore und redaktionelle Werkzeuge"},
+    {"id":"novatube","name":"NovaTube","url":"https://novatube-a10l.onrender.com","agent":"creative","scope":"Video- und Medienplattform"},
+    {"id":"quantum-mirror","name":"Quantum Mirror Wonderland","url":"https://quantum-mirror-wonderland.onrender.com","agent":"orchestrator","scope":"Spiegelwelt und Agenten-Erlebnis"},
+    {"id":"ionos-platform","name":"IONOS-KI Plattform","url":"https://ionos-ki.onrender.com","agent":"devops","scope":"Deployment, Betrieb und Systemdiagnose"},
+    {"id":"adiphenex-trading","name":"Adiphenex / Trinity Trading","url":"https://trinity-trading-k03l.onrender.com","agent":"quality","scope":"Demo-Tests, Risikoüberwachung und MT5-Integrationsplanung; Live-Handel bleibt gesperrt bis Freigabe"}
+  ],
+  "excluded": [
+    {"name":"Rothshild","reason":"Vom KI-Verbund ausdrücklich ausgeschlossen"},
+    {"name":"Lyca","reason":"Vom KI-Verbund ausdrücklich ausgeschlossen"},
+    {"name":"Webshop Parfum","reason":"Vom KI-Verbund ausdrücklich ausgeschlossen"},
+    {"name":"Sneaker-Webshop","reason":"Vom KI-Verbund ausdrücklich ausgeschlossen"},
+    {"name":"Weitere Webshops","reason":"Vom KI-Verbund ausdrücklich ausgeschlossen"}
+  ],
+  "execution_policy": {
+    "mode":"supervised",
+    "autonomous_deployments":false,
+    "production_writes_require_approval":true,
+    "live_trading_enabled":false,
+    "payment_confirmation_requires_provider_verification":true,
+    "secrets_must_be_read_from_environment":true,
+    "status_note":"Agentenrollen und Zuordnungen sind registriert. Externe APIs, Credentials und echte autonome Aktionen müssen separat eingerichtet und getestet werden."
+  }
+}
