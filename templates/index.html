@@ -62,27 +62,10 @@ h1,h2{letter-spacing:-.035em}::selection{background:rgba(167,139,250,.35);color:
 </main></div>
 <script src="/static/js/app.js"></script>
 </body></html><script>
-(function(){
-const models=[
-["openai/gpt-5.6","OpenAI · GPT-5.6"],
-["anthropic/claude-sonnet-5.5","Anthropic · Claude Sonnet 5.5"],
-["anthropic/claude-opus-5.5","Anthropic · Claude Opus 5.5"],
-["google/gemini-3.8-flash","Google · Gemini 3.8 Flash"],
-["google/gemini-3.1-pro-preview","Google · Gemini 3.1 Pro"],
-["x-ai/grok-4.7","xAI · Grok 4.7"],
-["deepseek/deepseek-v4-pro","DeepSeek · V4 Pro"],
-["deepseek/deepseek-v4.1-flash","DeepSeek · V4.1 Flash"],
-["mistralai/mistral-small-2603","Mistral · Small 4"],
-["mistralai/mistral-medium-3.5","Mistral · Medium 3.5"],
-["z-ai/glm-5.3","Z.ai · GLM 5.3"],
-["qwen/qwen3-max","Qwen · Qwen3 Max"]
-];
-const top=document.querySelector(".top-actions"); if(!top)return;
-const sel=document.createElement("select"); sel.id="ai-model-select"; sel.title="KI-Modell wählen";
-sel.style.cssText="background:#171521;color:#fff;border:1px solid #6f4cff;border-radius:999px;padding:8px 12px;font:inherit;max-width:240px";
-models.forEach(([v,t])=>{const o=document.createElement("option");o.value=v;o.textContent=t;sel.appendChild(o)});
-const saved=localStorage.getItem("ionos_ai_model"); if(saved&&models.some(x=>x[0]===saved))sel.value=saved;
-sel.onchange=()=>localStorage.setItem("ionos_ai_model",sel.value);
+(async function(){
+const top=document.querySelector(".top-actions");if(!top)return;
+const sel=document.createElement("select");sel.id="ai-model-select";sel.title="Server-konfiguriertes KI-Modell wählen";sel.style.cssText="background:#171521;color:#fff;border:1px solid #6f4cff;border-radius:999px;padding:8px 12px;font:inherit;max-width:240px";
+try{const r=await fetch("/api/models",{cache:"no-store"}),data=await r.json();(data.models||[]).forEach(m=>{const o=document.createElement("option");o.value=m.id;o.textContent=(m.provider==="openrouter"?"OpenRouter":"OpenAI")+" · "+m.name;sel.appendChild(o)});if(!sel.options.length){const o=document.createElement("option");o.value="";o.textContent="API-Key in Render konfigurieren";sel.appendChild(o);sel.disabled=true}}catch(e){const o=document.createElement("option");o.value="";o.textContent="Modellstatus nicht verfügbar";sel.appendChild(o);sel.disabled=true}
 top.insertBefore(sel,top.firstChild);
 })();
 </script>
