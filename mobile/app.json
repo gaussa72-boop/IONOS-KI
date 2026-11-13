@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "IONOS KI",
+    "slug": "ionos-ki",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "bundleIdentifier": "com.gaussa.ionoski"
+    },
+    "android": {
+      "package": "com.gaussa.ionoski"
+    }
+  }
+}
