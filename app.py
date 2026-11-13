@@ -224,3 +224,20 @@ def api_chat():
 @app.post("/api/reset")
 def reset_chat():
     return jsonify({"ok":True})
+
+
+# ULTIMA Agent Nexus: registry-backed, read-only project and agent directory.
+@app.get("/agents")
+def ultima_agents_page():
+    return render_template("agents.html")
+
+@app.get("/api/agents")
+def ultima_agents_api():
+    from pathlib import Path
+    registry_path = Path(__file__).with_name("agents.json")
+    try:
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        app.logger.exception("ULTIMA agent registry unavailable")
+        return jsonify({"ok": False, "error": "Agent registry unavailable"}), 503
+    return jsonify(registry), 200
