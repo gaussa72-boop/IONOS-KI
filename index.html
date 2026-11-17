@@ -68,6 +68,47 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;background-ima
 <script src="https://ultima-membership-api.onrender.com/membership-widget.js"></script>
 <script>(function(){var sites={"ionos-ki.onrender.com":["ionos-ki","IONOS-KI"]};var entry=sites[location.hostname];if(entry&&window.UltimaMembership)window.UltimaMembership.init({siteSlug:entry[0],brand:entry[1]});})();</script>
   <script src="https://ultima-membership-api.onrender.com/support-widget.js" defer></script>
+
+<style id="ai-tools-menu-style">
+#ai-tools-dock{position:fixed;right:18px;bottom:18px;z-index:99999;font:14px/1.4 system-ui,sans-serif;color:#f7f3ff}
+#ai-tools-dock details{width:min(310px,calc(100vw - 36px));border:1px solid #78dcff88;border-radius:18px;background:rgba(5,10,27,.94);box-shadow:0 12px 45px #0009,0 0 24px #42cfff22;backdrop-filter:blur(18px);overflow:hidden}
+#ai-tools-dock summary{list-style:none;cursor:pointer;padding:13px 16px;font-weight:750;letter-spacing:.04em;color:#bcefff;display:flex;align-items:center;gap:9px}
+#ai-tools-dock summary::-webkit-details-marker{display:none}
+#ai-tools-dock .ai-tools-panel{padding:0 12px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#ai-tools-dock button{border:1px solid #8ddfff55;border-radius:11px;background:#12233b;color:#f2f8ff;padding:10px 9px;text-align:left;cursor:pointer;font:inherit}
+#ai-tools-dock button:hover{background:#1c3b59;border-color:#8ddfff}
+#ai-tools-dock .ai-tools-note{grid-column:1/-1;color:#a9c5d9;font-size:11px;padding:3px 2px}
+@media(max-width:520px){#ai-tools-dock{right:10px;bottom:10px}#ai-tools-dock details{width:min(290px,calc(100vw - 20px))}}
+</style>
+<div id="ai-tools-dock">
+<details>
+<summary><span aria-hidden="true">✦</span> KI-Funktionen <span aria-hidden="true">⌄</span></summary>
+<div class="ai-tools-panel">
+<button type="button" data-ai-action="chat">💬 Chat öffnen</button>
+<button type="button" data-ai-action="voice">🎙️ Spracheingabe</button>
+<button type="button" data-ai-action="read">🔊 Antwort vorlesen</button>
+<button type="button" data-ai-action="stop">⏹ Vorlesen stoppen</button>
+<button type="button" data-ai-action="export">📄 Chat exportieren</button>
+<button type="button" data-ai-action="clear">↻ Eingabe leeren</button>
+<div class="ai-tools-note">Die Aktionen greifen auf die vorhandene Oberfläche zu; nicht unterstützte Browserfunktionen werden gemeldet.</div>
+</div>
+</details>
+</div>
+<script id="ai-tools-menu-script">
+(()=>{const dock=document.getElementById('ai-tools-dock');if(!dock||dock.dataset.ready)return;dock.dataset.ready='1';
+const findInput=()=>document.querySelector('textarea:not([disabled]),input[type="text"]:not([disabled]),[contenteditable="true"]');
+const visible=el=>el&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const messages=()=>[...document.querySelectorAll('[data-message],.message,.chat-message,.bot-message,.assistant-message,.chat-bubble,[role="log"]')].filter(visible);
+const notify=t=>{let n=dock.querySelector('.ai-tools-note');if(n)n.textContent=t;};
+dock.addEventListener('click',async e=>{const b=e.target.closest('button[data-ai-action]');if(!b)return;const action=b.dataset.aiAction;
+if(action==='chat'){const el=findInput();if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});notify('Chat-Eingabe fokussiert.')}else{notify('Auf dieser Seite wurde kein Chat-Eingabefeld gefunden.');}}
+if(action==='voice'){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){notify('Spracheingabe wird von diesem Browser nicht unterstützt.');return;}const rec=new SR();rec.lang=document.documentElement.lang||'de-DE';rec.interimResults=false;rec.onresult=ev=>{const el=findInput();if(el){el.value=(el.value||'')+ev.results[0][0].transcript;el.dispatchEvent(new Event('input',{bubbles:true}));el.focus();notify('Diktat eingefügt.');}};rec.onerror=()=>notify('Spracheingabe konnte nicht gestartet werden.');rec.start();notify('Ich höre zu …');}
+if(action==='read'){const text=messages().map(x=>x.innerText).filter(Boolean).join('\n');if(!text){notify('Noch keine lesbare Chat-Antwort gefunden.');return;}if(!('speechSynthesis'in window)){notify('Vorlesen wird nicht unterstützt.');return;}speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(text.slice(-12000)));notify('Chat wird vorgelesen.');}
+if(action==='stop'){if('speechSynthesis'in window)speechSynthesis.cancel();notify('Vorlesen gestoppt.');}
+if(action==='export'){const text=messages().map(x=>x.innerText).filter(Boolean).join('\n\n');if(!text){notify('Keine Chat-Nachrichten zum Export gefunden.');return;}const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));a.download='KI-Chat.txt';a.click();URL.revokeObjectURL(a.href);notify('Chat-Text exportiert.');}
+if(action==='clear'){const el=findInput();if(el){el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));el.focus();notify('Eingabefeld geleert.')}else notify('Kein Eingabefeld gefunden.');}
+});})();
+</script>
 </body>
 </html>
 <img src="/static/images/singularity_core.png" alt="Zentrum der Singularität">
