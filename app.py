@@ -120,17 +120,28 @@ def _local_reply(message):
         return "Erklärmodus aktiv. Ich strukturiere das Thema verständlich, nenne Annahmen und trenne Fakten, Beispiele und offene Punkte."
     return "IONOS-KI hat deine Anfrage analysiert. Ich kann Wissen strukturieren, Ideen in Projekte übersetzen, Code erzeugen und komplexe Aufgaben in überprüfbare Schritte zerlegen."
 
+
+
+def load_author_research_context():
+    """Load the author's curated research concepts without changing this agent's identity."""
+    from pathlib import Path
+    try:
+        return Path(__file__).with_name("research").joinpath("ADRIANO_IDEENWISSEN.md").read_text(encoding="utf-8")
+    except OSError:
+        app.logger.warning("Author research knowledge file is unavailable")
+        return ""
+
 def _openai_reply(message, history, model=None):
     from openai import OpenAI
     openai_key=os.getenv("OPENAI_API_KEY","").strip()
     router_key=os.getenv("OPENROUTER_API_KEY","").strip()
-    use_router=(AI_PROVIDER=="openrouter" and bool(router_key)) or (not openai_key and bool(router_key))
+    use_router=(AI_PROVIDER=="openrouter" and bool(router_key)) or (not openai_key and bool(router_key))\n    research_context=load_author_research_context()
     if use_router:
         client=OpenAI(api_key=router_key,base_url="https://openrouter.ai/api/v1")
         response=client.chat.completions.create(
             model=OPENROUTER_MODEL,
             messages=[
-                {"role":"system","content":"Du bist IONOS-KI V2. Arbeite präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen und behaupte keine nicht ausgeführten Aktionen."},
+                {"role":"system","content":"Du bist IONOS-KI V2. Arbeite präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen und behaupte keine nicht ausgeführten Aktionen.\\n\\nAutorenspezifisches Forschungswissen; Evidenzstatus klar kennzeichnen:\\n"+research_context},
                 *history[-12:],
                 {"role":"user","content":message}
             ]
@@ -141,7 +152,7 @@ def _openai_reply(message, history, model=None):
     client=OpenAI(api_key=openai_key)
     options={
         "model":OPENAI_MODEL,
-        "instructions":"Du bist IONOS-KI V2. Arbeite präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen und behaupte keine nicht ausgeführten Aktionen.",
+        "instructions":"Du bist IONOS-KI V2. Arbeite präzise, strukturiert, kontextbewusst und ehrlich. Prüfe Annahmen und behaupte keine nicht ausgeführten Aktionen.\\n\\nAutorenspezifisches Forschungswissen; Evidenzstatus klar kennzeichnen:\\n"+research_context,
         "input":[*history[-12:],{"role":"user","content":message}],
         "store":False
     }
