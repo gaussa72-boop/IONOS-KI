@@ -135,7 +135,8 @@ def _openai_reply(message, history, model=None):
     from openai import OpenAI
     openai_key=os.getenv("OPENAI_API_KEY","").strip()
     router_key=os.getenv("OPENROUTER_API_KEY","").strip()
-    use_router=(AI_PROVIDER=="openrouter" and bool(router_key)) or (not openai_key and bool(router_key))\n    research_context=load_author_research_context()
+    use_router=(AI_PROVIDER=="openrouter" and bool(router_key)) or (not openai_key and bool(router_key))
+    research_context=load_author_research_context()
     if use_router:
         client=OpenAI(api_key=router_key,base_url="https://openrouter.ai/api/v1")
         response=client.chat.completions.create(
