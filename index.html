@@ -109,6 +109,15 @@ if(action==='export'){const text=messages().map(x=>x.innerText).filter(Boolean).
 if(action==='clear'){const el=findInput();if(el){el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));el.focus();notify('Eingabefeld geleert.')}else notify('Kein Eingabefeld gefunden.');}
 });})();
 </script>
+
+<style id="ai-tools-vertical-layout">
+/* Alle KI-Werkzeuge untereinander; mobil vollständig erreichbar */
+#ai-tools-dock{max-height:calc(100dvh - 24px)}
+#ai-tools-dock details{max-height:calc(100dvh - 24px);display:flex;flex-direction:column}
+#ai-tools-dock .ai-tools-panel{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:8px;overflow-y:auto;overscroll-behavior:contain;min-height:0}
+#ai-tools-dock .ai-tools-panel button{display:block;width:100%;min-height:48px;flex:0 0 auto}
+#ai-tools-dock .ai-tools-note{display:block;width:100%;flex:0 0 auto}
+</style>
 </body>
 </html>
 <img src="/static/images/singularity_core.png" alt="Zentrum der Singularität">
