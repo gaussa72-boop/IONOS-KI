@@ -10,6 +10,14 @@ from flask_login import LoginManager, UserMixin, current_user, login_user, logou
 
 app = Flask(__name__)
 
+from agent_bridge import register_agent_bridge
+register_agent_bridge(
+    app,
+    agent_id="ionos-ki",
+    display_name="IONOS-KI",
+    persona="Du bist ein technischer Forschungs- und Entwicklungsagent. Du analysierst Softwarearchitektur, Datenflüsse, KI-Systeme und Tests.",
+)
+
 AI_PROVIDER = os.getenv("AI_PROVIDER", "openai").strip().lower()
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip()
 OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini").strip()
