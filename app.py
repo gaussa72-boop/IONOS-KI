@@ -185,7 +185,8 @@ def api_chat():
     if not message:return jsonify({"ok":False,"error":"Bitte gib eine Nachricht ein."}),400
     if len(message)>12000:return jsonify({"ok":False,"error":"Nachricht ist zu lang (max. 12.000 Zeichen)."}),413
     if os.getenv("AI_ENABLED","true").strip().lower()!="true":return jsonify({"ok":False,"error":"KI ist mit AI_ENABLED=false deaktiviert."}),503
-    if not (os.getenv("OPENAI_API_KEY","").strip() or os.getenv("OPENROUTER_API_KEY","").strip()):return jsonify({"ok":False,"error":"OPENAI_API_KEY oder OPENROUTER_API_KEY fehlt in Render."}),503
+    if not (os.getenv("OPENAI_API_KEY","").strip() or os.getenv("OPENROUTER_API_KEY","").strip()):
+        return jsonify({"ok":True,"reply":_local_reply(message),"provider":"offline","model":"IONOS Offline-Reflexion","ai_mode":"offline","notice":"Kein externer API-Key konfiguriert; dies ist eine lokale Regelantwort und kein generatives Sprachmodell."}),200
     history=data.get("history") if isinstance(data.get("history"),list) else []
     clean=[]
     for item in history[-12:]:
