@@ -43,6 +43,14 @@ def _sec_headers(response):
     response.headers.setdefault("Cross-Origin-Opener-Policy","same-origin")
     response.headers.setdefault("Strict-Transport-Security","max-age=31536000; includeSubDomains")
     if request.path.startswith("/api/"): response.headers["Cache-Control"]="no-store"
+    origin=request.headers.get("Origin","")
+    allowed_origins={"https://zenmachanik-rea.onrender.com"}
+    if origin in allowed_origins:
+        response.headers["Access-Control-Allow-Origin"]=origin
+        response.headers["Vary"]="Origin"
+        response.headers["Access-Control-Allow-Methods"]="POST, OPTIONS"
+        response.headers["Access-Control-Allow-Headers"]="Content-Type"
+        response.headers["Access-Control-Max-Age"]="600"
     response.headers.pop("Server",None)
     return response
 
