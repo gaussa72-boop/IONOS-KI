@@ -1,4 +1,5 @@
 import os
+import re
 import time
 import urllib.request
 import urllib.error
@@ -215,12 +216,14 @@ def api_chat():
 def api_vision():
     data=request.get_json(silent=True) or {}
     prompt=str(data.get("prompt") or "").strip()
-    image=str(data.get("image") or "")
+    images=data.get("images") if isinstance(data.get("images"),list) else [data.get("image")]
+    images=[str(x or "") for x in images if x]
     if not prompt:return jsonify(ok=False,error="Bitte einen Analyseauftrag senden."),400
     if len(prompt)>12000:return jsonify(ok=False,error="Analyseauftrag ist zu lang."),413
-    if not re.fullmatch(r"data:image/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+",image):
+    if not 1<=len(images)<=6:return jsonify(ok=False,error="Bitte ein bis sechs Referenzbilder senden."),400
+    if any(not re.fullmatch(r"data:image/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+",image) for image in images):
         return jsonify(ok=False,error="Ungültiges Bildformat. Erlaubt sind JPEG, PNG und WebP."),400
-    if len(image)>17_500_000:return jsonify(ok=False,error="Das Referenzbild ist zu groß."),413
+    if sum(len(image) for image in images)>17_500_000:return jsonify(ok=False,error="Die Referenzbilder sind zusammen zu groß."),413
     openai_key=os.getenv("OPENAI_API_KEY","").strip()
     router_key=os.getenv("OPENROUTER_API_KEY","").strip()
     use_router=(AI_PROVIDER=="openrouter" and bool(router_key)) or (not openai_key and bool(router_key))
@@ -239,7 +242,7 @@ def api_vision():
             model=model,
             messages=[
                 {"role":"system","content":"Du bist IONOS-KI Vision. Analysiere ausschließlich sichtbare, nicht-sensitive Bildelemente. Identifiziere keine realen Personen und leite keine sensiblen Eigenschaften ab. Antworte auf Deutsch und trenne Beobachtung von kreativer Interpretation."},
-                {"role":"user","content":[{"type":"text","text":prompt},{"type":"image_url","image_url":{"url":image,"detail":"low"}}]}
+                {"role":"user","content":[{"type":"text","text":prompt},*[{"type":"image_url","image_url":{"url":image,"detail":"low"}} for image in images]]}
             ],
             max_tokens=1400
         )
