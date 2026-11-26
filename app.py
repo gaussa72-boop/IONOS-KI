@@ -28,7 +28,8 @@ from time import monotonic
 _SEC_RATE=defaultdict(deque)
 @app.before_request
 def _sec_before():
-    if request.content_length and request.content_length > 1048576: return jsonify(error="Request too large."),413
+    max_body=18*1024*1024 if request.path=="/api/vision" else 1048576
+    if request.content_length and request.content_length > max_body: return jsonify(error="Request too large."),413
     if request.path in {"/.env","/.git/config","/server.py","/app.py","/main.py","/package.json","/requirements.txt","/render.yaml","/Procfile"} or request.path.startswith("/.git/") or request.path.startswith("/.env"): return jsonify(error="Not Found."),404
     q=_SEC_RATE[request.remote_addr or "unknown"]; now=monotonic()
     while q and now-q[0]>60:q.popleft()
@@ -209,6 +210,46 @@ def api_chat():
     except Exception:
         app.logger.exception("IONOS-KI provider request failed")
         return jsonify({"ok":False,"error":"KI-Anfrage fehlgeschlagen. Prüfe API-Key, Modellfreigabe und Guthaben."}),502
+
+@app.post("/api/vision")
+def api_vision():
+    data=request.get_json(silent=True) or {}
+    prompt=str(data.get("prompt") or "").strip()
+    image=str(data.get("image") or "")
+    if not prompt:return jsonify(ok=False,error="Bitte einen Analyseauftrag senden."),400
+    if len(prompt)>12000:return jsonify(ok=False,error="Analyseauftrag ist zu lang."),413
+    if not re.fullmatch(r"data:image/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+",image):
+        return jsonify(ok=False,error="Ungültiges Bildformat. Erlaubt sind JPEG, PNG und WebP."),400
+    if len(image)>17_500_000:return jsonify(ok=False,error="Das Referenzbild ist zu groß."),413
+    openai_key=os.getenv("OPENAI_API_KEY","").strip()
+    router_key=os.getenv("OPENROUTER_API_KEY","").strip()
+    use_router=(AI_PROVIDER=="openrouter" and bool(router_key)) or (not openai_key and bool(router_key))
+    if use_router:
+        from openai import OpenAI
+        client=OpenAI(api_key=router_key,base_url="https://openrouter.ai/api/v1")
+        model=OPENROUTER_MODEL
+    elif openai_key:
+        from openai import OpenAI
+        client=OpenAI(api_key=openai_key)
+        model=OPENAI_MODEL
+    else:
+        return jsonify(ok=False,error="Für Bildanalyse muss ein OpenAI- oder OpenRouter-API-Key in IONOS-KI Render Environment hinterlegt sein."),503
+    try:
+        response=client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role":"system","content":"Du bist IONOS-KI Vision. Analysiere ausschließlich sichtbare, nicht-sensitive Bildelemente. Identifiziere keine realen Personen und leite keine sensiblen Eigenschaften ab. Antworte auf Deutsch und trenne Beobachtung von kreativer Interpretation."},
+                {"role":"user","content":[{"type":"text","text":prompt},{"type":"image_url","image_url":{"url":image,"detail":"low"}}]}
+            ],
+            max_tokens=1400
+        )
+        answer=response.choices[0].message.content
+        if not answer:return jsonify(ok=False,error="Das Bildmodell hat keine Antwort geliefert."),502
+        return jsonify(ok=True,reply=answer,provider="openrouter" if use_router else "openai",model=model),200
+    except Exception:
+        app.logger.exception("IONOS vision provider request failed")
+        return jsonify(ok=False,error="Bildanalyse fehlgeschlagen. Prüfe Vision-Modell, API-Key und Guthaben."),502
+
 
 @app.post("/api/reset")
 def reset_chat():
